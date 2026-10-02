@@ -1,0 +1,11 @@
+# uv 工具级术语表：覆盖 style/terms.yml 的通用译法。
+# 保留原文的术语在此显式登记，避免不同页面各自选词。
+lockfile: lockfile
+resolver: 解析器
+dependency group: 依赖组
+index: 索引
+workspace: workspace
+sdist: sdist
+wheel: wheel
+venv: venv
+build backend: 构建后端

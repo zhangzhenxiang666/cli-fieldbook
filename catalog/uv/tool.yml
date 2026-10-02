@@ -1,0 +1,5 @@
+schema: 1
+name: uv
+binary: uv
+repository: https://github.com/astral-sh/uv
+summary: 极快的 Python 包与项目管理器，含 pip 兼容接口、Python 版本与工具管理。
