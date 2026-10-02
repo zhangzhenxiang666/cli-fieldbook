@@ -1,0 +1,206 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/vercel-labs/skills",
+  "upstreamVersion": "1.7.0",
+  "ref": "v1.7.0",
+  "commit": "7407f3893ad4dceab546ac002c3ef806e4000c73",
+  "adapter": "source-skills-v1",
+  "normalization": 1,
+  "profile": {
+    "id": "source-default",
+    "scope": "10 public command nodes (root + 9 subcommands); dispatch aliases add(a,i,install), remove(rm,r), list(ls), find(search,f,s), update(upgrade,check) verified in src/cli.ts; flags rebuilt from the handwritten parser; experimental_* commands are publicly listed but experimental"
+  },
+  "evidence": [
+    {
+      "id": "source:src/cli.ts",
+      "path": "upstream/source-extracts/src/cli.ts.txt",
+      "sha256": "e702d27bbdd1104c3cd5fdf0819f3ffd2566c9423c2205351e883a7045473999",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/cli.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/add.ts",
+      "path": "upstream/source-extracts/src/add.ts.txt",
+      "sha256": "706baa766339b6c3c6b3df7e826c7c24c12dd58d02686125b6b0d4f9c4e7eec6",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/add.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/use.ts",
+      "path": "upstream/source-extracts/src/use.ts.txt",
+      "sha256": "2d1666698dcdc01caa8d3bdd38ec2451b149da16e306a06f9008be8b8410c36d",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/use.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/remove.ts",
+      "path": "upstream/source-extracts/src/remove.ts.txt",
+      "sha256": "8bb511ab833193818260ebab49db7d9fe82016195fdf279acc083912ec201493",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/remove.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/list.ts",
+      "path": "upstream/source-extracts/src/list.ts.txt",
+      "sha256": "9756195392fdea1c4a4f209729565839ec1edd834aa604a87443fd54c037631a",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/list.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/find.ts",
+      "path": "upstream/source-extracts/src/find.ts.txt",
+      "sha256": "aa845ea84c80cee4f34db1fdabfab653dd3a7927e9a809d522402fb80e9b6d14",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/find.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/update.ts",
+      "path": "upstream/source-extracts/src/update.ts.txt",
+      "sha256": "61c7a8ff694ee43af330033f2566bef349a457ae0de80dcf59272388492ea6be",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/update.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/sync.ts",
+      "path": "upstream/source-extracts/src/sync.ts.txt",
+      "sha256": "ae0fc0d78a386220f9dcbabf9bc01739e8e9c609753c0008094de1f8d57b4bd6",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/sync.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/install.ts",
+      "path": "upstream/source-extracts/src/install.ts.txt",
+      "sha256": "0bc62a9f5e829de663b7b3d90f208e1553454c6e21622fc7572d726803b61118",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/install.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/agents.ts",
+      "path": "upstream/source-extracts/src/agents.ts.txt",
+      "sha256": "8902f56a121ce4b1a800b3aa04d3f83b7baeaf32e1abf441c0b8eabb3f8f89a5",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/agents.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/installer.ts",
+      "path": "upstream/source-extracts/src/installer.ts.txt",
+      "sha256": "cdb32fd6cce3af962ad961677dea5fbe18f26091af6e7d627d9e6933aa8fe16a",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/installer.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/skill-lock.ts",
+      "path": "upstream/source-extracts/src/skill-lock.ts.txt",
+      "sha256": "fcf628f8af6c637c4348bdaeeb2833f1705ee2ccd1772935e2ae350340cc635d",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/skill-lock.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/local-lock.ts",
+      "path": "upstream/source-extracts/src/local-lock.ts.txt",
+      "sha256": "58dd1e428ead85983f5aab2c3bb650e384d7a247f096be5de56200f80e3d08ba",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/local-lock.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/detect-agent.ts",
+      "path": "upstream/source-extracts/src/detect-agent.ts.txt",
+      "sha256": "c874fff449a4243c975ded0d346176e6f60359142e62b1bf99f2cd7e2ba41ee0",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/detect-agent.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/telemetry.ts",
+      "path": "upstream/source-extracts/src/telemetry.ts.txt",
+      "sha256": "a1d64dc35ae9ad4fd1d80e116a83fb74f08aa9f610964cc6e15b8ee5d6570844",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/telemetry.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/source-parser.ts",
+      "path": "upstream/source-extracts/src/source-parser.ts.txt",
+      "sha256": "d498dbe96231b85d6bab7412d3f16173d0f52f5756360a906fd6efdc4a906b75",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/source-parser.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/types.ts",
+      "path": "upstream/source-extracts/src/types.ts.txt",
+      "sha256": "0f444746b0ef0da541e23184f401eb0da81b3abad217c934e89cc54970c84d9c",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/types.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/constants.ts",
+      "path": "upstream/source-extracts/src/constants.ts.txt",
+      "sha256": "fc01e4591a3f7da665eca6cbda19cd2913c66bf2704f26adb6be2dfd7cf0c867",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/constants.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/update-source.ts",
+      "path": "upstream/source-extracts/src/update-source.ts.txt",
+      "sha256": "2a7589c819563b0afb1d8f05b48f0ba77a1eaa6bae3dd1f464914391fac32a6e",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/update-source.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:src/frontmatter.ts",
+      "path": "upstream/source-extracts/src/frontmatter.ts.txt",
+      "sha256": "3d3f155e397886529f76901720748b3cba929f88a41df06ef263be09ce50928d",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/src/frontmatter.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:README.md",
+      "path": "upstream/source-extracts/README.md.txt",
+      "sha256": "f1835e9d5cc091a82b3ea75ec93bdd96e3c8f86187358ca046a3ac3acdb3983b",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/README.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:LICENSE",
+      "path": "upstream/source-extracts/LICENSE.txt",
+      "sha256": "661142e53c313d2bb5e1b055f5c0a39001450ff1b5e27b89dc4bc7de9a6352ca",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/LICENSE",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    },
+    {
+      "id": "source:package.json",
+      "path": "upstream/source-extracts/package.json",
+      "sha256": "d912e2f2fa141ba3d65b80e7374827d92ac4c6b81fdd63dcb80fdd641809f5d2",
+      "url": "https://raw.githubusercontent.com/vercel-labs/skills/7407f3893ad4dceab546ac002c3ef806e4000c73/package.json",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T12:44:30.000Z"
+    }
+  ],
+  "limitations": [
+    "仓库证据全部为固定提交 v1.7.0 的源码快照；命令树、选项与参数由源码重建，帮助视图为源码重建而非原始 --help 输出。",
+    "真实帮助输出已于 2026-10-02 在一次性环境（临时 HOME、CI=1、DISABLE_TELEMETRY=1）通过 npx skills@1.7.0 采集核对，与源码重建一致；但当前协议的来源类别不含运行采集记录，故未保存为仓库证据。",
+    "示例与工作流未实测；未运行任何安装、移除或更新类副作用命令。",
+    "agent 注册表共 79 个 AgentType（src/types.ts）；README 的 agent 列表为滚动文档，仅作交叉核对，行为以固定提交源码为准。",
+    "未参考第三方 fork（含 antfu/skills-cli）的 README，其命令集与本版本不同。"
+  ]
+}
