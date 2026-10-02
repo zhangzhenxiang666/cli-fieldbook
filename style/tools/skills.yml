@@ -1,0 +1,9 @@
+skill: 技能
+agent: Agent
+package: 技能包
+scope: 作用域
+symlink: 符号链接
+lockfile: 锁文件
+telemetry: 遥测
+banner: 横幅
+frontmatter: frontmatter
