@@ -1,0 +1,549 @@
+[
+  {
+    "path": [],
+    "aliases": [],
+    "synopsis": [
+      "skills <command> [options]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "--help, -h",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli.ts"
+        ]
+      },
+      {
+        "name": "--version",
+        "display": "--version, -v",
+        "aliases": [
+          "-v"
+        ],
+        "evidenceIds": [
+          "source:src/cli.ts"
+        ]
+      }
+    ],
+    "children": [
+      ["add"],
+      ["use"],
+      ["remove"],
+      ["list"],
+      ["find"],
+      ["update"],
+      ["experimental_install"],
+      ["init"],
+      ["experimental_sync"]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli.ts",
+      "source:src/detect-agent.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": ["add"],
+    "aliases": [
+      ["a"],
+      ["i"],
+      ["install"]
+    ],
+    "synopsis": [
+      "skills add [options] <package>"
+    ],
+    "arguments": [
+      {
+        "name": "package",
+        "display": "<package>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/add.ts",
+          "source:src/source-parser.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--global",
+        "display": "-g, --global",
+        "aliases": [
+          "-g"
+        ],
+        "evidenceIds": [
+          "source:src/add.ts"
+        ]
+      },
+      {
+        "name": "--agent",
+        "display": "-a, --agent <agents>",
+        "aliases": [
+          "-a"
+        ],
+        "evidenceIds": [
+          "source:src/add.ts",
+          "source:src/agents.ts"
+        ]
+      },
+      {
+        "name": "--skill",
+        "display": "-s, --skill <skills>",
+        "aliases": [
+          "-s"
+        ],
+        "evidenceIds": [
+          "source:src/add.ts"
+        ]
+      },
+      {
+        "name": "--list",
+        "display": "-l, --list",
+        "aliases": [
+          "-l"
+        ],
+        "evidenceIds": [
+          "source:src/add.ts"
+        ]
+      },
+      {
+        "name": "--yes",
+        "display": "-y, --yes",
+        "aliases": [
+          "-y"
+        ],
+        "evidenceIds": [
+          "source:src/add.ts"
+        ]
+      },
+      {
+        "name": "--copy",
+        "display": "--copy",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/add.ts",
+          "source:src/installer.ts"
+        ]
+      },
+      {
+        "name": "--metadata",
+        "display": "--metadata <json>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/add.ts"
+        ]
+      },
+      {
+        "name": "--subagent",
+        "display": "--subagent <names>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/add.ts",
+          "source:src/agents.ts"
+        ]
+      },
+      {
+        "name": "--all",
+        "display": "--all",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/add.ts"
+        ]
+      },
+      {
+        "name": "--full-depth",
+        "display": "--full-depth",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/add.ts",
+          "source:src/constants.ts"
+        ]
+      },
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/add.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli.ts",
+      "source:src/add.ts",
+      "source:src/installer.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": ["use"],
+    "aliases": [],
+    "synopsis": [
+      "skills use [options] <package>@<skill>"
+    ],
+    "arguments": [
+      {
+        "name": "package@skill",
+        "display": "<package>@<skill>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/use.ts",
+          "source:src/source-parser.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--skill",
+        "display": "-s, --skill <skill>",
+        "aliases": [
+          "-s"
+        ],
+        "evidenceIds": [
+          "source:src/use.ts"
+        ]
+      },
+      {
+        "name": "--agent",
+        "display": "-a, --agent <agent>",
+        "aliases": [
+          "-a"
+        ],
+        "evidenceIds": [
+          "source:src/use.ts"
+        ]
+      },
+      {
+        "name": "--full-depth",
+        "display": "--full-depth",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/use.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli.ts",
+      "source:src/use.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": ["remove"],
+    "aliases": [
+      ["rm"],
+      ["r"]
+    ],
+    "synopsis": [
+      "skills remove [skills...] [options]"
+    ],
+    "arguments": [
+      {
+        "name": "skills",
+        "display": "[skills]...",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/remove.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--global",
+        "display": "-g, --global",
+        "aliases": [
+          "-g"
+        ],
+        "evidenceIds": [
+          "source:src/remove.ts"
+        ]
+      },
+      {
+        "name": "--agent",
+        "display": "-a, --agent <agents>",
+        "aliases": [
+          "-a"
+        ],
+        "evidenceIds": [
+          "source:src/remove.ts"
+        ]
+      },
+      {
+        "name": "--skill",
+        "display": "-s, --skill <skills>",
+        "aliases": [
+          "-s"
+        ],
+        "evidenceIds": [
+          "source:src/remove.ts"
+        ]
+      },
+      {
+        "name": "--yes",
+        "display": "-y, --yes",
+        "aliases": [
+          "-y"
+        ],
+        "evidenceIds": [
+          "source:src/remove.ts"
+        ]
+      },
+      {
+        "name": "--all",
+        "display": "--all",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/remove.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli.ts",
+      "source:src/remove.ts",
+      "source:src/skill-lock.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": ["list"],
+    "aliases": [
+      ["ls"]
+    ],
+    "synopsis": [
+      "skills list [options]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--global",
+        "display": "-g, --global",
+        "aliases": [
+          "-g"
+        ],
+        "evidenceIds": [
+          "source:src/list.ts"
+        ]
+      },
+      {
+        "name": "--agent",
+        "display": "-a, --agent <agents>",
+        "aliases": [
+          "-a"
+        ],
+        "evidenceIds": [
+          "source:src/list.ts"
+        ]
+      },
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/list.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli.ts",
+      "source:src/list.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": ["find"],
+    "aliases": [
+      ["search"],
+      ["f"],
+      ["s"]
+    ],
+    "synopsis": [
+      "skills find [query] [options]"
+    ],
+    "arguments": [
+      {
+        "name": "query",
+        "display": "[query]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/find.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--owner",
+        "display": "--owner <owner>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/find.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli.ts",
+      "source:src/find.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": ["update"],
+    "aliases": [
+      ["upgrade"],
+      ["check"]
+    ],
+    "synopsis": [
+      "skills update [skills...] [options]"
+    ],
+    "arguments": [
+      {
+        "name": "skills",
+        "display": "[skills]...",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/update.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--global",
+        "display": "-g, --global",
+        "aliases": [
+          "-g"
+        ],
+        "evidenceIds": [
+          "source:src/update.ts"
+        ]
+      },
+      {
+        "name": "--project",
+        "display": "-p, --project",
+        "aliases": [
+          "-p"
+        ],
+        "evidenceIds": [
+          "source:src/update.ts"
+        ]
+      },
+      {
+        "name": "--yes",
+        "display": "-y, --yes",
+        "aliases": [
+          "-y"
+        ],
+        "evidenceIds": [
+          "source:src/update.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli.ts",
+      "source:src/update.ts",
+      "source:src/local-lock.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": ["experimental_install"],
+    "aliases": [],
+    "synopsis": [
+      "skills experimental_install"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli.ts",
+      "source:src/install.ts",
+      "source:src/local-lock.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": ["init"],
+    "aliases": [],
+    "synopsis": [
+      "skills init [name]"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "[name]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli.ts"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": ["experimental_sync"],
+    "aliases": [],
+    "synopsis": [
+      "skills experimental_sync [options]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--agent",
+        "display": "-a, --agent <agents>",
+        "aliases": [
+          "-a"
+        ],
+        "evidenceIds": [
+          "source:src/sync.ts"
+        ]
+      },
+      {
+        "name": "--yes",
+        "display": "-y, --yes",
+        "aliases": [
+          "-y"
+        ],
+        "evidenceIds": [
+          "source:src/sync.ts"
+        ]
+      },
+      {
+        "name": "--force",
+        "display": "-f, --force",
+        "aliases": [
+          "-f"
+        ],
+        "evidenceIds": [
+          "source:src/sync.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli.ts",
+      "source:src/sync.ts"
+    ],
+    "profileId": "source-default"
+  }
+]
