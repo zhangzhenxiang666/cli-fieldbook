@@ -1,0 +1,17 @@
+Delete a persistent volume or file storage from a service.
+
+Examples:
+  coolify svc storage delete <service_uuid> <storage_uuid>
+
+Usage:
+  coolify service storage delete <service_uuid> <storage_uuid> [flags]
+
+Flags:
+  -h, --help   help for delete
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

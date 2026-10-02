@@ -1,0 +1,15 @@
+Delete a GitLab App integration. The app must not be used by any applications.
+
+Usage:
+  coolify gitlab delete <app_id_or_uuid> [flags]
+
+Flags:
+  -f, --force   Skip confirmation prompt
+  -h, --help    help for delete
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

@@ -1,0 +1,65 @@
+Create a new application from a custom Dockerfile content.
+
+Examples:
+  coolify app create dockerfile --server-uuid <uuid> --project-uuid <uuid> --environment-name production \
+    --dockerfile "FROM node:18\nWORKDIR /app\nCOPY . .\nRUN npm install\nCMD [\"npm\", \"start\"]"
+
+  coolify app create dockerfile --server-uuid <uuid> --project-uuid <uuid> --environment-name production \
+    --dockerfile "$(cat Dockerfile)" --ports-exposes 3000 --instant-deploy
+
+Usage:
+  coolify app create dockerfile [flags]
+
+Flags:
+      --custom-internal-name string            Custom internal hostname
+      --description string                     Application description
+      --destination-uuid string                Destination UUID if server has multiple destinations
+      --disable-build-cache                    Disable the build cache
+      --docker-images-to-keep int              Number of Docker images to retain
+      --dockerfile string                      Dockerfile content (required)
+      --dockerfile-target-build string         Dockerfile target build stage
+      --domains string                         Domain(s) for the application
+      --environment-name string                Environment name
+      --environment-uuid string                Environment UUID
+      --gpu-count string                       GPU count
+      --gpu-device-ids string                  GPU device IDs
+      --gpu-driver string                      GPU driver
+      --gpu-options string                     GPU options
+      --health-check-enabled                   Enable health checks
+      --health-check-path string               Health check path
+  -h, --help                                   help for dockerfile
+      --include-source-commit-in-build         Include the source commit in the build
+      --inject-build-args-to-dockerfile        Inject build arguments into the Dockerfile
+      --instant-deploy                         Deploy immediately after creation
+      --is-consistent-container-name-enabled   Use consistent container names
+      --is-env-sorting-enabled                 Sort environment variables
+      --is-git-lfs-enabled                     Enable Git LFS
+      --is-git-shallow-clone-enabled           Use a shallow Git clone
+      --is-git-submodules-enabled              Clone Git submodules
+      --is-gpu-enabled                         Enable GPU
+      --is-gzip-enabled                        Enable gzip compression
+      --is-log-drain-enabled                   Enable application log drain
+      --is-pr-deployments-public-enabled       Make pull request deployments public
+      --is-preview-deployments-enabled         Enable preview deployments
+      --is-raw-compose-deployment-enabled      Deploy the raw Docker Compose definition
+      --is-stripprefix-enabled                 Enable path prefix stripping
+      --limits-cpus string                     CPU limit
+      --limits-memory string                   Memory limit
+      --max-restart-count int                  Maximum container restart count
+      --name string                            Application name
+      --ports-exposes string                   Exposed ports, e.g., '3000' or '3000,8080'
+      --ports-mappings string                  Port mappings (host:container)
+      --preview-url-template string            Preview URL template
+      --project-uuid string                    Project UUID (required)
+      --server-uuid string                     Server UUID (required)
+      --stop-grace-period int                  Container stop grace period in seconds
+      --tag stringArray                        Tag to assign to the application (repeatable)
+      --tags strings                           Tags to assign to the application
+      --use-build-secrets                      Use Docker Build Secrets for build-time variables
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

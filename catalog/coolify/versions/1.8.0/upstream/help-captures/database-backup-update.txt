@@ -1,0 +1,26 @@
+Update a backup configuration settings (frequency, retention, S3, etc.). First UUID is the database, second is the specific backup configuration.
+
+Usage:
+  coolify database backup update <database_uuid> <backup_uuid> [flags]
+
+Flags:
+      --databases-to-backup string            Comma-separated list of databases to backup
+      --dump-all                              Dump all databases
+      --enabled                               Enable or disable backup
+      --frequency string                      Backup frequency (cron expression)
+  -h, --help                                  help for update
+      --retention-amount-locally int          Number of backups to retain locally
+      --retention-amount-s3 int               Number of backups to retain in S3
+      --retention-days-locally int            Days to retain backups locally
+      --retention-days-s3 int                 Days to retain backups in S3
+      --retention-max-storage-locally float   Max storage for local backups (GB)
+      --retention-max-storage-s3 float        Max storage for S3 backups (GB)
+      --s3-storage-uuid string                S3 storage UUID
+      --save-s3                               Save backups to S3
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

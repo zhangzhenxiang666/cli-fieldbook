@@ -1,0 +1,19 @@
+Update a context's properties (name, URL, token)
+
+Usage:
+  coolify context update <context_name> [flags]
+
+Examples:
+context update myserver --name newname --url https://new.coolify.com --token newtoken
+
+Flags:
+  -h, --help           help for update
+  -n, --name string    New name for the context
+  -t, --token string   New token for the context
+  -u, --url string     New URL for the context
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information

@@ -1,0 +1,20 @@
+Create server shared env
+
+Usage:
+  coolify shared-env server create <server_uuid> [flags]
+
+Flags:
+      --comment string   Comment
+  -h, --help             help for create
+      --key string       Variable key
+      --literal          Treat value as literal
+      --multiline        Multiline value
+      --shown-once       Show value only once
+      --value string     Variable value
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

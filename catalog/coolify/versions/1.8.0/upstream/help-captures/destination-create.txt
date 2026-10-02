@@ -1,0 +1,18 @@
+Create a destination for a server
+
+Usage:
+  coolify destination create [flags]
+
+Flags:
+  -h, --help             help for create
+      --name string      Destination name (defaults on the server)
+      --network string   Docker network name (required)
+      --server string    Server UUID (required)
+      --type string      Destination type: standalone or swarm
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

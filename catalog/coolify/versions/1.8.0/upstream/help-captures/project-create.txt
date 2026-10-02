@@ -1,0 +1,20 @@
+Create a new project in Coolify.
+
+Examples:
+  coolify project create --name "My Project"
+  coolify project create --name "My Project" --description "A description"
+
+Usage:
+  coolify project create [flags]
+
+Flags:
+      --description string   Project description
+  -h, --help                 help for create
+      --name string          Project name (required)
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

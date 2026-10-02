@@ -1,0 +1,14 @@
+List DigitalOcean SSH keys
+
+Usage:
+  coolify server digitalocean ssh-keys <cloud_token_uuid> [flags]
+
+Flags:
+  -h, --help   help for ssh-keys
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

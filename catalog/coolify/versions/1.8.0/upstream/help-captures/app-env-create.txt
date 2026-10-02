@@ -1,0 +1,22 @@
+Create a new environment variable for a specific application. Use --key and --value flags to specify the variable.
+
+Usage:
+  coolify app env create <app_uuid> [flags]
+
+Flags:
+      --build-time       Available at build time (default: true) (default true)
+      --comment string   Comment for the environment variable
+  -h, --help             help for create
+      --is-literal       Treat value as literal (don't interpolate variables)
+      --is-multiline     Value is multiline
+      --key string       Environment variable key (required)
+      --preview          Available in preview deployments
+      --runtime          Available at runtime (default: true) (default true)
+      --value string     Environment variable value (required)
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

@@ -1,0 +1,21 @@
+Update a database's configuration by UUID.
+
+Usage:
+  coolify database update <uuid> [flags]
+
+Flags:
+      --description string     Database description
+  -h, --help                   help for update
+      --image string           Docker image
+      --is-public              Make database publicly accessible
+      --limits-cpus string     CPU limit
+      --limits-memory string   Memory limit
+      --name string            Database name
+      --public-port int        Public port
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

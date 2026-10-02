@@ -1,0 +1,54 @@
+Create a new database of the specified type.
+
+Supported types: postgresql, mysql, mariadb, mongodb, redis, keydb, clickhouse, dragonfly
+
+Examples:
+  coolify databases create postgresql --server-uuid=<uuid> --project-uuid=<uuid> --environment-name=production
+  coolify databases create mysql --server-uuid=<uuid> --project-uuid=<uuid> --environment-name=production --name="My MySQL"
+
+Usage:
+  coolify database create <type> [flags]
+
+Flags:
+      --clickhouse-admin-password string   Clickhouse admin password
+      --clickhouse-admin-user string       Clickhouse admin user
+      --description string                 Database description
+      --destination-uuid string            Destination UUID if server has multiple destinations
+      --dragonfly-password string          Dragonfly password
+      --environment-name string            Environment name
+      --environment-uuid string            Environment UUID
+  -h, --help                               help for create
+      --image string                       Docker image
+      --instant-deploy                     Deploy immediately after creation
+      --is-public                          Make database publicly accessible
+      --keydb-password string              KeyDB password
+      --limits-cpus string                 CPU limit (e.g., '0.5', '2')
+      --limits-memory string               Memory limit (e.g., '512m', '2g')
+      --mariadb-database string            MariaDB database name
+      --mariadb-password string            MariaDB password
+      --mariadb-root-password string       MariaDB root password
+      --mariadb-user string                MariaDB user
+      --mongo-database string              MongoDB database name
+      --mongo-root-password string         MongoDB root password
+      --mongo-root-username string         MongoDB root username
+      --mysql-database string              MySQL database name
+      --mysql-password string              MySQL password
+      --mysql-root-password string         MySQL root password
+      --mysql-user string                  MySQL user
+      --name string                        Database name
+      --postgres-db string                 PostgreSQL database name
+      --postgres-password string           PostgreSQL password
+      --postgres-user string               PostgreSQL user
+      --project-uuid string                Project UUID (required)
+      --public-port int                    Public port
+      --redis-password string              Redis password
+      --server-uuid string                 Server UUID (required)
+      --tag stringArray                    Tag to assign (repeatable)
+      --tags strings                       Comma-separated tags to assign
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

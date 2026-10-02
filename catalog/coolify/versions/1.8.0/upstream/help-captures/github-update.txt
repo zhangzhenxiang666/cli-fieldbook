@@ -1,0 +1,27 @@
+Update an existing GitHub App integration. Provide the app UUID and the fields you want to update.
+
+Usage:
+  coolify github update <app_uuid> [flags]
+
+Flags:
+      --api-url string            GitHub API URL
+      --app-id int                GitHub App ID
+      --client-id string          GitHub OAuth Client ID
+      --client-secret string      GitHub OAuth Client Secret
+      --custom-port int           Custom port for SSH
+      --custom-user string        Custom user for SSH
+  -h, --help                      help for update
+      --html-url string           GitHub HTML URL
+      --installation-id int       GitHub Installation ID
+      --name string               GitHub App name
+      --organization string       GitHub organization
+      --private-key-uuid string   UUID of private key
+      --system-wide               Is this app system-wide
+      --webhook-secret string     GitHub Webhook Secret
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

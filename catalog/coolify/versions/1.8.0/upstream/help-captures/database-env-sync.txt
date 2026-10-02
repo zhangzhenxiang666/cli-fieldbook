@@ -1,0 +1,21 @@
+Sync environment variables from a .env file. This command intelligently:
+- Updates existing environment variables with new values
+- Creates new environment variables that don't exist yet
+- Uses efficient bulk operations where possible
+
+Example: coolify db env sync abc123 --file .env.production
+
+Usage:
+  coolify database env sync <database_uuid> [flags]
+
+Flags:
+  -f, --file string   Path to .env file (required)
+  -h, --help          help for sync
+      --is-literal    Treat all values as literal (don't interpolate variables)
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

@@ -1,0 +1,25 @@
+Create a DigitalOcean server
+
+Usage:
+  coolify server digitalocean create [flags]
+
+Flags:
+      --cloud-init string    Cloud-init YAML
+      --cloud-token string   Cloud provider token UUID
+      --enable-ipv6          Enable public IPv6 (default true)
+  -h, --help                 help for create
+      --image string         DigitalOcean image ID or slug
+      --monitoring           Enable DigitalOcean monitoring (default true)
+      --name string          Server name
+      --private-key string   Coolify private key UUID
+      --region string        DigitalOcean region
+      --size string          DigitalOcean size
+      --ssh-key-ids ints     Additional DigitalOcean SSH key IDs
+      --validate             Validate after creation
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

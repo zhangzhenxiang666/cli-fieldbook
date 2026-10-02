@@ -1,0 +1,41 @@
+Create a new one-click service of the specified type.
+
+Use 'coolify service create --list-types' to see all available service types.
+
+Examples:
+  coolify service create wordpress-with-mysql --server-uuid=<uuid> --project-uuid=<uuid> --environment-name=production
+  coolify service create ghost --server-uuid=<uuid> --project-uuid=<uuid> --environment-name=production --name="My Blog"
+  coolify service create n8n --server-uuid=<uuid> --project-uuid=<uuid> --environment-name=production --instant-deploy
+
+Popular service types:
+  - wordpress-with-mysql, wordpress-with-mariadb, wordpress-without-database
+  - ghost, plausible, umami, uptime-kuma
+  - n8n, n8n-with-postgresql
+  - nextcloud, gitea, minio
+  - grafana, metabase, nocodb
+  - supabase, pocketbase, appwrite
+
+Usage:
+  coolify service create <type> [flags]
+
+Flags:
+      --description string        Service description
+      --destination-uuid string   Destination UUID if server has multiple destinations
+      --docker-compose string     Custom Docker Compose content (for advanced customization)
+      --environment-name string   Environment name
+      --environment-uuid string   Environment UUID
+  -h, --help                      help for create
+      --instant-deploy            Deploy immediately after creation
+      --list-types                List all available service types
+      --name string               Service name
+      --project-uuid string       Project UUID (required)
+      --server-uuid string        Server UUID (required)
+      --tag stringArray           Tag to assign (repeatable)
+      --tags strings              Comma-separated tags to assign
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

@@ -1,0 +1,37 @@
+Manage Coolify servers - list, get details, add new servers, validate connections, and remove servers.
+
+Usage:
+  coolify server [command]
+
+Aliases:
+  server, servers
+
+Available Commands:
+  add               Add a server
+  cloudflare-tunnel Manage Cloudflare Tunnel settings
+  destinations      Manage a server's Docker network destinations
+  digitalocean      Provision servers with DigitalOcean
+  docker-cleanup    Manage server Docker cleanup settings
+  domains           Get server domains by uuid
+  get               Get server details by uuid
+  hetzner           Provision servers with Hetzner
+  list              List all servers
+  log-drains        Manage server log drain settings
+  proxy             Manage server reverse proxy
+  remove            Remove a server
+  sentinel          Manage server Sentinel/metrics settings
+  update            Update a server
+  validate          Validate a server
+  vultr             Provision servers with Vultr
+
+Flags:
+  -h, --help   help for server
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)
+
+Use "coolify server [command] --help" for more information about a command.

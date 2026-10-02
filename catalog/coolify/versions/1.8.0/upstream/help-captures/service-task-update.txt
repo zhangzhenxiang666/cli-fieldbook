@@ -1,0 +1,24 @@
+Update a scheduled task. At least one field flag is required.
+
+Examples:
+  coolify service task update <service_uuid> <task_uuid> --name renamed
+  coolify service task update <service_uuid> <task_uuid> --frequency "0 3 * * *" --enabled=false
+
+Usage:
+  coolify service task update <service_uuid> <task_uuid> [flags]
+
+Flags:
+      --command string     Command to run
+      --container string   Container name to run the command in
+      --enabled            Whether the task is enabled (default true)
+      --frequency string   Cron expression or frequency
+  -h, --help               help for update
+      --name string        Task name
+      --timeout int        Timeout in seconds (default 300)
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

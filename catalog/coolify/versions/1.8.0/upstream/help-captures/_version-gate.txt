@@ -1,0 +1,4 @@
+captured-at: 2026-10-02T13:35:25Z
+binary: /opt/homebrew/bin/coolify
+version output:
+1.8.0

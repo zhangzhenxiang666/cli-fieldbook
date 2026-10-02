@@ -1,0 +1,28 @@
+List and manage persistent volumes and file storages for applications.
+
+Usage:
+  coolify app storage [command]
+
+Aliases:
+  storage, storages
+
+Available Commands:
+  create        Create a storage for an application
+  delete        Delete a storage from an application
+  delete-backup Delete storage volume backup schedule
+  list          List all storages for an application
+  run-backup    Run storage volume backup now
+  set-backup    Create or replace storage volume backup schedule
+  update        Update a storage for an application
+
+Flags:
+  -h, --help   help for storage
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)
+
+Use "coolify app storage [command] --help" for more information about a command.

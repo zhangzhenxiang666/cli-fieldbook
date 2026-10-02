@@ -1,0 +1,845 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/coollabsio/coolify-cli",
+  "upstreamVersion": "1.8.0",
+  "ref": "v1.8.0",
+  "commit": "ff0ea90fc40e2d5f10e993f79759f705e5e6af10",
+  "adapter": "protocol-coolify-v1",
+  "normalization": 1,
+  "profile": {
+    "id": "core-subset",
+    "scope": "public command tree core subset: 94 of 330 nodes discovered by recursive --help walk; exclusions listed in zh-CN/reference/sources.md"
+  },
+  "limitations": [
+    "Examples and workflows are untested: no live Coolify instance was used; outputs shown as expected, not observed.",
+    "Captured help comes from the locally installed Homebrew build reporting 1.8.0; not a byte-level verification of the tagged commit.",
+    "Cloud provisioning (server hetzner/digitalocean/vultr), settings surfaces, integrations, storage/task subgroups and other exclusions are not covered.",
+    "No exhaustive implementation audit beyond the in-scope command files."
+  ],
+  "evidence": [
+    {
+      "id": "source:cmd/root.go",
+      "path": "upstream/source-extracts/cmd/root.go.txt",
+      "sha256": "a667bfd55c8d3b3b17f29e15ce09f216bd955f3e8a635ef5fd7762f7957082d1",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/root.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:coolify/main.go",
+      "path": "upstream/source-extracts/coolify/main.go.txt",
+      "sha256": "2d2f5bd367c5457505336abeedb6b57563fb5853c5c5713c31025e9d85dae76a",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/coolify/main.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/application.go",
+      "path": "upstream/source-extracts/cmd/application/application.go.txt",
+      "sha256": "f726620b706198beb7d9f994c1282467a07e06e42cc7c2e6e3fb1f3281ff1e1c",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/application.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/create/create.go",
+      "path": "upstream/source-extracts/cmd/application/create/create.go.txt",
+      "sha256": "a63ab52bdc82954c11501298556f7b50b10ac0ac4f02cf2e935fd94a12f14149",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/create/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/create/public.go",
+      "path": "upstream/source-extracts/cmd/application/create/public.go.txt",
+      "sha256": "9d7051b7bd937bcd9efc4c13d7c79083a6ad9b12ec11f820ccf4577a7e8861c3",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/create/public.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/create/github.go",
+      "path": "upstream/source-extracts/cmd/application/create/github.go.txt",
+      "sha256": "30e2aa6be8633e337b560bde8874ad1fa2a9d76f3d595cfd2ba486e3ec58dee6",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/create/github.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/create/deploy_key.go",
+      "path": "upstream/source-extracts/cmd/application/create/deploy_key.go.txt",
+      "sha256": "342bc42f9ac9d169a6d37f4ba91b3deced921e038a268a6c19a11ca76c68e0c1",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/create/deploy_key.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/create/dockerfile.go",
+      "path": "upstream/source-extracts/cmd/application/create/dockerfile.go.txt",
+      "sha256": "13232198a854ba0ffadf907535a3503e14dd6423cd615ce09c1027b927860c31",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/create/dockerfile.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/create/dockerimage.go",
+      "path": "upstream/source-extracts/cmd/application/create/dockerimage.go.txt",
+      "sha256": "1396e76987891f07cfa46185f3b11891dbca38296ad872081a2ef30cdd7d2f2e",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/create/dockerimage.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/delete.go",
+      "path": "upstream/source-extracts/cmd/application/delete.go.txt",
+      "sha256": "29a0cb7c182124ecc5d41cc39b930b8e78340086565b0ed32191db3660072c9b",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/get.go",
+      "path": "upstream/source-extracts/cmd/application/get.go.txt",
+      "sha256": "f3cb23aaeaedd681a1d9447959192be28f1a280f3a4b1a9d691a7c2d927d8ee1",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/lifecycle.go",
+      "path": "upstream/source-extracts/cmd/application/lifecycle.go.txt",
+      "sha256": "76eab8c417aa5460083bf090d0950bd6316972f70a6f1cfd781058f9323dbb86",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/lifecycle.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/list.go",
+      "path": "upstream/source-extracts/cmd/application/list.go.txt",
+      "sha256": "2d228d78613c6418a7c15434f8e47382602ac8766ece01ec4bba86d06b694aad",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/logs.go",
+      "path": "upstream/source-extracts/cmd/application/logs.go.txt",
+      "sha256": "20d9ec130db04c74d95bc2781b7f93e6639d325010559a08b0a42a18797cb59a",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/logs.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/start.go",
+      "path": "upstream/source-extracts/cmd/application/start.go.txt",
+      "sha256": "ce562d08f73873700ad573035fff1228ccf71758c6c31768fd99ee35ee704acf",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/start.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/stop.go",
+      "path": "upstream/source-extracts/cmd/application/stop.go.txt",
+      "sha256": "115ced685d9b97593242d694ecf5bbbb47a9715ffb392970d378b62abeee0602",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/stop.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/restart.go",
+      "path": "upstream/source-extracts/cmd/application/restart.go.txt",
+      "sha256": "a36e0afeb3c6a5099fc0fd47a3d9c889f2d2aba9f22877f64fd7c89d588411c5",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/restart.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/env/create.go",
+      "path": "upstream/source-extracts/cmd/application/env/create.go.txt",
+      "sha256": "e0e10d69f20590a7ab63181f312793abf06e5e28775e65ca776808e1c5ce41af",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/env/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/env/delete.go",
+      "path": "upstream/source-extracts/cmd/application/env/delete.go.txt",
+      "sha256": "65c214b437f457f06cc577d14677092df30f958d0cf3cbc9f9fa02ad97f74994",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/env/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/env/get.go",
+      "path": "upstream/source-extracts/cmd/application/env/get.go.txt",
+      "sha256": "83bbad06ae292c14b6664a88a2210cd2e71c9ad794d1bc4a6b081b424141d2c1",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/env/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/env/list.go",
+      "path": "upstream/source-extracts/cmd/application/env/list.go.txt",
+      "sha256": "641f22c3b49f5ded2737370a61a5de670aa86dc9487962fe4fd8e791e5deeb75",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/env/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/env/sync.go",
+      "path": "upstream/source-extracts/cmd/application/env/sync.go.txt",
+      "sha256": "b6f660abbf4b49e5effb15bd81d3ddeba55cdca8a8046983045d366e3983ba30",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/env/sync.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/env/update.go",
+      "path": "upstream/source-extracts/cmd/application/env/update.go.txt",
+      "sha256": "f7b6fa842ba5fc12051e5fe9915c417170978b060c84b8e112c646ef2e38b31c",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/env/update.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/appflags/compose_domains.go",
+      "path": "upstream/source-extracts/cmd/application/appflags/compose_domains.go.txt",
+      "sha256": "648500d1a983adedc9f75013a28815d05d019501c281a5a9e63b3069d6a61b88",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/appflags/compose_domains.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/application/appflags/settings.go",
+      "path": "upstream/source-extracts/cmd/application/appflags/settings.go.txt",
+      "sha256": "d47293b1b26b137ad483d2d970befc946ed851d6c54f4c368a652ecaf90318a4",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/application/appflags/settings.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/database.go",
+      "path": "upstream/source-extracts/cmd/database/database.go.txt",
+      "sha256": "ce0f92537a198734f2502da79d3b0f4c98d9b613909dea010e507a13ab8043f8",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/database.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/create.go",
+      "path": "upstream/source-extracts/cmd/database/create.go.txt",
+      "sha256": "01f67186c356ce4498b2bdf988d66c7a7896f5c64cd0df807e51955a1f00c39d",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/delete.go",
+      "path": "upstream/source-extracts/cmd/database/delete.go.txt",
+      "sha256": "d8d2ecfb787f6e595d917043dd48f62c29f5ad02437fe94a5ba1fd3136ca3cad",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/get.go",
+      "path": "upstream/source-extracts/cmd/database/get.go.txt",
+      "sha256": "07d1329af3c6e43a2a918460c2c95783f883b50020cecec6a3d902b1788fe9fd",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/list.go",
+      "path": "upstream/source-extracts/cmd/database/list.go.txt",
+      "sha256": "b52e666a4cb9e57b3d036de41acb3cdcb243c9bff801e4d33be51ac13f24b967",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/logs.go",
+      "path": "upstream/source-extracts/cmd/database/logs.go.txt",
+      "sha256": "22c3f06cba9edac295ee0f790795c7217510ce73abb1633f731578dbe53ab8c4",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/logs.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/start.go",
+      "path": "upstream/source-extracts/cmd/database/start.go.txt",
+      "sha256": "08c5d7ec914add40f05291ae26945e1bafd27187018a6ae54b0457f56e62ba05",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/start.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/stop.go",
+      "path": "upstream/source-extracts/cmd/database/stop.go.txt",
+      "sha256": "beadaa6fba658c0a05f0f9ba52c8467d8b3a3e4221a952e87dcc0ef2d688db85",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/stop.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/restart.go",
+      "path": "upstream/source-extracts/cmd/database/restart.go.txt",
+      "sha256": "970ec9fab936e209a53aae18e0e056fdec5f895e7ea4d8fd9d20fd690716e1ab",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/restart.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/backup/create.go",
+      "path": "upstream/source-extracts/cmd/database/backup/create.go.txt",
+      "sha256": "68a239be8c6c7f12ce3ed000f88a75d1e4a3e3a6c9f3f53fef9ce170be43d25c",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/backup/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/backup/delete.go",
+      "path": "upstream/source-extracts/cmd/database/backup/delete.go.txt",
+      "sha256": "e21b0ab5dd4b74d94f2c405eee88a4f92f44ef853f56c40d7d06ae36f02e3a5b",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/backup/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/backup/delete-execution.go",
+      "path": "upstream/source-extracts/cmd/database/backup/delete-execution.go.txt",
+      "sha256": "1d33704782270332369eb8feb2c70220dcaffd299acb23d59f02a5bc6feceeff",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/backup/delete-execution.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/backup/execution.go",
+      "path": "upstream/source-extracts/cmd/database/backup/execution.go.txt",
+      "sha256": "edaef8686dad080e77f728298ad04908c1a43344a716f59216c70591629f80c2",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/backup/execution.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/backup/list.go",
+      "path": "upstream/source-extracts/cmd/database/backup/list.go.txt",
+      "sha256": "b70bfae75f0098c33fdc3fb4a2f234460147d01899ad0cd67efd65160f44407f",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/backup/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/backup/trigger.go",
+      "path": "upstream/source-extracts/cmd/database/backup/trigger.go.txt",
+      "sha256": "560a641bbc5d72f7f0dfa86d99c398b2c07101194e4acbfed1cd87b6cb408819",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/backup/trigger.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/backup/update.go",
+      "path": "upstream/source-extracts/cmd/database/backup/update.go.txt",
+      "sha256": "08bc0a07f9a5d985b499961a464c2e6b288777aa72a7e4d7f6894c14737052e6",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/backup/update.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/env/create.go",
+      "path": "upstream/source-extracts/cmd/database/env/create.go.txt",
+      "sha256": "10e05b63dbfda8eeec992b9dd90249cfe362a19c9aa339b03a27f862a013c4fc",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/env/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/env/delete.go",
+      "path": "upstream/source-extracts/cmd/database/env/delete.go.txt",
+      "sha256": "26b10fdd4da797b86cc96591a3bdcf8f1bdc062d9b61cd77b547f8060b2c54b8",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/env/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/env/get.go",
+      "path": "upstream/source-extracts/cmd/database/env/get.go.txt",
+      "sha256": "fe414a0db1a44a7c775ae4888005a3398c63b0b75a85004a49a6aae5f82ed16f",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/env/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/env/list.go",
+      "path": "upstream/source-extracts/cmd/database/env/list.go.txt",
+      "sha256": "a4d29ffd471a9d470dc9c55afee44c985994997a1754b72f6e79888f8cb289a6",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/env/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/env/sync.go",
+      "path": "upstream/source-extracts/cmd/database/env/sync.go.txt",
+      "sha256": "068911c6a8476cd1bada2c310deb981690e5a74ed1e17e989171352e89324000",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/env/sync.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/database/env/update.go",
+      "path": "upstream/source-extracts/cmd/database/env/update.go.txt",
+      "sha256": "a3ad9c85c0bb4045d218aa1c15800a2e6bc56ccbf3dc8518bcd40ad7203a4388",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/database/env/update.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/service.go",
+      "path": "upstream/source-extracts/cmd/service/service.go.txt",
+      "sha256": "1c037e3e0cb7601d12702d83f4cf7b73e03bb096fd41b3707bf5f6dff144a36d",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/service.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/create.go",
+      "path": "upstream/source-extracts/cmd/service/create.go.txt",
+      "sha256": "8171ef23ecaebff044e61ccfe6e8264a31a4897e12ee5af4fc7daf28cc700995",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/delete.go",
+      "path": "upstream/source-extracts/cmd/service/delete.go.txt",
+      "sha256": "604b98d0ba5eea2b08b7aacf50cdd6cfd5a548b06a0c31afd56f6de855b834f7",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/get.go",
+      "path": "upstream/source-extracts/cmd/service/get.go.txt",
+      "sha256": "da72c371dd7a449c5d5166036d261bc65d054fb1ec3d02abd9eb1a4d1d909ca8",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/list.go",
+      "path": "upstream/source-extracts/cmd/service/list.go.txt",
+      "sha256": "275cfdfd7c502a693c877d25127433093b2a90c9f579517d9079959220281587",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/logs.go",
+      "path": "upstream/source-extracts/cmd/service/logs.go.txt",
+      "sha256": "464fc599597167cd8524e936d9058974d3c434b6e31678f81e04c22d883fe9b1",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/logs.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/start.go",
+      "path": "upstream/source-extracts/cmd/service/start.go.txt",
+      "sha256": "6537ce21164eb96e7bf5f72499242f1a20016133fcfb5735390e0566e6c8dcf9",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/start.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/stop.go",
+      "path": "upstream/source-extracts/cmd/service/stop.go.txt",
+      "sha256": "b9947e14d3a83914ba9fbecf282de4feef4ffd917eb556718dd51de121ddc51b",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/stop.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/restart.go",
+      "path": "upstream/source-extracts/cmd/service/restart.go.txt",
+      "sha256": "126f6b35a1b3628cb82560f2dafb38fb784b3d1ce1da5a57331c525ef2d67c98",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/restart.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/env/create.go",
+      "path": "upstream/source-extracts/cmd/service/env/create.go.txt",
+      "sha256": "b2ef36849ef14648e112046719adef2a799864141b92febce9f7c99b627acb8d",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/env/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/env/delete.go",
+      "path": "upstream/source-extracts/cmd/service/env/delete.go.txt",
+      "sha256": "6490fd428bf283c5ce5908f213ee0116f9f54f7d5c17d3cd7e34bf0a4804e95e",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/env/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/env/env.go",
+      "path": "upstream/source-extracts/cmd/service/env/env.go.txt",
+      "sha256": "4cdf627187e6ce1b3bfa57bb99ed4ebf088823a75adeeb97ab645bbd59086562",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/env/env.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/env/get.go",
+      "path": "upstream/source-extracts/cmd/service/env/get.go.txt",
+      "sha256": "a97665e2be123ddf7c4c8d74c0a782cd2c2a0cf75f9e2da9e8546a961c506cf2",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/env/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/env/list.go",
+      "path": "upstream/source-extracts/cmd/service/env/list.go.txt",
+      "sha256": "7f6aeb3946062340179a1d86b280476030283d9771e6a08736f17e632eab7d8d",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/env/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/env/sync.go",
+      "path": "upstream/source-extracts/cmd/service/env/sync.go.txt",
+      "sha256": "e6c9b0090f6005b601ccb556f86413b40a2d7fb7f36ece238c15b6a463422e88",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/env/sync.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/service/env/update.go",
+      "path": "upstream/source-extracts/cmd/service/env/update.go.txt",
+      "sha256": "83006ad5c779fee7cc5fad4cd86b08f7f4b3ab8ab72de17e08e2efe9f0a41656",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/service/env/update.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/deployment/deployment.go",
+      "path": "upstream/source-extracts/cmd/deployment/deployment.go.txt",
+      "sha256": "b26faaa33ade7e0d4171b2fc998e79a2ea354f79ddbd135171f338cf6540c114",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/deployment/deployment.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/deployment/batch.go",
+      "path": "upstream/source-extracts/cmd/deployment/batch.go.txt",
+      "sha256": "807fac2f6429be29770c5942b36601f1881a9b5043a231ac5aa84d8d92852a46",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/deployment/batch.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/deployment/cancel.go",
+      "path": "upstream/source-extracts/cmd/deployment/cancel.go.txt",
+      "sha256": "4c11cdc8541db39a6192291295e85b614db4c643d19b50fc969f5db51487eeee",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/deployment/cancel.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/deployment/get.go",
+      "path": "upstream/source-extracts/cmd/deployment/get.go.txt",
+      "sha256": "95296649f584c38965df6dcb92f2259dcd3a5ddd9e44f36063e64e37d32eef24",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/deployment/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/deployment/list.go",
+      "path": "upstream/source-extracts/cmd/deployment/list.go.txt",
+      "sha256": "34e76b7bc837595581bb15f670f318101a584164c8769d4202394fd961a6b53c",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/deployment/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/deployment/name.go",
+      "path": "upstream/source-extracts/cmd/deployment/name.go.txt",
+      "sha256": "bb9c4e0e5bb9023e2ece4c73186e56bdd3e8d7cbd97553ab290f7c309b6de1e9",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/deployment/name.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/deployment/uuid.go",
+      "path": "upstream/source-extracts/cmd/deployment/uuid.go.txt",
+      "sha256": "6423b7dfd65ff22deab715cb30dee8a117237fa241444e720d952b08c1083853",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/deployment/uuid.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/context/context.go",
+      "path": "upstream/source-extracts/cmd/context/context.go.txt",
+      "sha256": "159143265d846f56e5fb8981d2d02903669886613f939aec81555f8a90440b15",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/context/context.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/context/add.go",
+      "path": "upstream/source-extracts/cmd/context/add.go.txt",
+      "sha256": "60e246744982652135e3a8deef21a2e24fdff3d3363a5591035572b54255f72e",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/context/add.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/context/delete.go",
+      "path": "upstream/source-extracts/cmd/context/delete.go.txt",
+      "sha256": "12b61de05053699131b1fb7ce1ce593086760b384b546fa9edfc0e077637824a",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/context/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/context/get.go",
+      "path": "upstream/source-extracts/cmd/context/get.go.txt",
+      "sha256": "ec3652a71b828fe63a792d0e961e357e67308af732c8726b2d955da026870e23",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/context/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/context/list.go",
+      "path": "upstream/source-extracts/cmd/context/list.go.txt",
+      "sha256": "f9306823c13c7c58d87f8991a24354fdacf7f0c7c21ee1f9880c204cf3c494ce",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/context/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/context/set_default.go",
+      "path": "upstream/source-extracts/cmd/context/set_default.go.txt",
+      "sha256": "7507170ee02b95e6f6f40d6a74d2f491ccaa88ac3e9fc32c680856e2e9681333",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/context/set_default.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/context/set_token.go",
+      "path": "upstream/source-extracts/cmd/context/set_token.go.txt",
+      "sha256": "07ee5a99788ad94e92d2c4c5a33a75851c1bec484b5599fac86405f51ec8ca40",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/context/set_token.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/context/use.go",
+      "path": "upstream/source-extracts/cmd/context/use.go.txt",
+      "sha256": "77b0aef6b84a281f8a08e58292e28a90a9640e3c1aa503d4d3606dd286b1c150",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/context/use.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/context/verify.go",
+      "path": "upstream/source-extracts/cmd/context/verify.go.txt",
+      "sha256": "c0c0cd12b42b41e78811f265ada3c6d7e13a4df3c77c04cda5625f4dffbb0a41",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/context/verify.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/server/server.go",
+      "path": "upstream/source-extracts/cmd/server/server.go.txt",
+      "sha256": "e8f5768f2d2e8208ecc94aad1dd5ce459cd6e2bda618b8a7d2b93b9269670635",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/server/server.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/server/add.go",
+      "path": "upstream/source-extracts/cmd/server/add.go.txt",
+      "sha256": "98fb5f7003c34ab06e11cd597a19183d7ab68a9f22236031e67bb6c1a17ccdfc",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/server/add.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/server/get.go",
+      "path": "upstream/source-extracts/cmd/server/get.go.txt",
+      "sha256": "67c2c484bff95ea55d1b8abccfd17398944bf06b824d60ca080517353d494ddb",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/server/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/server/list.go",
+      "path": "upstream/source-extracts/cmd/server/list.go.txt",
+      "sha256": "d9b0b963c49d4e079e064530b45e384c5824fc66c2d12ff1316b2beca56585b9",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/server/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/server/remove.go",
+      "path": "upstream/source-extracts/cmd/server/remove.go.txt",
+      "sha256": "2d20b84938d0931331c5885c8d7319fa8aead8f7e511930af26d810e1b955556",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/server/remove.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/server/validate.go",
+      "path": "upstream/source-extracts/cmd/server/validate.go.txt",
+      "sha256": "777997705fff86d487b239c6e077b81697800f64b48aa3d89e206c2669c128d5",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/server/validate.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/project/project.go",
+      "path": "upstream/source-extracts/cmd/project/project.go.txt",
+      "sha256": "4f4c75e7265b158c7fbefc6d99f89c80dfba0f4e46ea77a192b15bc934f57076",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/project/project.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/project/create.go",
+      "path": "upstream/source-extracts/cmd/project/create.go.txt",
+      "sha256": "02c0d244e08a4fc6a21ee82faeadb421a2c50a4fdcc922aee78ce9b42644c7ad",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/project/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/project/delete.go",
+      "path": "upstream/source-extracts/cmd/project/delete.go.txt",
+      "sha256": "5537541f5fa70ca8732e4a341670dc3c3ed1fe859a124304045571992f3d5952",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/project/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/project/get.go",
+      "path": "upstream/source-extracts/cmd/project/get.go.txt",
+      "sha256": "ca52b109ccc3ca00a10f3c803c40b422afc93ac5371103c484769c92a5b97876",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/project/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/project/list.go",
+      "path": "upstream/source-extracts/cmd/project/list.go.txt",
+      "sha256": "4b35a63581ff6cca08db651cc5654b1aa50a98dcca9d35c3964c6f2eb8c53d11",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/project/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/version/version.go",
+      "path": "upstream/source-extracts/cmd/version/version.go.txt",
+      "sha256": "5424b1e1022950db2003037966aae71289821fe5a1be635470d571cf7c7e0762",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/version/version.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:cmd/update/update.go",
+      "path": "upstream/source-extracts/cmd/update/update.go.txt",
+      "sha256": "5fedac99ee534d6ee8da7f8c6c2e22e620996f122f53eacd12c2a858778c2e71",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/cmd/update/update.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:internal/config/config.go",
+      "path": "upstream/source-extracts/internal/config/config.go.txt",
+      "sha256": "3b85e113fdc73e62d8c60fdd47822198023a6792be5408c71ee0931f39487288",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/internal/config/config.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:internal/config/instance.go",
+      "path": "upstream/source-extracts/internal/config/instance.go.txt",
+      "sha256": "1dceeb0df646e075c99efeee1eca68b3b63948c71c6c2c9a28479e1f699559b8",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/internal/config/instance.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:internal/config/loader.go",
+      "path": "upstream/source-extracts/internal/config/loader.go.txt",
+      "sha256": "e2da1c164002e6f21ac9deb09d16e2e08057dd704eeb65a54004c0cd15aa7920",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/internal/config/loader.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:internal/output/formatter.go",
+      "path": "upstream/source-extracts/internal/output/formatter.go.txt",
+      "sha256": "a13909f3139635eeee4edafb1ed184d4d68f143991f64756e5699d0bf60e5723",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/internal/output/formatter.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:internal/output/json.go",
+      "path": "upstream/source-extracts/internal/output/json.go.txt",
+      "sha256": "816c1d0a1e92ea2c2d9d5dc46bd6c0507f7878f960570396c400d9ac2188d483",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/internal/output/json.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:internal/output/pretty.go",
+      "path": "upstream/source-extracts/internal/output/pretty.go.txt",
+      "sha256": "8b808be49cad1e5e27c61dde3fbf64f2be3bbfb9a92fdca04d5cb44b0a19584e",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/internal/output/pretty.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:internal/output/table.go",
+      "path": "upstream/source-extracts/internal/output/table.go.txt",
+      "sha256": "f219ba69dda3fa0d578d89fe30bf2896240c201ddd0fd87fd4cd69967dba1213",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/internal/output/table.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:internal/version/checker.go",
+      "path": "upstream/source-extracts/internal/version/checker.go.txt",
+      "sha256": "35998bfe826cb3f40a906a1c3f8619903b957d1fb861b8ad85220d017437529a",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/internal/version/checker.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:README.md",
+      "path": "upstream/source-extracts/README.md.txt",
+      "sha256": "a61e7dae81f9fa43163b17d2b5d09084edc6bda968fabe59d8e976283c4d5bed",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/README.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:llms.txt",
+      "path": "upstream/source-extracts/llms.txt.txt",
+      "sha256": "fa13c46ab41f2c131077799823304c67a03f2c131cd15ec4ef6a68098ff62175",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/llms.txt",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    },
+    {
+      "id": "source:LICENSE",
+      "path": "upstream/source-extracts/LICENSE.txt",
+      "sha256": "9b95566a535169efa765ad1d1282ee5519f6db85b655665252ef4990f4bb12c2",
+      "url": "https://raw.githubusercontent.com/coollabsio/coolify-cli/ff0ea90fc40e2d5f10e993f79759f705e5e6af10/LICENSE",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:45:44.000Z"
+    }
+  ]
+}

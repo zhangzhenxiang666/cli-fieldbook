@@ -1,0 +1,28 @@
+Create a Hetzner server
+
+Usage:
+  coolify server hetzner create [flags]
+
+Flags:
+      --cloud-init string    Cloud-init YAML
+      --cloud-token string   Cloud provider token UUID
+      --enable-backups       Enable Hetzner backups
+      --enable-ipv4          Enable public IPv4 (default true)
+      --enable-ipv6          Enable public IPv6 (default true)
+      --firewall-ids ints    Hetzner firewall IDs
+  -h, --help                 help for create
+      --image int            Hetzner image ID
+      --location string      Hetzner location name
+      --name string          Server name (auto-generated if omitted)
+      --network-ids ints     Hetzner network IDs
+      --private-key string   Coolify private key UUID
+      --server-type string   Hetzner server type
+      --ssh-key-ids ints     Additional Hetzner SSH key IDs
+      --validate             Validate after creation
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)
