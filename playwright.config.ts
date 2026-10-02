@@ -10,5 +10,5 @@ export default defineConfig({
   ],
   // pnpm 12 starts commands in separate process groups. Launch Node directly so
   // Playwright can stop the server and close its output pipes after the tests.
-  webServer: { command: 'exec node node_modules/astro/bin/astro.mjs preview --root site --host 127.0.0.1 --port 4321 --ignore-lock', url: 'http://127.0.0.1:4321/cli-fieldbook/', reuseExistingServer: !process.env.CI }
+  webServer: { command: 'node node_modules/astro/bin/astro.mjs preview --root site --host 127.0.0.1 --port 4321 --ignore-lock', url: 'http://127.0.0.1:4321/cli-fieldbook/', reuseExistingServer: !process.env.CI }
 });
