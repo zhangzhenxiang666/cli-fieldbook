@@ -1,0 +1,33 @@
+---
+import DefaultPageTitle from '@astrojs/starlight/components/PageTitle.astro';
+import catalog from '../../../.generated/site.json';
+const meta=Astro.locals.starlightRoute.entry.data.fieldbook??{};
+const versions=catalog.versions.filter(v=>v.toolId===meta.tool);
+---
+<DefaultPageTitle {...Astro.props}/>
+{meta.tool && <div class="version-context" data-pagefind-ignore>
+  <div class="context-line"><span data-pagefind-filter="tool">{meta.tool}</span><span data-pagefind-filter="version">{meta.version}</span><span data-pagefind-filter="kind">{meta.kind}</span></div>
+  <label>阅读版本 <select id="fieldbook-version" aria-label="阅读版本">
+    {versions.map(v=>{const entity=v.pages.find(p=>p.id===meta.id);return <option selected={v.version===meta.version} value={entity?.url??v.url} data-missing={meta.id&&!entity?'true':'false'}>{v.version}{v.default?' · 默认':''}{v.publication==='draft'?' · 草稿':''}</option>})}
+  </select></label>
+  <p>固定源码核对 · 原始帮助未采集 · 示例未实测</p>
+  {meta.preview&&<strong>预览内容，尚未批准发布</strong>}
+  <p id="version-message" role="status"></p>
+</div>}
+<script>
+  const select=document.querySelector<HTMLSelectElement>('#fieldbook-version');
+  select?.addEventListener('change',()=>{
+    const option=select.selectedOptions[0];
+    if(option?.dataset.missing==='true') {
+      const message=document.querySelector('#version-message');
+      if(message){message.replaceChildren(document.createTextNode('目标版本没有同一文档。'));const link=document.createElement('a');link.href=select.value;link.textContent='打开目标版本首页';message.append(' ',link);}return;
+    }
+    location.href=select.value;
+  });
+</script>
+<style>
+  .version-context {margin-top:1rem;padding:.9rem 1rem;background:var(--sl-color-gray-7);border:1px solid var(--sl-color-hairline-light);border-radius:.5rem;font-size:.8rem;color:var(--sl-color-gray-2);}
+  .context-line {display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.6rem;} .context-line span {border:1px solid var(--sl-color-hairline);padding:.1rem .4rem;border-radius:.2rem;font-family:var(--sl-font-mono);}
+  label {display:flex;align-items:center;gap:.5rem;} select {font:inherit;padding:.3rem .5rem;background:var(--sl-color-black);color:var(--sl-color-white);border:1px solid var(--sl-color-gray-4);border-radius:.3rem;}
+  p {margin:.5rem 0 0;} strong {color:var(--sl-color-orange);} #version-message:empty {display:none;}
+</style>

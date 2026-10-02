@@ -1,0 +1,7 @@
+:root {--sl-color-accent-low:#133732;--sl-color-accent:#43b8a1;--sl-color-accent-high:#b1eadd;--sl-font-system:'PingFang SC','Microsoft YaHei',system-ui,sans-serif;}
+:root[data-theme='light'] {--sl-color-accent-low:#d4f4eb;--sl-color-accent:#116e5d;--sl-color-accent-high:#164d43;}
+.sl-markdown-content {overflow-wrap:anywhere;}
+.sl-markdown-content table {display:block;max-width:100%;overflow-x:auto;}
+.sl-markdown-content pre {max-width:100%;overflow:auto;}
+.sl-markdown-content h2 {margin-top:2.2rem;}
+@media(min-width:72rem) {.main-pane {max-width:calc(100vw - var(--sl-sidebar-width));}}

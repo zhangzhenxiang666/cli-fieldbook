@@ -1,0 +1,23 @@
+---
+const meta=Astro.locals.starlightRoute.entry.data.fieldbook??{};
+const base=import.meta.env.BASE_URL.endsWith('/')?import.meta.env.BASE_URL.slice(0,-1):import.meta.env.BASE_URL;
+---
+<button id="search-open" type="button" aria-label="搜索文档" aria-haspopup="dialog"><span aria-hidden="true">⌕ <span class="search-label">搜索文档</span></span><kbd>⌘ / Ctrl K</kbd></button>
+<dialog data-base={base} id="fieldbook-search" aria-labelledby="search-title" data-tool={meta.tool??''} data-version={meta.version??''}>
+  <div class="search-heading"><h2 id="search-title">搜索文档与标识</h2><button type="button" id="search-close" aria-label="关闭搜索">×</button></div>
+  <label class="query-label" for="search-query">命令、选项、函数或中文关键词</label>
+  <input id="search-query" type="search" placeholder="例如 jj log、-r、parents()、超时" autocomplete="off"/>
+  <label class="scope-label" for="search-scope">搜索范围 <select id="search-scope"><option value="current" selected={!!meta.tool}>{meta.tool?`${meta.tool} ${meta.version}`:'全部工具和版本'}</option>{meta.tool&&<option value="all">全部工具和版本</option>}</select></label>
+  <p id="search-status" role="status">输入关键词开始搜索。</p>
+  <ol id="search-results"></ol>
+</dialog>
+<script is:inline type="module" src={`${base}/search.js`}></script>
+<style>
+  #search-open {display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:.55rem .8rem;border:1px solid var(--sl-color-gray-5);border-radius:.45rem;background:var(--sl-color-gray-7);color:var(--sl-color-gray-2);font:inherit;cursor:pointer;width:min(100%,26rem);}
+  kbd {font-size:.65rem;white-space:nowrap;} dialog {width:min(42rem,calc(100vw - 2rem));max-height:80vh;overflow:auto;padding:1.5rem;border:1px solid var(--sl-color-gray-5);border-radius:.75rem;background:var(--sl-color-black);color:var(--sl-color-white);box-shadow:0 1rem 4rem #0006;}
+  dialog::backdrop {background:#081a20aa;backdrop-filter:blur(3px);} .search-heading {display:flex;align-items:center;justify-content:space-between;} h2 {font-size:1.15rem;margin:0;} #search-close {font:inherit;font-size:1.4rem;border:0;background:none;color:inherit;cursor:pointer;padding:.3rem .5rem;}
+  label {font-size:.8rem;color:var(--sl-color-gray-2);} .query-label {display:block;margin:.8rem 0 .4rem;} input {width:100%;font:inherit;padding:.7rem .8rem;border:1px solid var(--sl-color-gray-4);border-radius:.4rem;background:var(--sl-color-gray-7);color:inherit;} input:focus {outline:2px solid var(--sl-color-accent);outline-offset:2px;}
+  .scope-label {display:flex;align-items:center;gap:.6rem;margin-top:.7rem;} select {max-width:100%;padding:.3rem;font:inherit;background:var(--sl-color-black);color:inherit;border:1px solid var(--sl-color-gray-4);border-radius:.3rem;}
+  #search-status {font-size:.8rem;color:var(--sl-color-gray-3);} ol {list-style:none;margin:0;padding:0;} :global(#search-results li) {padding:.8rem 0;border-top:1px solid var(--sl-color-hairline-light);} :global(#search-results a) {font-weight:600;display:block;overflow-wrap:anywhere;} :global(#search-results small) {font-size:.7rem;color:var(--sl-color-gray-3);} :global(#search-results p) {font-size:.8rem;margin:.3rem 0 0;}
+  @media(max-width:50rem){kbd{display:none;}.search-label{display:none;}#search-open{width:2.5rem;height:2.5rem;justify-content:center;flex-shrink:0;gap:0;}dialog{padding:1rem;}}
+</style>

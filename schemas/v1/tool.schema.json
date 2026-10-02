@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cli-fieldbook.invalid/schemas/v1/tool",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "binary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repository": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "defaults": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "name",
+    "binary",
+    "repository"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,13 @@
+CLI Fieldbook / 令册
+Copyright 2026 CLI Fieldbook contributors.
+Original code and original Chinese prose are licensed under Apache-2.0.
+
+This is an unofficial reference. Translation is not endorsement or runtime certification.
+
+Herdr 0.9.3: herdrdev/herdr, Apache-2.0.
+Jujutsu 0.45.1: The Jujutsu Authors, Apache-2.0.
+Each catalog tool retains attribution, fixed upstream LICENSE snapshots, and source notices.
+Original upstream copyrights and notices remain applicable to excerpts and translations.
+
+Generated website dependencies, including Astro, Starlight and Pagefind, retain their own licenses.
+Dependency source and license information are available through the pinned package lock and packages.

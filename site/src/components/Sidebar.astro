@@ -1,0 +1,24 @@
+---
+import catalog from '../../../.generated/site.json';
+const meta=Astro.locals.starlightRoute.entry.data.fieldbook??{};
+const current=catalog.versions.find(v=>v.toolId===meta.tool&&v.version===meta.version);
+const labels={commands:'命令参考',concepts:'概念',workflows:'工作流',reference:'专题参考与来源'};
+const active=(url)=>Astro.url.pathname===url;
+---
+<nav aria-label="工具与文档">
+  <a class="fieldbook-home" href={`${import.meta.env.BASE_URL.replace(/\/$/,'')}/`}>← 全部工具</a>
+  {current ? <>
+    <a class="tool-title" href={current.url}>{current.name} <span>{current.version}</span></a>
+    {Object.entries(labels).map(([kind,label])=><details open={kind===meta.kind || meta.kind==='overview'}>
+      <summary>{label}<span class="count">{current.pages.filter(p=>p.kind===kind).length}</span></summary>
+      <ul>{current.pages.filter(p=>p.kind===kind).map(p=><li><a href={p.url} aria-current={active(p.url)?'page':undefined}>{p.title}</a></li>)}</ul>
+    </details>)}
+  </> : catalog.versions.map(v=><a class="tool-title" href={v.url}>{v.name} <span>{v.version}</span></a>)}
+</nav>
+<style>
+  nav {font-size:.9rem;} a {display:block;text-decoration:none;color:var(--sl-color-gray-2);padding:.4rem .65rem;border-radius:.35rem;overflow-wrap:anywhere;}
+  a:hover {background:var(--sl-color-gray-6);color:var(--sl-color-white);} a[aria-current=page] {background:var(--sl-color-accent-low);color:var(--sl-color-accent-high);}
+  .tool-title {font-weight:700;font-size:1rem;margin:.7rem 0;} .tool-title span {font-weight:400;font-size:.8rem;}
+  summary {cursor:pointer;font-weight:600;padding:.6rem .4rem;display:list-item;} .count {font-size:.75rem;font-weight:400;float:right;color:var(--sl-color-gray-3);}
+  ul {list-style:none;padding:0;margin:0 0 .75rem;} li {margin:0;} .fieldbook-home {font-size:.8rem;}
+</style>

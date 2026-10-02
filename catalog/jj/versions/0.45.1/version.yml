@@ -1,0 +1,5 @@
+schema: 1
+upstream:
+  version: 0.45.1
+  ref: v0.45.1
+publication: published

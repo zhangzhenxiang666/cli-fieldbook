@@ -1,0 +1,43 @@
+{
+  "name": "cli-fieldbook",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@12.6.0",
+  "engines": {
+    "node": "24.20.0",
+    "pnpm": "12.6.0"
+  },
+  "scripts": {
+    "docs": "tsx pipeline/cli/main.ts",
+    "check": "pnpm run docs check && tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "build": "pnpm run docs build",
+    "dev": "pnpm run docs generate --preview && astro dev --root site --host 127.0.0.1 --ignore-lock",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "0.42.5",
+    "astro": "7.3.5",
+    "pagefind": "1.5.2",
+    "ajv": "8.17.1",
+    "yaml": "2.8.1",
+    "unified": "11.0.5",
+    "remark-parse": "11.0.0",
+    "remark-gfm": "4.0.1",
+    "remark-stringify": "11.0.0",
+    "mdast-util-to-string": "4.0.0",
+    "unist-util-visit": "5.0.0",
+    "github-slugger": "2.0.0",
+    "fflate": "0.8.2",
+    "jsonc-parser": "3.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@types/node": "24.7.0",
+    "@types/mdast": "4.0.4",
+    "typescript": "5.9.3",
+    "tsx": "4.20.6"
+  }
+}

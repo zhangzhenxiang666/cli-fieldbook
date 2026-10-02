@@ -1,0 +1,196 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/herdrdev/herdr",
+  "upstreamVersion": "0.9.3",
+  "ref": "v0.9.3",
+  "commit": "7b116c05bfda646af39d2524c54e70c751f57ee8",
+  "adapter": "legacy-herdr-v1",
+  "normalization": 1,
+  "profile": {
+    "id": "source-default",
+    "scope": "125 public help nodes; internal entries documented separately"
+  },
+  "evidence": [
+    {
+      "id": "legacy:commands",
+      "path": "upstream/legacy-commands.json",
+      "sha256": "823c97413667be8c9fcd74fa3c741527b7ec5b7312cb48b429bc70c6156dff1e",
+      "url": "https://github.com/zhangzhenxiang666/cli-fieldbook/blob/main/imports/legacy/herdr-v0.9.3-zh.zip",
+      "method": "legacy-import",
+      "obtainedAt": "2026-10-02T02:24:44.788Z"
+    },
+    {
+      "id": "source:LICENSE",
+      "path": "upstream/source-extracts/LICENSE.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/LICENSE",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:43.729Z"
+    },
+    {
+      "id": "source:src/cli.rs",
+      "path": "upstream/source-extracts/src/cli.rs.txt",
+      "sha256": "78e8a01db25d238c1445f155219023bf249ce7acbcbb9b45eea8ff6bffe74a40",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:43.759Z"
+    },
+    {
+      "id": "source:src/cli/agent.rs",
+      "path": "upstream/source-extracts/src/cli/agent.rs.txt",
+      "sha256": "652568964b4b035f93a013a4da8219d50d9d6e22bbeb703660e9787e98bb2353",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/agent.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:43.758Z"
+    },
+    {
+      "id": "source:src/cli/api.rs",
+      "path": "upstream/source-extracts/src/cli/api.rs.txt",
+      "sha256": "8e01cfd17c631019501b55f532bd6e37ba3a7b089e26281f6972ff23d13ac8b4",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/api.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:43.757Z"
+    },
+    {
+      "id": "source:src/cli/integration.rs",
+      "path": "upstream/source-extracts/src/cli/integration.rs.txt",
+      "sha256": "41eb23a82e8ac5dc7c5cee1d952bf40a6fd91451d91e3deedfeeb6b4d6cc34c1",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/integration.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:43.757Z"
+    },
+    {
+      "id": "source:src/cli/pane.rs",
+      "path": "upstream/source-extracts/src/cli/pane.rs.txt",
+      "sha256": "1306443209bf232b5a900260b2e102d61328ee88dc762a20cb26af902a5fc7ff",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/pane.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:43.760Z"
+    },
+    {
+      "id": "source:src/cli/plugin.rs",
+      "path": "upstream/source-extracts/src/cli/plugin.rs.txt",
+      "sha256": "25271503b362915553e871f24bb801a1751f276fdd0dc2240f04555aac41984e",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/plugin.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:43.974Z"
+    },
+    {
+      "id": "source:src/cli/runtime.rs",
+      "path": "upstream/source-extracts/src/cli/runtime.rs.txt",
+      "sha256": "d0ef1247d77dc67d3da4870f0a39b93b824e38a3579dd4d28936172a416e8264",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/runtime.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:43.991Z"
+    },
+    {
+      "id": "source:src/cli/server.rs",
+      "path": "upstream/source-extracts/src/cli/server.rs.txt",
+      "sha256": "3b2e7b410c44f290bd70bb800f2f3fe716be23402778b5a7ed608d3098097fb7",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/server.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.000Z"
+    },
+    {
+      "id": "source:src/cli/spec.rs",
+      "path": "upstream/source-extracts/src/cli/spec.rs.txt",
+      "sha256": "2836109545d02bb2769c18e18194f675fc77587088302601394a790c590fe3d3",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/spec.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.003Z"
+    },
+    {
+      "id": "source:src/cli/spec/completion.rs",
+      "path": "upstream/source-extracts/src/cli/spec/completion.rs.txt",
+      "sha256": "b7d7666fa1aef15e5b18fcf3e49b3e6d6f5b35ad1c1cdf5fd8b268fd4dea4708",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/spec/completion.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.000Z"
+    },
+    {
+      "id": "source:src/cli/spec/machine.rs",
+      "path": "upstream/source-extracts/src/cli/spec/machine.rs.txt",
+      "sha256": "efc50a19f0b2f3386dca0a9f2b3ab71da19453f3b6de9e11060c2fea4423e7b2",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/spec/machine.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.001Z"
+    },
+    {
+      "id": "source:src/cli/status.rs",
+      "path": "upstream/source-extracts/src/cli/status.rs.txt",
+      "sha256": "fbb163e6e5f3b006706dd8a5892e81c8174be2492221adb3b440b7dc01383c4c",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/status.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.224Z"
+    },
+    {
+      "id": "source:src/cli/tab.rs",
+      "path": "upstream/source-extracts/src/cli/tab.rs.txt",
+      "sha256": "6931472552378195f96b7341cc8bf74377cfd90069c298e464ff750069e64049",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/tab.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.237Z"
+    },
+    {
+      "id": "source:src/cli/target.rs",
+      "path": "upstream/source-extracts/src/cli/target.rs.txt",
+      "sha256": "b241c59b8d97946597effb328d1d439b9c5710a00c4f1992bd02901d387003eb",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/target.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.265Z"
+    },
+    {
+      "id": "source:src/cli/workspace.rs",
+      "path": "upstream/source-extracts/src/cli/workspace.rs.txt",
+      "sha256": "8f554691e91351e43aeee61533c86e8021cb242ec2f8ebd71b4cee1d65bb4eec",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/workspace.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.265Z"
+    },
+    {
+      "id": "source:src/cli/worktree.rs",
+      "path": "upstream/source-extracts/src/cli/worktree.rs.txt",
+      "sha256": "1f4293ff00f6c436b06797adea3f16c3cf46780a10c19cd8193c24baa3014c4f",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/cli/worktree.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.264Z"
+    },
+    {
+      "id": "source:src/detect/mod.rs",
+      "path": "upstream/source-extracts/src/detect/mod.rs.txt",
+      "sha256": "9ec4a358d9ca7a2756addb8f8cd24267776272c1c5e9c7a9172d8fb67efc830d",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/detect/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.268Z"
+    },
+    {
+      "id": "source:src/integration/mod.rs",
+      "path": "upstream/source-extracts/src/integration/mod.rs.txt",
+      "sha256": "93318c4b1cc04fa532bd0cdd942bd9f6ad66570bd97eac61f2fff0fe06d0f0a8",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/integration/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.469Z"
+    },
+    {
+      "id": "source:src/integration/registry.rs",
+      "path": "upstream/source-extracts/src/integration/registry.rs.txt",
+      "sha256": "5108d69cdd7db363ec74839aeffec9c746da3d7a440c1e05f5401a698e0e38b0",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/integration/registry.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.479Z"
+    },
+    {
+      "id": "source:src/main.rs",
+      "path": "upstream/source-extracts/src/main.rs.txt",
+      "sha256": "721963928b8aa460497f19d929b9dde14c32ab6f2db593b8eab9f561d804dc6c",
+      "url": "https://raw.githubusercontent.com/herdrdev/herdr/7b116c05bfda646af39d2524c54e70c751f57ee8/src/main.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:44.785Z"
+    }
+  ],
+  "limitations": [
+    "未采集目标二进制原始帮助。",
+    "示例和工作流未实测。",
+    "初始来源为旧中文资料与固定提交源码；结构审核不等于全量实现审计。"
+  ]
+}

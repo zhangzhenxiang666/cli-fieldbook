@@ -1,0 +1,1317 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/jj-vcs/jj",
+  "upstreamVersion": "0.45.1",
+  "ref": "v0.45.1",
+  "commit": "7c41cdeb16b6b321c64e789a966b6adf723816a5",
+  "adapter": "legacy-jj-v1",
+  "normalization": 1,
+  "profile": {
+    "id": "source-default",
+    "scope": "122 public nodes, 26 hidden debug nodes, 5 feature-gated bench nodes"
+  },
+  "evidence": [
+    {
+      "id": "legacy:commands",
+      "path": "upstream/legacy-commands.json",
+      "sha256": "e41e5ddd44decc86c069cd144040135972a68f974b676c4ec9b04846080645c4",
+      "url": "https://github.com/zhangzhenxiang666/cli-fieldbook/blob/main/imports/legacy/jj-v0.45.1-zh-revsets.zip",
+      "method": "legacy-import",
+      "obtainedAt": "2026-10-02T02:24:53.720Z"
+    },
+    {
+      "id": "source:CHANGELOG.md",
+      "path": "upstream/source-extracts/CHANGELOG.md.txt",
+      "sha256": "05c34fb8d81f4de624c4f6754f6e31abdee14942ce3f32cc6925b7775b393c76",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/CHANGELOG.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.088Z"
+    },
+    {
+      "id": "source:cli/src/cli_util.rs",
+      "path": "upstream/source-extracts/cli/src/cli_util.rs.txt",
+      "sha256": "ee1eb31d16c0b5a920ea80ad2f73ff4183b83450013f63dacb8402f2f77f1e2d",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/cli_util.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.089Z"
+    },
+    {
+      "id": "source:cli/src/commands/abandon.rs",
+      "path": "upstream/source-extracts/cli/src/commands/abandon.rs.txt",
+      "sha256": "fc1d2eb9083843868ef05657ddf192609ddc87f7c520aa8244651e7d749e1107",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/abandon.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.072Z"
+    },
+    {
+      "id": "source:cli/src/commands/absorb.rs",
+      "path": "upstream/source-extracts/cli/src/commands/absorb.rs.txt",
+      "sha256": "5fb37c9c989068425e1edddb8c6fe29557f5c3d2a9a75b73325060782ed9beab",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/absorb.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.072Z"
+    },
+    {
+      "id": "source:cli/src/commands/arrange.rs",
+      "path": "upstream/source-extracts/cli/src/commands/arrange.rs.txt",
+      "sha256": "fd8f032ae593db57b7114e009ab08f4b5cbb5b28d6266878e683736105615374",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/arrange.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.088Z"
+    },
+    {
+      "id": "source:cli/src/commands/bench/common_ancestors.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bench/common_ancestors.rs.txt",
+      "sha256": "987ec0a82da0a776810525a3989c8f8b3219aeb9e758110d78fcada9f3952a00",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bench/common_ancestors.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.323Z"
+    },
+    {
+      "id": "source:cli/src/commands/bench/is_ancestor.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bench/is_ancestor.rs.txt",
+      "sha256": "64fb5b2f80a60c1c38976c6741766eb62c24d6bbf768c45b2b7edec037ce6a10",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bench/is_ancestor.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.323Z"
+    },
+    {
+      "id": "source:cli/src/commands/bench/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bench/mod.rs.txt",
+      "sha256": "1c884c5691eb70ab3781262274ffe5a5bf3ffec391af2d25dcd1c98be62ca68f",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bench/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.323Z"
+    },
+    {
+      "id": "source:cli/src/commands/bench/resolve_prefix.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bench/resolve_prefix.rs.txt",
+      "sha256": "416e18b9440072c650fdbb6e61fd62bc3432148297d79d1bce3b5b237adb4691",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bench/resolve_prefix.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.329Z"
+    },
+    {
+      "id": "source:cli/src/commands/bench/revset.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bench/revset.rs.txt",
+      "sha256": "626cb3cfef07381e4f7fd6733ca261c5b7b7fac5b41d0da606f45bd092d6985e",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bench/revset.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.334Z"
+    },
+    {
+      "id": "source:cli/src/commands/bisect/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bisect/mod.rs.txt",
+      "sha256": "dec10819fe1d2d46efdfcf3283578b1e00d55c1115b135324ec6bbb5eaf46366",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bisect/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.334Z"
+    },
+    {
+      "id": "source:cli/src/commands/bisect/run.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bisect/run.rs.txt",
+      "sha256": "3e5c3cebd3ce0233133eec998c4692503bb9b240175278ed19b3ade4b963d1c2",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bisect/run.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.566Z"
+    },
+    {
+      "id": "source:cli/src/commands/bookmark/advance.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bookmark/advance.rs.txt",
+      "sha256": "737d73739915be950eca4b2d6c07372b2cc6b5ff107bb4858ad5d4c98d61910f",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bookmark/advance.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.565Z"
+    },
+    {
+      "id": "source:cli/src/commands/bookmark/create.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bookmark/create.rs.txt",
+      "sha256": "d4840c4f11801c52e38b471725a7a06c3f87c803d03d1e5267bb360e8b98c123",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bookmark/create.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.566Z"
+    },
+    {
+      "id": "source:cli/src/commands/bookmark/delete.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bookmark/delete.rs.txt",
+      "sha256": "39654d69399fc45f241a20555ff95ab24233a1b81fb445290f2cdc2b9d88f6fa",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bookmark/delete.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.581Z"
+    },
+    {
+      "id": "source:cli/src/commands/bookmark/forget.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bookmark/forget.rs.txt",
+      "sha256": "93d072a69c9446b059e696b7e00db281809a22047c6caa3b19eb6241974162de",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bookmark/forget.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.580Z"
+    },
+    {
+      "id": "source:cli/src/commands/bookmark/list.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bookmark/list.rs.txt",
+      "sha256": "a8bc50e0efe2eedd4a42a7badc9cccb7f08dcab2867234ad0aa8ba359a2b9487",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bookmark/list.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.580Z"
+    },
+    {
+      "id": "source:cli/src/commands/bookmark/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bookmark/mod.rs.txt",
+      "sha256": "923b7b82d3c049e1c79ea38ad5fa3ffe65516bd914c3ffc27a0483c1dd542864",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bookmark/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.834Z"
+    },
+    {
+      "id": "source:cli/src/commands/bookmark/move.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bookmark/move.rs.txt",
+      "sha256": "8a00a18a67b67aaa0c747e579c418629ce42b841ae96386d6514dac75b8002f2",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bookmark/move.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.834Z"
+    },
+    {
+      "id": "source:cli/src/commands/bookmark/rename.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bookmark/rename.rs.txt",
+      "sha256": "c047e20eb7ebe6a08e830da189acde3ba6d8c97126078b12aa9e3fa95023fe7e",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bookmark/rename.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.833Z"
+    },
+    {
+      "id": "source:cli/src/commands/bookmark/set.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bookmark/set.rs.txt",
+      "sha256": "ef59f18e4a40a4d32b6e140496034d9bfef610d5432fa4b9d3aaadeed9d299b6",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bookmark/set.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.834Z"
+    },
+    {
+      "id": "source:cli/src/commands/bookmark/track.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bookmark/track.rs.txt",
+      "sha256": "06cee3dd65502f5607645cf65f7635bee9b1ea0e45cde23aaaaa49f3059a9728",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bookmark/track.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.834Z"
+    },
+    {
+      "id": "source:cli/src/commands/bookmark/untrack.rs",
+      "path": "upstream/source-extracts/cli/src/commands/bookmark/untrack.rs.txt",
+      "sha256": "ef9cc6a5c670f38de6c2eca79f69d7e22c2198a8f00032d5c3fce81a7e6e0b6b",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/bookmark/untrack.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.834Z"
+    },
+    {
+      "id": "source:cli/src/commands/commit.rs",
+      "path": "upstream/source-extracts/cli/src/commands/commit.rs.txt",
+      "sha256": "34913520c54c541d7b4cc42ecc34ac36053609e5d76082523bb8730ac6cb3c6c",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/commit.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:46.104Z"
+    },
+    {
+      "id": "source:cli/src/commands/config/edit.rs",
+      "path": "upstream/source-extracts/cli/src/commands/config/edit.rs.txt",
+      "sha256": "b477e4abffda17fa9fdbdbdca129924f2acabaa9684e339fc32de754f27c56af",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/config/edit.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:46.104Z"
+    },
+    {
+      "id": "source:cli/src/commands/config/gc.rs",
+      "path": "upstream/source-extracts/cli/src/commands/config/gc.rs.txt",
+      "sha256": "8f6765a6a413497924787f98bdf7c42597fd631c1828d777ced245f33edddab1",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/config/gc.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:46.104Z"
+    },
+    {
+      "id": "source:cli/src/commands/config/get.rs",
+      "path": "upstream/source-extracts/cli/src/commands/config/get.rs.txt",
+      "sha256": "b687a4dced2c5ac89c2b4cbeff4ef3737c75205288dee4ae3c5aa25a119fc22b",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/config/get.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:46.103Z"
+    },
+    {
+      "id": "source:cli/src/commands/config/list.rs",
+      "path": "upstream/source-extracts/cli/src/commands/config/list.rs.txt",
+      "sha256": "8c88fbfb5827f704b54372d373d1183680cc954a7e29439b49d65a44142334e3",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/config/list.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:46.106Z"
+    },
+    {
+      "id": "source:cli/src/commands/config/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/config/mod.rs.txt",
+      "sha256": "0f03c3404229397cad74ba3fd4821d7cb4587208a58aed9d23bd95d7258d7b76",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/config/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:46.103Z"
+    },
+    {
+      "id": "source:cli/src/commands/config/path.rs",
+      "path": "upstream/source-extracts/cli/src/commands/config/path.rs.txt",
+      "sha256": "fc74e31f9c55ad9dc983a8353fab2c34608bb5c76608a91051aa737af4b0e351",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/config/path.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:47.529Z"
+    },
+    {
+      "id": "source:cli/src/commands/config/set.rs",
+      "path": "upstream/source-extracts/cli/src/commands/config/set.rs.txt",
+      "sha256": "f90ad1c82e6116d7d567eec4ca8b17395f155c99b8d9e8f467f32eb32db0ec55",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/config/set.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:47.119Z"
+    },
+    {
+      "id": "source:cli/src/commands/config/unset.rs",
+      "path": "upstream/source-extracts/cli/src/commands/config/unset.rs.txt",
+      "sha256": "1afd566194bfe520430cb30289929272677db6d1be296dbdf8a2a262f136f7c1",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/config/unset.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:47.528Z"
+    },
+    {
+      "id": "source:cli/src/commands/converge.rs",
+      "path": "upstream/source-extracts/cli/src/commands/converge.rs.txt",
+      "sha256": "335adcaf1d012a9155ed837101985ab0d4d209766fd7f3d0b3048409bbe4a6dd",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/converge.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:46.401Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/copy_detection.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/copy_detection.rs.txt",
+      "sha256": "a8f27dca672474111f0469ed632f12b4cffd0dcb7a6b383fd75ba706c8a362c9",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/copy_detection.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:47.528Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/fileset.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/fileset.rs.txt",
+      "sha256": "6f9b83961ffb3cf3d9a526b0a73efee683dd68caeb8aef4c70fe4566ca560719",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/fileset.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:47.528Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/index_changed_paths.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/index_changed_paths.rs.txt",
+      "sha256": "d67e04519fe9b7ffe74589c18d38c3e2c1baa3284583baad22cb5a2c24119d48",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/index_changed_paths.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:47.528Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/index.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/index.rs.txt",
+      "sha256": "c92506bb0ab46566f8c49b5eff06a42d59de38ae5cc7a7b5f7f80db5180d33ec",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/index.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:46.943Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/init_simple.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/init_simple.rs.txt",
+      "sha256": "590e63a7388dae44ebec087a3818405773e78891850597744e6d3382865cabd9",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/init_simple.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:48.161Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/local_working_copy.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/local_working_copy.rs.txt",
+      "sha256": "6553d2ae0eff93ae855ad8a8ecf5ec6e728af03a97af269590ceb6d4cfbb0249",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/local_working_copy.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:48.672Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/mod.rs.txt",
+      "sha256": "44b86d86db26a26b2a9fe9806d9af3f3cc02d23d77c2fdf4703f421bc58cd7c4",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:48.673Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/object.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/object.rs.txt",
+      "sha256": "d4197366a015938c192ea1ffd61d44ca771caefe48f2f2c5fbf311e8c99dc97e",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/object.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:48.646Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/reindex.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/reindex.rs.txt",
+      "sha256": "dc014c02e2d4ac68dd5696dcc2eae710397d42f856b39d8dd39d9e338c77efc5",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/reindex.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:47.836Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/revset.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/revset.rs.txt",
+      "sha256": "8de0a0533fcd02b0e98d6371ef93c02e93ae058ef9a437e88168f211d5dbdd14",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/revset.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:47.835Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/snapshot.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/snapshot.rs.txt",
+      "sha256": "b5d7d52000dbf3123188fa01455164650cf3fc7863f871be77f446e3684f1c47",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/snapshot.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:48.166Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/stacked_table.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/stacked_table.rs.txt",
+      "sha256": "9981dd579155a5b62ce30b06daf695e4252c742433796cebf02fc9f35868eee5",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/stacked_table.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:48.834Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/template.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/template.rs.txt",
+      "sha256": "316d31c676ed269cfeae5bfff6b140f877320aa01eb6d340854028ead8b7b12d",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/template.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:48.898Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/tree.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/tree.rs.txt",
+      "sha256": "6e19ca0ba3c11920e727a49420184e1f69b9e67d9e44037ce973c0c5b18047fd",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/tree.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:48.898Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/watchman.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/watchman.rs.txt",
+      "sha256": "77b854469cd352b206d629319cdc9846140c6acba7a7cf9459dbec3d41e25cbc",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/watchman.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:48.899Z"
+    },
+    {
+      "id": "source:cli/src/commands/debug/working_copy.rs",
+      "path": "upstream/source-extracts/cli/src/commands/debug/working_copy.rs.txt",
+      "sha256": "fcaffbaa4f673822667c74bcc4ffdb804180b4433cc4c1219609905211266324",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/debug/working_copy.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:48.909Z"
+    },
+    {
+      "id": "source:cli/src/commands/describe.rs",
+      "path": "upstream/source-extracts/cli/src/commands/describe.rs.txt",
+      "sha256": "aa1a540cd6d2d00266e589117e9f0c3baaf7e91c1710047c36da2c97c4374d13",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/describe.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:48.912Z"
+    },
+    {
+      "id": "source:cli/src/commands/diff.rs",
+      "path": "upstream/source-extracts/cli/src/commands/diff.rs.txt",
+      "sha256": "c63fa21a4f9050c43caabebb293ea6a594e190d3697b741c8d6e83d694812dc1",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/diff.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.082Z"
+    },
+    {
+      "id": "source:cli/src/commands/diffedit.rs",
+      "path": "upstream/source-extracts/cli/src/commands/diffedit.rs.txt",
+      "sha256": "1f80b40afdee5cf902448782c4cac6327f834537a95dbd5ad85cae11e59cb772",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/diffedit.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.140Z"
+    },
+    {
+      "id": "source:cli/src/commands/duplicate.rs",
+      "path": "upstream/source-extracts/cli/src/commands/duplicate.rs.txt",
+      "sha256": "9f7a1bf3cf957f90a0fdb77e34deadb8995d1ad04319e3248038aab7bcd67ea7",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/duplicate.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.140Z"
+    },
+    {
+      "id": "source:cli/src/commands/edit.rs",
+      "path": "upstream/source-extracts/cli/src/commands/edit.rs.txt",
+      "sha256": "e6a67937a65827b7c94ea03d3fe33d5fbc1b67a4ec4b798cc584a71ce8d96c1a",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/edit.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.139Z"
+    },
+    {
+      "id": "source:cli/src/commands/evolog.rs",
+      "path": "upstream/source-extracts/cli/src/commands/evolog.rs.txt",
+      "sha256": "90e84f21230956acd0fafbf969696f81d0b31412fb7e9d4e29745a08157d9ce8",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/evolog.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.157Z"
+    },
+    {
+      "id": "source:cli/src/commands/file/annotate.rs",
+      "path": "upstream/source-extracts/cli/src/commands/file/annotate.rs.txt",
+      "sha256": "c9e56b27373830e7b46c334cee0f68706db4c5351fa8092b05d0d1bc3ceff48a",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/file/annotate.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.158Z"
+    },
+    {
+      "id": "source:cli/src/commands/file/chmod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/file/chmod.rs.txt",
+      "sha256": "480b97a4344fb85c796714dd0b6492c53b3abb340cb6641ac10f305f763d2f6c",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/file/chmod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.316Z"
+    },
+    {
+      "id": "source:cli/src/commands/file/list.rs",
+      "path": "upstream/source-extracts/cli/src/commands/file/list.rs.txt",
+      "sha256": "716fe16060f30e123e634bddbba78abe5a2b34118872bb9a3cbf62a5ef67cb69",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/file/list.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.371Z"
+    },
+    {
+      "id": "source:cli/src/commands/file/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/file/mod.rs.txt",
+      "sha256": "db3a2457a7e087af52d3655310e00f48168b7681e6a4bc3d4927e513798152ca",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/file/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.375Z"
+    },
+    {
+      "id": "source:cli/src/commands/file/search.rs",
+      "path": "upstream/source-extracts/cli/src/commands/file/search.rs.txt",
+      "sha256": "f0aff80aded1882efc4a47eb4e687edfccec9a7a19f4b4a6926f122e6a90f7ed",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/file/search.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.372Z"
+    },
+    {
+      "id": "source:cli/src/commands/file/show.rs",
+      "path": "upstream/source-extracts/cli/src/commands/file/show.rs.txt",
+      "sha256": "ec3607380c3a2dbc79c07a8a9f0f405b3053b925d9d4db756c549813cd5165ec",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/file/show.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.392Z"
+    },
+    {
+      "id": "source:cli/src/commands/file/track.rs",
+      "path": "upstream/source-extracts/cli/src/commands/file/track.rs.txt",
+      "sha256": "51694bc6beff451b9758d15ac3b0b1618585210e65d669605d0166b4fa27735a",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/file/track.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.392Z"
+    },
+    {
+      "id": "source:cli/src/commands/file/untrack.rs",
+      "path": "upstream/source-extracts/cli/src/commands/file/untrack.rs.txt",
+      "sha256": "86278148e35e475b4b176cd0edee076ca2b596b3ecf83c9120994d170ee351b7",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/file/untrack.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.592Z"
+    },
+    {
+      "id": "source:cli/src/commands/fix.rs",
+      "path": "upstream/source-extracts/cli/src/commands/fix.rs.txt",
+      "sha256": "3c4659041ac1ce0af044964429eb3b89986fec4bd7dac43c364e1c9c9bb32200",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/fix.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.619Z"
+    },
+    {
+      "id": "source:cli/src/commands/gerrit/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/gerrit/mod.rs.txt",
+      "sha256": "3feb6ac733b271ca75cf0c2d056a1476de15cb0d47a00a506e4f3717a1ec1c6d",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/gerrit/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.618Z"
+    },
+    {
+      "id": "source:cli/src/commands/gerrit/upload.rs",
+      "path": "upstream/source-extracts/cli/src/commands/gerrit/upload.rs.txt",
+      "sha256": "94d03660e6b9a64f1e585becd849e962ecd5d20d0e2561fd54d249c4eaf4142c",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/gerrit/upload.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.626Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/clone.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/clone.rs.txt",
+      "sha256": "505b6c62e85fb6bcb50d3d816fad583a020651e8a7860b50932fb849c6f54136",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/clone.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.681Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/colocation.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/colocation.rs.txt",
+      "sha256": "eb2f0eb20822513241f1ed299e0450cbbc94156087efe16b6a229100735e0d20",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/colocation.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.679Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/export.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/export.rs.txt",
+      "sha256": "8fa64394418573dc6fcb37ed995ef09d39ef57120cd2c3a966b23e8fecf54646",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/export.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.839Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/fetch.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/fetch.rs.txt",
+      "sha256": "50efaf3b400911a38b9c76fb99e5c03eb1ed2e9448ada8fdf9c712782ff61b17",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/fetch.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.861Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/import.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/import.rs.txt",
+      "sha256": "ebe3cfd5f3f85d0d45e3d88b0c114e2e45a68b760513744e5862b84b6e4167f9",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/import.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.861Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/init.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/init.rs.txt",
+      "sha256": "de06d522d286fa2ad22d77e489956d1cb82d7204649739af44e76cb05aa0f16a",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/init.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.880Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/mod.rs.txt",
+      "sha256": "08baa038e73df7e155ab23de7876d53877cdac1aaa526565b316f68d585f0ec0",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.921Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/push.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/push.rs.txt",
+      "sha256": "213469e3bcfbd5d991245a88efc88aaa28c7be30e9fcb81f88ab1aa37dcf3a0d",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/push.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:49.925Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/remote/add.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/remote/add.rs.txt",
+      "sha256": "0152c632bd8a7e209839d0cc6b386755bc8f81ff46deca1a47299def624272ef",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/remote/add.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.090Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/remote/list.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/remote/list.rs.txt",
+      "sha256": "c493463132b3be53ccdae2fbd6e6d36c3f1c3016b2b416cf0f163eb758bb0f8f",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/remote/list.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.101Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/remote/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/remote/mod.rs.txt",
+      "sha256": "4aab395d800c84636080e5a1fef1c5cbc9007ebb9ff04c0617ddcb4defe9686e",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/remote/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.101Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/remote/remove.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/remote/remove.rs.txt",
+      "sha256": "e44a4da4821a09fae7f52970b165c4370b64f4e5604d82bda141c386e49de71b",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/remote/remove.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.121Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/remote/rename.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/remote/rename.rs.txt",
+      "sha256": "a589af1d8e9eebc788c83a64636d0e8a2aea0e3458398c636b0f9b5318722712",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/remote/rename.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.168Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/remote/set_url.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/remote/set_url.rs.txt",
+      "sha256": "e48b67ee0a74bb86b9f060197de238d13d7a60a259274f54217abfae2681b06f",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/remote/set_url.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.168Z"
+    },
+    {
+      "id": "source:cli/src/commands/git/root.rs",
+      "path": "upstream/source-extracts/cli/src/commands/git/root.rs.txt",
+      "sha256": "2c9f4b59c87aec01bc8373068da94b7ee6c97145b88a8f73e58def746c764146",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/git/root.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.338Z"
+    },
+    {
+      "id": "source:cli/src/commands/help.rs",
+      "path": "upstream/source-extracts/cli/src/commands/help.rs.txt",
+      "sha256": "f83d6425ed6b877146e6778f13291a01ef3481371d64ecb699f519de01b19fdc",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/help.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.339Z"
+    },
+    {
+      "id": "source:cli/src/commands/interdiff.rs",
+      "path": "upstream/source-extracts/cli/src/commands/interdiff.rs.txt",
+      "sha256": "acb49071c0814ba21b557d867fe09f740764a2f3cc793797a8c24eb6130f630a",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/interdiff.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.340Z"
+    },
+    {
+      "id": "source:cli/src/commands/log.rs",
+      "path": "upstream/source-extracts/cli/src/commands/log.rs.txt",
+      "sha256": "42434592cd61bda5ba3609c184f85b94e650cfd73f69954fb77b75a5b40fcd94",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/log.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.375Z"
+    },
+    {
+      "id": "source:cli/src/commands/metaedit.rs",
+      "path": "upstream/source-extracts/cli/src/commands/metaedit.rs.txt",
+      "sha256": "9a99a18222e037e8a89c6d5a62895d6b872273849976523d6836b2ee13904397",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/metaedit.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.456Z"
+    },
+    {
+      "id": "source:cli/src/commands/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/mod.rs.txt",
+      "sha256": "b1ca564932c0255888564d24f56b409ad00f018fd4239683e60a0f07d8b7d253",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.456Z"
+    },
+    {
+      "id": "source:cli/src/commands/new.rs",
+      "path": "upstream/source-extracts/cli/src/commands/new.rs.txt",
+      "sha256": "cf744c495353d85c8fc4d7078dca2ed86cbe7b84ab656612427813d29899e239",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/new.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.599Z"
+    },
+    {
+      "id": "source:cli/src/commands/next.rs",
+      "path": "upstream/source-extracts/cli/src/commands/next.rs.txt",
+      "sha256": "b62c94e8afa36acc5dcd02a4117f419940ca92a6b0bf45f917863765e25809b5",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/next.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.599Z"
+    },
+    {
+      "id": "source:cli/src/commands/operation/abandon.rs",
+      "path": "upstream/source-extracts/cli/src/commands/operation/abandon.rs.txt",
+      "sha256": "a956c88ffc664bc540825649640cffc8230a9f6c8a176a4b8cf8a18c84020ade",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/operation/abandon.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.599Z"
+    },
+    {
+      "id": "source:cli/src/commands/operation/diff.rs",
+      "path": "upstream/source-extracts/cli/src/commands/operation/diff.rs.txt",
+      "sha256": "ffecc9c17e9251b78fe7e75b6bbff8a6114b098005f1f6437f026e9533260d5c",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/operation/diff.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.633Z"
+    },
+    {
+      "id": "source:cli/src/commands/operation/integrate.rs",
+      "path": "upstream/source-extracts/cli/src/commands/operation/integrate.rs.txt",
+      "sha256": "08880569fabbc0b9af08a1e5d54084d2fc1c9a1fe7ab58ca89b6c682ed29bf9b",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/operation/integrate.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.724Z"
+    },
+    {
+      "id": "source:cli/src/commands/operation/log.rs",
+      "path": "upstream/source-extracts/cli/src/commands/operation/log.rs.txt",
+      "sha256": "30093d7963acbd010ea95b90d356cc47a5320153b330498fd107ac0520311150",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/operation/log.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.729Z"
+    },
+    {
+      "id": "source:cli/src/commands/operation/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/operation/mod.rs.txt",
+      "sha256": "1f343434261779bb431f1e5379cc67d7aeeb621204e3d45c1bb585530ac72e83",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/operation/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.856Z"
+    },
+    {
+      "id": "source:cli/src/commands/operation/restore.rs",
+      "path": "upstream/source-extracts/cli/src/commands/operation/restore.rs.txt",
+      "sha256": "52800b70887218f3306bb638da11dd6f92fa0ae49a297f63a2df04e73bf024d7",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/operation/restore.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.857Z"
+    },
+    {
+      "id": "source:cli/src/commands/operation/revert.rs",
+      "path": "upstream/source-extracts/cli/src/commands/operation/revert.rs.txt",
+      "sha256": "1b5234ca9d5ff8de6b80a296176ad93ffed22dcc4b3a02c707586ff3f97b65fc",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/operation/revert.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.857Z"
+    },
+    {
+      "id": "source:cli/src/commands/operation/show.rs",
+      "path": "upstream/source-extracts/cli/src/commands/operation/show.rs.txt",
+      "sha256": "c9e12fcacd20c3dbb24d2bf7f656bee5926dfb650e1adaa6eb94218a2d623efc",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/operation/show.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.880Z"
+    },
+    {
+      "id": "source:cli/src/commands/parallelize.rs",
+      "path": "upstream/source-extracts/cli/src/commands/parallelize.rs.txt",
+      "sha256": "2bb2616a7c01e0e347c0fc68ba4c233f875b422809783cf82d3ff6088499e9f0",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/parallelize.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.965Z"
+    },
+    {
+      "id": "source:cli/src/commands/prev.rs",
+      "path": "upstream/source-extracts/cli/src/commands/prev.rs.txt",
+      "sha256": "2ecfc1de3bef16fef66f42620f28ac35f2f2849139b9a702ccf9cb0645b33b72",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/prev.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:50.967Z"
+    },
+    {
+      "id": "source:cli/src/commands/rebase.rs",
+      "path": "upstream/source-extracts/cli/src/commands/rebase.rs.txt",
+      "sha256": "dc78aa1f89adc3d5b316370d5c5a085b4ce75a267c9b8642933b9a9c07b85de1",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/rebase.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.134Z"
+    },
+    {
+      "id": "source:cli/src/commands/redo.rs",
+      "path": "upstream/source-extracts/cli/src/commands/redo.rs.txt",
+      "sha256": "0335595cf22bb55b0c9e382fbdaaa3a59af1ec12169f0b6ddea748d31aa59eb4",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/redo.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.132Z"
+    },
+    {
+      "id": "source:cli/src/commands/resolve.rs",
+      "path": "upstream/source-extracts/cli/src/commands/resolve.rs.txt",
+      "sha256": "77e28e6bbf8d88583c273caa62a4019590d88e6e7cf90c4253575fc8c615b97b",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/resolve.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.134Z"
+    },
+    {
+      "id": "source:cli/src/commands/restore.rs",
+      "path": "upstream/source-extracts/cli/src/commands/restore.rs.txt",
+      "sha256": "42930b9b1862c5a3459f72ba42cd7937cebab03c5cc1e47273db4ff1447540ad",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/restore.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.134Z"
+    },
+    {
+      "id": "source:cli/src/commands/revert.rs",
+      "path": "upstream/source-extracts/cli/src/commands/revert.rs.txt",
+      "sha256": "820848fa9251a97459e5bdd85cdd259b80987a01b953c786ce0291d7a8c4ddf7",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/revert.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.213Z"
+    },
+    {
+      "id": "source:cli/src/commands/root.rs",
+      "path": "upstream/source-extracts/cli/src/commands/root.rs.txt",
+      "sha256": "58fd32f5f2fd957f2687d25710302e86e052cb04af347ce79c646e531eb16612",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/root.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.213Z"
+    },
+    {
+      "id": "source:cli/src/commands/run.rs",
+      "path": "upstream/source-extracts/cli/src/commands/run.rs.txt",
+      "sha256": "3c45911c863bd0613d1bf48461346d60cdaf151fe253dc15b757dbeda32dcd1a",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/run.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.376Z"
+    },
+    {
+      "id": "source:cli/src/commands/show.rs",
+      "path": "upstream/source-extracts/cli/src/commands/show.rs.txt",
+      "sha256": "17db8dee69b70fdd589a9b79f3cd77b1719a1c106214f2d4cc9fae6fb4df1dea",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/show.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.375Z"
+    },
+    {
+      "id": "source:cli/src/commands/sign.rs",
+      "path": "upstream/source-extracts/cli/src/commands/sign.rs.txt",
+      "sha256": "3c99cb618e7001c5e35787748688757c63675393c44030cf2ba705e2b8dad36e",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/sign.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.376Z"
+    },
+    {
+      "id": "source:cli/src/commands/simplify_parents.rs",
+      "path": "upstream/source-extracts/cli/src/commands/simplify_parents.rs.txt",
+      "sha256": "11a48979fb5e84d00bbaa6f883cb25f5ea38dd9a34d5378eb17cdaaa7b26e55a",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/simplify_parents.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.376Z"
+    },
+    {
+      "id": "source:cli/src/commands/sparse/edit.rs",
+      "path": "upstream/source-extracts/cli/src/commands/sparse/edit.rs.txt",
+      "sha256": "9836ec1728ea191d83e923f9091429f5a8b123cc099899feb5c6ddc9b5700705",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/sparse/edit.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.456Z"
+    },
+    {
+      "id": "source:cli/src/commands/sparse/list.rs",
+      "path": "upstream/source-extracts/cli/src/commands/sparse/list.rs.txt",
+      "sha256": "e78a97a1068968a3814a463aff2e160e156733b30b517aeb261a828d723f699d",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/sparse/list.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.456Z"
+    },
+    {
+      "id": "source:cli/src/commands/sparse/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/sparse/mod.rs.txt",
+      "sha256": "dc7135be3d7cd3db0eeda954101b210c136e1846559d242862de6aa0f6b1089c",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/sparse/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.632Z"
+    },
+    {
+      "id": "source:cli/src/commands/sparse/reset.rs",
+      "path": "upstream/source-extracts/cli/src/commands/sparse/reset.rs.txt",
+      "sha256": "1d9cd312d88faedc05dae6a51647bb27d566620ba06de851cbd5d39cd787d297",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/sparse/reset.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.634Z"
+    },
+    {
+      "id": "source:cli/src/commands/sparse/set.rs",
+      "path": "upstream/source-extracts/cli/src/commands/sparse/set.rs.txt",
+      "sha256": "3490752ccb4a4edccb596e547eb2e47e3c661f08ea1306d440dc0cd8d02817cd",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/sparse/set.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.632Z"
+    },
+    {
+      "id": "source:cli/src/commands/split.rs",
+      "path": "upstream/source-extracts/cli/src/commands/split.rs.txt",
+      "sha256": "b059bc0abbf5c19796c87861e0339fb622193f6236d90fa2d9377f5b459e3abd",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/split.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.634Z"
+    },
+    {
+      "id": "source:cli/src/commands/squash.rs",
+      "path": "upstream/source-extracts/cli/src/commands/squash.rs.txt",
+      "sha256": "7f1d4ef5f16a23d35b10771779aff9e159d7c367bb64d98986dc2606a01efe3a",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/squash.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.726Z"
+    },
+    {
+      "id": "source:cli/src/commands/status.rs",
+      "path": "upstream/source-extracts/cli/src/commands/status.rs.txt",
+      "sha256": "de348ba48a760e0f44aad1f30b5233336706d44b7ac37d9c641ef9438360c8d2",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/status.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.727Z"
+    },
+    {
+      "id": "source:cli/src/commands/tag/delete.rs",
+      "path": "upstream/source-extracts/cli/src/commands/tag/delete.rs.txt",
+      "sha256": "558d9bb2445e538ea771c56114ebff897ce72a279b56a0e76c961efbf93f34c9",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/tag/delete.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.878Z"
+    },
+    {
+      "id": "source:cli/src/commands/tag/list.rs",
+      "path": "upstream/source-extracts/cli/src/commands/tag/list.rs.txt",
+      "sha256": "38d3c10f5409a388504888d298490466093f87105655f5cc12f29d09e40b87e5",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/tag/list.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.875Z"
+    },
+    {
+      "id": "source:cli/src/commands/tag/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/tag/mod.rs.txt",
+      "sha256": "49e64535222506d27fe4c6a732ae44a7554c727964b6629d3992369aef98536f",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/tag/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.878Z"
+    },
+    {
+      "id": "source:cli/src/commands/tag/set.rs",
+      "path": "upstream/source-extracts/cli/src/commands/tag/set.rs.txt",
+      "sha256": "02b83147af6392d40930d231014706d804f8da3fbfe27c6960b46261641a865c",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/tag/set.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.878Z"
+    },
+    {
+      "id": "source:cli/src/commands/tag/track.rs",
+      "path": "upstream/source-extracts/cli/src/commands/tag/track.rs.txt",
+      "sha256": "aaad9b7fc488738f37b15c84c21a08fc95562e7f3f401acb51199506c3aa79bc",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/tag/track.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.963Z"
+    },
+    {
+      "id": "source:cli/src/commands/tag/untrack.rs",
+      "path": "upstream/source-extracts/cli/src/commands/tag/untrack.rs.txt",
+      "sha256": "63db624884c61a996a7aff990300086be11a85b5cf112ea025040261095480d1",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/tag/untrack.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:51.963Z"
+    },
+    {
+      "id": "source:cli/src/commands/undo.rs",
+      "path": "upstream/source-extracts/cli/src/commands/undo.rs.txt",
+      "sha256": "09ddfd17ebd7cec228c51c16df14232a8b7c5a32a1730cda93dd2d1b70385861",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/undo.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.111Z"
+    },
+    {
+      "id": "source:cli/src/commands/unsign.rs",
+      "path": "upstream/source-extracts/cli/src/commands/unsign.rs.txt",
+      "sha256": "332d55cb250233f2478821cbb3897ea6580cdf41c9c03435570075052a0877ea",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/unsign.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.131Z"
+    },
+    {
+      "id": "source:cli/src/commands/util/backend/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/util/backend/mod.rs.txt",
+      "sha256": "b4fd6d2cb7edfd79004cea688536f7bff30c9d2fc732a0231a9f22d3d4d61959",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/util/backend/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.137Z"
+    },
+    {
+      "id": "source:cli/src/commands/util/backend/name.rs",
+      "path": "upstream/source-extracts/cli/src/commands/util/backend/name.rs.txt",
+      "sha256": "57a7581b8098c1ba17fb509e49a6aeb70047297613d66d9b45f8e340a50ad51d",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/util/backend/name.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.137Z"
+    },
+    {
+      "id": "source:cli/src/commands/util/completion.rs",
+      "path": "upstream/source-extracts/cli/src/commands/util/completion.rs.txt",
+      "sha256": "1849b6dc4184699d0c763400911f4d128c35d3735438a858d7df2556c9d49c9e",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/util/completion.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.243Z"
+    },
+    {
+      "id": "source:cli/src/commands/util/config_schema.rs",
+      "path": "upstream/source-extracts/cli/src/commands/util/config_schema.rs.txt",
+      "sha256": "57e4bb8c76ecca30db5c79ee286f3db35af31e91eb4955b986304c650bb1b91a",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/util/config_schema.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.241Z"
+    },
+    {
+      "id": "source:cli/src/commands/util/exec.rs",
+      "path": "upstream/source-extracts/cli/src/commands/util/exec.rs.txt",
+      "sha256": "f25d4f4dbedd845c178d173dce00b98b7e1f56957d80e4adee25679a46c66440",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/util/exec.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.365Z"
+    },
+    {
+      "id": "source:cli/src/commands/util/gc.rs",
+      "path": "upstream/source-extracts/cli/src/commands/util/gc.rs.txt",
+      "sha256": "9c4d6a3704abb6f3afbb63cfd44153437b83d7e68d0f2426f84f8cdbbb0b4b9b",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/util/gc.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.385Z"
+    },
+    {
+      "id": "source:cli/src/commands/util/install_man_pages.rs",
+      "path": "upstream/source-extracts/cli/src/commands/util/install_man_pages.rs.txt",
+      "sha256": "b2b4cda7178dae697eccb370481b4bee83ef3b55a01dca38966abf1b379be0ba",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/util/install_man_pages.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.379Z"
+    },
+    {
+      "id": "source:cli/src/commands/util/markdown_help.rs",
+      "path": "upstream/source-extracts/cli/src/commands/util/markdown_help.rs.txt",
+      "sha256": "12da6d95cca1b0d3357f7687fcde09e77a5f6f5ff92e6f3fcad1ca143f308813",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/util/markdown_help.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.378Z"
+    },
+    {
+      "id": "source:cli/src/commands/util/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/util/mod.rs.txt",
+      "sha256": "a2efa2344494a6029c98b09b044224622c43f25e2fff7fc73fddedaa497d0ec3",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/util/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.481Z"
+    },
+    {
+      "id": "source:cli/src/commands/util/snapshot.rs",
+      "path": "upstream/source-extracts/cli/src/commands/util/snapshot.rs.txt",
+      "sha256": "297e9531702c6d610e0ba951e960a65050866c138a8763eed101297f05a54398",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/util/snapshot.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.487Z"
+    },
+    {
+      "id": "source:cli/src/commands/version.rs",
+      "path": "upstream/source-extracts/cli/src/commands/version.rs.txt",
+      "sha256": "bd500cdc7cc7f9f78884f951460019d3de535250390d13df56fa2966f824c53e",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/version.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.601Z"
+    },
+    {
+      "id": "source:cli/src/commands/workspace/add.rs",
+      "path": "upstream/source-extracts/cli/src/commands/workspace/add.rs.txt",
+      "sha256": "80696088c098d3ff7b7976e27b71f2e6017131636910c7c4942d1550b6d3aa75",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/workspace/add.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.647Z"
+    },
+    {
+      "id": "source:cli/src/commands/workspace/forget.rs",
+      "path": "upstream/source-extracts/cli/src/commands/workspace/forget.rs.txt",
+      "sha256": "70f1aac9037c5dbb4e158b42cfb5ab5578b371635ce9f503d2c63dab7ae4ec24",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/workspace/forget.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.646Z"
+    },
+    {
+      "id": "source:cli/src/commands/workspace/list.rs",
+      "path": "upstream/source-extracts/cli/src/commands/workspace/list.rs.txt",
+      "sha256": "c33ab847c458e947e848f03be6d46031e6f62b1d08ed0b21de88533489fc7c4d",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/workspace/list.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.647Z"
+    },
+    {
+      "id": "source:cli/src/commands/workspace/mod.rs",
+      "path": "upstream/source-extracts/cli/src/commands/workspace/mod.rs.txt",
+      "sha256": "4bd5de8701afd3960e9f226d57e62a70651d7ca14ff5b4d401b5498136542a54",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/workspace/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.752Z"
+    },
+    {
+      "id": "source:cli/src/commands/workspace/rename.rs",
+      "path": "upstream/source-extracts/cli/src/commands/workspace/rename.rs.txt",
+      "sha256": "1ebdb349f4357102eb34bb5878ee9888bcbf84b8739326321537b407db1a3a60",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/workspace/rename.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.749Z"
+    },
+    {
+      "id": "source:cli/src/commands/workspace/root.rs",
+      "path": "upstream/source-extracts/cli/src/commands/workspace/root.rs.txt",
+      "sha256": "1fc924fc62042b5c3cac0da83c522ffadb2909cdd5b75fe001fbf5242633ba1f",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/workspace/root.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.899Z"
+    },
+    {
+      "id": "source:cli/src/commands/workspace/update_stale.rs",
+      "path": "upstream/source-extracts/cli/src/commands/workspace/update_stale.rs.txt",
+      "sha256": "05a7fc999067b99e2a62876601378fd76d400ce7b6a058bf5ba4ffea6677a5cf",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commands/workspace/update_stale.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.900Z"
+    },
+    {
+      "id": "source:cli/src/commit_templater.rs",
+      "path": "upstream/source-extracts/cli/src/commit_templater.rs.txt",
+      "sha256": "3871cb4e41d2d0569368144769efcd57c144bb24371bdc7f7a62f9f6cbad098a",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/commit_templater.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.901Z"
+    },
+    {
+      "id": "source:cli/src/config/misc.toml",
+      "path": "upstream/source-extracts/cli/src/config/misc.toml.txt",
+      "sha256": "5380373a7943a9b0d04c2b47c01e06d56045150252a9f62858e247d2108643b0",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/config/misc.toml",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.900Z"
+    },
+    {
+      "id": "source:cli/src/config/revsets.toml",
+      "path": "upstream/source-extracts/cli/src/config/revsets.toml.txt",
+      "sha256": "1c48f97b247bf08ef3ee3b6e7b22f8d92456da0efe42df7c600cba0eddef96be",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/config/revsets.toml",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.989Z"
+    },
+    {
+      "id": "source:cli/src/config/templates.toml",
+      "path": "upstream/source-extracts/cli/src/config/templates.toml.txt",
+      "sha256": "444d2f0afb356517bb3fedea48201448efc129b1d6f4a099e975e1ab5b15aefa",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/config/templates.toml",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:52.990Z"
+    },
+    {
+      "id": "source:cli/src/diff_util.rs",
+      "path": "upstream/source-extracts/cli/src/diff_util.rs.txt",
+      "sha256": "41f37c1d22c7a6aed0fef1fb4dcc1bb81aacba0fc50edeac479b857e5ef33228",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/diff_util.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.205Z"
+    },
+    {
+      "id": "source:cli/src/revset_util.rs",
+      "path": "upstream/source-extracts/cli/src/revset_util.rs.txt",
+      "sha256": "680094b24af1b4dde172973eba5c50db27d902ff0ab770a96b12cf72b5ffb246",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/cli/src/revset_util.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.205Z"
+    },
+    {
+      "id": "source:docs/conflicts.md",
+      "path": "upstream/source-extracts/docs/conflicts.md.txt",
+      "sha256": "bd1bb9ba7ac9b39785d5efbd450a4add54e5162d30af0bceb39c7dfe49015810",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/docs/conflicts.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.204Z"
+    },
+    {
+      "id": "source:docs/filesets.md",
+      "path": "upstream/source-extracts/docs/filesets.md.txt",
+      "sha256": "2ad48a1c609ffbd78c3b272484a51a3f85504c28dd1816adb45b62b015e35b97",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/docs/filesets.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.204Z"
+    },
+    {
+      "id": "source:docs/glossary.md",
+      "path": "upstream/source-extracts/docs/glossary.md.txt",
+      "sha256": "6bf1624c2a3b7a4b607569e5d49d3976917f5c01054bc6b782c1939d3e49fb2b",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/docs/glossary.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.268Z"
+    },
+    {
+      "id": "source:docs/revsets.md",
+      "path": "upstream/source-extracts/docs/revsets.md.txt",
+      "sha256": "0988ee4d523ede1d55d03101c024cca9aec8ab7b276940cd1579e15d67986ee9",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/docs/revsets.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.268Z"
+    },
+    {
+      "id": "source:docs/templates.md",
+      "path": "upstream/source-extracts/docs/templates.md.txt",
+      "sha256": "dab830dfe49060031890ced3e2415a19cc17dd33b6853a0aacd1ac9c5a2f74d8",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/docs/templates.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.483Z"
+    },
+    {
+      "id": "source:docs/working-copy.md",
+      "path": "upstream/source-extracts/docs/working-copy.md.txt",
+      "sha256": "20578df094781b9a3a24a33be318ee2810b6686e3886ea13f997c5a20275e4ea",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/docs/working-copy.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.483Z"
+    },
+    {
+      "id": "source:lib/src/default_index/revset_engine.rs",
+      "path": "upstream/source-extracts/lib/src/default_index/revset_engine.rs.txt",
+      "sha256": "19e7a173beab0c063bc9743cbdb69b7ea28603ce76e110a7af3d62015f063780",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/default_index/revset_engine.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.484Z"
+    },
+    {
+      "id": "source:lib/src/dsl_util.rs",
+      "path": "upstream/source-extracts/lib/src/dsl_util.rs.txt",
+      "sha256": "19a035010dd447a60b32cef5f496eea0230a18103e042e55b9640c76bad70043",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/dsl_util.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.465Z"
+    },
+    {
+      "id": "source:lib/src/revset_parser.rs",
+      "path": "upstream/source-extracts/lib/src/revset_parser.rs.txt",
+      "sha256": "293fc390852894929aa10bf53becbddb93e40b83217132b078f77ed7ace513e0",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset_parser.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.709Z"
+    },
+    {
+      "id": "source:lib/src/revset.pest",
+      "path": "upstream/source-extracts/lib/src/revset.pest.txt",
+      "sha256": "e6b8855069bf3872c3c9cb45ba937aa4ae2c1a4f6332a2102aa0ff7a93b49306",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.pest",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.513Z"
+    },
+    {
+      "id": "source:lib/src/revset.rs",
+      "path": "upstream/source-extracts/lib/src/revset.rs.txt",
+      "sha256": "013d216dddf093cf93e0fe4319fe50520c759569c1f967e045fe6e672a04cce2",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.515Z"
+    },
+    {
+      "id": "source:lib/src/time_util.rs",
+      "path": "upstream/source-extracts/lib/src/time_util.rs.txt",
+      "sha256": "022e16dcf20ce740fd7171cb0addbe1082f9eb98e587b800cd20929c9be4d4c0",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/time_util.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:53.715Z"
+    },
+    {
+      "id": "source:LICENSE",
+      "path": "upstream/source-extracts/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "url": "https://raw.githubusercontent.com/jj-vcs/jj/7c41cdeb16b6b321c64e789a966b6adf723816a5/LICENSE",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T02:24:45.072Z"
+    }
+  ],
+  "limitations": [
+    "未采集目标二进制原始帮助。",
+    "示例和工作流未实测。",
+    "初始来源为旧中文资料与固定提交源码；结构审核不等于全量实现审计。",
+    "旧公开命令清单曾参考滚动 latest；已将相关源码固定为版本快照，行为审阅范围另见审核报告。"
+  ]
+}

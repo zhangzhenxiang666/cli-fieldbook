@@ -1,0 +1,7 @@
+schema: 1
+name: Herdr
+binary: herdr
+repository: https://github.com/herdrdev/herdr
+summary: 面向 AI 编程 Agent 的终端工作区管理器。
+defaults:
+  zh-CN: 0.9.3

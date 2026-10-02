@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cli-fieldbook.invalid/schemas/v1/version",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "upstream": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "version",
+        "ref"
+      ],
+      "additionalProperties": false
+    },
+    "publication": {
+      "enum": [
+        "draft",
+        "published"
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "upstream",
+    "publication"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,3631 @@
+{
+  "schema": 1,
+  "archive": "jj-v0.45.1-zh-revsets.zip",
+  "sha256": "d2612f727eb124d6c69b596da064f98c9604527e8636c5c40a32e58f3834e873",
+  "checksumEntries": 19,
+  "commandNodes": 153,
+  "pages": [
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 350,
+      "target": "zh-CN/commands/index.md",
+      "title": "jj",
+      "legacyAnchors": [
+        "cmd-jj",
+        "cmd-jj"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 518,
+      "target": "zh-CN/commands/abandon/index.md",
+      "title": "jj abandon",
+      "legacyAnchors": [
+        "cmd-abandon",
+        "cmd-abandon"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 550,
+      "target": "zh-CN/commands/absorb/index.md",
+      "title": "jj absorb",
+      "legacyAnchors": [
+        "cmd-absorb",
+        "cmd-absorb"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 588,
+      "target": "zh-CN/commands/arrange/index.md",
+      "title": "jj arrange",
+      "legacyAnchors": [
+        "cmd-arrange",
+        "cmd-arrange"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 614,
+      "target": "zh-CN/commands/bisect/index.md",
+      "title": "jj bisect",
+      "legacyAnchors": [
+        "cmd-bisect",
+        "cmd-bisect"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 638,
+      "target": "zh-CN/commands/bisect/run/index.md",
+      "title": "jj bisect run",
+      "legacyAnchors": [
+        "cmd-bisect-run",
+        "cmd-bisect-run"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 680,
+      "target": "zh-CN/commands/bookmark/index.md",
+      "title": "jj bookmark",
+      "legacyAnchors": [
+        "cmd-bookmark",
+        "cmd-bookmark"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 731,
+      "target": "zh-CN/commands/bookmark/advance/index.md",
+      "title": "jj bookmark advance",
+      "legacyAnchors": [
+        "cmd-bookmark-advance",
+        "cmd-bookmark-advance"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 760,
+      "target": "zh-CN/commands/bookmark/create/index.md",
+      "title": "jj bookmark create",
+      "legacyAnchors": [
+        "cmd-bookmark-create",
+        "cmd-bookmark-create"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 787,
+      "target": "zh-CN/commands/bookmark/delete/index.md",
+      "title": "jj bookmark delete",
+      "legacyAnchors": [
+        "cmd-bookmark-delete",
+        "cmd-bookmark-delete"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 813,
+      "target": "zh-CN/commands/bookmark/forget/index.md",
+      "title": "jj bookmark forget",
+      "legacyAnchors": [
+        "cmd-bookmark-forget",
+        "cmd-bookmark-forget"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 843,
+      "target": "zh-CN/commands/bookmark/list/index.md",
+      "title": "jj bookmark list",
+      "legacyAnchors": [
+        "cmd-bookmark-list",
+        "cmd-bookmark-list"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 892,
+      "target": "zh-CN/commands/bookmark/move/index.md",
+      "title": "jj bookmark move",
+      "legacyAnchors": [
+        "cmd-bookmark-move",
+        "cmd-bookmark-move"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 925,
+      "target": "zh-CN/commands/bookmark/rename/index.md",
+      "title": "jj bookmark rename",
+      "legacyAnchors": [
+        "cmd-bookmark-rename",
+        "cmd-bookmark-rename"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 955,
+      "target": "zh-CN/commands/bookmark/set/index.md",
+      "title": "jj bookmark set",
+      "legacyAnchors": [
+        "cmd-bookmark-set",
+        "cmd-bookmark-set"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 987,
+      "target": "zh-CN/commands/bookmark/track/index.md",
+      "title": "jj bookmark track",
+      "legacyAnchors": [
+        "cmd-bookmark-track",
+        "cmd-bookmark-track"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1016,
+      "target": "zh-CN/commands/bookmark/untrack/index.md",
+      "title": "jj bookmark untrack",
+      "legacyAnchors": [
+        "cmd-bookmark-untrack",
+        "cmd-bookmark-untrack"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1045,
+      "target": "zh-CN/commands/commit/index.md",
+      "title": "jj commit",
+      "legacyAnchors": [
+        "cmd-commit",
+        "cmd-commit"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1083,
+      "target": "zh-CN/commands/config/index.md",
+      "title": "jj config",
+      "legacyAnchors": [
+        "cmd-config",
+        "cmd-config"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1125,
+      "target": "zh-CN/commands/config/edit/index.md",
+      "title": "jj config edit",
+      "legacyAnchors": [
+        "cmd-config-edit",
+        "cmd-config-edit"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1160,
+      "target": "zh-CN/commands/config/gc/index.md",
+      "title": "jj config gc",
+      "legacyAnchors": [
+        "cmd-config-gc",
+        "cmd-config-gc"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1182,
+      "target": "zh-CN/commands/config/get/index.md",
+      "title": "jj config get",
+      "legacyAnchors": [
+        "cmd-config-get",
+        "cmd-config-get"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1206,
+      "target": "zh-CN/commands/config/list/index.md",
+      "title": "jj config list",
+      "legacyAnchors": [
+        "cmd-config-list",
+        "cmd-config-list"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1250,
+      "target": "zh-CN/commands/config/path/index.md",
+      "title": "jj config path",
+      "legacyAnchors": [
+        "cmd-config-path",
+        "cmd-config-path"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1281,
+      "target": "zh-CN/commands/config/set/index.md",
+      "title": "jj config set",
+      "legacyAnchors": [
+        "cmd-config-set",
+        "cmd-config-set"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1323,
+      "target": "zh-CN/commands/config/unset/index.md",
+      "title": "jj config unset",
+      "legacyAnchors": [
+        "cmd-config-unset",
+        "cmd-config-unset"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1362,
+      "target": "zh-CN/commands/converge/index.md",
+      "title": "jj converge",
+      "legacyAnchors": [
+        "cmd-converge",
+        "cmd-converge"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1390,
+      "target": "zh-CN/commands/describe/index.md",
+      "title": "jj describe",
+      "legacyAnchors": [
+        "cmd-describe",
+        "cmd-describe"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1432,
+      "target": "zh-CN/commands/diff/index.md",
+      "title": "jj diff",
+      "legacyAnchors": [
+        "cmd-diff",
+        "cmd-diff"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1509,
+      "target": "zh-CN/commands/diffedit/index.md",
+      "title": "jj diffedit",
+      "legacyAnchors": [
+        "cmd-diffedit",
+        "cmd-diffedit"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1550,
+      "target": "zh-CN/commands/duplicate/index.md",
+      "title": "jj duplicate",
+      "legacyAnchors": [
+        "cmd-duplicate",
+        "cmd-duplicate"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1593,
+      "target": "zh-CN/commands/edit/index.md",
+      "title": "jj edit",
+      "legacyAnchors": [
+        "cmd-edit",
+        "cmd-edit"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1619,
+      "target": "zh-CN/commands/evolog/index.md",
+      "title": "jj evolog",
+      "legacyAnchors": [
+        "cmd-evolog",
+        "cmd-evolog"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1696,
+      "target": "zh-CN/commands/file/index.md",
+      "title": "jj file",
+      "legacyAnchors": [
+        "cmd-file",
+        "cmd-file"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1738,
+      "target": "zh-CN/commands/file/annotate/index.md",
+      "title": "jj file annotate",
+      "legacyAnchors": [
+        "cmd-file-annotate",
+        "cmd-file-annotate"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1768,
+      "target": "zh-CN/commands/file/chmod/index.md",
+      "title": "jj file chmod",
+      "legacyAnchors": [
+        "cmd-file-chmod",
+        "cmd-file-chmod"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1800,
+      "target": "zh-CN/commands/file/list/index.md",
+      "title": "jj file list",
+      "legacyAnchors": [
+        "cmd-file-list",
+        "cmd-file-list"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1830,
+      "target": "zh-CN/commands/file/search/index.md",
+      "title": "jj file search",
+      "legacyAnchors": [
+        "cmd-file-search",
+        "cmd-file-search"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1869,
+      "target": "zh-CN/commands/file/show/index.md",
+      "title": "jj file show",
+      "legacyAnchors": [
+        "cmd-file-show",
+        "cmd-file-show"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1899,
+      "target": "zh-CN/commands/file/track/index.md",
+      "title": "jj file track",
+      "legacyAnchors": [
+        "cmd-file-track",
+        "cmd-file-track"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1928,
+      "target": "zh-CN/commands/file/untrack/index.md",
+      "title": "jj file untrack",
+      "legacyAnchors": [
+        "cmd-file-untrack",
+        "cmd-file-untrack"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1954,
+      "target": "zh-CN/commands/fix/index.md",
+      "title": "jj fix",
+      "legacyAnchors": [
+        "cmd-fix",
+        "cmd-fix"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 1989,
+      "target": "zh-CN/commands/gerrit/index.md",
+      "title": "jj gerrit",
+      "legacyAnchors": [
+        "cmd-gerrit",
+        "cmd-gerrit"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2013,
+      "target": "zh-CN/commands/gerrit/upload/index.md",
+      "title": "jj gerrit upload",
+      "legacyAnchors": [
+        "cmd-gerrit-upload",
+        "cmd-gerrit-upload"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2114,
+      "target": "zh-CN/commands/git/index.md",
+      "title": "jj git",
+      "legacyAnchors": [
+        "cmd-git",
+        "cmd-git"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2162,
+      "target": "zh-CN/commands/git/clone/index.md",
+      "title": "jj git clone",
+      "legacyAnchors": [
+        "cmd-git-clone",
+        "cmd-git-clone"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2212,
+      "target": "zh-CN/commands/git/colocation/index.md",
+      "title": "jj git colocation",
+      "legacyAnchors": [
+        "cmd-git-colocation",
+        "cmd-git-colocation"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2244,
+      "target": "zh-CN/commands/git/colocation/disable/index.md",
+      "title": "jj git colocation disable",
+      "legacyAnchors": [
+        "cmd-git-colocation-disable",
+        "cmd-git-colocation-disable"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2266,
+      "target": "zh-CN/commands/git/colocation/enable/index.md",
+      "title": "jj git colocation enable",
+      "legacyAnchors": [
+        "cmd-git-colocation-enable",
+        "cmd-git-colocation-enable"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2288,
+      "target": "zh-CN/commands/git/colocation/status/index.md",
+      "title": "jj git colocation status",
+      "legacyAnchors": [
+        "cmd-git-colocation-status",
+        "cmd-git-colocation-status"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2310,
+      "target": "zh-CN/commands/git/export/index.md",
+      "title": "jj git export",
+      "legacyAnchors": [
+        "cmd-git-export",
+        "cmd-git-export"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2332,
+      "target": "zh-CN/commands/git/fetch/index.md",
+      "title": "jj git fetch",
+      "legacyAnchors": [
+        "cmd-git-fetch",
+        "cmd-git-fetch"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2369,
+      "target": "zh-CN/commands/git/import/index.md",
+      "title": "jj git import",
+      "legacyAnchors": [
+        "cmd-git-import",
+        "cmd-git-import"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2391,
+      "target": "zh-CN/commands/git/init/index.md",
+      "title": "jj git init",
+      "legacyAnchors": [
+        "cmd-git-init",
+        "cmd-git-init"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2429,
+      "target": "zh-CN/commands/git/push/index.md",
+      "title": "jj git push",
+      "legacyAnchors": [
+        "cmd-git-push",
+        "cmd-git-push"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2504,
+      "target": "zh-CN/commands/git/remote/index.md",
+      "title": "jj git remote",
+      "legacyAnchors": [
+        "cmd-git-remote",
+        "cmd-git-remote"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2540,
+      "target": "zh-CN/commands/git/remote/add/index.md",
+      "title": "jj git remote add",
+      "legacyAnchors": [
+        "cmd-git-remote-add",
+        "cmd-git-remote-add"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2570,
+      "target": "zh-CN/commands/git/remote/list/index.md",
+      "title": "jj git remote list",
+      "legacyAnchors": [
+        "cmd-git-remote-list",
+        "cmd-git-remote-list"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2590,
+      "target": "zh-CN/commands/git/remote/remove/index.md",
+      "title": "jj git remote remove",
+      "legacyAnchors": [
+        "cmd-git-remote-remove",
+        "cmd-git-remote-remove"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2616,
+      "target": "zh-CN/commands/git/remote/rename/index.md",
+      "title": "jj git remote rename",
+      "legacyAnchors": [
+        "cmd-git-remote-rename",
+        "cmd-git-remote-rename"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2643,
+      "target": "zh-CN/commands/git/remote/set-url/index.md",
+      "title": "jj git remote set-url",
+      "legacyAnchors": [
+        "cmd-git-remote-set-url",
+        "cmd-git-remote-set-url"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2676,
+      "target": "zh-CN/commands/git/root/index.md",
+      "title": "jj git root",
+      "legacyAnchors": [
+        "cmd-git-root",
+        "cmd-git-root"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2698,
+      "target": "zh-CN/commands/help/index.md",
+      "title": "jj help",
+      "legacyAnchors": [
+        "cmd-help",
+        "cmd-help"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2727,
+      "target": "zh-CN/commands/interdiff/index.md",
+      "title": "jj interdiff",
+      "legacyAnchors": [
+        "cmd-interdiff",
+        "cmd-interdiff"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2791,
+      "target": "zh-CN/commands/log/index.md",
+      "title": "jj log",
+      "legacyAnchors": [
+        "cmd-log",
+        "cmd-log"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2877,
+      "target": "zh-CN/commands/metaedit/index.md",
+      "title": "jj metaedit",
+      "legacyAnchors": [
+        "cmd-metaedit",
+        "cmd-metaedit"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2931,
+      "target": "zh-CN/commands/new/index.md",
+      "title": "jj new",
+      "legacyAnchors": [
+        "cmd-new",
+        "cmd-new"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 2980,
+      "target": "zh-CN/commands/next/index.md",
+      "title": "jj next",
+      "legacyAnchors": [
+        "cmd-next",
+        "cmd-next"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3413,
+      "target": "zh-CN/commands/prev/index.md",
+      "title": "jj prev",
+      "legacyAnchors": [
+        "cmd-prev",
+        "cmd-prev"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3015,
+      "target": "zh-CN/commands/operation/index.md",
+      "title": "jj operation",
+      "legacyAnchors": [
+        "cmd-operation",
+        "cmd-operation"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3057,
+      "target": "zh-CN/commands/operation/abandon/index.md",
+      "title": "jj operation abandon",
+      "legacyAnchors": [
+        "cmd-operation-abandon",
+        "cmd-operation-abandon"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3083,
+      "target": "zh-CN/commands/operation/diff/index.md",
+      "title": "jj operation diff",
+      "legacyAnchors": [
+        "cmd-operation-diff",
+        "cmd-operation-diff"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3155,
+      "target": "zh-CN/commands/operation/integrate/index.md",
+      "title": "jj operation integrate",
+      "legacyAnchors": [
+        "cmd-operation-integrate",
+        "cmd-operation-integrate"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3181,
+      "target": "zh-CN/commands/operation/log/index.md",
+      "title": "jj operation log",
+      "legacyAnchors": [
+        "cmd-operation-log",
+        "cmd-operation-log"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3256,
+      "target": "zh-CN/commands/operation/restore/index.md",
+      "title": "jj operation restore",
+      "legacyAnchors": [
+        "cmd-operation-restore",
+        "cmd-operation-restore"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3286,
+      "target": "zh-CN/commands/operation/revert/index.md",
+      "title": "jj operation revert",
+      "legacyAnchors": [
+        "cmd-operation-revert",
+        "cmd-operation-revert"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3316,
+      "target": "zh-CN/commands/operation/show/index.md",
+      "title": "jj operation show",
+      "legacyAnchors": [
+        "cmd-operation-show",
+        "cmd-operation-show"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3387,
+      "target": "zh-CN/commands/parallelize/index.md",
+      "title": "jj parallelize",
+      "legacyAnchors": [
+        "cmd-parallelize",
+        "cmd-parallelize"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3448,
+      "target": "zh-CN/commands/rebase/index.md",
+      "title": "jj rebase",
+      "legacyAnchors": [
+        "cmd-rebase",
+        "cmd-rebase"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3504,
+      "target": "zh-CN/commands/redo/index.md",
+      "title": "jj redo",
+      "legacyAnchors": [
+        "cmd-redo",
+        "cmd-redo"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3526,
+      "target": "zh-CN/commands/resolve/index.md",
+      "title": "jj resolve",
+      "legacyAnchors": [
+        "cmd-resolve",
+        "cmd-resolve"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3561,
+      "target": "zh-CN/commands/restore/index.md",
+      "title": "jj restore",
+      "legacyAnchors": [
+        "cmd-restore",
+        "cmd-restore"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3613,
+      "target": "zh-CN/commands/revert/index.md",
+      "title": "jj revert",
+      "legacyAnchors": [
+        "cmd-revert",
+        "cmd-revert"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3655,
+      "target": "zh-CN/commands/root/index.md",
+      "title": "jj root",
+      "legacyAnchors": [
+        "cmd-root",
+        "cmd-root"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3675,
+      "target": "zh-CN/commands/run/index.md",
+      "title": "jj run",
+      "legacyAnchors": [
+        "cmd-run",
+        "cmd-run"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3739,
+      "target": "zh-CN/commands/show/index.md",
+      "title": "jj show",
+      "legacyAnchors": [
+        "cmd-show",
+        "cmd-show"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3813,
+      "target": "zh-CN/commands/sign/index.md",
+      "title": "jj sign",
+      "legacyAnchors": [
+        "cmd-sign",
+        "cmd-sign"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3848,
+      "target": "zh-CN/commands/simplify-parents/index.md",
+      "title": "jj simplify-parents",
+      "legacyAnchors": [
+        "cmd-simplify-parents",
+        "cmd-simplify-parents"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3876,
+      "target": "zh-CN/commands/sparse/index.md",
+      "title": "jj sparse",
+      "legacyAnchors": [
+        "cmd-sparse",
+        "cmd-sparse"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3909,
+      "target": "zh-CN/commands/sparse/edit/index.md",
+      "title": "jj sparse edit",
+      "legacyAnchors": [
+        "cmd-sparse-edit",
+        "cmd-sparse-edit"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3929,
+      "target": "zh-CN/commands/sparse/list/index.md",
+      "title": "jj sparse list",
+      "legacyAnchors": [
+        "cmd-sparse-list",
+        "cmd-sparse-list"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3949,
+      "target": "zh-CN/commands/sparse/reset/index.md",
+      "title": "jj sparse reset",
+      "legacyAnchors": [
+        "cmd-sparse-reset",
+        "cmd-sparse-reset"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 3969,
+      "target": "zh-CN/commands/sparse/set/index.md",
+      "title": "jj sparse set",
+      "legacyAnchors": [
+        "cmd-sparse-set",
+        "cmd-sparse-set"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4000,
+      "target": "zh-CN/commands/split/index.md",
+      "title": "jj split",
+      "legacyAnchors": [
+        "cmd-split",
+        "cmd-split"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4054,
+      "target": "zh-CN/commands/squash/index.md",
+      "title": "jj squash",
+      "legacyAnchors": [
+        "cmd-squash",
+        "cmd-squash"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4119,
+      "target": "zh-CN/commands/status/index.md",
+      "title": "jj status",
+      "legacyAnchors": [
+        "cmd-status",
+        "cmd-status"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4145,
+      "target": "zh-CN/commands/tag/index.md",
+      "title": "jj tag",
+      "legacyAnchors": [
+        "cmd-tag",
+        "cmd-tag"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4181,
+      "target": "zh-CN/commands/tag/delete/index.md",
+      "title": "jj tag delete",
+      "legacyAnchors": [
+        "cmd-tag-delete",
+        "cmd-tag-delete"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4205,
+      "target": "zh-CN/commands/tag/list/index.md",
+      "title": "jj tag list",
+      "legacyAnchors": [
+        "cmd-tag-list",
+        "cmd-tag-list"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4254,
+      "target": "zh-CN/commands/tag/set/index.md",
+      "title": "jj tag set",
+      "legacyAnchors": [
+        "cmd-tag-set",
+        "cmd-tag-set"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4286,
+      "target": "zh-CN/commands/tag/track/index.md",
+      "title": "jj tag track",
+      "legacyAnchors": [
+        "cmd-tag-track",
+        "cmd-tag-track"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4315,
+      "target": "zh-CN/commands/tag/untrack/index.md",
+      "title": "jj tag untrack",
+      "legacyAnchors": [
+        "cmd-tag-untrack",
+        "cmd-tag-untrack"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4344,
+      "target": "zh-CN/commands/undo/index.md",
+      "title": "jj undo",
+      "legacyAnchors": [
+        "cmd-undo",
+        "cmd-undo"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4366,
+      "target": "zh-CN/commands/unsign/index.md",
+      "title": "jj unsign",
+      "legacyAnchors": [
+        "cmd-unsign",
+        "cmd-unsign"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4398,
+      "target": "zh-CN/commands/util/index.md",
+      "title": "jj util",
+      "legacyAnchors": [
+        "cmd-util",
+        "cmd-util"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4443,
+      "target": "zh-CN/commands/util/backend/index.md",
+      "title": "jj util backend",
+      "legacyAnchors": [
+        "cmd-util-backend",
+        "cmd-util-backend"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4467,
+      "target": "zh-CN/commands/util/backend/name/index.md",
+      "title": "jj util backend name",
+      "legacyAnchors": [
+        "cmd-util-backend-name",
+        "cmd-util-backend-name"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4487,
+      "target": "zh-CN/commands/util/completion/index.md",
+      "title": "jj util completion",
+      "legacyAnchors": [
+        "cmd-util-completion",
+        "cmd-util-completion"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4513,
+      "target": "zh-CN/commands/util/config-schema/index.md",
+      "title": "jj util config-schema",
+      "legacyAnchors": [
+        "cmd-util-config-schema",
+        "cmd-util-config-schema"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4533,
+      "target": "zh-CN/commands/util/exec/index.md",
+      "title": "jj util exec",
+      "legacyAnchors": [
+        "cmd-util-exec",
+        "cmd-util-exec"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4562,
+      "target": "zh-CN/commands/util/gc/index.md",
+      "title": "jj util gc",
+      "legacyAnchors": [
+        "cmd-util-gc",
+        "cmd-util-gc"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4587,
+      "target": "zh-CN/commands/util/install-man-pages/index.md",
+      "title": "jj util install-man-pages",
+      "legacyAnchors": [
+        "cmd-util-install-man-pages",
+        "cmd-util-install-man-pages"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4613,
+      "target": "zh-CN/commands/util/markdown-help/index.md",
+      "title": "jj util markdown-help",
+      "legacyAnchors": [
+        "cmd-util-markdown-help",
+        "cmd-util-markdown-help"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4635,
+      "target": "zh-CN/commands/util/snapshot/index.md",
+      "title": "jj util snapshot",
+      "legacyAnchors": [
+        "cmd-util-snapshot",
+        "cmd-util-snapshot"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4657,
+      "target": "zh-CN/commands/version/index.md",
+      "title": "jj version",
+      "legacyAnchors": [
+        "cmd-version",
+        "cmd-version"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4677,
+      "target": "zh-CN/commands/workspace/index.md",
+      "title": "jj workspace",
+      "legacyAnchors": [
+        "cmd-workspace",
+        "cmd-workspace"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4716,
+      "target": "zh-CN/commands/workspace/add/index.md",
+      "title": "jj workspace add",
+      "legacyAnchors": [
+        "cmd-workspace-add",
+        "cmd-workspace-add"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4755,
+      "target": "zh-CN/commands/workspace/forget/index.md",
+      "title": "jj workspace forget",
+      "legacyAnchors": [
+        "cmd-workspace-forget",
+        "cmd-workspace-forget"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4781,
+      "target": "zh-CN/commands/workspace/list/index.md",
+      "title": "jj workspace list",
+      "legacyAnchors": [
+        "cmd-workspace-list",
+        "cmd-workspace-list"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4804,
+      "target": "zh-CN/commands/workspace/rename/index.md",
+      "title": "jj workspace rename",
+      "legacyAnchors": [
+        "cmd-workspace-rename",
+        "cmd-workspace-rename"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4830,
+      "target": "zh-CN/commands/workspace/root/index.md",
+      "title": "jj workspace root",
+      "legacyAnchors": [
+        "cmd-workspace-root",
+        "cmd-workspace-root"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4853,
+      "target": "zh-CN/commands/workspace/update-stale/index.md",
+      "title": "jj workspace update-stale",
+      "legacyAnchors": [
+        "cmd-workspace-update-stale",
+        "cmd-workspace-update-stale"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4878,
+      "target": "zh-CN/commands/debug/index.md",
+      "title": "jj debug",
+      "legacyAnchors": [
+        "cmd-debug",
+        "cmd-debug"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4944,
+      "target": "zh-CN/commands/debug/copy-detection/index.md",
+      "title": "jj debug copy-detection",
+      "legacyAnchors": [
+        "cmd-debug-copy-detection",
+        "cmd-debug-copy-detection"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4970,
+      "target": "zh-CN/commands/debug/fileset/index.md",
+      "title": "jj debug fileset",
+      "legacyAnchors": [
+        "cmd-debug-fileset",
+        "cmd-debug-fileset"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 4996,
+      "target": "zh-CN/commands/debug/index/index.md",
+      "title": "jj debug index",
+      "legacyAnchors": [
+        "cmd-debug-index",
+        "cmd-debug-index"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5018,
+      "target": "zh-CN/commands/debug/index-changed-paths/index.md",
+      "title": "jj debug index-changed-paths",
+      "legacyAnchors": [
+        "cmd-debug-index-changed-paths",
+        "cmd-debug-index-changed-paths"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5043,
+      "target": "zh-CN/commands/debug/init-simple/index.md",
+      "title": "jj debug init-simple",
+      "legacyAnchors": [
+        "cmd-debug-init-simple",
+        "cmd-debug-init-simple"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5069,
+      "target": "zh-CN/commands/debug/local-working-copy/index.md",
+      "title": "jj debug local-working-copy",
+      "legacyAnchors": [
+        "cmd-debug-local-working-copy",
+        "cmd-debug-local-working-copy"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5091,
+      "target": "zh-CN/commands/debug/object/index.md",
+      "title": "jj debug object",
+      "legacyAnchors": [
+        "cmd-debug-object",
+        "cmd-debug-object"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5130,
+      "target": "zh-CN/commands/debug/object/commit/index.md",
+      "title": "jj debug object commit",
+      "legacyAnchors": [
+        "cmd-debug-object-commit",
+        "cmd-debug-object-commit"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5188,
+      "target": "zh-CN/commands/debug/object/operation/index.md",
+      "title": "jj debug object operation",
+      "legacyAnchors": [
+        "cmd-debug-object-operation",
+        "cmd-debug-object-operation"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5156,
+      "target": "zh-CN/commands/debug/object/file/index.md",
+      "title": "jj debug object file",
+      "legacyAnchors": [
+        "cmd-debug-object-file",
+        "cmd-debug-object-file"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5214,
+      "target": "zh-CN/commands/debug/object/symlink/index.md",
+      "title": "jj debug object symlink",
+      "legacyAnchors": [
+        "cmd-debug-object-symlink",
+        "cmd-debug-object-symlink"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5246,
+      "target": "zh-CN/commands/debug/object/tree/index.md",
+      "title": "jj debug object tree",
+      "legacyAnchors": [
+        "cmd-debug-object-tree",
+        "cmd-debug-object-tree"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5278,
+      "target": "zh-CN/commands/debug/object/view/index.md",
+      "title": "jj debug object view",
+      "legacyAnchors": [
+        "cmd-debug-object-view",
+        "cmd-debug-object-view"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5307,
+      "target": "zh-CN/commands/debug/reindex/index.md",
+      "title": "jj debug reindex",
+      "legacyAnchors": [
+        "cmd-debug-reindex",
+        "cmd-debug-reindex"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5329,
+      "target": "zh-CN/commands/debug/revset/index.md",
+      "title": "jj debug revset",
+      "legacyAnchors": [
+        "cmd-debug-revset",
+        "cmd-debug-revset"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5361,
+      "target": "zh-CN/commands/debug/snapshot/index.md",
+      "title": "jj debug snapshot",
+      "legacyAnchors": [
+        "cmd-debug-snapshot",
+        "cmd-debug-snapshot"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5383,
+      "target": "zh-CN/commands/debug/stacked-table/index.md",
+      "title": "jj debug stacked-table",
+      "legacyAnchors": [
+        "cmd-debug-stacked-table",
+        "cmd-debug-stacked-table"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5412,
+      "target": "zh-CN/commands/debug/template/index.md",
+      "title": "jj debug template",
+      "legacyAnchors": [
+        "cmd-debug-template",
+        "cmd-debug-template"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5438,
+      "target": "zh-CN/commands/debug/tree/index.md",
+      "title": "jj debug tree",
+      "legacyAnchors": [
+        "cmd-debug-tree",
+        "cmd-debug-tree"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5473,
+      "target": "zh-CN/commands/debug/watchman/index.md",
+      "title": "jj debug watchman",
+      "legacyAnchors": [
+        "cmd-debug-watchman",
+        "cmd-debug-watchman"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5572,
+      "target": "zh-CN/commands/debug/watchman/status/index.md",
+      "title": "jj debug watchman status",
+      "legacyAnchors": [
+        "cmd-debug-watchman-status",
+        "cmd-debug-watchman-status"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5528,
+      "target": "zh-CN/commands/debug/watchman/query-clock/index.md",
+      "title": "jj debug watchman query-clock",
+      "legacyAnchors": [
+        "cmd-debug-watchman-query-clock",
+        "cmd-debug-watchman-query-clock"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5506,
+      "target": "zh-CN/commands/debug/watchman/query-changed-files/index.md",
+      "title": "jj debug watchman query-changed-files",
+      "legacyAnchors": [
+        "cmd-debug-watchman-query-changed-files",
+        "cmd-debug-watchman-query-changed-files"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5550,
+      "target": "zh-CN/commands/debug/watchman/reset-clock/index.md",
+      "title": "jj debug watchman reset-clock",
+      "legacyAnchors": [
+        "cmd-debug-watchman-reset-clock",
+        "cmd-debug-watchman-reset-clock"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5594,
+      "target": "zh-CN/commands/debug/working-copy/index.md",
+      "title": "jj debug working-copy",
+      "legacyAnchors": [
+        "cmd-debug-working-copy",
+        "cmd-debug-working-copy"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5619,
+      "target": "zh-CN/commands/bench/index.md",
+      "title": "jj bench",
+      "legacyAnchors": [
+        "cmd-bench",
+        "cmd-bench"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5652,
+      "target": "zh-CN/commands/bench/common-ancestors/index.md",
+      "title": "jj bench common-ancestors",
+      "legacyAnchors": [
+        "cmd-bench-common-ancestors",
+        "cmd-bench-common-ancestors"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5690,
+      "target": "zh-CN/commands/bench/is-ancestor/index.md",
+      "title": "jj bench is-ancestor",
+      "legacyAnchors": [
+        "cmd-bench-is-ancestor",
+        "cmd-bench-is-ancestor"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5728,
+      "target": "zh-CN/commands/bench/resolve-prefix/index.md",
+      "title": "jj bench resolve-prefix",
+      "legacyAnchors": [
+        "cmd-bench-resolve-prefix",
+        "cmd-bench-resolve-prefix"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5763,
+      "target": "zh-CN/commands/bench/revset/index.md",
+      "title": "jj bench revset",
+      "legacyAnchors": [
+        "cmd-bench-revset",
+        "cmd-bench-revset"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 28,
+      "target": "zh-CN/reference/revset/intro.md",
+      "title": "Revsets / 阅读说明与类型边界",
+      "legacyAnchors": [
+        "revset-intro",
+        "revset-intro"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 57,
+      "target": "zh-CN/reference/revset/hidden.md",
+      "title": "Hidden revisions / 可见、隐藏与搜索域",
+      "legacyAnchors": [
+        "revset-hidden",
+        "revset-hidden"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 94,
+      "target": "zh-CN/reference/revset/symbols.md",
+      "title": "Symbols / 提交符号、工作区与 change offset",
+      "legacyAnchors": [
+        "revset-symbols",
+        "revset-symbols"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 145,
+      "target": "zh-CN/reference/revset/operators.md",
+      "title": "Operators / 全部运算符与优先级",
+      "legacyAnchors": [
+        "revset-operators",
+        "revset-operators"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 196,
+      "target": "zh-CN/reference/revset/ranges.md",
+      "title": "Examples / 用同一张图分清 :: 与 ..",
+      "legacyAnchors": [
+        "revset-ranges",
+        "revset-ranges"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 249,
+      "target": "zh-CN/reference/revset/function-syntax.md",
+      "title": "Functions / 函数签名、默认值与参数类型",
+      "legacyAnchors": [
+        "revset-function-syntax",
+        "revset-function-syntax"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1789,
+      "target": "zh-CN/reference/revset/string-patterns.md",
+      "title": "String patterns / 字符串模式与逻辑组合",
+      "legacyAnchors": [
+        "revset-string-patterns",
+        "revset-string-patterns"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1842,
+      "target": "zh-CN/reference/revset/date-patterns.md",
+      "title": "Date patterns / 日期边界、时区与可复现查询",
+      "legacyAnchors": [
+        "revset-date-patterns",
+        "revset-date-patterns"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1874,
+      "target": "zh-CN/reference/revset/aliases.md",
+      "title": "Aliases / 自定义符号、函数与模式别名",
+      "legacyAnchors": [
+        "revset-aliases",
+        "revset-aliases"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1937,
+      "target": "zh-CN/reference/revset/default-config.md",
+      "title": "Built-in Aliases / 默认定义与命令选择范围",
+      "legacyAnchors": [
+        "revset-default-config",
+        "revset-default-config"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 2111,
+      "target": "zh-CN/reference/revset/connectivity.md",
+      "title": "Examples / reachable、connected、heads、roots 的区别",
+      "legacyAnchors": [
+        "revset-connectivity",
+        "revset-connectivity"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 2153,
+      "target": "zh-CN/reference/revset/log-markers.md",
+      "title": "Log markers / 日志图形、引用后缀与状态标签",
+      "legacyAnchors": [
+        "revset-log-markers",
+        "revset-log-markers"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 2210,
+      "target": "zh-CN/reference/revset/migration.md",
+      "title": "Version notes / 旧教程迁移与上一版勘误",
+      "legacyAnchors": [
+        "revset-migration",
+        "revset-migration"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 2244,
+      "target": "zh-CN/reference/revset/recipes-intro.md",
+      "title": "Examples / 20 个可组合的查询场景",
+      "legacyAnchors": [
+        "revset-recipes-intro",
+        "revset-recipes-intro"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 2567,
+      "target": "zh-CN/reference/revset/sources.md",
+      "title": "Sources / 固定版本源码、覆盖口径与验证限制",
+      "legacyAnchors": [
+        "revset-sources",
+        "revset-sources"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 302,
+      "target": "zh-CN/reference/revset/functions/parents.md",
+      "title": "parents(x, [depth])",
+      "legacyAnchors": [
+        "revset-fn-parents",
+        "revset-fn-parents"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 329,
+      "target": "zh-CN/reference/revset/functions/children.md",
+      "title": "children(x, [depth])",
+      "legacyAnchors": [
+        "revset-fn-children",
+        "revset-fn-children"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 356,
+      "target": "zh-CN/reference/revset/functions/ancestors.md",
+      "title": "ancestors(x, [depth])",
+      "legacyAnchors": [
+        "revset-fn-ancestors",
+        "revset-fn-ancestors"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 383,
+      "target": "zh-CN/reference/revset/functions/descendants.md",
+      "title": "descendants(x, [depth])",
+      "legacyAnchors": [
+        "revset-fn-descendants",
+        "revset-fn-descendants"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 410,
+      "target": "zh-CN/reference/revset/functions/first_parent.md",
+      "title": "first_parent(x, [depth])",
+      "legacyAnchors": [
+        "revset-fn-first_parent",
+        "revset-fn-first_parent"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 437,
+      "target": "zh-CN/reference/revset/functions/first_ancestors.md",
+      "title": "first_ancestors(x, [depth])",
+      "legacyAnchors": [
+        "revset-fn-first_ancestors",
+        "revset-fn-first_ancestors"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 464,
+      "target": "zh-CN/reference/revset/functions/reachable.md",
+      "title": "reachable(srcs, domain)",
+      "legacyAnchors": [
+        "revset-fn-reachable",
+        "revset-fn-reachable"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 491,
+      "target": "zh-CN/reference/revset/functions/connected.md",
+      "title": "connected(x)",
+      "legacyAnchors": [
+        "revset-fn-connected",
+        "revset-fn-connected"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 518,
+      "target": "zh-CN/reference/revset/functions/all.md",
+      "title": "all()",
+      "legacyAnchors": [
+        "revset-fn-all",
+        "revset-fn-all"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 545,
+      "target": "zh-CN/reference/revset/functions/none.md",
+      "title": "none()",
+      "legacyAnchors": [
+        "revset-fn-none",
+        "revset-fn-none"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 572,
+      "target": "zh-CN/reference/revset/functions/change_id.md",
+      "title": "change_id(prefix)",
+      "legacyAnchors": [
+        "revset-fn-change_id",
+        "revset-fn-change_id"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 599,
+      "target": "zh-CN/reference/revset/functions/commit_id.md",
+      "title": "commit_id(prefix)",
+      "legacyAnchors": [
+        "revset-fn-commit_id",
+        "revset-fn-commit_id"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 626,
+      "target": "zh-CN/reference/revset/functions/bookmarks.md",
+      "title": "bookmarks([pattern])",
+      "legacyAnchors": [
+        "revset-fn-bookmarks",
+        "revset-fn-bookmarks"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 653,
+      "target": "zh-CN/reference/revset/functions/remote_bookmarks.md",
+      "title": "remote_bookmarks([name_pattern], [[remote=]remote_pattern])",
+      "legacyAnchors": [
+        "revset-fn-remote_bookmarks",
+        "revset-fn-remote_bookmarks"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 680,
+      "target": "zh-CN/reference/revset/functions/tracked_remote_bookmarks.md",
+      "title": "tracked_remote_bookmarks([name_pattern], [[remote=]remote_pattern])",
+      "legacyAnchors": [
+        "revset-fn-tracked_remote_bookmarks",
+        "revset-fn-tracked_remote_bookmarks"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 707,
+      "target": "zh-CN/reference/revset/functions/untracked_remote_bookmarks.md",
+      "title": "untracked_remote_bookmarks([name_pattern], [[remote=]remote_pattern])",
+      "legacyAnchors": [
+        "revset-fn-untracked_remote_bookmarks",
+        "revset-fn-untracked_remote_bookmarks"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 734,
+      "target": "zh-CN/reference/revset/functions/tags.md",
+      "title": "tags([pattern])",
+      "legacyAnchors": [
+        "revset-fn-tags",
+        "revset-fn-tags"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 761,
+      "target": "zh-CN/reference/revset/functions/remote_tags.md",
+      "title": "remote_tags([name_pattern], [[remote=]remote_pattern])",
+      "legacyAnchors": [
+        "revset-fn-remote_tags",
+        "revset-fn-remote_tags"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 788,
+      "target": "zh-CN/reference/revset/functions/tracked_remote_tags.md",
+      "title": "tracked_remote_tags([name_pattern], [[remote=]remote_pattern])",
+      "legacyAnchors": [
+        "revset-fn-tracked_remote_tags",
+        "revset-fn-tracked_remote_tags"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 815,
+      "target": "zh-CN/reference/revset/functions/untracked_remote_tags.md",
+      "title": "untracked_remote_tags([name_pattern], [[remote=]remote_pattern])",
+      "legacyAnchors": [
+        "revset-fn-untracked_remote_tags",
+        "revset-fn-untracked_remote_tags"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 842,
+      "target": "zh-CN/reference/revset/functions/visible_heads.md",
+      "title": "visible_heads()",
+      "legacyAnchors": [
+        "revset-fn-visible_heads",
+        "revset-fn-visible_heads"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 869,
+      "target": "zh-CN/reference/revset/functions/root.md",
+      "title": "root()",
+      "legacyAnchors": [
+        "revset-fn-root",
+        "revset-fn-root"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 896,
+      "target": "zh-CN/reference/revset/functions/heads.md",
+      "title": "heads(x)",
+      "legacyAnchors": [
+        "revset-fn-heads",
+        "revset-fn-heads"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 923,
+      "target": "zh-CN/reference/revset/functions/roots.md",
+      "title": "roots(x)",
+      "legacyAnchors": [
+        "revset-fn-roots",
+        "revset-fn-roots"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 950,
+      "target": "zh-CN/reference/revset/functions/latest.md",
+      "title": "latest(x, [count])",
+      "legacyAnchors": [
+        "revset-fn-latest",
+        "revset-fn-latest"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 977,
+      "target": "zh-CN/reference/revset/functions/fork_point.md",
+      "title": "fork_point(x)",
+      "legacyAnchors": [
+        "revset-fn-fork_point",
+        "revset-fn-fork_point"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1004,
+      "target": "zh-CN/reference/revset/functions/merge_point.md",
+      "title": "merge_point(x)",
+      "legacyAnchors": [
+        "revset-fn-merge_point",
+        "revset-fn-merge_point"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1031,
+      "target": "zh-CN/reference/revset/functions/bisect.md",
+      "title": "bisect(x)",
+      "legacyAnchors": [
+        "revset-fn-bisect",
+        "revset-fn-bisect"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1058,
+      "target": "zh-CN/reference/revset/functions/exactly.md",
+      "title": "exactly(x, count)",
+      "legacyAnchors": [
+        "revset-fn-exactly",
+        "revset-fn-exactly"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1085,
+      "target": "zh-CN/reference/revset/functions/merges.md",
+      "title": "merges()",
+      "legacyAnchors": [
+        "revset-fn-merges",
+        "revset-fn-merges"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1112,
+      "target": "zh-CN/reference/revset/functions/forks.md",
+      "title": "forks()",
+      "legacyAnchors": [
+        "revset-fn-forks",
+        "revset-fn-forks"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1139,
+      "target": "zh-CN/reference/revset/functions/description.md",
+      "title": "description(pattern)",
+      "legacyAnchors": [
+        "revset-fn-description",
+        "revset-fn-description"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1166,
+      "target": "zh-CN/reference/revset/functions/subject.md",
+      "title": "subject(pattern)",
+      "legacyAnchors": [
+        "revset-fn-subject",
+        "revset-fn-subject"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1193,
+      "target": "zh-CN/reference/revset/functions/author.md",
+      "title": "author(pattern)",
+      "legacyAnchors": [
+        "revset-fn-author",
+        "revset-fn-author"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1220,
+      "target": "zh-CN/reference/revset/functions/author_name.md",
+      "title": "author_name(pattern)",
+      "legacyAnchors": [
+        "revset-fn-author_name",
+        "revset-fn-author_name"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1247,
+      "target": "zh-CN/reference/revset/functions/author_email.md",
+      "title": "author_email(pattern)",
+      "legacyAnchors": [
+        "revset-fn-author_email",
+        "revset-fn-author_email"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1274,
+      "target": "zh-CN/reference/revset/functions/author_date.md",
+      "title": "author_date(pattern)",
+      "legacyAnchors": [
+        "revset-fn-author_date",
+        "revset-fn-author_date"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1301,
+      "target": "zh-CN/reference/revset/functions/mine.md",
+      "title": "mine()",
+      "legacyAnchors": [
+        "revset-fn-mine",
+        "revset-fn-mine"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1328,
+      "target": "zh-CN/reference/revset/functions/committer.md",
+      "title": "committer(pattern)",
+      "legacyAnchors": [
+        "revset-fn-committer",
+        "revset-fn-committer"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1355,
+      "target": "zh-CN/reference/revset/functions/committer_name.md",
+      "title": "committer_name(pattern)",
+      "legacyAnchors": [
+        "revset-fn-committer_name",
+        "revset-fn-committer_name"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1382,
+      "target": "zh-CN/reference/revset/functions/committer_email.md",
+      "title": "committer_email(pattern)",
+      "legacyAnchors": [
+        "revset-fn-committer_email",
+        "revset-fn-committer_email"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1409,
+      "target": "zh-CN/reference/revset/functions/committer_date.md",
+      "title": "committer_date(pattern)",
+      "legacyAnchors": [
+        "revset-fn-committer_date",
+        "revset-fn-committer_date"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1436,
+      "target": "zh-CN/reference/revset/functions/signed.md",
+      "title": "signed()",
+      "legacyAnchors": [
+        "revset-fn-signed",
+        "revset-fn-signed"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1463,
+      "target": "zh-CN/reference/revset/functions/empty.md",
+      "title": "empty()",
+      "legacyAnchors": [
+        "revset-fn-empty",
+        "revset-fn-empty"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1490,
+      "target": "zh-CN/reference/revset/functions/files.md",
+      "title": "files(expression)",
+      "legacyAnchors": [
+        "revset-fn-files",
+        "revset-fn-files"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1517,
+      "target": "zh-CN/reference/revset/functions/diff_lines.md",
+      "title": "diff_lines(text, [files])",
+      "legacyAnchors": [
+        "revset-fn-diff_lines",
+        "revset-fn-diff_lines"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1544,
+      "target": "zh-CN/reference/revset/functions/diff_lines_added.md",
+      "title": "diff_lines_added(text, [files])",
+      "legacyAnchors": [
+        "revset-fn-diff_lines_added",
+        "revset-fn-diff_lines_added"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1571,
+      "target": "zh-CN/reference/revset/functions/diff_lines_removed.md",
+      "title": "diff_lines_removed(text, [files])",
+      "legacyAnchors": [
+        "revset-fn-diff_lines_removed",
+        "revset-fn-diff_lines_removed"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1598,
+      "target": "zh-CN/reference/revset/functions/conflicts.md",
+      "title": "conflicts()",
+      "legacyAnchors": [
+        "revset-fn-conflicts",
+        "revset-fn-conflicts"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1625,
+      "target": "zh-CN/reference/revset/functions/divergent.md",
+      "title": "divergent()",
+      "legacyAnchors": [
+        "revset-fn-divergent",
+        "revset-fn-divergent"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1652,
+      "target": "zh-CN/reference/revset/functions/present.md",
+      "title": "present(x)",
+      "legacyAnchors": [
+        "revset-fn-present",
+        "revset-fn-present"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1679,
+      "target": "zh-CN/reference/revset/functions/coalesce.md",
+      "title": "coalesce(revsets...)",
+      "legacyAnchors": [
+        "revset-fn-coalesce",
+        "revset-fn-coalesce"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1706,
+      "target": "zh-CN/reference/revset/functions/working_copies.md",
+      "title": "working_copies()",
+      "legacyAnchors": [
+        "revset-fn-working_copies",
+        "revset-fn-working_copies"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1733,
+      "target": "zh-CN/reference/revset/functions/at_operation.md",
+      "title": "at_operation(op, x)",
+      "legacyAnchors": [
+        "revset-fn-at_operation",
+        "revset-fn-at_operation"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1760,
+      "target": "zh-CN/reference/revset/functions/diff_contains.md",
+      "title": "diff_contains(text, [files])",
+      "legacyAnchors": [
+        "revset-fn-diff_contains",
+        "revset-fn-diff_contains"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1975,
+      "target": "zh-CN/reference/revset/aliases/trunk.md",
+      "title": "trunk()",
+      "legacyAnchors": [
+        "revset-alias-trunk"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1992,
+      "target": "zh-CN/reference/revset/aliases/builtin_log.md",
+      "title": "builtin_log()",
+      "legacyAnchors": [
+        "revset-alias-builtin_log"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 2009,
+      "target": "zh-CN/reference/revset/aliases/builtin_immutable_heads.md",
+      "title": "builtin_immutable_heads()",
+      "legacyAnchors": [
+        "revset-alias-builtin_immutable_heads"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 2026,
+      "target": "zh-CN/reference/revset/aliases/immutable_heads.md",
+      "title": "immutable_heads()",
+      "legacyAnchors": [
+        "revset-alias-immutable_heads"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 2043,
+      "target": "zh-CN/reference/revset/aliases/immutable.md",
+      "title": "immutable()",
+      "legacyAnchors": [
+        "revset-alias-immutable"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 2060,
+      "target": "zh-CN/reference/revset/aliases/mutable.md",
+      "title": "mutable()",
+      "legacyAnchors": [
+        "revset-alias-mutable"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 2077,
+      "target": "zh-CN/reference/revset/aliases/visible.md",
+      "title": "visible()",
+      "legacyAnchors": [
+        "revset-alias-visible"
+      ]
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 2094,
+      "target": "zh-CN/reference/revset/aliases/hidden.md",
+      "title": "hidden()",
+      "legacyAnchors": [
+        "revset-alias-hidden"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 9,
+      "target": "zh-CN/concepts/reading.md",
+      "title": "阅读范围与可信边界",
+      "legacyAnchors": []
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 41,
+      "target": "zh-CN/concepts/syntax.md",
+      "title": "怎么读命令语法",
+      "legacyAnchors": []
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 55,
+      "target": "zh-CN/concepts/objects.md",
+      "title": "核心对象与常见误解",
+      "legacyAnchors": []
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 72,
+      "target": "zh-CN/concepts/languages.md",
+      "title": "Revset、Fileset 和 Template 速查",
+      "legacyAnchors": []
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 123,
+      "target": "zh-CN/concepts/global-options.md",
+      "title": "全局选项",
+      "legacyAnchors": [
+        "global-options"
+      ]
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 173,
+      "target": "zh-CN/concepts/diff-options.md",
+      "title": "共享差异格式选项",
+      "legacyAnchors": []
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5800,
+      "target": "zh-CN/concepts/defaults.md",
+      "title": "内置默认值不等于你的有效配置",
+      "legacyAnchors": []
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5831,
+      "target": "zh-CN/concepts/aliases.md",
+      "title": "别名的三个层级",
+      "legacyAnchors": []
+    },
+    {
+      "source": "jj-v0.45.1-zh.md",
+      "line": 5842,
+      "target": "zh-CN/concepts/safety.md",
+      "title": "安全边界",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 46,
+      "target": "zh-CN/workflows/01.md",
+      "title": "01. 初始化：新克隆与接入已有 Git 仓库",
+      "legacyAnchors": [
+        "workflow-01"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 75,
+      "target": "zh-CN/workflows/02.md",
+      "title": "02. 日常开发：理解 @、describe、new 与 commit",
+      "legacyAnchors": [
+        "workflow-02"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 99,
+      "target": "zh-CN/workflows/03.md",
+      "title": "03. 临时插入紧急修复：不依赖 stash",
+      "legacyAnchors": [
+        "workflow-03"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 124,
+      "target": "zh-CN/workflows/04.md",
+      "title": "04. 堆叠提交：回头修正中间的一层",
+      "legacyAnchors": [
+        "workflow-04"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 156,
+      "target": "zh-CN/workflows/05.md",
+      "title": "05. 一次改太多：把功能与重构拆开",
+      "legacyAnchors": [
+        "workflow-05"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 178,
+      "target": "zh-CN/workflows/06.md",
+      "title": "06. 整理碎片：squash、部分 squash 与 absorb",
+      "legacyAnchors": [
+        "workflow-06"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 201,
+      "target": "zh-CN/workflows/07.md",
+      "title": "07. 跟上主线：fetch 后 rebase 当前分支",
+      "legacyAnchors": [
+        "workflow-07"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 221,
+      "target": "zh-CN/workflows/08.md",
+      "title": "08. 精确选择 rebase 的范围与插入位置",
+      "legacyAnchors": [
+        "workflow-08"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 244,
+      "target": "zh-CN/workflows/09.md",
+      "title": "09. 挑选别人的改动：duplicate 而不是移动原提交",
+      "legacyAnchors": [
+        "workflow-09"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 264,
+      "target": "zh-CN/workflows/10.md",
+      "title": "10. 合并分支并解决冲突",
+      "legacyAnchors": [
+        "workflow-10"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 289,
+      "target": "zh-CN/workflows/11.md",
+      "title": "11. 首次发布功能分支：显式管理书签",
+      "legacyAnchors": [
+        "workflow-11"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 312,
+      "target": "zh-CN/workflows/12.md",
+      "title": "12. 持续更新已发布的功能分支",
+      "legacyAnchors": [
+        "workflow-12"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 335,
+      "target": "zh-CN/workflows/13.md",
+      "title": "13. 清理书签：delete、forget 与 untrack 不等价",
+      "legacyAnchors": [
+        "workflow-13"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 363,
+      "target": "zh-CN/workflows/14.md",
+      "title": "14. 只撤销某个文件的修改：restore",
+      "legacyAnchors": [
+        "workflow-14"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 384,
+      "target": "zh-CN/workflows/15.md",
+      "title": "15. 操作做错了：undo、redo 与操作日志恢复",
+      "legacyAnchors": [
+        "workflow-15"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 411,
+      "target": "zh-CN/workflows/16.md",
+      "title": "16. 已发布历史不宜重写：用 revert 生成反向提交",
+      "legacyAnchors": [
+        "workflow-16"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 432,
+      "target": "zh-CN/workflows/17.md",
+      "title": "17. 追踪一个 change 怎样被改写：evolog 与 interdiff",
+      "legacyAnchors": [
+        "workflow-17"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 452,
+      "target": "zh-CN/workflows/18.md",
+      "title": "18. 多个目录并行开发：workspace",
+      "legacyAnchors": [
+        "workflow-18"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 477,
+      "target": "zh-CN/workflows/19.md",
+      "title": "19. 大仓库与跟踪控制：sparse、track、untrack",
+      "legacyAnchors": [
+        "workflow-19"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 505,
+      "target": "zh-CN/workflows/20.md",
+      "title": "20. 批量验证堆叠中的每个提交：run",
+      "legacyAnchors": [
+        "workflow-20"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 524,
+      "target": "zh-CN/workflows/21.md",
+      "title": "21. 自动整理每一层：run 与 fix 的边界",
+      "legacyAnchors": [
+        "workflow-21"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 546,
+      "target": "zh-CN/workflows/22.md",
+      "title": "22. 定位首次引入问题的提交：bisect run",
+      "legacyAnchors": [
+        "workflow-22"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 563,
+      "target": "zh-CN/workflows/23.md",
+      "title": "23. 发布标签与签名：先确定目标，再放宽任何保护",
+      "legacyAnchors": [
+        "workflow-23"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 586,
+      "target": "zh-CN/workflows/24.md",
+      "title": "24. Gerrit 代码评审：upload 与普通 push 分开",
+      "legacyAnchors": [
+        "workflow-24"
+      ]
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 603,
+      "target": "zh-CN/workflows/guide-24.md",
+      "title": "最值得记住的选择表",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 622,
+      "target": "zh-CN/workflows/guide-25.md",
+      "title": "三种“历史”分别回答什么",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 651,
+      "target": "zh-CN/workflows/revset-01.md",
+      "title": "R01 · 查看当前所在的可变提交栈",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 663,
+      "target": "zh-CN/workflows/revset-02.md",
+      "title": "R02 · 查看当前主线之外的非空改动",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 675,
+      "target": "zh-CN/workflows/revset-03.md",
+      "title": "R03 · 查我的可变工作",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 687,
+      "target": "zh-CN/workflows/revset-04.md",
+      "title": "R04 · 按代数查看历史，而不是按条数",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 700,
+      "target": "zh-CN/workflows/revset-05.md",
+      "title": "R05 · 按标题约定查找修复",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 712,
+      "target": "zh-CN/workflows/revset-06.md",
+      "title": "R06 · 限定一个明确的作者时间区间",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 724,
+      "target": "zh-CN/workflows/revset-07.md",
+      "title": "R07 · 调查最近发生过重写的候选",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 736,
+      "target": "zh-CN/workflows/revset-08.md",
+      "title": "R08 · 查看某个 Rust 模块的变更历史",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 748,
+      "target": "zh-CN/workflows/revset-09.md",
+      "title": "R09 · 找出 TODO 是什么时候加进来的",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 760,
+      "target": "zh-CN/workflows/revset-10.md",
+      "title": "R10 · 查找某个旧 API 的删除",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 772,
+      "target": "zh-CN/workflows/revset-11.md",
+      "title": "R11 · 只查看当前可变历史里的文件冲突",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 784,
+      "target": "zh-CN/workflows/revset-12.md",
+      "title": "R12 · 定位 change 分歧",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 796,
+      "target": "zh-CN/workflows/revset-13.md",
+      "title": "R13 · 预览空白草稿候选",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 808,
+      "target": "zh-CN/workflows/revset-14.md",
+      "title": "R14 · 看当前历史相对 origin 已知书签的差集",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 821,
+      "target": "zh-CN/workflows/revset-15.md",
+      "title": "R15 · 总览本地引用与工作区边界",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 833,
+      "target": "zh-CN/workflows/revset-16.md",
+      "title": "R16 · 找当前工作与主线的共同基点",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 845,
+      "target": "zh-CN/workflows/revset-17.md",
+      "title": "R17 · 找两个 feature 最早共同进入哪里的历史",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 857,
+      "target": "zh-CN/workflows/revset-18.md",
+      "title": "R18 · 兼容 main/master，但不吞掉歧义",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 869,
+      "target": "zh-CN/workflows/revset-19.md",
+      "title": "R19 · 从旧 operation 查看当前已经隐藏的提交",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 882,
+      "target": "zh-CN/workflows/revset-20.md",
+      "title": "R20 · 给脚本的单目标加数量断言",
+      "legacyAnchors": []
+    },
+    {
+      "source": "sources-and-coverage.md",
+      "line": 1,
+      "target": "zh-CN/reference/sources.md",
+      "title": "来源、覆盖与校对记录",
+      "legacyAnchors": []
+    },
+    {
+      "source": "revsets-zh.md",
+      "line": 1,
+      "target": "zh-CN/reference/revset/index.md",
+      "title": "Revset 完整参考",
+      "legacyAnchors": []
+    },
+    {
+      "source": "README.md",
+      "line": 1,
+      "target": "zh-CN/reference/legacy.md",
+      "title": "历史资料与迁移说明",
+      "legacyAnchors": []
+    }
+  ],
+  "deduplicated": [
+    "integrated Revset copies → reference/revset",
+    "20 query recipes → workflows/revset-*"
+  ],
+  "notEditorialInputs": [
+    "HTML",
+    "TXT",
+    "Python helpers"
+  ],
+  "knowledgeAudit": {
+    "registeredFunctions": 55,
+    "documentedFunctions": 54,
+    "deprecatedFunctions": [
+      "diff_contains"
+    ],
+    "defaultAliases": 8,
+    "aliasesMatchFixedConfig": true
+  },
+  "corrections": [
+    {
+      "file": "zh-CN/reference/revset/functions/parents.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L777",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L827"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/children.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L787",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L837"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/ancestors.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L797",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L847"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/descendants.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L808",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L858"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/first_parent.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L819",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L869"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/first_ancestors.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L829",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L879"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/reachable.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L845",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L895"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/connected.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L840",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L890"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/all.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L855",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L905"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/none.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L851",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L901"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/change_id.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L881",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L931"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/commit_id.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L890",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L940"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/bookmarks.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L899",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L949"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/remote_bookmarks.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L908",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L958"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/tracked_remote_bookmarks.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L913",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L963"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/untracked_remote_bookmarks.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L921",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L971"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/tags.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L929",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L979"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/remote_tags.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L938",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L988"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/tracked_remote_tags.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L943",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L993"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/untracked_remote_tags.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L948",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L998"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/visible_heads.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L873",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L923"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/root.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L877",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L927"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/heads.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L863",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L913"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/roots.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L868",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L918"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/latest.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L953",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1003"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/fork_point.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L963",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1013"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/merge_point.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L968",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1018"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/bisect.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L973",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1023"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/exactly.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L978",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1028"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/merges.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L984",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1034"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/forks.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L990",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1040"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/description.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L994",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1044"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/subject.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1000",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1050"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/author.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1006",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1056"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/author_name.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1014",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1064"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/author_email.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1020",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1070"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/author_date.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1026",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1076"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/mine.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1038",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1088"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/committer.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1047",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1097"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/committer_name.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1055",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1105"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/committer_email.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1061",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1111"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/committer_date.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1067",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1117"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/signed.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1033",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1083"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/empty.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1074",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1124"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/files.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1078",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1128"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/diff_lines.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1089",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1139"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/diff_lines_added.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1107",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1157"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/diff_lines_removed.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1118",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1168"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/conflicts.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1131",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1181"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/divergent.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1135",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1185"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/present.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1139",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1189"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/coalesce.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1156",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1206"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/working_copies.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L859",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L909"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/at_operation.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1144",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1194"
+    },
+    {
+      "file": "zh-CN/reference/revset/functions/diff_contains.md",
+      "kind": "function_source_line",
+      "before": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1129",
+      "after": "https://github.com/jj-vcs/jj/blob/7c41cdeb16b6b321c64e789a966b6adf723816a5/lib/src/revset.rs#L1180"
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "edit"
+        ],
+        "field": "--user",
+        "evidenceIds": [
+          "source:cli/src/commands/config/edit.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "edit"
+        ],
+        "field": "--repo",
+        "evidenceIds": [
+          "source:cli/src/commands/config/edit.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "edit"
+        ],
+        "field": "--workspace",
+        "evidenceIds": [
+          "source:cli/src/commands/config/edit.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "edit"
+        ],
+        "field": "--file",
+        "evidenceIds": [
+          "source:cli/src/commands/config/edit.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "list"
+        ],
+        "field": "--user",
+        "evidenceIds": [
+          "source:cli/src/commands/config/list.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "list"
+        ],
+        "field": "--repo",
+        "evidenceIds": [
+          "source:cli/src/commands/config/list.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "list"
+        ],
+        "field": "--workspace",
+        "evidenceIds": [
+          "source:cli/src/commands/config/list.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "path"
+        ],
+        "field": "--user",
+        "evidenceIds": [
+          "source:cli/src/commands/config/path.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "path"
+        ],
+        "field": "--repo",
+        "evidenceIds": [
+          "source:cli/src/commands/config/path.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "path"
+        ],
+        "field": "--workspace",
+        "evidenceIds": [
+          "source:cli/src/commands/config/path.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "set"
+        ],
+        "field": "--user",
+        "evidenceIds": [
+          "source:cli/src/commands/config/set.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "set"
+        ],
+        "field": "--repo",
+        "evidenceIds": [
+          "source:cli/src/commands/config/set.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "set"
+        ],
+        "field": "--workspace",
+        "evidenceIds": [
+          "source:cli/src/commands/config/set.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "set"
+        ],
+        "field": "--file",
+        "evidenceIds": [
+          "source:cli/src/commands/config/set.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "unset"
+        ],
+        "field": "--user",
+        "evidenceIds": [
+          "source:cli/src/commands/config/unset.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "unset"
+        ],
+        "field": "--repo",
+        "evidenceIds": [
+          "source:cli/src/commands/config/unset.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "unset"
+        ],
+        "field": "--workspace",
+        "evidenceIds": [
+          "source:cli/src/commands/config/unset.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "config",
+          "unset"
+        ],
+        "field": "--file",
+        "evidenceIds": [
+          "source:cli/src/commands/config/unset.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/config/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "common-ancestors"
+        ],
+        "field": "--save-baseline",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/common_ancestors.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "common-ancestors"
+        ],
+        "field": "--baseline",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/common_ancestors.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "common-ancestors"
+        ],
+        "field": "--sample-size",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/common_ancestors.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "is-ancestor"
+        ],
+        "field": "--save-baseline",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/is_ancestor.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "is-ancestor"
+        ],
+        "field": "--baseline",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/is_ancestor.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "is-ancestor"
+        ],
+        "field": "--sample-size",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/is_ancestor.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "resolve-prefix"
+        ],
+        "field": "--save-baseline",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/resolve_prefix.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "resolve-prefix"
+        ],
+        "field": "--baseline",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/resolve_prefix.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "resolve-prefix"
+        ],
+        "field": "--sample-size",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/resolve_prefix.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "revset"
+        ],
+        "field": "--save-baseline",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/revset.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "revset"
+        ],
+        "field": "--baseline",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/revset.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    },
+    {
+      "file": "upstream/commands.json",
+      "kind": "flattened_field_source",
+      "before": {
+        "command": [
+          "bench",
+          "revset"
+        ],
+        "field": "--sample-size",
+        "evidenceIds": [
+          "source:cli/src/commands/bench/revset.rs"
+        ]
+      },
+      "after": [
+        "source:cli/src/commands/bench/mod.rs"
+      ]
+    }
+  ],
+  "sharedProse": [
+    "Global options are authored on the root command only.",
+    "Diff format options are authored in concepts/diff-options.md only."
+  ]
+}

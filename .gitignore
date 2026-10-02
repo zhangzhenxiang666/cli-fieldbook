@@ -1,0 +1,11 @@
+node_modules/
+.generated/
+.astro/
+site/.astro/
+site/src/content/docs/
+site/public/generated/
+site/dist/
+playwright-report/
+test-results/
+.DS_Store
+*.tsbuildinfo

@@ -1,0 +1,1438 @@
+{
+  "schema": 1,
+  "archive": "herdr-v0.9.3-zh.zip",
+  "sha256": "f2f7dc99dd106d6c28dd09b2e1f78f3ac5786fe046983ec18eac243218dc2ee0",
+  "checksumEntries": 13,
+  "commandNodes": 125,
+  "pages": [
+    {
+      "source": "commands-zh.md",
+      "line": 5,
+      "target": "zh-CN/commands/index.md",
+      "title": "herdr",
+      "legacyAnchors": [
+        "cmd-herdr"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 59,
+      "target": "zh-CN/commands/completion/index.md",
+      "title": "herdr completion",
+      "legacyAnchors": [
+        "cmd-completion"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 82,
+      "target": "zh-CN/commands/update/index.md",
+      "title": "herdr update",
+      "legacyAnchors": [
+        "cmd-update"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 103,
+      "target": "zh-CN/commands/status/index.md",
+      "title": "herdr status",
+      "legacyAnchors": [
+        "cmd-status"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 126,
+      "target": "zh-CN/commands/status/server/index.md",
+      "title": "herdr status server",
+      "legacyAnchors": [
+        "cmd-status-server"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 141,
+      "target": "zh-CN/commands/status/client/index.md",
+      "title": "herdr status client",
+      "legacyAnchors": [
+        "cmd-status-client"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 156,
+      "target": "zh-CN/commands/config/index.md",
+      "title": "herdr config",
+      "legacyAnchors": [
+        "cmd-config"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 174,
+      "target": "zh-CN/commands/config/check/index.md",
+      "title": "herdr config check",
+      "legacyAnchors": [
+        "cmd-config-check"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 192,
+      "target": "zh-CN/commands/config/reset-keys/index.md",
+      "title": "herdr config reset-keys",
+      "legacyAnchors": [
+        "cmd-config-reset-keys"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 212,
+      "target": "zh-CN/commands/channel/index.md",
+      "title": "herdr channel",
+      "legacyAnchors": [
+        "cmd-channel"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 230,
+      "target": "zh-CN/commands/channel/show/index.md",
+      "title": "herdr channel show",
+      "legacyAnchors": [
+        "cmd-channel-show"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 244,
+      "target": "zh-CN/commands/channel/set/index.md",
+      "title": "herdr channel set",
+      "legacyAnchors": [
+        "cmd-channel-set"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 267,
+      "target": "zh-CN/commands/machine/index.md",
+      "title": "herdr machine",
+      "legacyAnchors": [
+        "cmd-machine"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 295,
+      "target": "zh-CN/commands/machine/list/index.md",
+      "title": "herdr machine list",
+      "legacyAnchors": [
+        "cmd-machine-list"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 310,
+      "target": "zh-CN/commands/machine/status/index.md",
+      "title": "herdr machine status",
+      "legacyAnchors": [
+        "cmd-machine-status"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 332,
+      "target": "zh-CN/commands/machine/reconnect/index.md",
+      "title": "herdr machine reconnect",
+      "legacyAnchors": [
+        "cmd-machine-reconnect"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 353,
+      "target": "zh-CN/commands/machine/add/index.md",
+      "title": "herdr machine add",
+      "legacyAnchors": [
+        "cmd-machine-add"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 378,
+      "target": "zh-CN/commands/machine/rename/index.md",
+      "title": "herdr machine rename",
+      "legacyAnchors": [
+        "cmd-machine-rename"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 396,
+      "target": "zh-CN/commands/machine/remove/index.md",
+      "title": "herdr machine remove",
+      "legacyAnchors": [
+        "cmd-machine-remove"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 417,
+      "target": "zh-CN/commands/machine/enable/index.md",
+      "title": "herdr machine enable",
+      "legacyAnchors": [
+        "cmd-machine-enable"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 434,
+      "target": "zh-CN/commands/machine/disable/index.md",
+      "title": "herdr machine disable",
+      "legacyAnchors": [
+        "cmd-machine-disable"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 455,
+      "target": "zh-CN/commands/server/index.md",
+      "title": "herdr server",
+      "legacyAnchors": [
+        "cmd-server"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 480,
+      "target": "zh-CN/commands/server/stop/index.md",
+      "title": "herdr server stop",
+      "legacyAnchors": [
+        "cmd-server-stop"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 498,
+      "target": "zh-CN/commands/server/reload-config/index.md",
+      "title": "herdr server reload-config",
+      "legacyAnchors": [
+        "cmd-server-reload-config"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 512,
+      "target": "zh-CN/commands/server/agent-manifests/index.md",
+      "title": "herdr server agent-manifests",
+      "legacyAnchors": [
+        "cmd-server-agent-manifests"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 527,
+      "target": "zh-CN/commands/server/update-agent-manifests/index.md",
+      "title": "herdr server update-agent-manifests",
+      "legacyAnchors": [
+        "cmd-server-update-agent-manifests"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 546,
+      "target": "zh-CN/commands/server/reload-agent-manifests/index.md",
+      "title": "herdr server reload-agent-manifests",
+      "legacyAnchors": [
+        "cmd-server-reload-agent-manifests"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 560,
+      "target": "zh-CN/commands/api/index.md",
+      "title": "herdr api",
+      "legacyAnchors": [
+        "cmd-api"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 578,
+      "target": "zh-CN/commands/api/snapshot/index.md",
+      "title": "herdr api snapshot",
+      "legacyAnchors": [
+        "cmd-api-snapshot"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 596,
+      "target": "zh-CN/commands/api/schema/index.md",
+      "title": "herdr api schema",
+      "legacyAnchors": [
+        "cmd-api-schema"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 618,
+      "target": "zh-CN/commands/workspace/index.md",
+      "title": "herdr workspace",
+      "legacyAnchors": [
+        "cmd-workspace"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 641,
+      "target": "zh-CN/commands/workspace/list/index.md",
+      "title": "herdr workspace list",
+      "legacyAnchors": [
+        "cmd-workspace-list"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 655,
+      "target": "zh-CN/commands/workspace/create/index.md",
+      "title": "herdr workspace create",
+      "legacyAnchors": [
+        "cmd-workspace-create"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 680,
+      "target": "zh-CN/commands/workspace/get/index.md",
+      "title": "herdr workspace get",
+      "legacyAnchors": [
+        "cmd-workspace-get"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 697,
+      "target": "zh-CN/commands/workspace/focus/index.md",
+      "title": "herdr workspace focus",
+      "legacyAnchors": [
+        "cmd-workspace-focus"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 714,
+      "target": "zh-CN/commands/workspace/rename/index.md",
+      "title": "herdr workspace rename",
+      "legacyAnchors": [
+        "cmd-workspace-rename"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 732,
+      "target": "zh-CN/commands/workspace/report-metadata/index.md",
+      "title": "herdr workspace report-metadata",
+      "legacyAnchors": [
+        "cmd-workspace-report-metadata"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 758,
+      "target": "zh-CN/commands/workspace/close/index.md",
+      "title": "herdr workspace close",
+      "legacyAnchors": [
+        "cmd-workspace-close"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 785,
+      "target": "zh-CN/commands/worktree/index.md",
+      "title": "herdr worktree",
+      "legacyAnchors": [
+        "cmd-worktree"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 809,
+      "target": "zh-CN/commands/worktree/list/index.md",
+      "title": "herdr worktree list",
+      "legacyAnchors": [
+        "cmd-worktree-list"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 830,
+      "target": "zh-CN/commands/worktree/create/index.md",
+      "title": "herdr worktree create",
+      "legacyAnchors": [
+        "cmd-worktree-create"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 861,
+      "target": "zh-CN/commands/worktree/open/index.md",
+      "title": "herdr worktree open",
+      "legacyAnchors": [
+        "cmd-worktree-open"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 891,
+      "target": "zh-CN/commands/worktree/remove/index.md",
+      "title": "herdr worktree remove",
+      "legacyAnchors": [
+        "cmd-worktree-remove"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 916,
+      "target": "zh-CN/commands/tab/index.md",
+      "title": "herdr tab",
+      "legacyAnchors": [
+        "cmd-tab"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 938,
+      "target": "zh-CN/commands/tab/list/index.md",
+      "title": "herdr tab list",
+      "legacyAnchors": [
+        "cmd-tab-list"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 953,
+      "target": "zh-CN/commands/tab/create/index.md",
+      "title": "herdr tab create",
+      "legacyAnchors": [
+        "cmd-tab-create"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 977,
+      "target": "zh-CN/commands/tab/get/index.md",
+      "title": "herdr tab get",
+      "legacyAnchors": [
+        "cmd-tab-get"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 994,
+      "target": "zh-CN/commands/tab/focus/index.md",
+      "title": "herdr tab focus",
+      "legacyAnchors": [
+        "cmd-tab-focus"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1011,
+      "target": "zh-CN/commands/tab/close/index.md",
+      "title": "herdr tab close",
+      "legacyAnchors": [
+        "cmd-tab-close"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1032,
+      "target": "zh-CN/commands/tab/rename/index.md",
+      "title": "herdr tab rename",
+      "legacyAnchors": [
+        "cmd-tab-rename"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1050,
+      "target": "zh-CN/commands/notification/index.md",
+      "title": "herdr notification",
+      "legacyAnchors": [
+        "cmd-notification"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1067,
+      "target": "zh-CN/commands/notification/show/index.md",
+      "title": "herdr notification show",
+      "legacyAnchors": [
+        "cmd-notification-show"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1091,
+      "target": "zh-CN/commands/agent/index.md",
+      "title": "herdr agent",
+      "legacyAnchors": [
+        "cmd-agent"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1124,
+      "target": "zh-CN/commands/agent/list/index.md",
+      "title": "herdr agent list",
+      "legacyAnchors": [
+        "cmd-agent-list"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1138,
+      "target": "zh-CN/commands/agent/get/index.md",
+      "title": "herdr agent get",
+      "legacyAnchors": [
+        "cmd-agent-get"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1155,
+      "target": "zh-CN/commands/agent/read/index.md",
+      "title": "herdr agent read",
+      "legacyAnchors": [
+        "cmd-agent-read"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1182,
+      "target": "zh-CN/commands/agent/send-keys/index.md",
+      "title": "herdr agent send-keys",
+      "legacyAnchors": [
+        "cmd-agent-send-keys"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1204,
+      "target": "zh-CN/commands/agent/prompt/index.md",
+      "title": "herdr agent prompt",
+      "legacyAnchors": [
+        "cmd-agent-prompt"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1237,
+      "target": "zh-CN/commands/agent/rename/index.md",
+      "title": "herdr agent rename",
+      "legacyAnchors": [
+        "cmd-agent-rename"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1260,
+      "target": "zh-CN/commands/agent/focus/index.md",
+      "title": "herdr agent focus",
+      "legacyAnchors": [
+        "cmd-agent-focus"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1277,
+      "target": "zh-CN/commands/agent/wait/index.md",
+      "title": "herdr agent wait",
+      "legacyAnchors": [
+        "cmd-agent-wait"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1302,
+      "target": "zh-CN/commands/agent/attach/index.md",
+      "title": "herdr agent attach",
+      "legacyAnchors": [
+        "cmd-agent-attach"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1326,
+      "target": "zh-CN/commands/agent/start/index.md",
+      "title": "herdr agent start",
+      "legacyAnchors": [
+        "cmd-agent-start"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1355,
+      "target": "zh-CN/commands/agent/explain/index.md",
+      "title": "herdr agent explain",
+      "legacyAnchors": [
+        "cmd-agent-explain"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1383,
+      "target": "zh-CN/commands/pane/index.md",
+      "title": "herdr pane",
+      "legacyAnchors": [
+        "cmd-pane"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1424,
+      "target": "zh-CN/commands/pane/list/index.md",
+      "title": "herdr pane list",
+      "legacyAnchors": [
+        "cmd-pane-list"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1439,
+      "target": "zh-CN/commands/pane/current/index.md",
+      "title": "herdr pane current",
+      "legacyAnchors": [
+        "cmd-pane-current"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1459,
+      "target": "zh-CN/commands/pane/get/index.md",
+      "title": "herdr pane get",
+      "legacyAnchors": [
+        "cmd-pane-get"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1476,
+      "target": "zh-CN/commands/pane/layout/index.md",
+      "title": "herdr pane layout",
+      "legacyAnchors": [
+        "cmd-pane-layout"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1492,
+      "target": "zh-CN/commands/pane/process-info/index.md",
+      "title": "herdr pane process-info",
+      "legacyAnchors": [
+        "cmd-pane-process-info"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1512,
+      "target": "zh-CN/commands/pane/neighbor/index.md",
+      "title": "herdr pane neighbor",
+      "legacyAnchors": [
+        "cmd-pane-neighbor"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1529,
+      "target": "zh-CN/commands/pane/edges/index.md",
+      "title": "herdr pane edges",
+      "legacyAnchors": [
+        "cmd-pane-edges"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1545,
+      "target": "zh-CN/commands/pane/focus/index.md",
+      "title": "herdr pane focus",
+      "legacyAnchors": [
+        "cmd-pane-focus"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1566,
+      "target": "zh-CN/commands/pane/resize/index.md",
+      "title": "herdr pane resize",
+      "legacyAnchors": [
+        "cmd-pane-resize"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1588,
+      "target": "zh-CN/commands/pane/zoom/index.md",
+      "title": "herdr pane zoom",
+      "legacyAnchors": [
+        "cmd-pane-zoom"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1614,
+      "target": "zh-CN/commands/pane/read/index.md",
+      "title": "herdr pane read",
+      "legacyAnchors": [
+        "cmd-pane-read"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1642,
+      "target": "zh-CN/commands/pane/rename/index.md",
+      "title": "herdr pane rename",
+      "legacyAnchors": [
+        "cmd-pane-rename"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1665,
+      "target": "zh-CN/commands/pane/input/index.md",
+      "title": "herdr pane input",
+      "legacyAnchors": [
+        "cmd-pane-input"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1691,
+      "target": "zh-CN/commands/pane/split/index.md",
+      "title": "herdr pane split",
+      "legacyAnchors": [
+        "cmd-pane-split"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1723,
+      "target": "zh-CN/commands/pane/swap/index.md",
+      "title": "herdr pane swap",
+      "legacyAnchors": [
+        "cmd-pane-swap"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1748,
+      "target": "zh-CN/commands/pane/move/index.md",
+      "title": "herdr pane move",
+      "legacyAnchors": [
+        "cmd-pane-move"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1784,
+      "target": "zh-CN/commands/pane/close/index.md",
+      "title": "herdr pane close",
+      "legacyAnchors": [
+        "cmd-pane-close"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1805,
+      "target": "zh-CN/commands/pane/send-text/index.md",
+      "title": "herdr pane send-text",
+      "legacyAnchors": [
+        "cmd-pane-send-text"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1829,
+      "target": "zh-CN/commands/pane/send-keys/index.md",
+      "title": "herdr pane send-keys",
+      "legacyAnchors": [
+        "cmd-pane-send-keys"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1851,
+      "target": "zh-CN/commands/pane/wait-output/index.md",
+      "title": "herdr pane wait-output",
+      "legacyAnchors": [
+        "cmd-pane-wait-output"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1882,
+      "target": "zh-CN/commands/pane/run/index.md",
+      "title": "herdr pane run",
+      "legacyAnchors": [
+        "cmd-pane-run"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1906,
+      "target": "zh-CN/commands/pane/report-agent/index.md",
+      "title": "herdr pane report-agent",
+      "legacyAnchors": [
+        "cmd-pane-report-agent"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1937,
+      "target": "zh-CN/commands/pane/report-agent-session/index.md",
+      "title": "herdr pane report-agent-session",
+      "legacyAnchors": [
+        "cmd-pane-report-agent-session"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1965,
+      "target": "zh-CN/commands/pane/release-agent/index.md",
+      "title": "herdr pane release-agent",
+      "legacyAnchors": [
+        "cmd-pane-release-agent"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 1989,
+      "target": "zh-CN/commands/pane/report-metadata/index.md",
+      "title": "herdr pane report-metadata",
+      "legacyAnchors": [
+        "cmd-pane-report-metadata"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2025,
+      "target": "zh-CN/commands/terminal/index.md",
+      "title": "herdr terminal",
+      "legacyAnchors": [
+        "cmd-terminal"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2048,
+      "target": "zh-CN/commands/terminal/attach/index.md",
+      "title": "herdr terminal attach",
+      "legacyAnchors": [
+        "cmd-terminal-attach"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2070,
+      "target": "zh-CN/commands/terminal/session/index.md",
+      "title": "herdr terminal session",
+      "legacyAnchors": [
+        "cmd-terminal-session"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2092,
+      "target": "zh-CN/commands/terminal/session/control/index.md",
+      "title": "herdr terminal session control",
+      "legacyAnchors": [
+        "cmd-terminal-session-control"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2118,
+      "target": "zh-CN/commands/terminal/session/observe/index.md",
+      "title": "herdr terminal session observe",
+      "legacyAnchors": [
+        "cmd-terminal-session-observe"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2143,
+      "target": "zh-CN/commands/terminal/title/index.md",
+      "title": "herdr terminal title",
+      "legacyAnchors": [
+        "cmd-terminal-title"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2161,
+      "target": "zh-CN/commands/terminal/title/set/index.md",
+      "title": "herdr terminal title set",
+      "legacyAnchors": [
+        "cmd-terminal-title-set"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2182,
+      "target": "zh-CN/commands/terminal/title/clear/index.md",
+      "title": "herdr terminal title clear",
+      "legacyAnchors": [
+        "cmd-terminal-title-clear"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2200,
+      "target": "zh-CN/commands/session/index.md",
+      "title": "herdr session",
+      "legacyAnchors": [
+        "cmd-session"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2224,
+      "target": "zh-CN/commands/session/list/index.md",
+      "title": "herdr session list",
+      "legacyAnchors": [
+        "cmd-session-list"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2239,
+      "target": "zh-CN/commands/session/attach/index.md",
+      "title": "herdr session attach",
+      "legacyAnchors": [
+        "cmd-session-attach"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2260,
+      "target": "zh-CN/commands/session/stop/index.md",
+      "title": "herdr session stop",
+      "legacyAnchors": [
+        "cmd-session-stop"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2282,
+      "target": "zh-CN/commands/session/delete/index.md",
+      "title": "herdr session delete",
+      "legacyAnchors": [
+        "cmd-session-delete"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2304,
+      "target": "zh-CN/commands/integration/index.md",
+      "title": "herdr integration",
+      "legacyAnchors": [
+        "cmd-integration"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2327,
+      "target": "zh-CN/commands/integration/install/index.md",
+      "title": "herdr integration install",
+      "legacyAnchors": [
+        "cmd-integration-install"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2348,
+      "target": "zh-CN/commands/integration/uninstall/index.md",
+      "title": "herdr integration uninstall",
+      "legacyAnchors": [
+        "cmd-integration-uninstall"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2369,
+      "target": "zh-CN/commands/integration/status/index.md",
+      "title": "herdr integration status",
+      "legacyAnchors": [
+        "cmd-integration-status"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2388,
+      "target": "zh-CN/commands/plugin/index.md",
+      "title": "herdr plugin",
+      "legacyAnchors": [
+        "cmd-plugin"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2419,
+      "target": "zh-CN/commands/plugin/install/index.md",
+      "title": "herdr plugin install",
+      "legacyAnchors": [
+        "cmd-plugin-install"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2442,
+      "target": "zh-CN/commands/plugin/uninstall/index.md",
+      "title": "herdr plugin uninstall",
+      "legacyAnchors": [
+        "cmd-plugin-uninstall"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2463,
+      "target": "zh-CN/commands/plugin/link/index.md",
+      "title": "herdr plugin link",
+      "legacyAnchors": [
+        "cmd-plugin-link"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2486,
+      "target": "zh-CN/commands/plugin/unlink/index.md",
+      "title": "herdr plugin unlink",
+      "legacyAnchors": [
+        "cmd-plugin-unlink"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2507,
+      "target": "zh-CN/commands/plugin/enable/index.md",
+      "title": "herdr plugin enable",
+      "legacyAnchors": [
+        "cmd-plugin-enable"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2524,
+      "target": "zh-CN/commands/plugin/disable/index.md",
+      "title": "herdr plugin disable",
+      "legacyAnchors": [
+        "cmd-plugin-disable"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2541,
+      "target": "zh-CN/commands/plugin/list/index.md",
+      "title": "herdr plugin list",
+      "legacyAnchors": [
+        "cmd-plugin-list"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2557,
+      "target": "zh-CN/commands/plugin/config-dir/index.md",
+      "title": "herdr plugin config-dir",
+      "legacyAnchors": [
+        "cmd-plugin-config-dir"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2578,
+      "target": "zh-CN/commands/plugin/action/index.md",
+      "title": "herdr plugin action",
+      "legacyAnchors": [
+        "cmd-plugin-action"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2596,
+      "target": "zh-CN/commands/plugin/action/list/index.md",
+      "title": "herdr plugin action list",
+      "legacyAnchors": [
+        "cmd-plugin-action-list"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2611,
+      "target": "zh-CN/commands/plugin/action/invoke/index.md",
+      "title": "herdr plugin action invoke",
+      "legacyAnchors": [
+        "cmd-plugin-action-invoke"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2633,
+      "target": "zh-CN/commands/plugin/log/index.md",
+      "title": "herdr plugin log",
+      "legacyAnchors": [
+        "cmd-plugin-log"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2652,
+      "target": "zh-CN/commands/plugin/log/list/index.md",
+      "title": "herdr plugin log list",
+      "legacyAnchors": [
+        "cmd-plugin-log-list"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2668,
+      "target": "zh-CN/commands/plugin/pane/index.md",
+      "title": "herdr plugin pane",
+      "legacyAnchors": [
+        "cmd-plugin-pane"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2687,
+      "target": "zh-CN/commands/plugin/pane/open/index.md",
+      "title": "herdr plugin pane open",
+      "legacyAnchors": [
+        "cmd-plugin-pane-open"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2723,
+      "target": "zh-CN/commands/plugin/pane/focus/index.md",
+      "title": "herdr plugin pane focus",
+      "legacyAnchors": [
+        "cmd-plugin-pane-focus"
+      ]
+    },
+    {
+      "source": "commands-zh.md",
+      "line": 2740,
+      "target": "zh-CN/commands/plugin/pane/close/index.md",
+      "title": "herdr plugin pane close",
+      "legacyAnchors": [
+        "cmd-plugin-pane-close"
+      ]
+    },
+    {
+      "source": "concepts-zh.md",
+      "line": 5,
+      "target": "zh-CN/concepts/01.md",
+      "title": "1. 先分清这六层",
+      "legacyAnchors": []
+    },
+    {
+      "source": "concepts-zh.md",
+      "line": 23,
+      "target": "zh-CN/concepts/02.md",
+      "title": "2. detach、停止、关闭、恢复不是同一件事",
+      "legacyAnchors": []
+    },
+    {
+      "source": "concepts-zh.md",
+      "line": 37,
+      "target": "zh-CN/concepts/03.md",
+      "title": "3. Agent 状态的两套集合",
+      "legacyAnchors": []
+    },
+    {
+      "source": "concepts-zh.md",
+      "line": 53,
+      "target": "zh-CN/concepts/04.md",
+      "title": "4. 输出快照来源与行数",
+      "legacyAnchors": []
+    },
+    {
+      "source": "concepts-zh.md",
+      "line": 70,
+      "target": "zh-CN/concepts/05.md",
+      "title": "5. --kind 的 24 个规范 Agent 名称",
+      "legacyAnchors": []
+    },
+    {
+      "source": "concepts-zh.md",
+      "line": 103,
+      "target": "zh-CN/concepts/06.md",
+      "title": "6. 可安装的集成目标不等于 Agent KIND",
+      "legacyAnchors": []
+    },
+    {
+      "source": "concepts-zh.md",
+      "line": 121,
+      "target": "zh-CN/concepts/07.md",
+      "title": "7. 三种输入方式及其完成边界",
+      "legacyAnchors": []
+    },
+    {
+      "source": "concepts-zh.md",
+      "line": 135,
+      "target": "zh-CN/concepts/08.md",
+      "title": "8. CLI 输出分类与错误处理",
+      "legacyAnchors": []
+    },
+    {
+      "source": "concepts-zh.md",
+      "line": 152,
+      "target": "zh-CN/concepts/09.md",
+      "title": "9. SSH 的两条路径与允许路由的命令",
+      "legacyAnchors": []
+    },
+    {
+      "source": "concepts-zh.md",
+      "line": 170,
+      "target": "zh-CN/concepts/10.md",
+      "title": "10. 配置、环境变量与展示模板",
+      "legacyAnchors": []
+    },
+    {
+      "source": "concepts-zh.md",
+      "line": 211,
+      "target": "zh-CN/concepts/11.md",
+      "title": "11. 常用默认快捷键",
+      "legacyAnchors": []
+    },
+    {
+      "source": "help-differences-zh.md",
+      "line": 5,
+      "target": "zh-CN/reference/differences-01.md",
+      "title": "1. 帮助文档的两个来源",
+      "legacyAnchors": []
+    },
+    {
+      "source": "help-differences-zh.md",
+      "line": 11,
+      "target": "zh-CN/reference/differences-02.md",
+      "title": "2. 已确认差异",
+      "legacyAnchors": []
+    },
+    {
+      "source": "help-differences-zh.md",
+      "line": 36,
+      "target": "zh-CN/reference/differences-03.md",
+      "title": "3. 非公开命令树中的入口",
+      "legacyAnchors": []
+    },
+    {
+      "source": "help-differences-zh.md",
+      "line": 57,
+      "target": "zh-CN/reference/differences-04.md",
+      "title": "4. 不要混用旧文档的拼写",
+      "legacyAnchors": []
+    },
+    {
+      "source": "help-differences-zh.md",
+      "line": 70,
+      "target": "zh-CN/reference/differences-05.md",
+      "title": "5. 验证边界",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 7,
+      "target": "zh-CN/workflows/01.md",
+      "title": "01. 首次启动、离开与返回",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 28,
+      "target": "zh-CN/workflows/02.md",
+      "title": "02. 为任务使用独立命名会话",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 53,
+      "target": "zh-CN/workflows/03.md",
+      "title": "03. 检查配置并恢复错误快捷键",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 80,
+      "target": "zh-CN/workflows/04.md",
+      "title": "04. 在 Mac 的 zsh 中安装命令补全",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 101,
+      "target": "zh-CN/workflows/05.md",
+      "title": "05. 创建工作区并保存真实 ID",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 126,
+      "target": "zh-CN/workflows/06.md",
+      "title": "06. 把编辑、测试与日志拆成 tab / pane",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 149,
+      "target": "zh-CN/workflows/07.md",
+      "title": "07. 分别读当前屏幕、近期日志和检测视图",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 167,
+      "target": "zh-CN/workflows/08.md",
+      "title": "08. 区分输入文本、按键与提交 shell 命令",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 193,
+      "target": "zh-CN/workflows/09.md",
+      "title": "09. 为 shell 任务设置本次运行的完成标记",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 218,
+      "target": "zh-CN/workflows/10.md",
+      "title": "10. 在现有 shell 窗格内启动一个 Codex Agent",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 237,
+      "target": "zh-CN/workflows/11.md",
+      "title": "11. 提交提示词，并正确解释等待结果",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 263,
+      "target": "zh-CN/workflows/12.md",
+      "title": "12. Agent blocked 时先看屏幕，不盲目补发 prompt",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 281,
+      "target": "zh-CN/workflows/13.md",
+      "title": "13. 两个 Agent 并行，但不要让焦点决定目标",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 303,
+      "target": "zh-CN/workflows/14.md",
+      "title": "14. 排查 Agent 识别错误",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 332,
+      "target": "zh-CN/workflows/15.md",
+      "title": "15. 检查与更新 Agent hook 集成",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 353,
+      "target": "zh-CN/workflows/16.md",
+      "title": "16. 分别命名对象，并上报纯展示信息",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 385,
+      "target": "zh-CN/workflows/17.md",
+      "title": "17. 只读观察，或明确接管交互控制",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 405,
+      "target": "zh-CN/workflows/18.md",
+      "title": "18. 远程 TUI 与命名会话",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 425,
+      "target": "zh-CN/workflows/19.md",
+      "title": "19. 保存 SSH machine，再显式路由 API",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 452,
+      "target": "zh-CN/workflows/20.md",
+      "title": "20. Git worktree：创建、重新打开与安全清理",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 485,
+      "target": "zh-CN/workflows/21.md",
+      "title": "21. 继续用 jj 管版本，让 Herdr 只管理终端",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 500,
+      "target": "zh-CN/workflows/22.md",
+      "title": "22. 先禁用关联本地插件，再审查和调用动作",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 530,
+      "target": "zh-CN/workflows/23.md",
+      "title": "23. 打开带百分比尺寸的插件 popup",
+      "legacyAnchors": []
+    },
+    {
+      "source": "workflows-zh.md",
+      "line": 558,
+      "target": "zh-CN/workflows/24.md",
+      "title": "24. 导出 schema / snapshot，并为自动化建立检查边界",
+      "legacyAnchors": []
+    },
+    {
+      "source": "sources.md",
+      "line": 1,
+      "target": "zh-CN/reference/sources.md",
+      "title": "版本、来源与调研方法",
+      "legacyAnchors": []
+    },
+    {
+      "source": "README.md",
+      "line": 1,
+      "target": "zh-CN/reference/legacy.md",
+      "title": "历史资料与迁移说明",
+      "legacyAnchors": []
+    }
+  ],
+  "deduplicated": [
+    "combined manual → component Markdown"
+  ],
+  "notEditorialInputs": [
+    "HTML",
+    "TXT",
+    "Python helpers"
+  ],
+  "corrections": [],
+  "sharedProse": []
+}

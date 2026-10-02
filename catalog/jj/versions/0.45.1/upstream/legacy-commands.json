@@ -1,0 +1,4215 @@
+{
+  "": {
+    "name": "jj",
+    "description": "Jujutsu：与 Git 兼容的版本控制工具。",
+    "usage": "jj [OPTIONS] [COMMAND]",
+    "arguments": [],
+    "options": [
+      [
+        "-h, --help",
+        "显示帮助；-h 为短帮助，--help 为长帮助。"
+      ],
+      [
+        "-V, --version",
+        "显示版本。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "未指定子命令时，由 ui.default-command 决定实际执行的命令，内置默认是 log。用户 aliases 可以增加入口，因而不存在跨所有用户配置的有限“全部别名”清单。",
+    "status": "public",
+    "source": "cli/src/commands/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/mod.rs"
+  },
+  "abandon": {
+    "name": "jj abandon",
+    "description": "放弃一个或多个修订，并把其后代变基到它们的父提交。",
+    "usage": "jj abandon [OPTIONS] [REVSETS]...",
+    "arguments": [
+      [
+        "[REVSETS]...",
+        "要放弃的修订集合；默认 @。也接受 -r 形式。"
+      ]
+    ],
+    "options": [
+      [
+        "--retain-bookmarks",
+        "不删除指向被放弃修订的书签，而是把它们移到父修订。"
+      ],
+      [
+        "--restore-descendants",
+        "保持子提交的最终文件内容，而不是通常的差异重放行为。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "若放弃了工作副本提交，会创建新的空工作副本提交。放弃不是永久擦除对象；但后续清理可能缩小恢复窗口。",
+    "status": "public",
+    "source": "cli/src/commands/abandon.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/abandon.rs"
+  },
+  "absorb": {
+    "name": "jj absorb",
+    "description": "把源修订中的修改自动分配到最近修改相应代码行的可变祖先。",
+    "usage": "jj absorb [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "只考虑匹配路径中的修改；省略时考虑全部路径。"
+      ]
+    ],
+    "options": [
+      [
+        "-f, --from <REVSET>",
+        "源修订；默认 @。"
+      ],
+      [
+        "-t, --into <REVSETS>",
+        "允许接收修改的修订；默认 mutable()。只考虑源修订的祖先；别名 --to。"
+      ],
+      [
+        "-i, --interactive",
+        "先交互选择需要吸收的修改块。"
+      ],
+      [
+        "--tool <NAME>",
+        "选择差异编辑器，隐含 --interactive。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "不能无歧义确定归属的修改留在源修订。只有所有修改都已吸收且源修订没有描述时，源修订才会被自动放弃。用 jj op show -p 检查结果。",
+    "status": "public",
+    "source": "cli/src/commands/absorb.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/absorb.rs"
+  },
+  "arrange": {
+    "name": "jj arrange",
+    "description": "交互式调整提交图。",
+    "usage": "jj arrange [REVSETS]...",
+    "arguments": [
+      [
+        "[REVSETS]...",
+        "要排列的修订；也接受 -r。默认使用 revsets.arrange。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "终端交互界面适合重排提交关系；改变依赖可能引入内容冲突。",
+    "status": "public",
+    "source": "cli/src/commands/arrange.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/arrange.rs"
+  },
+  "bisect": {
+    "name": "jj bisect",
+    "description": "通过二分搜索定位第一个坏修订。",
+    "usage": "jj bisect <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/bisect/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bisect/mod.rs"
+  },
+  "bisect run": {
+    "name": "jj bisect run",
+    "description": "执行检测命令，二分定位引入问题的修订。",
+    "usage": "jj bisect run [OPTIONS] --range <REVSETS> [COMMAND] [ARGS]...",
+    "arguments": [
+      [
+        "[COMMAND]",
+        "检测程序。退出码 0 为 good，125 为跳过，127 为中止；其余非零码为 bad。"
+      ],
+      [
+        "[ARGS]...",
+        "传给检测程序的参数；建议用 -- 隔开 jj 参数和程序参数。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --range <REVSETS>",
+        "必填，可重复；取各范围的并集。通常使用 GOOD..BAD。范围顶端假定为坏，范围外的祖先假定为好。"
+      ],
+      [
+        "--find-good",
+        "改为找第一个好修订；反转普通 good/bad 退出码解释，125 和 127 的特殊意义不变。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "每次会直接编辑被测修订并切换当前工作副本，不是 jj run 的独立工作目录模型。目标 commit ID 通过 JJ_BISECT_TARGET 提供。要求问题在所选历史上近似单调。 虽然 clap 的 Usage 将 [COMMAND] 显示为可选，但实际执行要求位置命令或旧 --command 至少提供一个；省略会报错。",
+    "status": "public",
+    "source": "cli/src/commands/bisect/run.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "--command <COMMAND>",
+        "已弃用的隐藏形式；与位置 COMMAND 互斥。改用 -- 后的位置命令及参数。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bisect/run.rs"
+  },
+  "bookmark": {
+    "name": "jj bookmark",
+    "description": "管理书签：可移动、可与远端同步的提交名称。",
+    "usage": "jj bookmark <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [
+      "b（默认配置别名，可覆盖）"
+    ],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/bookmark/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bookmark/mod.rs"
+  },
+  "bookmark advance": {
+    "name": "jj bookmark advance",
+    "description": "把离目标最近的书签向前推进。",
+    "usage": "jj bookmark advance [OPTIONS] [NAMES]...",
+    "arguments": [
+      [
+        "[NAMES]...",
+        "指定书签名称模式；指定后不使用默认 from revset 选择书签。"
+      ]
+    ],
+    "options": [
+      [
+        "-t, --to <REVSET>",
+        "目标修订；来自 revsets.bookmark-advance-to，内置默认 @。"
+      ]
+    ],
+    "aliases": [
+      "a"
+    ],
+    "notes": "未指定名称时，候选来自 revsets.bookmark-advance-from，内置默认 heads(::to & bookmarks())；to 在该表达式中可用。",
+    "status": "public",
+    "source": "cli/src/commands/bookmark/advance.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bookmark/advance.rs"
+  },
+  "bookmark create": {
+    "name": "jj bookmark create",
+    "description": "创建新书签。",
+    "usage": "jj bookmark create [OPTIONS] <NAMES>...",
+    "arguments": [
+      [
+        "<NAMES>...",
+        "要创建的书签名称。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "目标修订；默认 @；别名 --to。"
+      ]
+    ],
+    "aliases": [
+      "c"
+    ],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/bookmark/create.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bookmark/create.rs"
+  },
+  "bookmark delete": {
+    "name": "jj bookmark delete",
+    "description": "删除本地书签，并记录待推送到所跟踪远端的删除。",
+    "usage": "jj bookmark delete <NAMES>...",
+    "arguments": [
+      [
+        "<NAMES>...",
+        "要删除的书签名称模式，默认 glob。"
+      ]
+    ],
+    "options": [],
+    "aliases": [
+      "d"
+    ],
+    "notes": "不会同时放弃提交。远端删除要到之后选中该书签的 push 才发生；只想本地忘记请用 bookmark forget。",
+    "status": "public",
+    "source": "cli/src/commands/bookmark/delete.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bookmark/delete.rs"
+  },
+  "bookmark forget": {
+    "name": "jj bookmark forget",
+    "description": "忘记书签，不把本地删除传播到远端。",
+    "usage": "jj bookmark forget [OPTIONS] <NAMES>...",
+    "arguments": [
+      [
+        "<NAMES>...",
+        "要忘记的书签名称模式，默认 glob。"
+      ]
+    ],
+    "options": [
+      [
+        "--include-remotes",
+        "同时忘记对应远端书签的本地记录；包括 Git-tracking 记录。远端真实存在时，下次 fetch 可重新出现。"
+      ]
+    ],
+    "aliases": [
+      "f"
+    ],
+    "notes": "忘记本地书签会取消相应远端跟踪关系；此命令本身不删除远端分支。",
+    "status": "public",
+    "source": "cli/src/commands/bookmark/forget.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bookmark/forget.rs"
+  },
+  "bookmark list": {
+    "name": "jj bookmark list",
+    "description": "列出书签及其目标。",
+    "usage": "jj bookmark list [OPTIONS] [NAMES]...",
+    "arguments": [
+      [
+        "[NAMES]...",
+        "按本地书签名称模式过滤，默认 glob。"
+      ]
+    ],
+    "options": [
+      [
+        "-a, --all-remotes",
+        "包括所有跟踪和未跟踪远端书签，也显示与本地同步的目标。"
+      ],
+      [
+        "--remote <REMOTE>",
+        "按远端名称模式过滤，可重复；可与 --tracked、--conflicted 组合。"
+      ],
+      [
+        "-t, --tracked",
+        "只列出已跟踪远端书签，默认不包括本地 Git-tracking 书签。"
+      ],
+      [
+        "-c, --conflicted",
+        "只列出存在目标冲突的书签。"
+      ],
+      [
+        "-r, --revision <REVSETS>",
+        "只列出本地目标落在所给修订集合中的书签，可重复。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "书签输出模板，类型 CommitRef；默认 templates.bookmark_list。"
+      ],
+      [
+        "--sort <SORT_KEY>",
+        "排序键，可组合；末尾加 - 表示降序。键：name、author-name、author-email、author-date、committer-name、committer-email、committer-date，及各自的降序形式。默认 ui.bookmark-list-sort-keys。"
+      ]
+    ],
+    "aliases": [
+      "l"
+    ],
+    "notes": "默认仅在跟踪远端目标与本地不同时附带远端记录；未跟踪远端默认不显示。冲突中 - 是旧目标，+ 是新目标。",
+    "status": "public",
+    "source": "cli/src/commands/bookmark/list.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bookmark/list.rs"
+  },
+  "bookmark move": {
+    "name": "jj bookmark move",
+    "description": "移动已有书签，不创建新书签。",
+    "usage": "jj bookmark move [OPTIONS] <NAMES|--from <REVSETS>>",
+    "arguments": [
+      [
+        "[NAMES]...",
+        "要移动的书签名称模式；与 --from 同用时，进一步过滤该范围内的书签。"
+      ]
+    ],
+    "options": [
+      [
+        "-f, --from <REVSETS>",
+        "选择目前指向这些修订的书签，可重复。"
+      ],
+      [
+        "-t, --to <REVSET>",
+        "目标修订；默认 @。"
+      ],
+      [
+        "-B, --allow-backwards",
+        "允许向后或横向移动，不局限于后代方向。"
+      ]
+    ],
+    "aliases": [
+      "m"
+    ],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/bookmark/move.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bookmark/move.rs"
+  },
+  "bookmark rename": {
+    "name": "jj bookmark rename",
+    "description": "重命名书签，保持其目标提交不变。",
+    "usage": "jj bookmark rename [OPTIONS] <OLD> <NEW>",
+    "arguments": [
+      [
+        "<OLD>",
+        "旧名称。"
+      ],
+      [
+        "<NEW>",
+        "新名称。"
+      ]
+    ],
+    "options": [
+      [
+        "--overwrite-existing",
+        "允许覆盖已经存在的新名称。"
+      ]
+    ],
+    "aliases": [
+      "r"
+    ],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/bookmark/rename.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bookmark/rename.rs"
+  },
+  "bookmark set": {
+    "name": "jj bookmark set",
+    "description": "按名称创建或更新书签。",
+    "usage": "jj bookmark set [OPTIONS] <NAMES>...",
+    "arguments": [
+      [
+        "<NAMES>...",
+        "需要设置的书签名称。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "目标修订；默认 @；别名 --to。"
+      ],
+      [
+        "-B, --allow-backwards",
+        "允许把已有书签向后或横向移动。"
+      ]
+    ],
+    "aliases": [
+      "s"
+    ],
+    "notes": "需要严格保证不创建新名称时，用 bookmark move。",
+    "status": "public",
+    "source": "cli/src/commands/bookmark/set.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bookmark/set.rs"
+  },
+  "bookmark track": {
+    "name": "jj bookmark track",
+    "description": "开始跟踪远端书签。",
+    "usage": "jj bookmark track [OPTIONS] <BOOKMARK[@REMOTE]>...",
+    "arguments": [
+      [
+        "<BOOKMARK[@REMOTE]>...",
+        "BOOKMARK 是名称模式（默认 glob）；BOOKMARK@REMOTE 是精确的远端书签符号。"
+      ]
+    ],
+    "options": [
+      [
+        "--remote <REMOTE>",
+        "按远端名称模式过滤，可重复。省略时作用于所有名称匹配的远端书签。"
+      ]
+    ],
+    "aliases": [
+      "t"
+    ],
+    "notes": "跟踪后，远端书签会导入为同名本地书签，后续 fetch 可更新它。",
+    "status": "public",
+    "source": "cli/src/commands/bookmark/track.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bookmark/track.rs"
+  },
+  "bookmark untrack": {
+    "name": "jj bookmark untrack",
+    "description": "停止跟踪远端书签。",
+    "usage": "jj bookmark untrack [OPTIONS] <BOOKMARK[@REMOTE]>...",
+    "arguments": [
+      [
+        "<BOOKMARK[@REMOTE]>...",
+        "BOOKMARK 是名称模式（默认 glob）；BOOKMARK@REMOTE 是精确的远端书签符号。"
+      ]
+    ],
+    "options": [
+      [
+        "--remote <REMOTE>",
+        "按远端名称模式过滤，可重复。省略时作用于所有名称匹配的远端书签。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "停止跟踪不会删除本地书签，也不会删除服务器上的分支。",
+    "status": "public",
+    "source": "cli/src/commands/bookmark/untrack.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bookmark/untrack.rs"
+  },
+  "commit": {
+    "name": "jj commit",
+    "description": "更新当前 change 的描述，并在其上创建新的工作副本 change。",
+    "usage": "jj commit [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "把所选路径的修改留在当前提交，其余修改放到新工作副本提交。"
+      ]
+    ],
+    "options": [
+      [
+        "-i, --interactive",
+        "交互选择留在当前提交的修改。"
+      ],
+      [
+        "--tool <NAME>",
+        "差异编辑器，隐含 --interactive。"
+      ],
+      [
+        "-m, --message <MESSAGE>",
+        "提交描述；可重复以组成多个段落，不打开编辑器。"
+      ],
+      [
+        "--editor",
+        "即使给了 --message，仍打开编辑器继续修改。"
+      ]
+    ],
+    "aliases": [
+      "ci（默认配置别名，可覆盖）"
+    ],
+    "notes": "没有 -r：始终操作 @。不选路径、不用 -i 时近似 describe 后 new。已有书签不会像普通 split 那样自动前移到新的子 change。",
+    "status": "public",
+    "source": "cli/src/commands/commit.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/commit.rs"
+  },
+  "config": {
+    "name": "jj config",
+    "description": "读取或修改配置；配置项本身不等于 CLI 参数。",
+    "usage": "jj config <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/config/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/config/mod.rs"
+  },
+  "config edit": {
+    "name": "jj config edit",
+    "description": "用编辑器打开配置文件；文件不存在时创建。",
+    "usage": "jj config edit <--user|--repo|--workspace|--file <PATH>>",
+    "arguments": [],
+    "options": [
+      [
+        "--user",
+        "用户级配置。"
+      ],
+      [
+        "--repo",
+        "仓库级配置。"
+      ],
+      [
+        "--workspace",
+        "工作区级配置。"
+      ],
+      [
+        "--file <PATH>",
+        "指定受 jj 识别的配置文件作为写入/编辑目标；不是任意路径。可先用全局 --config-file 加载文件。set/edit 可创建尚不存在的合法目标及其父目录。"
+      ]
+    ],
+    "aliases": [
+      "e"
+    ],
+    "notes": "必须且只能选一个目标。v0.45 起 --user 使用首先加载的用户配置文件；指定 conf.d 中某个文件时请用 --file。",
+    "status": "public",
+    "source": "cli/src/commands/config/edit.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/config/edit.rs"
+  },
+  "config gc": {
+    "name": "jj config gc",
+    "description": "找出并可选择删除仓库路径已不存在的仓库级配置目录。",
+    "usage": "jj config gc",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "涉及配置目录清理；执行前阅读交互提示，不等于仓库对象的 util gc。",
+    "status": "public",
+    "source": "cli/src/commands/config/gc.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/config/gc.rs"
+  },
+  "config get": {
+    "name": "jj config get",
+    "description": "读取一个配置值，不带额外展示格式，适合脚本。",
+    "usage": "jj config get <NAME>",
+    "arguments": [
+      [
+        "<NAME>",
+        "配置键，例如 user.name。"
+      ]
+    ],
+    "options": [],
+    "aliases": [
+      "g"
+    ],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/config/get.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/config/get.rs"
+  },
+  "config list": {
+    "name": "jj config list",
+    "description": "列出配置变量、值及可选来源信息。",
+    "usage": "jj config list [OPTIONS] [NAME]",
+    "arguments": [
+      [
+        "[NAME]",
+        "可选的配置键或键前缀。"
+      ]
+    ],
+    "options": [
+      [
+        "--include-defaults",
+        "把内置默认配置也列出。"
+      ],
+      [
+        "--include-overridden",
+        "保留已经被更高优先级配置覆盖的条目。"
+      ],
+      [
+        "--user",
+        "用户级配置。"
+      ],
+      [
+        "--repo",
+        "仓库级配置。"
+      ],
+      [
+        "--workspace",
+        "工作区级配置。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "自定义格式。可用 name、value、overridden、source、path；默认 templates.config_list。"
+      ]
+    ],
+    "aliases": [
+      "l"
+    ],
+    "notes": "不指定层级时检查合并后的配置；需要定位来源可用 -T builtin_config_list_detailed。",
+    "status": "public",
+    "source": "cli/src/commands/config/list.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/config/list.rs"
+  },
+  "config path": {
+    "name": "jj config path",
+    "description": "输出配置文件路径；文件未必存在。",
+    "usage": "jj config path <--user|--repo|--workspace>",
+    "arguments": [],
+    "options": [
+      [
+        "--user",
+        "用户级配置。"
+      ],
+      [
+        "--repo",
+        "仓库级配置。"
+      ],
+      [
+        "--workspace",
+        "工作区级配置。"
+      ]
+    ],
+    "aliases": [
+      "p"
+    ],
+    "notes": "必须选一个层级。--repo/--workspace 在尚无配置目录时可能创建目录，所以不是绝对无副作用的查询。",
+    "status": "public",
+    "source": "cli/src/commands/config/path.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/config/path.rs"
+  },
+  "config set": {
+    "name": "jj config set",
+    "description": "把配置键写成指定值。",
+    "usage": "jj config set <--user|--repo|--workspace|--file <PATH>> <NAME> <VALUE>",
+    "arguments": [
+      [
+        "<NAME>",
+        "配置键，使用 TOML 点分语法。"
+      ],
+      [
+        "<VALUE>",
+        "TOML 表达式；普通字符串可省略 TOML 引号，但 shell 引号仍需正确处理。"
+      ]
+    ],
+    "options": [
+      [
+        "--user",
+        "用户级配置。"
+      ],
+      [
+        "--repo",
+        "仓库级配置。"
+      ],
+      [
+        "--workspace",
+        "工作区级配置。"
+      ],
+      [
+        "--file <PATH>",
+        "指定受 jj 识别的配置文件作为写入/编辑目标；不是任意路径。可先用全局 --config-file 加载文件。set/edit 可创建尚不存在的合法目标及其父目录。"
+      ]
+    ],
+    "aliases": [
+      "s"
+    ],
+    "notes": "目标四选一。复杂数组、含引号文本建议用 config edit。",
+    "status": "public",
+    "source": "cli/src/commands/config/set.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/config/set.rs"
+  },
+  "config unset": {
+    "name": "jj config unset",
+    "description": "从指定配置文件移除一个配置键。",
+    "usage": "jj config unset <--user|--repo|--workspace|--file <PATH>> <NAME>",
+    "arguments": [
+      [
+        "<NAME>",
+        "要移除的配置键。"
+      ]
+    ],
+    "options": [
+      [
+        "--user",
+        "用户级配置。"
+      ],
+      [
+        "--repo",
+        "仓库级配置。"
+      ],
+      [
+        "--workspace",
+        "工作区级配置。"
+      ],
+      [
+        "--file <PATH>",
+        "指定受 jj 识别的配置文件作为写入/编辑目标；不是任意路径。可先用全局 --config-file 加载文件。set/edit 可创建尚不存在的合法目标及其父目录。"
+      ]
+    ],
+    "aliases": [
+      "u"
+    ],
+    "notes": "移除高优先级配置后，低优先级的同名设置可能重新生效。",
+    "status": "public",
+    "source": "cli/src/commands/config/unset.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/config/unset.rs"
+  },
+  "converge": {
+    "name": "jj converge",
+    "description": "把同一 change ID 的多个可见分歧版本收敛成一个版本。",
+    "usage": "jj converge [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "-r, --revision <REVSETS>",
+        "查找分歧版本的范围，可重复；默认 revsets.converge。"
+      ],
+      [
+        "--no-interactive",
+        "不请求人工协助。无法自动解决时警告并不作修改；不要把退出成功当成所有分歧都已消失。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "只收敛选中集合内的分歧版本；可能仍留有其他版本。会重定位后代及本地书签，结果仍可能有文件冲突。此命令解决 change 分歧，不等于 resolve 解决文件冲突。",
+    "status": "public",
+    "source": "cli/src/commands/converge.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/converge.rs"
+  },
+  "describe": {
+    "name": "jj describe",
+    "description": "修改 change 描述。",
+    "usage": "jj describe [OPTIONS] [REVSETS]...",
+    "arguments": [
+      [
+        "[REVSETS]...",
+        "要编辑描述的修订；默认 @；支持 -r 形式。"
+      ]
+    ],
+    "options": [
+      [
+        "-m, --message <MESSAGE>",
+        "直接指定描述，可重复组成段落；多修订共用该描述。"
+      ],
+      [
+        "--stdin",
+        "从标准输入读取描述；多修订共用。"
+      ],
+      [
+        "--editor",
+        "在 --message/--stdin 提供初始文本后仍打开编辑器。"
+      ]
+    ],
+    "aliases": [
+      "desc（默认配置别名，可覆盖）"
+    ],
+    "notes": "可一次修改多个修订描述。-m 可重复，按段落连接；--stdin 与 --message 互斥。v0.45.1 没有 describe --author；作者等元数据请使用 metaedit。",
+    "status": "public",
+    "source": "cli/src/commands/describe.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "-r <REVSETS>",
+        "位置修订参数的隐藏便捷写法；可重复并与位置参数合并；不是 --revision 长选项。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/describe.rs"
+  },
+  "diff": {
+    "name": "jj diff",
+    "description": "比较两个修订的文件内容，或显示一个修订集合引入的净变化。",
+    "usage": "jj diff [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "只显示匹配路径。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revisions <REVSETS>",
+        "显示这些修订合计引入的变化；默认 -r @。集合不能在同一链上留空洞。"
+      ],
+      [
+        "-f, --from <REVSET>",
+        "左侧修订；只指定 --to 时这里默认 @。"
+      ],
+      [
+        "-t, --to <REVSET>",
+        "右侧修订；只指定 --from 时这里默认 @。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "每个文件差异的模板，类型 TreeDiffEntry。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "比较 merge 提交时，-r 的基线是父提交自动合并后的内容。此命令另外支持 -w = --ignore-all-space、-b = --ignore-space-change。 -r 与 --from/--to 互斥；--template 与内置差异格式及 --tool 互斥。",
+    "status": "public",
+    "source": "cli/src/commands/diff.rs",
+    "diff": true,
+    "hidden_options": [
+      [
+        "--revision <REVSETS>",
+        "--revisions 的隐藏长别名；本命令的公开拼写是复数 --revisions。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/diff.rs"
+  },
+  "diffedit": {
+    "name": "jj diffedit",
+    "description": "在差异编辑器中修改某个修订的内容。",
+    "usage": "jj diffedit [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "可编辑路径；未匹配路径不变。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "待修改修订；不指定 --from/--to 时默认 @。"
+      ],
+      [
+        "-f, --from <REVSET>",
+        "左侧比较基线；只给 --to 时默认 @。"
+      ],
+      [
+        "-t, --to <REVSET>",
+        "右侧待修改修订；只给 --from 时默认 @。"
+      ],
+      [
+        "--tool <NAME>",
+        "指定差异编辑器。"
+      ],
+      [
+        "--restore-descendants",
+        "保持后代最终内容，而不是在新父提交上重放后代差异。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "编辑右侧内容。默认后代会随重写而变基，可能冲突。-r 与 --from/--to 是两种选择方式，不要混用。",
+    "status": "public",
+    "source": "cli/src/commands/diffedit.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/diffedit.rs"
+  },
+  "duplicate": {
+    "name": "jj duplicate",
+    "description": "复制修订为新的 change，保留原修订。",
+    "usage": "jj duplicate [OPTIONS] [REVSETS]...",
+    "arguments": [
+      [
+        "[REVSETS]...",
+        "要复制的修订；默认 @；支持 -r。"
+      ]
+    ],
+    "options": [
+      [
+        "-o, --onto <REVSETS>",
+        "目标父修订，可重复以形成多父提交；可见长别名 --destination。 可见短别名 -d；源码未标记弃用。"
+      ],
+      [
+        "-A, --insert-after <REVSETS>",
+        "插到这些修订之后，并重接其孩子；可重复；别名 --after。"
+      ],
+      [
+        "-B, --insert-before <REVSETS>",
+        "插到这些修订之前，并重接它们；可重复；别名 --before。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "不指定位置时复制到原父提交或新复制的父提交上。复制产生新 change ID；与 rebase 移动原 change 不同。--onto 不能与插入选项同用；--insert-after 与 --insert-before 可以组合界定位置。",
+    "status": "public",
+    "source": "cli/src/commands/duplicate.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "-r <REVSETS>",
+        "位置修订参数的隐藏短选项形式；不能据此使用 --revision。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/duplicate.rs"
+  },
+  "edit": {
+    "name": "jj edit",
+    "description": "直接把已有修订设为当前工作副本修订。",
+    "usage": "jj edit <REVSET|-r <REVSET>>",
+    "arguments": [
+      [
+        "<REVSET>",
+        "要编辑的单个修订，必填；支持 -r。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "接下来写文件就是改写该 change；其后代通常跟随变基。增量修复常可用 new + squash，避免直接改历史。",
+    "status": "public",
+    "source": "cli/src/commands/edit.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/edit.rs"
+  },
+  "evolog": {
+    "name": "jj evolog",
+    "description": "查看同一个 change 随修改、变基而产生的历史版本。",
+    "usage": "jj evolog [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "-r, --revisions <REVSETS>",
+        "追踪这些修订的演化；默认 @。"
+      ],
+      [
+        "-n, --limit <LIMIT>",
+        "限制条数：拓扑排序之后、反转之前应用。"
+      ],
+      [
+        "--reversed",
+        "反向展示，较旧版本在前。"
+      ],
+      [
+        "-G, --no-graph",
+        "输出列表而非关系图。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "模板类型 CommitEvolutionEntry；默认 templates.evolog。"
+      ],
+      [
+        "-p, --patch",
+        "显示相对上一版本的修改；临时对齐父提交，避免无关基线变化污染差异。"
+      ]
+    ],
+    "aliases": [
+      "evolution-log",
+      "obslog（隐藏兼容别名）"
+    ],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/evolog.rs",
+    "diff": true,
+    "hidden_options": [
+      [
+        "--revision <REVSETS>",
+        "--revisions 的隐藏长别名；本命令的公开拼写是复数 --revisions。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/evolog.rs"
+  },
+  "file": {
+    "name": "jj file",
+    "description": "针对受版本控制文件的读取、搜索和跟踪操作。",
+    "usage": "jj file <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/file/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/file/mod.rs"
+  },
+  "file annotate": {
+    "name": "jj file annotate",
+    "description": "逐行显示目标文件内容来自哪个 change。",
+    "usage": "jj file annotate [OPTIONS] <PATH>",
+    "arguments": [
+      [
+        "<PATH>",
+        "单个文件路径。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "追踪起点修订；省略时使用工作副本。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "逐行输出模板，类型 AnnotationLine；默认 templates.file_annotate。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/file/annotate.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/file/annotate.rs"
+  },
+  "file chmod": {
+    "name": "jj file chmod",
+    "description": "设置或移除仓库中文件的可执行位。",
+    "usage": "jj file chmod [OPTIONS] <MODE> <FILESETS>...",
+    "arguments": [
+      [
+        "<MODE>",
+        "n（别名 normal）为不可执行；x（别名 executable）为可执行。不是 chmod 的 755 等模式。"
+      ],
+      [
+        "<FILESETS>...",
+        "需要改变可执行位的路径。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "待修改修订；默认 @。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "可作用于任意可重写修订，也支持 Windows 和冲突文件。",
+    "status": "public",
+    "source": "cli/src/commands/file/chmod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/file/chmod.rs"
+  },
+  "file list": {
+    "name": "jj file list",
+    "description": "列出修订中的文件。",
+    "usage": "jj file list [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "只列出匹配路径；省略时列出全部。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "修订；默认 @。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "文件条目模板，类型 TreeEntry；默认 templates.file_list。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/file/list.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/file/list.rs"
+  },
+  "file search": {
+    "name": "jj file search",
+    "description": "在指定修订的文件中按行搜索内容。",
+    "usage": "jj file search [OPTIONS] --pattern <PATTERN> [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "只搜索匹配文件，省略时搜索全部。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "被搜索修订；默认 @。"
+      ],
+      [
+        "-p, --pattern <PATTERN>",
+        "必填。字符串模式 kind:pattern；省略 kind 默认 regex。glob 要匹配整行，包含 foo 可写 glob:*foo*。"
+      ],
+      [
+        "--name-only",
+        "只输出包含匹配项的文件路径。"
+      ],
+      [
+        "-n, --line-number",
+        "为匹配行增加从 1 开始的行号。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "这是版本内容搜索，不会自动搜索历史中的每一个修订。",
+    "status": "public",
+    "source": "cli/src/commands/file/search.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/file/search.rs"
+  },
+  "file show": {
+    "name": "jj file show",
+    "description": "输出修订中文件的内容。",
+    "usage": "jj file show [OPTIONS] <FILESETS>...",
+    "arguments": [
+      [
+        "<FILESETS>...",
+        "要输出的路径，目录会递归遍历。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "内容来源修订；默认 @。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "文件元数据模板，类型 TreeEntry；默认 templates.file_show。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/file/show.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/file/show.rs"
+  },
+  "file track": {
+    "name": "jj file track",
+    "description": "让指定路径开始被当前工作副本跟踪。",
+    "usage": "jj file track [OPTIONS] <FILESETS>...",
+    "arguments": [
+      [
+        "<FILESETS>...",
+        "要开始跟踪的路径。"
+      ]
+    ],
+    "options": [
+      [
+        "--include-ignored",
+        "显式跟踪匹配路径，即使它们被 .gitignore 忽略或超过 snapshot.max-new-file-size。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "v0.45.1 源码的说明文字声称可省略路径，但实际 clap 声明 required=true。此手册按参数解析器要求写为必填；需要全部文件时使用 jj file track 'all()'。",
+    "status": "public",
+    "source": "cli/src/commands/file/track.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/file/track.rs"
+  },
+  "file untrack": {
+    "name": "jj file untrack",
+    "description": "停止跟踪指定路径，但保留磁盘文件。",
+    "usage": "jj file untrack <FILESETS>...",
+    "arguments": [
+      [
+        "<FILESETS>...",
+        "要停止跟踪的路径；必须已经被忽略，否则会被再次自动跟踪。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "先设置 .gitignore 等忽略规则，再执行。不要将其与删除历史中敏感数据混淆。",
+    "status": "public",
+    "source": "cli/src/commands/file/untrack.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/file/untrack.rs"
+  },
+  "fix": {
+    "name": "jj fix",
+    "description": "用已配置的文件转换器修复选定修订及其后代。",
+    "usage": "jj fix [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "只处理这些路径。"
+      ]
+    ],
+    "options": [
+      [
+        "-s, --source <REVSETS>",
+        "起始修订及其后代；默认 revsets.fix，内置为 reachable(@, mutable())。"
+      ],
+      [
+        "--include-unchanged-files",
+        "也处理未修改文件；不限制路径时可处理整个仓库。"
+      ],
+      [
+        "-a, --all-lines",
+        "处理整文件所有行，而非仅修改行；格式化器不支持行范围时无区别。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "先配置 fix.tools。转换器从标准输入读取内容并输出替代内容，应有确定性；相同路径/内容会去重执行。不是任意仓库级命令的通用运行器，那是 jj run。",
+    "status": "public",
+    "source": "cli/src/commands/fix.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/fix.rs"
+  },
+  "gerrit": {
+    "name": "jj gerrit",
+    "description": "与 Gerrit 代码审查服务交互（需要 git 编译特性）。",
+    "usage": "jj gerrit <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/gerrit/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/gerrit/mod.rs"
+  },
+  "gerrit upload": {
+    "name": "jj gerrit upload",
+    "description": "把提交上传为 Gerrit change / patch set。",
+    "usage": "jj gerrit upload [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "-r, --revision <REVSETS>",
+        "上传这些修订及其可变祖先；可重复。省略时：@ 有描述则选 @，否则选 @-。"
+      ],
+      [
+        "-b, --remote-branch <REMOTE_BRANCH>",
+        "Gerrit 的目标分支；默认读取 gerrit.default-remote-branch。"
+      ],
+      [
+        "--remote <REMOTE>",
+        "远端名称或完整 SSH URL；默认读取 gerrit.default-remote。"
+      ],
+      [
+        "-n, --dry-run",
+        "只显示拟上传的内容，不执行上传。"
+      ],
+      [
+        "--reviewer <REVIEWER>",
+        "请求此审查者；可重复，通常填写邮箱。"
+      ],
+      [
+        "--cc <CC>",
+        "抄送此用户；可重复。"
+      ],
+      [
+        "-l, --label <LABEL>",
+        "设置投票标签，可带分值（如 Code-Review+1）；无分值时为 +1，可重复；服务端可能忽略未知标签。"
+      ],
+      [
+        "--topic <TOPIC>",
+        "设置 change 的 topic。"
+      ],
+      [
+        "--hashtag <HASHTAG>",
+        "添加 hashtag；可重复。"
+      ],
+      [
+        "-m, --message <MESSAGE>",
+        "设置新 patch set 的说明，不是修改提交描述。"
+      ],
+      [
+        "--edit",
+        "把本次上传作为 change edit，而非立即发布新 patch set。"
+      ],
+      [
+        "--wip",
+        "标记为 work in progress。"
+      ],
+      [
+        "--ready",
+        "标记为准备好接受审查。"
+      ],
+      [
+        "--private",
+        "设为 private change。"
+      ],
+      [
+        "--remove-private",
+        "取消 private 标记。"
+      ],
+      [
+        "--publish-comments",
+        "发布草稿评论。"
+      ],
+      [
+        "--no-publish-comments",
+        "不发布草稿评论。"
+      ],
+      [
+        "--notify <NOTIFY>",
+        "通知范围：none、owner、owner-reviewers、all；默认 all。"
+      ],
+      [
+        "--submit",
+        "请求直接提交，需服务端允许且具备相应权限；这是高风险操作。"
+      ],
+      [
+        "--skip-validation",
+        "跳过提交验证；必须同时指定 --submit，仍受服务端权限限制。"
+      ],
+      [
+        "--merged",
+        "即使提交已合并，也请求创建 change。"
+      ],
+      [
+        "--ignore-attention-set",
+        "不让此次上传自动调整 attention set。"
+      ],
+      [
+        "--deadline <DEADLINE>",
+        "向 Gerrit 传递请求超时时限，值须符合服务端 deadline 语法。"
+      ],
+      [
+        "--custom <CUSTOM>",
+        "设置 Gerrit 自定义键值参数；可重复。"
+      ],
+      [
+        "-o, --option <OPTION>",
+        "附加 Git push option；可重复。"
+      ],
+      [
+        "--trace <TRACE>",
+        "为服务端诊断启用带指定标识的 trace。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "这是 Gerrit 工作流，不是 GitHub PR 命令。部分参数互斥或受 Gerrit 版本/权限限制。上传时补加 Change-Id trailer 可能使远端提交 ID 与本地不同。",
+    "status": "public",
+    "source": "cli/src/commands/gerrit/upload.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/gerrit/upload.rs"
+  },
+  "git": {
+    "name": "jj git",
+    "description": "Git 后端、远端和互操作命令（需要 git 编译特性）。",
+    "usage": "jj git <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/git/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/mod.rs"
+  },
+  "git clone": {
+    "name": "jj git clone",
+    "description": "克隆 Git 仓库并初始化 jj 工作区。",
+    "usage": "jj git clone [OPTIONS] <SOURCE> [DESTINATION]",
+    "arguments": [
+      [
+        "<SOURCE>",
+        "Git URL 或本地仓库路径；本地路径会规范化为绝对路径。"
+      ],
+      [
+        "[DESTINATION]",
+        "目标目录；默认从源地址末段推导。"
+      ]
+    ],
+    "options": [
+      [
+        "--remote <REMOTE_NAME>",
+        "初始远端名称；默认 origin。"
+      ],
+      [
+        "--colocate",
+        "使用并置布局：工作区中同时存在 .jj 和 .git；v0.45.1 默认开启，除非 git.colocate=false。"
+      ],
+      [
+        "--no-colocate",
+        "把 Git 后端放在 .jj 中，不在工作区根目录暴露 .git。"
+      ],
+      [
+        "--depth <DEPTH>",
+        "限制克隆历史深度；形成浅克隆。"
+      ],
+      [
+        "-b, --branch <BRANCH>",
+        "只获取匹配分支；可重复。使用 Git 支持的有限 glob（支持 *，不等同完整 fileset/glob）。"
+      ],
+      [
+        "-t, --tag <TAG>",
+        "只获取匹配标签；可重复，模式限制同 --branch。"
+      ],
+      [
+        "--object-hash <OBJECT_HASH>",
+        "Git 对象哈希：sha1 或 sha256；必须与源仓库一致；默认由 git.object-hash 决定（内置 sha1）。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "默认获取远端分支，并以默认分支为工作副本父修订。指定分支过滤时，首个精确匹配分支可影响初始父修订。不要把 sha256 当作可对既有仓库随意切换的设置。",
+    "status": "public",
+    "source": "cli/src/commands/git/clone.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/clone.rs"
+  },
+  "git colocation": {
+    "name": "jj git colocation",
+    "description": "管理当前 jj 工作区与 Git 工作区的并置状态。",
+    "usage": "jj git colocation <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "v0.45.1 仅支持主工作区；额外 workspace 不支持 Git colocation。",
+    "status": "public",
+    "source": "cli/src/commands/git/colocation.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/colocation.rs"
+  },
+  "git colocation disable": {
+    "name": "jj git colocation disable",
+    "description": "停用并置，把工作区根目录的 Git 元数据迁入 jj 管理的位置。",
+    "usage": "jj git colocation disable",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "v0.45.1 仅支持主工作区；额外 workspace 不支持 Git colocation。",
+    "status": "public",
+    "source": "cli/src/commands/git/colocation.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/colocation.rs"
+  },
+  "git colocation enable": {
+    "name": "jj git colocation enable",
+    "description": "启用并置，使 Git 工具能够在当前工作区识别 .git。",
+    "usage": "jj git colocation enable",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "v0.45.1 仅支持主工作区；额外 workspace 不支持 Git colocation。",
+    "status": "public",
+    "source": "cli/src/commands/git/colocation.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/colocation.rs"
+  },
+  "git colocation status": {
+    "name": "jj git colocation status",
+    "description": "查看当前并置状态。",
+    "usage": "jj git colocation status",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "v0.45.1 仅支持主工作区；额外 workspace 不支持 Git colocation。",
+    "status": "public",
+    "source": "cli/src/commands/git/colocation.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/colocation.rs"
+  },
+  "git export": {
+    "name": "jj git export",
+    "description": "把 jj 的引用状态导出到 Git 后端。",
+    "usage": "jj git export",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "并置仓库通常会自动导出；这是同步本地 Git 引用，不是推送到服务器。配合 --ignore-working-copy 可显式控制自动互操作。",
+    "status": "public",
+    "source": "cli/src/commands/git/export.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/export.rs"
+  },
+  "git fetch": {
+    "name": "jj git fetch",
+    "description": "获取远端 Git 引用与对象，并导入 jj。",
+    "usage": "jj git fetch [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "-b, --branch <BRANCH>",
+        "要获取的分支模式；可重复；有限 Git glob，不等于完整 revset。"
+      ],
+      [
+        "-t, --tag <TAG>",
+        "要获取的标签模式；可重复。"
+      ],
+      [
+        "--tracked",
+        "只获取已经跟踪的书签和标签。"
+      ],
+      [
+        "--remote <REMOTE>",
+        "从匹配名称的远端获取；可重复；远端名默认支持 glob。"
+      ],
+      [
+        "--all-remotes",
+        "从所有已配置远端获取。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "未指定远端时读取 git.fetch，或使用唯一远端 / origin。默认分支和标签筛选受 remotes.<name> 配置与 Git refspec 影响。fetch 不会自动把你的开发变更 rebase 到最新主干；引用失去可达性后是否 abandon 受 git.abandon-unreachable-commits 控制。",
+    "status": "public",
+    "source": "cli/src/commands/git/fetch.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/fetch.rs"
+  },
+  "git import": {
+    "name": "jj git import",
+    "description": "把 Git 后端的引用变化导入 jj。",
+    "usage": "jj git import",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "并置仓库通常自动导入；这不是网络 fetch。v0.45.1 中非并置仓库不会把 detached Git HEAD 自动当作工作副本导入。",
+    "status": "public",
+    "source": "cli/src/commands/git/import.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/import.rs"
+  },
+  "git init": {
+    "name": "jj git init",
+    "description": "创建使用 Git 后端的 jj 仓库，或接管现有 Git 仓库。",
+    "usage": "jj git init [OPTIONS] [DESTINATION]",
+    "arguments": [
+      [
+        "[DESTINATION]",
+        "初始化目录；默认当前目录。"
+      ]
+    ],
+    "options": [
+      [
+        "--colocate",
+        "创建并置仓库；内置默认 git.colocate=true。"
+      ],
+      [
+        "--no-colocate",
+        "创建非并置仓库，Git 后端保存在 .jj 中。"
+      ],
+      [
+        "--object-hash <OBJECT_HASH>",
+        "sha1 或 sha256；默认读取 git.object-hash（内置 sha1）。"
+      ],
+      [
+        "--git-repo <GIT_REPO>",
+        "使用已存在的 Git 仓库作为后端；与显式 --colocate 冲突；同目录已有 Git 仓库会进入并置路径。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "已有 Git 项目常用 jj git init --colocate。v0.45.1 的实际默认值以参数定义和 misc.toml 为准，不能沿用旧教程中“默认不并置”的结论。",
+    "status": "public",
+    "source": "cli/src/commands/git/init.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/init.rs"
+  },
+  "git push": {
+    "name": "jj git push",
+    "description": "把本地书签 / 标签更新推送到一个 Git 远端。",
+    "usage": "jj git push [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "--remote <REMOTE>",
+        "推送目标远端名称；默认 git.push，或唯一远端 / origin。跟踪关系不等于自动决定推送远端。"
+      ],
+      [
+        "-b, --bookmark <BOOKMARK>",
+        "推送匹配书签；可重复，名称默认 glob；新远端引用会建立跟踪。"
+      ],
+      [
+        "-t, --tag <TAG>",
+        "推送匹配标签；可重复，新引用会建立跟踪。"
+      ],
+      [
+        "--all",
+        "推送所有书签和标签，包括新建引用；谨慎使用。"
+      ],
+      [
+        "--tracked",
+        "推送已跟踪的书签和标签。"
+      ],
+      [
+        "--deleted",
+        "只推送已跟踪引用的删除。"
+      ],
+      [
+        "--allow-empty-description",
+        "允许推送描述为空的提交。"
+      ],
+      [
+        "--allow-private",
+        "允许推送匹配 git.private-commits 的提交；默认 private revset 为 none()。"
+      ],
+      [
+        "--allow-conflicts",
+        "允许把冲突提交推送出去；接收端未必能按期望处理。"
+      ],
+      [
+        "-r, --revision <REVSETS>",
+        "推送指向指定修订的引用；可重复；不是凭空为每个修订建立分支。"
+      ],
+      [
+        "-c, --change <REVSETS>",
+        "为指定 change 创建 / 更新自动命名书签并推送；可重复。名称受 templates.git_push_bookmark 控制。"
+      ],
+      [
+        "--named <NAME=REVISION>",
+        "创建 / 更新明确命名的书签并推送；可重复。"
+      ],
+      [
+        "--dry-run",
+        "显示计划，不实际推送。不要误记为全局选项，也不要假定所有命令都支持它。"
+      ],
+      [
+        "-o, --option <OPTION>",
+        "向 Git 服务端传递 push option；可重复。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "默认只选择当前工作相关的已跟踪引用，并不推送所有本地 change。jj 使用预期远端状态检查来保护历史重写，不能照搬 git push --force；先 fetch 再检查差异。--no-integrate-operation 不能替代这里的 --dry-run。 v0.45.1 的实现会直接拒绝全局 --no-integrate-operation。--all 与 --tracked 互斥；显式 -b/-t/-r/-c/--named 选择可互相组合，但不能与 --all、--tracked、--deleted 组合。--deleted 可与 --all 或 --tracked 配合。",
+    "status": "public",
+    "source": "cli/src/commands/git/push.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "--revisions <REVSETS>",
+        "--revision 的隐藏长别名；不应据此推断所有命令都接受这两个拼写。"
+      ],
+      [
+        "--branch <BOOKMARK>",
+        "--bookmark 的隐藏兼容长别名。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/push.rs"
+  },
+  "git remote": {
+    "name": "jj git remote",
+    "description": "管理 Git 远端配置。",
+    "usage": "jj git remote <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/git/remote/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/remote/mod.rs"
+  },
+  "git remote add": {
+    "name": "jj git remote add",
+    "description": "添加一个命名远端。",
+    "usage": "jj git remote add [OPTIONS] <REMOTE> <URL>",
+    "arguments": [
+      [
+        "<REMOTE>",
+        "远端名称。"
+      ],
+      [
+        "<URL>",
+        "获取地址。"
+      ]
+    ],
+    "options": [
+      [
+        "--push-url <PUSH_URL>",
+        "单独指定推送地址。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/git/remote/add.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/remote/add.rs"
+  },
+  "git remote list": {
+    "name": "jj git remote list",
+    "description": "列出已配置远端及地址。",
+    "usage": "jj git remote list",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/git/remote/list.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/remote/list.rs"
+  },
+  "git remote remove": {
+    "name": "jj git remote remove",
+    "description": "移除本地远端配置并忘记对应远端引用。",
+    "usage": "jj git remote remove <REMOTE>",
+    "arguments": [
+      [
+        "<REMOTE>",
+        "要移除的远端名称。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "不会删除服务器仓库；与向服务器推送引用删除不是同一件事。",
+    "status": "public",
+    "source": "cli/src/commands/git/remote/remove.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/remote/remove.rs"
+  },
+  "git remote rename": {
+    "name": "jj git remote rename",
+    "description": "重命名本地远端。",
+    "usage": "jj git remote rename <OLD> <NEW>",
+    "arguments": [
+      [
+        "<OLD>",
+        "旧名称。"
+      ],
+      [
+        "<NEW>",
+        "新名称。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/git/remote/rename.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/remote/rename.rs"
+  },
+  "git remote set-url": {
+    "name": "jj git remote set-url",
+    "description": "修改远端的获取 / 推送地址。",
+    "usage": "jj git remote set-url [OPTIONS] <REMOTE> [URL]",
+    "arguments": [
+      [
+        "<REMOTE>",
+        "远端名称。"
+      ],
+      [
+        "[URL]",
+        "新的获取地址，是 --fetch 的便捷写法。"
+      ]
+    ],
+    "options": [
+      [
+        "--push <PUSH>",
+        "设置推送 URL。"
+      ],
+      [
+        "--fetch <FETCH>",
+        "设置获取 URL。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/git/remote/set_url.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/remote/set_url.rs"
+  },
+  "git root": {
+    "name": "jj git root",
+    "description": "输出 Git 后端目录路径。",
+    "usage": "jj git root",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "与 jj root / jj workspace root 不同：这里返回后端 Git 目录，而不是工作区根目录。",
+    "status": "public",
+    "source": "cli/src/commands/git/root.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/git/root.rs"
+  },
+  "help": {
+    "name": "jj help",
+    "description": "显示指定命令路径的帮助，或打开关键字文档。",
+    "usage": "jj help [OPTIONS] [COMMAND]...",
+    "arguments": [
+      [
+        "[COMMAND]...",
+        "子命令路径，例如 git push；完整写法 jj help git push。"
+      ]
+    ],
+    "options": [
+      [
+        "-k, --keyword <KEYWORD>",
+        "文档主题：bookmarks、config、filesets、glossary、revsets、templates、tutorial。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "jj <命令> --help 是长帮助；-h 是短帮助。不要假定 jj git help push 也受支持。",
+    "status": "public",
+    "source": "cli/src/commands/help.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/help.rs"
+  },
+  "interdiff": {
+    "name": "jj interdiff",
+    "description": "比较两个修订各自引入的修改，而非简单比较最终文件树。",
+    "usage": "jj interdiff [OPTIONS] <--from <REVSET>|--to <REVSET>> [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "只比较匹配文件。"
+      ]
+    ],
+    "options": [
+      [
+        "-f, --from <REVSET>",
+        "旧版本；若只指定 --to，此项默认 @。"
+      ],
+      [
+        "-t, --to <REVSET>",
+        "新版本；若只指定 --from，此项默认 @。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "至少指定一个端点。会先对齐父修订再比较补丁，适合审查 rebase 前后的改动是否变化。",
+    "status": "public",
+    "source": "cli/src/commands/interdiff.rs",
+    "diff": true,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/interdiff.rs"
+  },
+  "log": {
+    "name": "jj log",
+    "description": "显示提交图。",
+    "usage": "jj log [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "按路径变化筛选历史。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSETS>",
+        "要显示的修订集合；无路径筛选时默认读取 revsets.log。"
+      ],
+      [
+        "-n, --limit <LIMIT>",
+        "最多显示多少个修订。"
+      ],
+      [
+        "--reversed",
+        "反转显示顺序。"
+      ],
+      [
+        "-G, --no-graph",
+        "不显示图形连线。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "提交输出模板，默认 templates.log。"
+      ],
+      [
+        "-p, --patch",
+        "同时显示每个修订的补丁。"
+      ],
+      [
+        "--count",
+        "输出匹配修订的数量。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "仅给路径、未给 -r 时，会从 all() 中筛选修改这些路径的修订，而不是继续采用 revsets.log。--count 与图形/补丁/反转/模板及差异格式选项互斥。",
+    "status": "public",
+    "source": "cli/src/commands/log.rs",
+    "diff": true,
+    "hidden_options": [
+      [
+        "--revisions <REVSETS>",
+        "--revision 的隐藏长别名；不应据此推断所有命令都接受这两个拼写。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/log.rs"
+  },
+  "metaedit": {
+    "name": "jj metaedit",
+    "description": "修改提交元数据，而不直接修改文件内容。",
+    "usage": "jj metaedit [OPTIONS] [REVSETS]...",
+    "arguments": [
+      [
+        "[REVSETS]...",
+        "目标修订；默认 @；也接受隐藏短选项 -r。"
+      ]
+    ],
+    "options": [
+      [
+        "--update-change-id",
+        "为修订重新分配 change ID。"
+      ],
+      [
+        "-m, --message <MESSAGE>",
+        "设置提交描述。"
+      ],
+      [
+        "--update-author-timestamp",
+        "把作者时间更新为当前时间。"
+      ],
+      [
+        "--update-author",
+        "把作者姓名 / 邮箱更新为当前用户，保留作者时间。"
+      ],
+      [
+        "--author <AUTHOR>",
+        "指定作者，格式 Name <email>。"
+      ],
+      [
+        "--author-timestamp <AUTHOR_TIMESTAMP>",
+        "指定作者时间，接受 RFC 2822 或 RFC 3339。"
+      ],
+      [
+        "--force-rewrite",
+        "即使元数据没有实质变化也重写提交，更新 committer 信息。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "重写元数据仍会改变 commit ID，并可能重写后代。作者信息和提交者信息不是一回事；提交者覆盖可使用对应 user 配置 / JJ_USER、JJ_EMAIL。 --author 与 --update-author 互斥；--author-timestamp 与 --update-author-timestamp 互斥。",
+    "status": "public",
+    "source": "cli/src/commands/metaedit.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "-r <REVSETS>",
+        "位置修订参数的隐藏短选项形式；不能据此使用 --revision。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/metaedit.rs"
+  },
+  "new": {
+    "name": "jj new",
+    "description": "创建一个空 change，默认切换工作副本来编辑它。",
+    "usage": "jj new [OPTIONS] [REVSETS]...",
+    "arguments": [
+      [
+        "[REVSETS]...",
+        "新修订的父集合；默认 @。多个父修订形成 merge；便捷短选项 -o、-r。"
+      ]
+    ],
+    "options": [
+      [
+        "-m, --message <MESSAGE>",
+        "新 change 的描述；可重复，按段落连接。"
+      ],
+      [
+        "--no-edit",
+        "创建新 change 但不切换工作副本。"
+      ],
+      [
+        "-A, --insert-after <REVSETS>",
+        "插在指定修订之后，并重接其孩子；可重复；别名 --after。"
+      ],
+      [
+        "-B, --insert-before <REVSETS>",
+        "插在指定修订之前；可重复；别名 --before。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "位置父集合与 -A/-B 互斥；-A 和 -B 可组合。不带插入选项时，实验性的书签自动前进配置可能影响书签。",
+    "status": "public",
+    "source": "cli/src/commands/new.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "-o <REVSETS>；短别名 -r、-d",
+        "与位置父修订参数合并使用；这是隐藏短选项，不等于存在 --onto / --revision / --destination 长选项。"
+      ],
+      [
+        "--edit",
+        "隐藏的无操作标志；用于与 --no-edit 配对，二者互斥。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/new.rs"
+  },
+  "next": {
+    "name": "jj next",
+    "description": "沿 后继 方向移动工作位置。",
+    "usage": "jj next [OPTIONS] [OFFSET]",
+    "arguments": [
+      [
+        "[OFFSET]",
+        "移动层数，默认 1；遇到多个候选可能需要交互选择。"
+      ]
+    ],
+    "options": [
+      [
+        "-e, --edit",
+        "直接编辑目标修订。"
+      ],
+      [
+        "-n, --no-edit",
+        "在目标修订上创建新的空 change。"
+      ],
+      [
+        "--conflict",
+        "沿后继方向寻找冲突修订。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "默认行为受 ui.movement.edit 控制，内置为 false：不是无条件 checkout 目标，而是创建新工作 change。需要确定性切换时用 jj edit <revision>。",
+    "status": "public",
+    "source": "cli/src/commands/next.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/next.rs"
+  },
+  "prev": {
+    "name": "jj prev",
+    "description": "沿 祖先 方向移动工作位置。",
+    "usage": "jj prev [OPTIONS] [OFFSET]",
+    "arguments": [
+      [
+        "[OFFSET]",
+        "移动层数，默认 1；遇到多个候选可能需要交互选择。"
+      ]
+    ],
+    "options": [
+      [
+        "-e, --edit",
+        "直接编辑目标修订。"
+      ],
+      [
+        "-n, --no-edit",
+        "在目标修订上创建新的空 change。"
+      ],
+      [
+        "--conflict",
+        "沿祖先方向寻找冲突修订。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "默认行为受 ui.movement.edit 控制，内置为 false：不是无条件 checkout 目标，而是创建新工作 change。需要确定性切换时用 jj edit <revision>。",
+    "status": "public",
+    "source": "cli/src/commands/prev.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/prev.rs"
+  },
+  "operation": {
+    "name": "jj operation",
+    "description": "管理仓库操作历史，而不是提交图。",
+    "usage": "jj operation <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [
+      "op"
+    ],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/operation/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/operation/mod.rs"
+  },
+  "operation abandon": {
+    "name": "jj operation abandon",
+    "description": "丢弃一段操作历史。",
+    "usage": "jj operation abandon <OPERATION>",
+    "arguments": [
+      [
+        "<OPERATION>",
+        "操作 ID 或操作范围；例如 ..<ID> 丢弃该操作及更早祖先历史。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "高风险：缩短恢复历史，之后 GC 可能使对应对象永久不可恢复。这不是撤销操作，应优先使用 undo / op revert / op restore。",
+    "status": "public",
+    "source": "cli/src/commands/operation/abandon.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/operation/abandon.rs"
+  },
+  "operation diff": {
+    "name": "jj operation diff",
+    "description": "比较两次仓库操作的状态差异。",
+    "usage": "jj operation diff [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "--operation <OPERATION>",
+        "比较该操作与其父操作；别名 --op。"
+      ],
+      [
+        "-f, --from <FROM>",
+        "起点操作。"
+      ],
+      [
+        "-t, --to <TO>",
+        "终点操作。"
+      ],
+      [
+        "-G, --no-graph",
+        "不画操作差异中的提交图。"
+      ],
+      [
+        "-p, --patch",
+        "显示经父修订对齐后的提交补丁差异。"
+      ],
+      [
+        "--show-changes-in <REVSETS>",
+        "只显示这些修订的 change 差异；默认 revsets.op-diff-changes-in。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "比较的是操作前后仓库视图，不是 jj diff 的两个提交树。",
+    "status": "public",
+    "source": "cli/src/commands/operation/diff.rs",
+    "diff": true,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/operation/diff.rs"
+  },
+  "operation integrate": {
+    "name": "jj operation integrate",
+    "description": "把先前未整合的操作并入当前操作头。",
+    "usage": "jj operation integrate <OPERATION>",
+    "arguments": [
+      [
+        "<OPERATION>",
+        "待整合操作 ID；已整合时无需重复动作。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "常与 --no-integrate-operation 搭配；相当于把操作产生的仓库变化并回当前状态，不是 push。",
+    "status": "public",
+    "source": "cli/src/commands/operation/integrate.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/operation/integrate.rs"
+  },
+  "operation log": {
+    "name": "jj operation log",
+    "description": "查看仓库操作日志。",
+    "usage": "jj operation log [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "-n, --limit <LIMIT>",
+        "最多显示的操作数量。"
+      ],
+      [
+        "--reversed",
+        "反转显示顺序。"
+      ],
+      [
+        "-G, --no-graph",
+        "不画操作图。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "操作输出模板。"
+      ],
+      [
+        "-d, --op-diff",
+        "显示每个操作造成的仓库状态差异。"
+      ],
+      [
+        "-p, --patch",
+        "显示提交补丁差异；隐含 --op-diff。"
+      ],
+      [
+        "--show-changes-in <REVSETS>",
+        "只显示这些修订的 change 差异；默认 revsets.op-diff-changes-in。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "默认也可能先快照工作副本 / 调和并发操作。需要观察已有状态时可用 jj --at-op=@ --ignore-working-copy op log。",
+    "status": "public",
+    "source": "cli/src/commands/operation/log.rs",
+    "diff": true,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/operation/log.rs"
+  },
+  "operation restore": {
+    "name": "jj operation restore",
+    "description": "把仓库视图恢复到某次操作后的状态。",
+    "usage": "jj operation restore [OPTIONS] <OPERATION>",
+    "arguments": [
+      [
+        "<OPERATION>",
+        "目标操作 ID / 表达式。"
+      ]
+    ],
+    "options": [
+      [
+        "--what <WHAT>",
+        "选择恢复部分，可重复：repo（仓库 / 本地引用）、remote-tracking（缓存的远端跟踪状态）；默认二者都恢复，属于实验性选项。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "会创建新的操作记录，不会替你撤回已执行的远端 push，也不会保证恢复任意外部文件。仅恢复 repo 可保留对远端当前状态的记忆。",
+    "status": "public",
+    "source": "cli/src/commands/operation/restore.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/operation/restore.rs"
+  },
+  "operation revert": {
+    "name": "jj operation revert",
+    "description": "在当前状态上反向应用指定操作的效果。",
+    "usage": "jj operation revert [OPTIONS] [OPERATION]",
+    "arguments": [
+      [
+        "[OPERATION]",
+        "要反向应用的操作；默认 @，即当前操作。"
+      ]
+    ],
+    "options": [
+      [
+        "--what <WHAT>",
+        "选择恢复部分，可重复：repo（仓库 / 本地引用）、remote-tracking（缓存的远端跟踪状态）；默认二者都恢复，属于实验性选项。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "和 restore 不同：revert 试图保留其他后续操作的效果，类似对一次操作做反向补丁。",
+    "status": "public",
+    "source": "cli/src/commands/operation/revert.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/operation/revert.rs"
+  },
+  "operation show": {
+    "name": "jj operation show",
+    "description": "显示一项操作的元数据和差异。",
+    "usage": "jj operation show [OPTIONS] [OPERATION]",
+    "arguments": [
+      [
+        "[OPERATION]",
+        "操作 ID；默认 @。"
+      ]
+    ],
+    "options": [
+      [
+        "-G, --no-graph",
+        "不画图。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "操作元数据模板。"
+      ],
+      [
+        "-p, --patch",
+        "显示提交补丁差异。"
+      ],
+      [
+        "--no-op-diff",
+        "不显示仓库状态差异。"
+      ],
+      [
+        "--show-changes-in <REVSETS>",
+        "只显示这些修订的 change 差异；默认 revsets.op-diff-changes-in。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/operation/show.rs",
+    "diff": true,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/operation/show.rs"
+  },
+  "parallelize": {
+    "name": "jj parallelize",
+    "description": "把指定修订整理为并行的兄弟变化。",
+    "usage": "jj parallelize [REVSETS]...",
+    "arguments": [
+      [
+        "[REVSETS]...",
+        "要并行化的修订；也可用隐藏 -r。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "保留集合外所需的依赖关系；选择不连续修订时，可能无法移除中间依赖，结果可能无变化。",
+    "status": "public",
+    "source": "cli/src/commands/parallelize.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/parallelize.rs"
+  },
+  "rebase": {
+    "name": "jj rebase",
+    "description": "把指定 change 移到新的父修订 / 插入位置。",
+    "usage": "jj rebase [OPTIONS] <--onto <REVSETS>|--insert-after <REVSETS>|--insert-before <REVSETS>>",
+    "arguments": [],
+    "options": [
+      [
+        "-b, --branch <REVSETS>",
+        "移动相对目标分叉出来的整条分支及后代；可重复；未指定 -b/-s/-r 时默认 -b @。"
+      ],
+      [
+        "-s, --source <REVSETS>",
+        "移动指定修订及其所有后代；可重复；每个显式指定的修订都会成为目标的直接孩子。"
+      ],
+      [
+        "-r, --revision <REVSETS>",
+        "只移动选中修订，未选中后代接回旧父位置；保留选中修订间的依赖关系。"
+      ],
+      [
+        "-o, --onto <REVSETS>",
+        "目标父修订，可重复以形成多父提交；可见长别名 --destination。 可见短别名 -d；源码未标弃用。"
+      ],
+      [
+        "-A, --insert-after <REVSETS>",
+        "插到这些修订之后，并重接其孩子；可重复；别名 --after。"
+      ],
+      [
+        "-B, --insert-before <REVSETS>",
+        "插到这些修订之前，并重接它们；可重复；别名 --before。"
+      ],
+      [
+        "--skip-emptied",
+        "重放后才变空的提交会被 abandon；原本就空的提交不删除；具有多个非空父的 merge 不跳过。"
+      ],
+      [
+        "--keep-divergent",
+        "保留 change ID 相同的分歧版本；默认遇到目标侧已有相同改动版本时可能消除重复分歧。"
+      ],
+      [
+        "--simplify-parents",
+        "同时移除冗余父边；效果类似 simplify-parents。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "-b/-s/-r 选择方式互斥。-o 与插入方式互斥；-A/-B 可组合。-d 是当前源码公开保留的短别名，并非已弃用；本手册示例统一写 -o。",
+    "status": "public",
+    "source": "cli/src/commands/rebase.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "--revisions <REVSETS>",
+        "--revision 的隐藏长别名。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/rebase.rs"
+  },
+  "redo": {
+    "name": "jj redo",
+    "description": "重做最近被 undo 撤销的操作。",
+    "usage": "jj redo",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "与连续 undo 配合，按撤销 / 重做历史前后移动；恢复指定操作仍使用 op restore。",
+    "status": "public",
+    "source": "cli/src/commands/redo.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/redo.rs"
+  },
+  "resolve": {
+    "name": "jj resolve",
+    "description": "使用外部三方合并工具处理冲突文件。",
+    "usage": "jj resolve [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "只处理匹配路径；省略表示所有可处理冲突。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "要处理的修订；默认 @。"
+      ],
+      [
+        "-l, --list",
+        "只列出冲突，不启动工具。"
+      ],
+      [
+        "--tool <NAME>",
+        "选择三方合并工具；内置 :ours / :theirs 分别采用冲突第 1 / 第 2 侧。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "只支持能表示为三方合并的冲突；也可以直接编辑文件中的冲突标记后运行 jj status，让 jj 快照结果。多父合并中的 ours/theirs 不能简单套用某个远端名。",
+    "status": "public",
+    "source": "cli/src/commands/resolve.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/resolve.rs"
+  },
+  "restore": {
+    "name": "jj restore",
+    "description": "把目标修订中的路径内容恢复为来源修订的内容。",
+    "usage": "jj restore [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "只恢复匹配路径；省略会作用于所有路径。"
+      ]
+    ],
+    "options": [
+      [
+        "-f, --from <REVSET>",
+        "来源修订；只给 --into 时默认 @。"
+      ],
+      [
+        "-t, --into <REVSET>",
+        "要重写的目标修订；只给 --from 时默认 @；别名 --to。"
+      ],
+      [
+        "-c, --changes-in <REVSET>",
+        "撤销该修订相对合并父树的改动；不能简单把 merge 的父树理解成某一个父。"
+      ],
+      [
+        "-i, --interactive",
+        "交互选择需要恢复的部分。"
+      ],
+      [
+        "--tool <NAME>",
+        "指定 diff editor；隐含 --interactive。"
+      ],
+      [
+        "--restore-descendants",
+        "重写后代时保留其文件树内容，而非继续重放原来的 diff。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "无端点参数时等价于 --changes-in @：恢复到父树，保留该 change 的描述等元数据。会覆盖工作修改；先检查 diff / 操作日志。 --changes-in 与 --from/--into 互斥；此命令没有正常可用的 -r 模式，隐藏 -r 只是迁移报错入口。",
+    "status": "public",
+    "source": "cli/src/commands/restore.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "-r, --revision <REVISION>",
+        "【仅用于报错提示，不是可用功能】解析后会主动返回错误，提示改用 --from 或 --changes-in。不要把它当成普通 revision 参数。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/restore.rs"
+  },
+  "revert": {
+    "name": "jj revert",
+    "description": "在指定位置新建反向修改，用来撤销既有提交的效果。",
+    "usage": "jj revert --revision <REVSETS> <--onto <REVSETS>|--insert-after <REVSETS>|--insert-before <REVSETS>>",
+    "arguments": [],
+    "options": [
+      [
+        "-r, --revision <REVSETS>",
+        "需要逆向应用的修订集合；必填。"
+      ],
+      [
+        "-o, --onto <REVSETS>",
+        "目标父修订，可重复以形成多父提交；可见长别名 --destination。 可见短别名 -d；源码未标记弃用。"
+      ],
+      [
+        "-A, --insert-after <REVSETS>",
+        "插到这些修订之后，并重接其孩子；可重复；别名 --after。"
+      ],
+      [
+        "-B, --insert-before <REVSETS>",
+        "插到这些修订之前，并重接它们；可重复；别名 --before。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "按逆拓扑顺序应用反向修改。不会删除原提交，适合对已经发布的提交做可审查的回退；描述模板为 templates.revert_description。",
+    "status": "public",
+    "source": "cli/src/commands/revert.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "--revisions <REVSETS>",
+        "--revision 的隐藏长别名；不应据此推断所有命令都接受这两个拼写。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/revert.rs"
+  },
+  "root": {
+    "name": "jj root",
+    "description": "输出当前工作区根目录，是 jj workspace root 的快捷入口。",
+    "usage": "jj root",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/root.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/root.rs"
+  },
+  "run": {
+    "name": "jj run",
+    "description": "在隔离工作副本中跨多个修订执行外部命令，默认把执行产生的修改写回修订。",
+    "usage": "jj run [OPTIONS] <COMMAND> [ARGS]...",
+    "arguments": [
+      [
+        "<COMMAND>",
+        "外部可执行程序。"
+      ],
+      [
+        "[ARGS]...",
+        "传给外部程序的参数；用 -- 分隔 jj 参数与程序参数。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSETS>",
+        "要处理的修订集合，可重复；省略时使用 revsets.run，内置为 reachable(@, mutable())。"
+      ],
+      [
+        "-j, --jobs <JOBS>",
+        "并发进程数；覆盖 run.jobs，未配置时为 1。"
+      ],
+      [
+        "--root",
+        "从每个隔离工作副本的根目录执行，而非调用 jj run 时对应的子目录。"
+      ],
+      [
+        "--clean",
+        "执行前删除并重建隔离工作副本；默认会复用，以保留构建产物。"
+      ],
+      [
+        "--restore-descendants",
+        "提交修改后，保持后代内容不变，而非重放后代补丁。"
+      ],
+      [
+        "--passthrough",
+        "标准输出 / 错误直接连接终端；仅允许单任务，不继承标准输入。"
+      ],
+      [
+        "--ignore-changes",
+        "丢弃程序产生的文件修改，不重写提交；只读测试通常应带上；允许检查 immutable 提交。"
+      ],
+      [
+        "--ignore-errors",
+        "失败时继续其他修订；失败任务修改不保存，成功任务最终原子应用；外部失败不决定 jj run 的最终退出码。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "设置 JJ_CHANGE_ID、JJ_COMMIT_ID、JJ_WORKSPACE_ROOT。隔离工作副本不是安全沙箱：外部命令仍可能联网或修改目录外资源。自动化测试慎用 --ignore-errors，以免把失败当成功。 --ignore-changes 与 --restore-descendants 互斥；--passthrough 在 jobs > 1 时会报错。",
+    "status": "public",
+    "source": "cli/src/commands/run.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "--revisions <REVSETS>",
+        "--revision 的隐藏长别名；不应据此推断所有命令都接受这两个拼写。"
+      ],
+      [
+        "-x",
+        "隐藏的无操作兼容标志；便于从 git rebase -x 迁移，不用于传递命令。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/run.rs"
+  },
+  "show": {
+    "name": "jj show",
+    "description": "显示修订的元数据和相对父树的补丁。",
+    "usage": "jj show [OPTIONS] [REVSETS]...",
+    "arguments": [
+      [
+        "[REVSETS]...",
+        "要查看的修订；默认 @；也可用隐藏 -r。"
+      ]
+    ],
+    "options": [
+      [
+        "--reversed",
+        "较早修订优先。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "元数据模板。"
+      ],
+      [
+        "--no-patch",
+        "不显示补丁。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "本命令还支持 -w = --ignore-all-space、-b = --ignore-space-change。",
+    "status": "public",
+    "source": "cli/src/commands/show.rs",
+    "diff": true,
+    "hidden_options": [
+      [
+        "-r <REVISION>",
+        "位置修订参数的隐藏短选项形式；不能据此使用 --revision。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/show.rs"
+  },
+  "sign": {
+    "name": "jj sign",
+    "description": "为修订添加密码学签名。",
+    "usage": "jj sign [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "-r, --revision <REVSETS>",
+        "要签名的修订；默认 revsets.sign。"
+      ],
+      [
+        "--key <KEY>",
+        "用于签名的密钥标识。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "需配置 signing backend。即使已有签名，也会重新签名；硬件令牌可能再次要求交互。签名会重写提交对象。",
+    "status": "public",
+    "source": "cli/src/commands/sign.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "--revisions <REVSETS>",
+        "--revision 的隐藏长别名；不应据此推断所有命令都接受这两个拼写。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/sign.rs"
+  },
+  "simplify-parents": {
+    "name": "jj simplify-parents",
+    "description": "删除冗余父边，不改变修订的文件树。",
+    "usage": "jj simplify-parents [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "-s, --source <REVSETS>",
+        "处理指定修订及其所有后代；可重复。"
+      ],
+      [
+        "-r, --revision <REVSETS>",
+        "仅处理指定修订；可重复。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "父节点 C 若也是另一个父节点 B 的祖先，则可以移除直接的 C 父边。未给选择器时读取 revsets.simplify-parents，默认 reachable(@, mutable())。",
+    "status": "public",
+    "source": "cli/src/commands/simplify_parents.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/simplify_parents.rs"
+  },
+  "sparse": {
+    "name": "jj sparse",
+    "description": "管理工作副本中实际展开的路径；不删除提交中其他文件。",
+    "usage": "jj sparse <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/sparse/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/sparse/mod.rs"
+  },
+  "sparse edit": {
+    "name": "jj sparse edit",
+    "description": "启动编辑器修改稀疏路径模式。",
+    "usage": "jj sparse edit",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/sparse/edit.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/sparse/edit.rs"
+  },
+  "sparse list": {
+    "name": "jj sparse list",
+    "description": "列出当前稀疏模式；. 表示整个仓库。",
+    "usage": "jj sparse list",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/sparse/list.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/sparse/list.rs"
+  },
+  "sparse reset": {
+    "name": "jj sparse reset",
+    "description": "恢复为在工作副本展开所有路径。",
+    "usage": "jj sparse reset",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/sparse/reset.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/sparse/reset.rs"
+  },
+  "sparse set": {
+    "name": "jj sparse set",
+    "description": "增删当前工作副本的稀疏路径模式。",
+    "usage": "jj sparse set [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "--add <ADD>",
+        "加入路径模式；可重复。"
+      ],
+      [
+        "--remove <REMOVE>",
+        "移除路径模式；可重复。"
+      ],
+      [
+        "--clear",
+        "先清空模式；常与 --add 组合。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "例如 jj sparse set --clear --add README.md --add lib。不要与 .gitignore 或 snapshot.auto-track 混淆。",
+    "status": "public",
+    "source": "cli/src/commands/sparse/set.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/sparse/set.rs"
+  },
+  "split": {
+    "name": "jj split",
+    "description": "把一个修订的修改拆为两部分。",
+    "usage": "jj split [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "放入“选中部分”的文件集合；未指定文件集合时默认交互选择。"
+      ]
+    ],
+    "options": [
+      [
+        "-i, --interactive",
+        "交互选择补丁片段。"
+      ],
+      [
+        "--tool <NAME>",
+        "指定 diff editor；隐含交互。"
+      ],
+      [
+        "-r, --revision <REVSET>",
+        "要拆分的修订；默认 @。"
+      ],
+      [
+        "-o, --onto <REVSETS>",
+        "目标父修订，可重复以形成多父提交；可见长别名 --destination。 可见短别名 -d；源码未标记弃用。"
+      ],
+      [
+        "-A, --insert-after <REVSETS>",
+        "插到这些修订之后，并重接其孩子；可重复；别名 --after。"
+      ],
+      [
+        "-B, --insert-before <REVSETS>",
+        "插到这些修订之前，并重接它们；可重复；别名 --before。"
+      ],
+      [
+        "-m, --message <MESSAGE>",
+        "为选中部分设置描述；另一部分保留原描述。"
+      ],
+      [
+        "--editor",
+        "使用 --message 后仍启动描述编辑器。"
+      ],
+      [
+        "-p, --parallel",
+        "拆成兄弟修订，而非父子修订。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "默认：选中部分保留在原 change，余下部分成为新孩子。使用 -o/-A/-B 时：选中部分提取为新位置的新 change，余下部分留原位。空提交不能 split。书签行为受 split.legacy-bookmark-behavior 影响（内置 true），拆分后务必检查书签。 --parallel 与 -o/-A/-B 互斥；-o 与 -A/-B 互斥，但 -A 和 -B 可组合。",
+    "status": "public",
+    "source": "cli/src/commands/split.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/split.rs"
+  },
+  "squash": {
+    "name": "jj squash",
+    "description": "把来源修订的修改移动到目标修订。",
+    "usage": "jj squash [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "只移动匹配文件的修改；省略则移动全部修改。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "把该修订压入它的单个父修订；默认 @；与实验性 -o/-A/-B 不兼容。"
+      ],
+      [
+        "-f, --from <REVSETS>",
+        "来源集合；可重复。省略且使用显式目标时默认 @。"
+      ],
+      [
+        "-t, --into <REVSET>",
+        "已有目标修订；默认 @；别名 --to。"
+      ],
+      [
+        "-o, --onto <REVSETS>",
+        "【实验性】目标父修订，可重复以形成多父提交；可见长别名 --destination。 此模式创建新提交，不是修改一个既有目标。 可见短别名 -d；源码未标记弃用。"
+      ],
+      [
+        "-A, --insert-after <REVSETS>",
+        "【实验性】插到这些修订之后，并重接其孩子；可重复；别名 --after。 此模式创建新提交，不是修改一个既有目标。"
+      ],
+      [
+        "-B, --insert-before <REVSETS>",
+        "【实验性】插到这些修订之前，并重接它们；可重复；别名 --before。 此模式创建新提交，不是修改一个既有目标。"
+      ],
+      [
+        "-m, --message <MESSAGE>",
+        "设置合并后的描述，不打开描述编辑器。"
+      ],
+      [
+        "-u, --use-destination-message",
+        "保留目标描述，丢弃来源描述。"
+      ],
+      [
+        "--editor",
+        "即使提供 --message 也打开描述编辑器。"
+      ],
+      [
+        "-i, --interactive",
+        "交互选择补丁片段。"
+      ],
+      [
+        "--tool <NAME>",
+        "指定 diff editor；隐含交互。"
+      ],
+      [
+        "-k, --keep-emptied",
+        "来源被移空后也不 abandon。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "裸命令把 @ 的修改压入 @-；@ 是 merge 时需明确指定目标。来源变空通常会 abandon；如果工作 change 被 abandon，jj 会创建新的空工作 change。 -r 与 --from、--into 和位置选项互斥；--into 与 -o/-A/-B 互斥；-o 与 -A/-B 互斥；-A 和 -B 可组合。--use-destination-message 与 --message 互斥。",
+    "status": "public",
+    "source": "cli/src/commands/squash.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/squash.rs"
+  },
+  "status": {
+    "name": "jj status",
+    "description": "显示工作修改、工作修订及其父、文件冲突与书签冲突。",
+    "usage": "jj status [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "限制文件状态展示范围。"
+      ]
+    ],
+    "options": [],
+    "aliases": [
+      "st（默认配置别名）"
+    ],
+    "notes": "状态命令通常会先快照工作副本。没有 Git staging area，不存在配套的 jj add。",
+    "status": "public",
+    "source": "cli/src/commands/status.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/status.rs"
+  },
+  "tag": {
+    "name": "jj tag",
+    "description": "管理本地和远端标签。",
+    "usage": "jj tag <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/tag/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/tag/mod.rs"
+  },
+  "tag delete": {
+    "name": "jj tag delete",
+    "description": "删除本地标签，不 abandon 标签指向的提交。",
+    "usage": "jj tag delete <NAMES>...",
+    "arguments": [
+      [
+        "<NAMES>...",
+        "标签名模式，默认 glob。"
+      ]
+    ],
+    "options": [],
+    "aliases": [
+      "d"
+    ],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/tag/delete.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/tag/delete.rs"
+  },
+  "tag list": {
+    "name": "jj tag list",
+    "description": "显示标签与目标。",
+    "usage": "jj tag list [OPTIONS] [NAMES]...",
+    "arguments": [
+      [
+        "[NAMES]...",
+        "标签名模式，默认 glob。"
+      ]
+    ],
+    "options": [
+      [
+        "-a, --all-remotes",
+        "包括所有跟踪和未跟踪远端标签，也显示与本地同步的目标。"
+      ],
+      [
+        "--remote <REMOTE>",
+        "按远端名称模式过滤，可重复；可与 --tracked、--conflicted 组合。"
+      ],
+      [
+        "-t, --tracked",
+        "只列出已跟踪远端标签，默认不包括本地 Git-tracking 标签。"
+      ],
+      [
+        "-c, --conflicted",
+        "只列出存在目标冲突的标签。"
+      ],
+      [
+        "-r, --revision <REVSETS>",
+        "只列出本地目标落在所给修订集合中的标签，可重复。"
+      ],
+      [
+        "-T, --template <TEMPLATE>",
+        "标签输出模板，类型 CommitRef；默认 templates.tag_list。"
+      ],
+      [
+        "--sort <SORT_KEY>",
+        "排序键，可组合；末尾加 - 表示降序。键：name、author-name、author-email、author-date、committer-name、committer-email、committer-date，及各自的降序形式。默认 ui.tag-list-sort-keys。"
+      ]
+    ],
+    "aliases": [
+      "l"
+    ],
+    "notes": "默认省略未跟踪的远端标签及与本地同步的远端目标。冲突项用 - / + 表示旧 / 新目标。模板配置 templates.tag_list；排序配置 ui.tag-list-sort-keys。",
+    "status": "public",
+    "source": "cli/src/commands/tag/list.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/tag/list.rs"
+  },
+  "tag set": {
+    "name": "jj tag set",
+    "description": "创建或移动标签。",
+    "usage": "jj tag set [OPTIONS] <NAMES>...",
+    "arguments": [
+      [
+        "<NAMES>...",
+        "要设置的标签名称。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "目标修订；默认 @；别名 --to。"
+      ],
+      [
+        "--allow-move",
+        "允许移动已经存在的标签。"
+      ]
+    ],
+    "aliases": [
+      "s"
+    ],
+    "notes": "标签移动可能破坏使用者对发布版本的预期；默认不允许无提示移动。",
+    "status": "public",
+    "source": "cli/src/commands/tag/set.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/tag/set.rs"
+  },
+  "tag track": {
+    "name": "jj tag track",
+    "description": "开始跟踪远端标签。",
+    "usage": "jj tag track [OPTIONS] <TAG[@REMOTE]>...",
+    "arguments": [
+      [
+        "<TAG[@REMOTE]>...",
+        "TAG 是名称模式（默认 glob）；TAG@REMOTE 精确指定一个远端标签。"
+      ]
+    ],
+    "options": [
+      [
+        "--remote <REMOTE>",
+        "限定远端名称模式；可重复；未给则作用于匹配名称的所有远端标签。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "跟踪使之后获取的远端变化传播到同名本地标签；停止跟踪不删除服务器标签。",
+    "status": "public",
+    "source": "cli/src/commands/tag/track.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/tag/track.rs"
+  },
+  "tag untrack": {
+    "name": "jj tag untrack",
+    "description": "停止跟踪远端标签。",
+    "usage": "jj tag untrack [OPTIONS] <TAG[@REMOTE]>...",
+    "arguments": [
+      [
+        "<TAG[@REMOTE]>...",
+        "TAG 是名称模式（默认 glob）；TAG@REMOTE 精确指定一个远端标签。"
+      ]
+    ],
+    "options": [
+      [
+        "--remote <REMOTE>",
+        "限定远端名称模式；可重复；未给则作用于匹配名称的所有远端标签。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "跟踪使之后获取的远端变化传播到同名本地标签；停止跟踪不删除服务器标签。",
+    "status": "public",
+    "source": "cli/src/commands/tag/untrack.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/tag/untrack.rs"
+  },
+  "undo": {
+    "name": "jj undo",
+    "description": "撤销最近一次操作；连续运行可继续向更早的状态回退。",
+    "usage": "jj undo",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "与 redo 配对。v0.45.1 的 undo 不接受一个操作 ID 作为位置参数；指定操作用 op restore / op revert。",
+    "status": "public",
+    "source": "cli/src/commands/undo.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/undo.rs"
+  },
+  "unsign": {
+    "name": "jj unsign",
+    "description": "移除修订的密码学签名。",
+    "usage": "jj unsign [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "-r, --revision <REVSETS>",
+        "需要去除签名的修订集合。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "去签名也会重写提交对象；不是修改本地 GPG / SSH 密钥。 源码没有提供与 sign 相同的默认 revset；请明确使用 -r 指定目标，勿假设省略后等价于 @。",
+    "status": "public",
+    "source": "cli/src/commands/unsign.rs",
+    "diff": false,
+    "hidden_options": [
+      [
+        "--revisions <REVSETS>",
+        "--revision 的隐藏长别名；不应据此推断所有命令都接受这两个拼写。"
+      ]
+    ],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/unsign.rs"
+  },
+  "util": {
+    "name": "jj util",
+    "description": "生成补全、导出帮助、执行脚本及维护后端等低频命令。",
+    "usage": "jj util <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/util/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/util/mod.rs"
+  },
+  "util backend": {
+    "name": "jj util backend",
+    "description": "查询后端信息。",
+    "usage": "jj util backend <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/util/backend/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/util/backend/mod.rs"
+  },
+  "util backend name": {
+    "name": "jj util backend name",
+    "description": "打印当前仓库使用的后端名称。",
+    "usage": "jj util backend name",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/util/backend/name.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/util/backend/name.rs"
+  },
+  "util completion": {
+    "name": "jj util completion",
+    "description": "向标准输出生成 shell 补全脚本。",
+    "usage": "jj util completion <SHELL>",
+    "arguments": [
+      [
+        "<SHELL>",
+        "bash、elvish、fish、nushell、power-shell、zsh。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "输出的是脚本，不会自动修改 shell 配置。PowerShell 的枚举拼写是 power-shell。",
+    "status": "public",
+    "source": "cli/src/commands/util/completion.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/util/completion.rs"
+  },
+  "util config-schema": {
+    "name": "jj util config-schema",
+    "description": "向标准输出打印 jj TOML 配置的 JSON Schema。",
+    "usage": "jj util config-schema",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/util/config_schema.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/util/config_schema.rs"
+  },
+  "util exec": {
+    "name": "jj util exec",
+    "description": "在 jj 上下文中执行外部程序。",
+    "usage": "jj util exec <COMMAND> [ARGS]...",
+    "arguments": [
+      [
+        "<COMMAND>",
+        "外部可执行程序。"
+      ],
+      [
+        "[ARGS]...",
+        "外部参数；建议用 -- 隔开。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "提供 JJ_WORKSPACE_ROOT，常用于自定义 alias；不是安全沙箱，任意脚本可能产生 jj undo 无法恢复的副作用。",
+    "status": "public",
+    "source": "cli/src/commands/util/exec.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/util/exec.rs"
+  },
+  "util gc": {
+    "name": "jj util gc",
+    "description": "执行后端垃圾回收。",
+    "usage": "jj util gc [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "--expire <EXPIRE>",
+        "过期阈值；v0.45.1 唯一可显式传入的值为 now。省略时保留最近两周的过时对象 / 操作。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "高风险：通常只有先 op abandon 才能回收旧操作引用的对象。op abandon 与 gc 组合会缩短甚至消除找回误操作的机会。",
+    "status": "public",
+    "source": "cli/src/commands/util/gc.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/util/gc.rs"
+  },
+  "util install-man-pages": {
+    "name": "jj util install-man-pages",
+    "description": "把手册页安装到给定目录。",
+    "usage": "jj util install-man-pages <PATH>",
+    "arguments": [
+      [
+        "<PATH>",
+        "目标手册根目录，例如 /usr/share/man；程序会追加 man1 等目录。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "会写入指定路径，系统目录可能需要权限。",
+    "status": "public",
+    "source": "cli/src/commands/util/install_man_pages.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/util/install_man_pages.rs"
+  },
+  "util markdown-help": {
+    "name": "jj util markdown-help",
+    "description": "向标准输出生成全部公开子命令的 Markdown 帮助。",
+    "usage": "jj util markdown-help",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "它使用 clap-markdown，排版及收录范围不完全等于逐个 jj --help；隐藏命令仍需单独检查。",
+    "status": "public",
+    "source": "cli/src/commands/util/markdown_help.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/util/markdown_help.rs"
+  },
+  "util snapshot": {
+    "name": "jj util snapshot",
+    "description": "显式快照工作副本。",
+    "usage": "jj util snapshot",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "绝大部分常规命令会自动快照，因此主要用于脚本中隔离“外部文件改动”和“后续 jj 操作”的操作记录；本命令不输出 operation ID。",
+    "status": "public",
+    "source": "cli/src/commands/util/snapshot.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/util/snapshot.rs"
+  },
+  "version": {
+    "name": "jj version",
+    "description": "显示 jj 版本与构建信息。",
+    "usage": "jj version",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/version.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/version.rs"
+  },
+  "workspace": {
+    "name": "jj workspace",
+    "description": "管理共享同一仓库的多个工作副本。",
+    "usage": "jj workspace <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/workspace/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/workspace/mod.rs"
+  },
+  "workspace add": {
+    "name": "jj workspace add",
+    "description": "创建额外工作区。",
+    "usage": "jj workspace add [OPTIONS] <DESTINATION>",
+    "arguments": [
+      [
+        "<DESTINATION>",
+        "新工作区目录。"
+      ]
+    ],
+    "options": [
+      [
+        "--name <NAME>",
+        "工作区名称；默认目标目录 basename。"
+      ],
+      [
+        "-r, --revision <REVSETS>",
+        "新工作 change 的父修订，可重复。省略时与当前工作 change 共享父修订，而不是默认以当前 @ 为父。"
+      ],
+      [
+        "-m, --message <MESSAGE>",
+        "新工作 change 的描述。"
+      ],
+      [
+        "--sparse-patterns <SPARSE_PATTERNS>",
+        "copy（默认，复制当前稀疏模式）、full（展开所有文件）、empty（不展开文件）。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "每个工作区有自己的 @ 和稀疏模式，共享提交与引用。v0.45.1 不收录 main 上尚未发布的 workspace add --colocate 新能力。",
+    "status": "public",
+    "source": "cli/src/commands/workspace/add.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/workspace/add.rs"
+  },
+  "workspace forget": {
+    "name": "jj workspace forget",
+    "description": "不再跟踪指定工作区的工作 change。",
+    "usage": "jj workspace forget [WORKSPACES]...",
+    "arguments": [
+      [
+        "[WORKSPACES]...",
+        "工作区名称；省略时忘记当前工作区。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "不会删除磁盘目录；目录删除是另一个动作。",
+    "status": "public",
+    "source": "cli/src/commands/workspace/forget.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/workspace/forget.rs"
+  },
+  "workspace list": {
+    "name": "jj workspace list",
+    "description": "列出仓库的工作区。",
+    "usage": "jj workspace list [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "-T, --template <TEMPLATE>",
+        "WorkspaceRef 输出模板；默认 templates.workspace_list。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/workspace/list.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/workspace/list.rs"
+  },
+  "workspace rename": {
+    "name": "jj workspace rename",
+    "description": "重命名当前工作区。",
+    "usage": "jj workspace rename <NEW_WORKSPACE_NAME>",
+    "arguments": [
+      [
+        "<NEW_WORKSPACE_NAME>",
+        "新的工作区名称。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "改的是工作区标识，不等同重命名磁盘目录。",
+    "status": "public",
+    "source": "cli/src/commands/workspace/rename.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/workspace/rename.rs"
+  },
+  "workspace root": {
+    "name": "jj workspace root",
+    "description": "输出工作区根目录。",
+    "usage": "jj workspace root [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "--name <NAME>",
+        "工作区名称；默认当前工作区。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "",
+    "status": "public",
+    "source": "cli/src/commands/workspace/root.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/workspace/root.rs"
+  },
+  "workspace update-stale": {
+    "name": "jj workspace update-stale",
+    "description": "刷新因其他工作区 / 操作变化而过时的当前工作副本。",
+    "usage": "jj workspace update-stale",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "多工作区共享仓库，但工作区磁盘文件不是即时同步；先确认没有需要另行保留的编辑内容。",
+    "status": "public",
+    "source": "cli/src/commands/workspace/update_stale.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "官方完整 CLI reference；命令结构与重点 Args/默认值/危险行为由 v0.45.1 源码复核",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/workspace/update_stale.rs"
+  },
+  "debug": {
+    "name": "jj debug",
+    "description": "面向开发者的底层诊断工具；顶层 help 隐藏。",
+    "usage": "jj debug <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/mod.rs"
+  },
+  "debug copy-detection": {
+    "name": "jj debug copy-detection",
+    "description": "显示修订相对其父中检测出的文件复制记录。",
+    "usage": "jj debug copy-detection [REVSET]",
+    "arguments": [
+      [
+        "[REVSET]",
+        "要检查的单个修订；默认 @。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/copy_detection.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/copy_detection.rs"
+  },
+  "debug fileset": {
+    "name": "jj debug fileset",
+    "description": "解析 fileset 并显示内部表达式与 matcher。",
+    "usage": "jj debug fileset <PATH>",
+    "arguments": [
+      [
+        "<PATH>",
+        "fileset 表达式，不只是字面路径；建议加引号。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/fileset.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/fileset.rs"
+  },
+  "debug index": {
+    "name": "jj debug index",
+    "description": "显示提交索引和 changed-path 索引统计。",
+    "usage": "jj debug index",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/index.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/index.rs"
+  },
+  "debug index-changed-paths": {
+    "name": "jj debug index-changed-paths",
+    "description": "构建 changed-path 索引。",
+    "usage": "jj debug index-changed-paths [OPTIONS]",
+    "arguments": [],
+    "options": [
+      [
+        "-n, --limit <LIMIT>",
+        "最多索引多少个修订；默认 u32::MAX，即 4294967295。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。会写索引，需要支持的默认索引后端。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/index_changed_paths.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/index_changed_paths.rs"
+  },
+  "debug init-simple": {
+    "name": "jj debug init-simple",
+    "description": "初始化概念验证用的 simple 后端仓库。",
+    "usage": "jj debug init-simple [DESTINATION]",
+    "arguments": [
+      [
+        "[DESTINATION]",
+        "目标目录，默认 .。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。不支持 clone / fetch / push；不是日常 Git 项目的初始化方式。拒绝 --no-integrate-operation、--ignore-working-copy、--at-op。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/init_simple.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/init_simple.rs"
+  },
+  "debug local-working-copy": {
+    "name": "jj debug local-working-copy",
+    "description": "显示本地磁盘工作副本的操作、树及逐文件缓存状态。",
+    "usage": "jj debug local-working-copy",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。要求标准 local-disk working copy；加载 helper 时可能快照。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/local_working_copy.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/local_working_copy.rs"
+  },
+  "debug object": {
+    "name": "jj debug object",
+    "description": "按底层对象 ID 读取存储对象。",
+    "usage": "jj debug object <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/object.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/object.rs"
+  },
+  "debug object commit": {
+    "name": "jj debug object commit",
+    "description": "打印提交对象内部结构。",
+    "usage": "jj debug object commit <ID>",
+    "arguments": [
+      [
+        "<ID>",
+        "完整十六进制对象 ID；不是普通 revset 或可任意缩写的 change ID。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/object.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/object.rs"
+  },
+  "debug object operation": {
+    "name": "jj debug object operation",
+    "description": "打印操作对象内部结构。",
+    "usage": "jj debug object operation <ID>",
+    "arguments": [
+      [
+        "<ID>",
+        "完整十六进制对象 ID；不是普通 revset 或可任意缩写的 change ID。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/object.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/object.rs"
+  },
+  "debug object file": {
+    "name": "jj debug object file",
+    "description": "输出文件对象内容。",
+    "usage": "jj debug object file [OPTIONS] <PATH> [ID]",
+    "arguments": [
+      [
+        "<PATH>",
+        "仓库内部路径；不是任意本机绝对路径。"
+      ],
+      [
+        "[ID]",
+        "完整十六进制对象 ID；与 -r 二选一。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVISION>",
+        "从指定修订中按给定路径查找对象；与 ID 互斥。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。file/tree 在解析器中要求 ID 或 -r。symlink 的参数声明未标 required，但执行分支会读取其中之一；实际调用同样必须明确给出 ID 或 -r。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/object.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/object.rs"
+  },
+  "debug object symlink": {
+    "name": "jj debug object symlink",
+    "description": "输出符号链接目标。",
+    "usage": "jj debug object symlink [OPTIONS] <PATH> [ID]",
+    "arguments": [
+      [
+        "<PATH>",
+        "仓库内部路径；不是任意本机绝对路径。"
+      ],
+      [
+        "[ID]",
+        "完整十六进制对象 ID；与 -r 二选一。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVISION>",
+        "从指定修订中按给定路径查找对象；与 ID 互斥。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。file/tree 在解析器中要求 ID 或 -r。symlink 的参数声明未标 required，但执行分支会读取其中之一；实际调用同样必须明确给出 ID 或 -r。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/object.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/object.rs"
+  },
+  "debug object tree": {
+    "name": "jj debug object tree",
+    "description": "打印指定目录的 tree 对象。",
+    "usage": "jj debug object tree [OPTIONS] <DIR> [ID]",
+    "arguments": [
+      [
+        "<DIR>",
+        "仓库内部路径；不是任意本机绝对路径。"
+      ],
+      [
+        "[ID]",
+        "完整十六进制对象 ID；与 -r 二选一。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVISION>",
+        "从指定修订中按给定路径查找对象；与 ID 互斥。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。file/tree 在解析器中要求 ID 或 -r。symlink 的参数声明未标 required，但执行分支会读取其中之一；实际调用同样必须明确给出 ID 或 -r。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/object.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/object.rs"
+  },
+  "debug object view": {
+    "name": "jj debug object view",
+    "description": "打印仓库 view 对象。",
+    "usage": "jj debug object view [OPTIONS] [ID]",
+    "arguments": [
+      [
+        "[ID]",
+        "完整十六进制 view ID；与 --op 二选一，必须提供其一。"
+      ]
+    ],
+    "options": [
+      [
+        "--op <OP>",
+        "使用该操作引用的 view；这里接受操作表达式。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/object.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/object.rs"
+  },
+  "debug reindex": {
+    "name": "jj debug reindex",
+    "description": "重建提交索引。",
+    "usage": "jj debug reindex",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。会重新初始化并写入索引；遇到疑似损坏时先备份，不要当作常规整理命令。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/reindex.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/reindex.rs"
+  },
+  "debug revset": {
+    "name": "jj debug revset",
+    "description": "解析、优化并求值 revset，显示各阶段以及完整 commit ID。",
+    "usage": "jj debug revset [OPTIONS] <REVISION>",
+    "arguments": [
+      [
+        "<REVISION>",
+        "revset 表达式。"
+      ]
+    ],
+    "options": [
+      [
+        "--no-resolve",
+        "不解析符号、不求值；可只观察解析 / 优化结构。"
+      ],
+      [
+        "--no-optimize",
+        "不改写为优化后的表达式。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/revset.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/revset.rs"
+  },
+  "debug snapshot": {
+    "name": "jj debug snapshot",
+    "description": "【已弃用】显式触发工作副本快照。",
+    "usage": "jj debug snapshot",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。v0.45.1 源码仍保留入口并发出弃用警告；替代命令为 jj util snapshot。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/snapshot.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/snapshot.rs"
+  },
+  "debug stacked-table": {
+    "name": "jj debug stacked-table",
+    "description": "显示堆叠表的分层统计。",
+    "usage": "jj debug stacked-table --key-size <KEY_SIZE> <DIR>",
+    "arguments": [
+      [
+        "<DIR>",
+        "table store 目录。"
+      ]
+    ],
+    "options": [
+      [
+        "-n, --key-size <KEY_SIZE>",
+        "键长度，单位字节；必填。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/stacked_table.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/stacked_table.rs"
+  },
+  "debug template": {
+    "name": "jj debug template",
+    "description": "解析模板并打印语法树。",
+    "usage": "jj debug template <TEMPLATE>",
+    "arguments": [
+      [
+        "<TEMPLATE>",
+        "模板表达式；此命令是解析诊断，不是对提交执行模板渲染。"
+      ]
+    ],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/template.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/template.rs"
+  },
+  "debug tree": {
+    "name": "jj debug tree",
+    "description": "递归列出 tree 的内部条目。",
+    "usage": "jj debug tree [OPTIONS] [FILESETS]...",
+    "arguments": [
+      [
+        "[FILESETS]...",
+        "路径筛选。"
+      ]
+    ],
+    "options": [
+      [
+        "-r, --revision <REVSET>",
+        "从该修订取树；默认 @；与 --id 互斥。"
+      ],
+      [
+        "--id <ID>",
+        "直接指定完整十六进制 tree ID。"
+      ],
+      [
+        "--dir <DIR>",
+        "指定该 tree 对应的目录；必须同时指定 --id；默认根目录。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/tree.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/tree.rs"
+  },
+  "debug watchman": {
+    "name": "jj debug watchman",
+    "description": "诊断 Watchman 文件监视集成。",
+    "usage": "jj debug watchman <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/watchman.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/watchman.rs"
+  },
+  "debug watchman status": {
+    "name": "jj debug watchman status",
+    "description": "检查配置、Watchman 安装及快照触发器。",
+    "usage": "jj debug watchman status",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。命令枚举仍存在，但二进制未编译 watchman 特性时执行会报错；reset-clock 会修改工作副本状态。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/watchman.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/watchman.rs"
+  },
+  "debug watchman query-clock": {
+    "name": "jj debug watchman query-clock",
+    "description": "查询 Watchman 时钟。",
+    "usage": "jj debug watchman query-clock",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。命令枚举仍存在，但二进制未编译 watchman 特性时执行会报错；reset-clock 会修改工作副本状态。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/watchman.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/watchman.rs"
+  },
+  "debug watchman query-changed-files": {
+    "name": "jj debug watchman query-changed-files",
+    "description": "查询 Watchman 报告的变化文件。",
+    "usage": "jj debug watchman query-changed-files",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。命令枚举仍存在，但二进制未编译 watchman 特性时执行会报错；reset-clock 会修改工作副本状态。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/watchman.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/watchman.rs"
+  },
+  "debug watchman reset-clock": {
+    "name": "jj debug watchman reset-clock",
+    "description": "清空保存的 Watchman 时钟状态。",
+    "usage": "jj debug watchman reset-clock",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。命令枚举仍存在，但二进制未编译 watchman 特性时执行会报错；reset-clock 会修改工作副本状态。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/watchman.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/watchman.rs"
+  },
+  "debug working-copy": {
+    "name": "jj debug working-copy",
+    "description": "显示工作副本实现类型、操作和树；使用 no-snapshot helper。",
+    "usage": "jj debug working-copy",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "开发者诊断接口，输出不保证稳定，不建议作为生产脚本协议。",
+    "status": "hidden",
+    "source": "cli/src/commands/debug/working_copy.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/debug/working_copy.rs"
+  },
+  "bench": {
+    "name": "jj bench",
+    "description": "内部基准测试；隐藏命令，且必须编译 bench 特性。",
+    "usage": "jj bench <COMMAND>",
+    "arguments": [],
+    "options": [],
+    "aliases": [],
+    "notes": "",
+    "status": "feature-gated",
+    "source": "cli/src/commands/bench/mod.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bench/mod.rs"
+  },
+  "bench common-ancestors": {
+    "name": "jj bench common-ancestors",
+    "description": "测试查找两个提交共同祖先的性能。",
+    "usage": "jj bench common-ancestors [OPTIONS] <REVISION1> <REVISION2>",
+    "arguments": [
+      [
+        "<REVISION1>",
+        "第一个修订。"
+      ],
+      [
+        "<REVISION2>",
+        "第二个修订。"
+      ]
+    ],
+    "options": [
+      [
+        "-s, --save-baseline <SAVE_BASELINE>",
+        "把结果保存到该基线名；默认 base；与 --baseline 互斥。"
+      ],
+      [
+        "-b, --baseline <BASELINE>",
+        "与已保存的基线比较；与 --save-baseline 互斥。"
+      ],
+      [
+        "--sample-size <SAMPLE_SIZE>",
+        "采样次数；默认 100，最小 10。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "必须使用启用 bench 特性的构建；常规发布二进制不应假定提供此命令。",
+    "status": "feature-gated",
+    "source": "cli/src/commands/bench/common_ancestors.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bench/common_ancestors.rs"
+  },
+  "bench is-ancestor": {
+    "name": "jj bench is-ancestor",
+    "description": "测试祖先关系判断的性能。",
+    "usage": "jj bench is-ancestor [OPTIONS] <ANCESTOR> <DESCENDANT>",
+    "arguments": [
+      [
+        "<ANCESTOR>",
+        "候选祖先修订。"
+      ],
+      [
+        "<DESCENDANT>",
+        "候选后代修订。"
+      ]
+    ],
+    "options": [
+      [
+        "-s, --save-baseline <SAVE_BASELINE>",
+        "把结果保存到该基线名；默认 base；与 --baseline 互斥。"
+      ],
+      [
+        "-b, --baseline <BASELINE>",
+        "与已保存的基线比较；与 --save-baseline 互斥。"
+      ],
+      [
+        "--sample-size <SAMPLE_SIZE>",
+        "采样次数；默认 100，最小 10。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "必须使用启用 bench 特性的构建；常规发布二进制不应假定提供此命令。",
+    "status": "feature-gated",
+    "source": "cli/src/commands/bench/is_ancestor.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bench/is_ancestor.rs"
+  },
+  "bench resolve-prefix": {
+    "name": "jj bench resolve-prefix",
+    "description": "测试 commit ID 前缀解析的性能。",
+    "usage": "jj bench resolve-prefix [OPTIONS] <PREFIX>",
+    "arguments": [
+      [
+        "<PREFIX>",
+        "十六进制 commit ID 前缀，不是 change ID。"
+      ]
+    ],
+    "options": [
+      [
+        "-s, --save-baseline <SAVE_BASELINE>",
+        "把结果保存到该基线名；默认 base；与 --baseline 互斥。"
+      ],
+      [
+        "-b, --baseline <BASELINE>",
+        "与已保存的基线比较；与 --save-baseline 互斥。"
+      ],
+      [
+        "--sample-size <SAMPLE_SIZE>",
+        "采样次数；默认 100，最小 10。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "必须使用启用 bench 特性的构建；常规发布二进制不应假定提供此命令。",
+    "status": "feature-gated",
+    "source": "cli/src/commands/bench/resolve_prefix.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bench/resolve_prefix.rs"
+  },
+  "bench revset": {
+    "name": "jj bench revset",
+    "description": "测试 revset 遍历 / 求值性能。",
+    "usage": "jj bench revset [OPTIONS] <REVISIONS|--file <FILE>>",
+    "arguments": [
+      [
+        "[REVISIONS]...",
+        "一个或多个 revset；与 --file 二选一，必须提供一个来源。"
+      ]
+    ],
+    "options": [
+      [
+        "-f, --file <FILE>",
+        "逐行读取 revset；忽略空行及以 # 开头的行。"
+      ],
+      [
+        "-s, --save-baseline <SAVE_BASELINE>",
+        "把结果保存到该基线名；默认 base；与 --baseline 互斥。"
+      ],
+      [
+        "-b, --baseline <BASELINE>",
+        "与已保存的基线比较；与 --save-baseline 互斥。"
+      ],
+      [
+        "--sample-size <SAMPLE_SIZE>",
+        "采样次数；默认 100，最小 10。"
+      ]
+    ],
+    "aliases": [],
+    "notes": "需要 bench 特性；测试数据会影响性能统计，请勿直接用结果比较不同配置的环境。",
+    "status": "feature-gated",
+    "source": "cli/src/commands/bench/revset.rs",
+    "diff": false,
+    "hidden_options": [],
+    "evidence": "固定版本源码的命令枚举、Args 定义及相关实现",
+    "source_url": "https://github.com/jj-vcs/jj/blob/v0.45.1/cli/src/commands/bench/revset.rs"
+  }
+}

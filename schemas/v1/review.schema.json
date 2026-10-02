@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cli-fieldbook.invalid/schemas/v1/review",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "status": {
+      "const": "prepared"
+    },
+    "preparedBy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pages": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "string",
+            "minLength": 1
+          },
+          "facts": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sources": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dependencies": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "body",
+          "facts",
+          "sources",
+          "dependencies"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "status",
+    "preparedBy",
+    "method",
+    "pages"
+  ],
+  "additionalProperties": false
+}

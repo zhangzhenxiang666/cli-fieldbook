@@ -1,0 +1,7 @@
+schema: 1
+name: Jujutsu
+binary: jj
+repository: https://github.com/jj-vcs/jj
+summary: 与 Git 兼容的版本控制工具，含完整 Revset 专题。
+defaults:
+  zh-CN: 0.45.1

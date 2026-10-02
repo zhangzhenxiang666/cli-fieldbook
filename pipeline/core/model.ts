@@ -1,0 +1,14 @@
+export type Kind = 'commands' | 'concepts' | 'workflows' | 'reference';
+export type Diagnostic = { file: string; line: number; code: string; message: string; fix: string; severity: 'error' | 'warning' };
+export type Tool = { schema: 1; name: string; binary: string; repository: string; summary?: string; defaults?: Record<string, string> };
+export type Version = { schema: 1; upstream: { version: string; ref: string }; publication: 'draft' | 'published' };
+export type Field = { name: string; display: string; aliases: string[]; evidenceIds: string[]; inherited?: boolean; group?: 'diff-format'; default?: string; required?: boolean; values?: string[] };
+export type Command = { path: string[]; aliases: string[][]; synopsis: string[]; arguments: Field[]; options: Field[]; children: string[][]; category: 'public' | 'hidden' | 'feature-gated'; evidenceIds: string[]; profileId: string; slug?: string[] };
+export type Evidence = { id: string; path: string; sha256: string; url: string; method: 'source-snapshot' | 'legacy-import'; obtainedAt: string };
+export type SourceLock = { schema: 1; repository: string; upstreamVersion: string; ref: string; commit: string; adapter: string; normalization: 1; profile: { id: string; scope: string }; evidence: Evidence[]; limitations: string[] };
+export type Frontmatter = { title?: string; command?: string[]; uses?: string[]; identifiers?: string[]; slug?: string[] };
+export type Page = { file: string; relative: string; kind: Kind; id: string; title: string; body: string; frontmatter: Frontmatter; command?: Command };
+export type Baseline = { body: string; facts: string; sources: string; dependencies: string };
+export type ReviewLock = { schema: 1; status: 'prepared'; preparedBy: string; method: string; pages: Record<string, Baseline> };
+export type ToolVersion = { toolId: string; versionId: string; locale: 'zh-CN'; root: string; tool: Tool; version: Version; commands: Command[]; sources: SourceLock; review?: ReviewLock; pages: Page[] };
+export type Catalog = { versions: ToolVersion[]; diagnostics: Diagnostic[] };

@@ -1,0 +1,204 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cli-fieldbook.invalid/schemas/v1/commands",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "path": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "aliases": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "uniqueItems": true
+      },
+      "synopsis": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uniqueItems": true
+      },
+      "arguments": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "display": {
+              "type": "string",
+              "minLength": 1
+            },
+            "aliases": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "evidenceIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "inherited": {
+              "type": "boolean"
+            },
+            "default": {
+              "type": "string"
+            },
+            "required": {
+              "type": "boolean"
+            },
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "group": {
+              "const": "diff-format"
+            }
+          },
+          "required": [
+            "name",
+            "display",
+            "aliases",
+            "evidenceIds"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "options": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "display": {
+              "type": "string",
+              "minLength": 1
+            },
+            "aliases": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "evidenceIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "inherited": {
+              "type": "boolean"
+            },
+            "default": {
+              "type": "string"
+            },
+            "required": {
+              "type": "boolean"
+            },
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "group": {
+              "const": "diff-format"
+            }
+          },
+          "required": [
+            "name",
+            "display",
+            "aliases",
+            "evidenceIds"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "children": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "uniqueItems": true
+      },
+      "category": {
+        "enum": [
+          "public",
+          "hidden",
+          "feature-gated"
+        ]
+      },
+      "evidenceIds": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uniqueItems": true
+      },
+      "profileId": {
+        "type": "string",
+        "minLength": 1
+      },
+      "slug": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "required": [
+      "path",
+      "aliases",
+      "synopsis",
+      "arguments",
+      "options",
+      "children",
+      "category",
+      "evidenceIds",
+      "profileId"
+    ],
+    "additionalProperties": false
+  },
+  "minItems": 1
+}

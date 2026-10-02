@@ -1,0 +1,97 @@
+name: Publish
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      revision:
+        description: 'Optional full commit SHA on main history for rollback'
+        required: false
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      revision: ${{ steps.revision.outputs.sha }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      # This is a trusted main workflow. Rollbacks only select commits in main's
+      # history; contributor refs and floating upstream content are never used.
+      - id: revision
+        env:
+          REQUESTED_REVISION: ${{ inputs.revision }}
+        run: |
+          candidate="${REQUESTED_REVISION:-$GITHUB_SHA}"
+          [[ "$candidate" =~ ^[a-f0-9]{40}$ ]]
+          git merge-base --is-ancestor "$candidate" origin/main
+          git checkout --detach "$candidate"
+          echo "sha=$candidate" >> "$GITHUB_OUTPUT"
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+        with:
+          version: 12.6.0
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24.20.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check && pnpm test
+      - run: pnpm build && pnpm run docs seal
+        env:
+          GITHUB_SHA: ${{ steps.revision.outputs.sha }}
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:browser
+      - name: Prepare maintainer review summary
+        run: |
+          cat docs/AUDIT.md >> "$GITHUB_STEP_SUMMARY"
+          echo '### Publication manifest' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat .generated/manifest.json >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: reviewed-site-${{ github.run_id }}
+          include-hidden-files: true
+          path: |
+            site/dist
+            .generated/artifact.json
+            .generated/manifest.json
+          retention-days: 14
+  deploy:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5
+        with:
+          name: reviewed-site-${{ github.run_id }}
+          path: .
+      # No install, build, source mutation, or contributor code runs after the
+      # maintainer gate. Verify the same bytes, then add an external approval link.
+      - name: Bind publication to this approved run
+        env:
+          TARGET_REVISION: ${{ needs.prepare.outputs.revision }}
+        run: node pipeline/cli/attest.mjs
+      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: site/dist
+      - uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
+        id: deployment

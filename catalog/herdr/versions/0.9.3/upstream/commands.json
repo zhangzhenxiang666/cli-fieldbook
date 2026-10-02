@@ -1,0 +1,7026 @@
+[
+  {
+    "path": [],
+    "aliases": [],
+    "synopsis": [
+      "herdr [OPTIONS]",
+      "herdr [--session <NAME>] <COMMAND>",
+      "herdr --machine <LABEL-OR-ID> <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--session",
+        "display": "--session <NAME>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/main.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--machine",
+        "display": "--machine <LABEL-OR-ID>",
+        "aliases": [
+          "-OR-ID"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/main.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--remote",
+        "display": "--remote <TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/main.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--remote-keybindings",
+        "display": "--remote-keybindings <MODE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/main.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--handoff",
+        "display": "--handoff",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/main.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--default-config",
+        "display": "--default-config",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/main.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--skill",
+        "display": "--skill",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/main.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--version",
+        "display": "-V, --version",
+        "aliases": [
+          "-V"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/main.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/main.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "completion"
+      ],
+      [
+        "update"
+      ],
+      [
+        "status"
+      ],
+      [
+        "config"
+      ],
+      [
+        "channel"
+      ],
+      [
+        "machine"
+      ],
+      [
+        "server"
+      ],
+      [
+        "api"
+      ],
+      [
+        "workspace"
+      ],
+      [
+        "worktree"
+      ],
+      [
+        "tab"
+      ],
+      [
+        "notification"
+      ],
+      [
+        "agent"
+      ],
+      [
+        "pane"
+      ],
+      [
+        "terminal"
+      ],
+      [
+        "session"
+      ],
+      [
+        "integration"
+      ],
+      [
+        "plugin"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/main.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "completion"
+    ],
+    "aliases": [
+      [
+        "completions"
+      ]
+    ],
+    "synopsis": [
+      "herdr completion <SHELL>"
+    ],
+    "arguments": [
+      {
+        "name": "SHELL",
+        "display": "<SHELL>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/completion.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec/completion.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec/completion.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "update"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr update [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--handoff",
+        "display": "--handoff",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/main.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/main.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/main.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "status"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr status [OPTIONS] [COMMAND]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/status.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/status.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "status",
+        "server"
+      ],
+      [
+        "status",
+        "client"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/status.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "status",
+      "server"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr status server [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/status.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/status.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/status.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "status",
+      "client"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr status client [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/status.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/status.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/status.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "config"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr config <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "config",
+        "check"
+      ],
+      [
+        "config",
+        "reset-keys"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "config",
+      "check"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr config check"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "config",
+      "reset-keys"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr config reset-keys"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "channel"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr channel <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "channel",
+        "show"
+      ],
+      [
+        "channel",
+        "set"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "channel",
+      "show"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr channel show"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "channel",
+      "set"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr channel set <CHANNEL>"
+    ],
+    "arguments": [
+      {
+        "name": "CHANNEL",
+        "display": "<CHANNEL>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "machine"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr machine <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "machine",
+        "list"
+      ],
+      [
+        "machine",
+        "status"
+      ],
+      [
+        "machine",
+        "reconnect"
+      ],
+      [
+        "machine",
+        "add"
+      ],
+      [
+        "machine",
+        "rename"
+      ],
+      [
+        "machine",
+        "remove"
+      ],
+      [
+        "machine",
+        "enable"
+      ],
+      [
+        "machine",
+        "disable"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec/machine.rs",
+      "source:src/cli/target.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "machine",
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr machine list [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec/machine.rs",
+      "source:src/cli/target.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "machine",
+      "status"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr machine status [LABEL_OR_ID] [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "LABEL_OR_ID",
+        "display": "[LABEL_OR_ID]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec/machine.rs",
+      "source:src/cli/target.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "machine",
+      "reconnect"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr machine reconnect <LABEL_OR_ID>"
+    ],
+    "arguments": [
+      {
+        "name": "LABEL_OR_ID",
+        "display": "<LABEL_OR_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec/machine.rs",
+      "source:src/cli/target.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "machine",
+      "add"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr machine add <SSH_TARGET> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "SSH_TARGET",
+        "display": "<SSH_TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--label",
+        "display": "--label <LABEL>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      },
+      {
+        "name": "--remote-session",
+        "display": "--remote-session <NAME>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec/machine.rs",
+      "source:src/cli/target.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "machine",
+      "rename"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr machine rename <PROFILE_ID> --label <LABEL>"
+    ],
+    "arguments": [
+      {
+        "name": "PROFILE_ID",
+        "display": "<PROFILE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--label",
+        "display": "--label <LABEL>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec/machine.rs",
+      "source:src/cli/target.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "machine",
+      "remove"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr machine remove <PROFILE_ID>"
+    ],
+    "arguments": [
+      {
+        "name": "PROFILE_ID",
+        "display": "<PROFILE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec/machine.rs",
+      "source:src/cli/target.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "machine",
+      "enable"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr machine enable <PROFILE_ID>"
+    ],
+    "arguments": [
+      {
+        "name": "PROFILE_ID",
+        "display": "<PROFILE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec/machine.rs",
+      "source:src/cli/target.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "machine",
+      "disable"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr machine disable <PROFILE_ID>"
+    ],
+    "arguments": [
+      {
+        "name": "PROFILE_ID",
+        "display": "<PROFILE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec/machine.rs",
+          "source:src/cli/target.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec/machine.rs",
+      "source:src/cli/target.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "server"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr server [COMMAND]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/server.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "server",
+        "stop"
+      ],
+      [
+        "server",
+        "reload-config"
+      ],
+      [
+        "server",
+        "agent-manifests"
+      ],
+      [
+        "server",
+        "update-agent-manifests"
+      ],
+      [
+        "server",
+        "reload-agent-manifests"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/server.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "server",
+      "stop"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr server stop"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/server.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/server.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "server",
+      "reload-config"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr server reload-config"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/server.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/server.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "server",
+      "agent-manifests"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr server agent-manifests [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/server.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/server.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/server.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "server",
+      "update-agent-manifests"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr server update-agent-manifests [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/server.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/server.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/server.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "server",
+      "reload-agent-manifests"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr server reload-agent-manifests"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/server.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/server.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "api"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr api <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/api.rs",
+          "source:src/cli/runtime.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "api",
+        "snapshot"
+      ],
+      [
+        "api",
+        "schema"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/api.rs",
+      "source:src/cli/runtime.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "api",
+      "snapshot"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr api snapshot"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/api.rs",
+          "source:src/cli/runtime.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/api.rs",
+      "source:src/cli/runtime.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "api",
+      "schema"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr api schema [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/api.rs",
+          "source:src/cli/runtime.rs"
+        ]
+      },
+      {
+        "name": "--output",
+        "display": "--output <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/api.rs",
+          "source:src/cli/runtime.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/api.rs",
+          "source:src/cli/runtime.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/api.rs",
+      "source:src/cli/runtime.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "workspace"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr workspace <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "workspace",
+        "list"
+      ],
+      [
+        "workspace",
+        "create"
+      ],
+      [
+        "workspace",
+        "get"
+      ],
+      [
+        "workspace",
+        "focus"
+      ],
+      [
+        "workspace",
+        "rename"
+      ],
+      [
+        "workspace",
+        "report-metadata"
+      ],
+      [
+        "workspace",
+        "close"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/workspace.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "workspace",
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr workspace list"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/workspace.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "workspace",
+      "create"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr workspace create [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--cwd",
+        "display": "--cwd <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      },
+      {
+        "name": "--label",
+        "display": "--label <TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      },
+      {
+        "name": "--env",
+        "display": "--env <KEY=VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      },
+      {
+        "name": "--focus",
+        "display": "--focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      },
+      {
+        "name": "--no-focus",
+        "display": "--no-focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/workspace.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "workspace",
+      "get"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr workspace get <workspace_id>"
+    ],
+    "arguments": [
+      {
+        "name": "workspace_id",
+        "display": "<workspace_id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/workspace.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "workspace",
+      "focus"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr workspace focus <workspace_id>"
+    ],
+    "arguments": [
+      {
+        "name": "workspace_id",
+        "display": "<workspace_id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/workspace.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "workspace",
+      "rename"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr workspace rename <WORKSPACE_ID> <LABEL>..."
+    ],
+    "arguments": [
+      {
+        "name": "WORKSPACE_ID",
+        "display": "<WORKSPACE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      },
+      {
+        "name": "LABEL",
+        "display": "<LABEL>...",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/workspace.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "workspace",
+      "report-metadata"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr workspace report-metadata <WORKSPACE_ID> --source <ID> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "WORKSPACE_ID",
+        "display": "<WORKSPACE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--source",
+        "display": "--source <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      },
+      {
+        "name": "--token",
+        "display": "--token <NAME=VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      },
+      {
+        "name": "--clear-token",
+        "display": "--clear-token <NAME>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      },
+      {
+        "name": "--seq",
+        "display": "--seq <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      },
+      {
+        "name": "--ttl-ms",
+        "display": "--ttl-ms <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/workspace.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "workspace",
+      "close"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr workspace close <workspace_id>"
+    ],
+    "arguments": [
+      {
+        "name": "workspace_id",
+        "display": "<workspace_id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/workspace.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/workspace.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "worktree"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr worktree <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "worktree",
+        "list"
+      ],
+      [
+        "worktree",
+        "create"
+      ],
+      [
+        "worktree",
+        "open"
+      ],
+      [
+        "worktree",
+        "remove"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/worktree.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "worktree",
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr worktree list [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--workspace",
+        "display": "--workspace <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--cwd",
+        "display": "--cwd <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--trust-repository",
+        "display": "--trust-repository",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/worktree.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "worktree",
+      "create"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr worktree create [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--workspace",
+        "display": "--workspace <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--cwd",
+        "display": "--cwd <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--branch",
+        "display": "--branch <NAME>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--base",
+        "display": "--base <REF>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--path",
+        "display": "--path <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--label",
+        "display": "--label <TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--focus",
+        "display": "--focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--no-focus",
+        "display": "--no-focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--trust-repository",
+        "display": "--trust-repository",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/worktree.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "worktree",
+      "open"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr worktree open [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--workspace",
+        "display": "--workspace <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--cwd",
+        "display": "--cwd <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--path",
+        "display": "--path <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--branch",
+        "display": "--branch <NAME>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--label",
+        "display": "--label <TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--focus",
+        "display": "--focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--no-focus",
+        "display": "--no-focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--trust-repository",
+        "display": "--trust-repository",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/worktree.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "worktree",
+      "remove"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr worktree remove --workspace <ID> [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--workspace",
+        "display": "--workspace <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--force",
+        "display": "--force",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--trust-repository",
+        "display": "--trust-repository",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/worktree.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/worktree.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tab"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr tab <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "tab",
+        "list"
+      ],
+      [
+        "tab",
+        "create"
+      ],
+      [
+        "tab",
+        "get"
+      ],
+      [
+        "tab",
+        "focus"
+      ],
+      [
+        "tab",
+        "close"
+      ],
+      [
+        "tab",
+        "rename"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/tab.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tab",
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr tab list [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--workspace",
+        "display": "--workspace <WORKSPACE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/tab.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tab",
+      "create"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr tab create [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--workspace",
+        "display": "--workspace <WORKSPACE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      },
+      {
+        "name": "--cwd",
+        "display": "--cwd <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      },
+      {
+        "name": "--label",
+        "display": "--label <TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      },
+      {
+        "name": "--env",
+        "display": "--env <KEY=VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      },
+      {
+        "name": "--focus",
+        "display": "--focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      },
+      {
+        "name": "--no-focus",
+        "display": "--no-focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/tab.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tab",
+      "get"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr tab get <tab_id>"
+    ],
+    "arguments": [
+      {
+        "name": "tab_id",
+        "display": "<tab_id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/tab.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tab",
+      "focus"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr tab focus <tab_id>"
+    ],
+    "arguments": [
+      {
+        "name": "tab_id",
+        "display": "<tab_id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/tab.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tab",
+      "close"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr tab close <tab_id>"
+    ],
+    "arguments": [
+      {
+        "name": "tab_id",
+        "display": "<tab_id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/tab.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tab",
+      "rename"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr tab rename <TAB_ID> <LABEL>..."
+    ],
+    "arguments": [
+      {
+        "name": "TAB_ID",
+        "display": "<TAB_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      },
+      {
+        "name": "LABEL",
+        "display": "<LABEL>...",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/tab.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/tab.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "notification"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr notification <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "notification",
+        "show"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "notification",
+      "show"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr notification show <TITLE> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "TITLE",
+        "display": "<TITLE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--body",
+        "display": "--body <TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs"
+        ]
+      },
+      {
+        "name": "--position",
+        "display": "--position <POSITION>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs"
+        ]
+      },
+      {
+        "name": "--sound",
+        "display": "--sound <SOUND>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "agent",
+        "list"
+      ],
+      [
+        "agent",
+        "get"
+      ],
+      [
+        "agent",
+        "read"
+      ],
+      [
+        "agent",
+        "send-keys"
+      ],
+      [
+        "agent",
+        "prompt"
+      ],
+      [
+        "agent",
+        "rename"
+      ],
+      [
+        "agent",
+        "focus"
+      ],
+      [
+        "agent",
+        "wait"
+      ],
+      [
+        "agent",
+        "attach"
+      ],
+      [
+        "agent",
+        "start"
+      ],
+      [
+        "agent",
+        "explain"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent",
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent list"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent",
+      "get"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent get <target>"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<target>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent",
+      "read"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent read <TARGET> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "TARGET",
+        "display": "<TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--source",
+        "display": "--source <SOURCE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--lines",
+        "display": "--lines <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--format",
+        "display": "--format <FORMAT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--ansi",
+        "display": "--ansi",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent",
+      "send-keys"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent send-keys <TARGET> <KEY>..."
+    ],
+    "arguments": [
+      {
+        "name": "TARGET",
+        "display": "<TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "KEY",
+        "display": "<KEY>...",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent",
+      "prompt"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent prompt <TARGET> <TEXT> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "TARGET",
+        "display": "<TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "TEXT",
+        "display": "<TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--wait",
+        "display": "--wait",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--until",
+        "display": "--until <STATUS>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--timeout",
+        "display": "--timeout <MS>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent",
+      "rename"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent rename <TARGET> <NAME>|--clear"
+    ],
+    "arguments": [
+      {
+        "name": "TARGET",
+        "display": "<TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "NAME",
+        "display": "<NAME>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--clear",
+        "display": "--clear",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent",
+      "focus"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent focus <target>"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<target>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent",
+      "wait"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent wait <TARGET> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "TARGET",
+        "display": "<TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--until",
+        "display": "--until <STATUS>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--timeout",
+        "display": "--timeout <MS>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent",
+      "attach"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent attach <TARGET> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "TARGET",
+        "display": "<TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--takeover",
+        "display": "--takeover",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent",
+      "start"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent start <NAME> --kind <KIND> --pane <ID> [OPTIONS] [-- [AGENT_ARG]...]"
+    ],
+    "arguments": [
+      {
+        "name": "NAME",
+        "display": "<NAME>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "AGENT_ARG",
+        "display": "[AGENT_ARG]...",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--kind",
+        "display": "--kind <KIND>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--timeout",
+        "display": "--timeout <MS>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agent",
+      "explain"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr agent explain [TARGET] [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "TARGET",
+        "display": "[TARGET]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--file",
+        "display": "--file <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--agent",
+        "display": "--agent <LABEL>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--format",
+        "display": "--format <FORMAT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--verbose",
+        "display": "-v, --verbose",
+        "aliases": [
+          "-v"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/agent.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/agent.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "pane",
+        "list"
+      ],
+      [
+        "pane",
+        "current"
+      ],
+      [
+        "pane",
+        "get"
+      ],
+      [
+        "pane",
+        "layout"
+      ],
+      [
+        "pane",
+        "process-info"
+      ],
+      [
+        "pane",
+        "neighbor"
+      ],
+      [
+        "pane",
+        "edges"
+      ],
+      [
+        "pane",
+        "focus"
+      ],
+      [
+        "pane",
+        "resize"
+      ],
+      [
+        "pane",
+        "zoom"
+      ],
+      [
+        "pane",
+        "read"
+      ],
+      [
+        "pane",
+        "rename"
+      ],
+      [
+        "pane",
+        "input"
+      ],
+      [
+        "pane",
+        "split"
+      ],
+      [
+        "pane",
+        "swap"
+      ],
+      [
+        "pane",
+        "move"
+      ],
+      [
+        "pane",
+        "close"
+      ],
+      [
+        "pane",
+        "send-text"
+      ],
+      [
+        "pane",
+        "send-keys"
+      ],
+      [
+        "pane",
+        "wait-output"
+      ],
+      [
+        "pane",
+        "run"
+      ],
+      [
+        "pane",
+        "report-agent"
+      ],
+      [
+        "pane",
+        "report-agent-session"
+      ],
+      [
+        "pane",
+        "release-agent"
+      ],
+      [
+        "pane",
+        "report-metadata"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane list [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--workspace",
+        "display": "--workspace <WORKSPACE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "current"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane current [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--current",
+        "display": "--current",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "get"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane get <pane_id>"
+    ],
+    "arguments": [
+      {
+        "name": "pane_id",
+        "display": "<pane_id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "layout"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane layout [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--current",
+        "display": "--current",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "process-info"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane process-info [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--current",
+        "display": "--current",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "neighbor"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane neighbor --direction <DIRECTION> [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--direction",
+        "display": "--direction <DIRECTION>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--current",
+        "display": "--current",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "edges"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane edges [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--current",
+        "display": "--current",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "focus"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane focus --direction <DIRECTION> [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--direction",
+        "display": "--direction <DIRECTION>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--current",
+        "display": "--current",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "resize"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane resize --direction <DIRECTION> [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--direction",
+        "display": "--direction <DIRECTION>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--amount",
+        "display": "--amount <FLOAT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--current",
+        "display": "--current",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "zoom"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane zoom [PANE_ID] [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "[PANE_ID]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--current",
+        "display": "--current",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--toggle",
+        "display": "--toggle",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--on",
+        "display": "--on",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--off",
+        "display": "--off",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "read"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane read <PANE_ID> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--source",
+        "display": "--source <SOURCE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--lines",
+        "display": "--lines <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--format",
+        "display": "--format <FORMAT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--ansi",
+        "display": "--ansi",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--raw",
+        "display": "--raw",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "rename"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane rename <PANE_ID> [LABEL]... [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "LABEL",
+        "display": "[LABEL]...",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--clear",
+        "display": "--clear",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "input"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane input [PANE_ID] [OPTIONS] --right-click <TARGET>"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "[PANE_ID]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--current",
+        "display": "--current",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--right-click",
+        "display": "--right-click <TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "split"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane split [PANE_ID] [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "[PANE_ID]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--current",
+        "display": "--current",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--direction",
+        "display": "--direction <DIRECTION>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--ratio",
+        "display": "--ratio <FLOAT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--cwd",
+        "display": "--cwd <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--env",
+        "display": "--env <KEY=VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--right-click",
+        "display": "--right-click <TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--focus",
+        "display": "--focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--no-focus",
+        "display": "--no-focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "swap"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane swap [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--direction",
+        "display": "--direction <DIRECTION>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--pane",
+        "display": "--pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--current",
+        "display": "--current",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--source-pane",
+        "display": "--source-pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--target-pane",
+        "display": "--target-pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "move"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane move <PANE_ID> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--tab",
+        "display": "--tab <TAB_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--split",
+        "display": "--split <DIRECTION>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--target-pane",
+        "display": "--target-pane <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--ratio",
+        "display": "--ratio <FLOAT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--new-tab",
+        "display": "--new-tab",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--workspace",
+        "display": "--workspace <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--new-workspace",
+        "display": "--new-workspace",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--label",
+        "display": "--label <TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--tab-label",
+        "display": "--tab-label <TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--focus",
+        "display": "--focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--no-focus",
+        "display": "--no-focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "close"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane close <pane_id>"
+    ],
+    "arguments": [
+      {
+        "name": "pane_id",
+        "display": "<pane_id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "send-text"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane send-text <PANE_ID> <TEXT>"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "TEXT",
+        "display": "<TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "send-keys"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane send-keys <PANE_ID> <KEY>..."
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "KEY",
+        "display": "<KEY>...",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "wait-output"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane wait-output <PANE_ID> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--match",
+        "display": "--match <TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--regex",
+        "display": "--regex <PATTERN>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--source",
+        "display": "--source <SOURCE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--lines",
+        "display": "--lines <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--timeout",
+        "display": "--timeout <MS>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--raw",
+        "display": "--raw",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "run"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane run <PANE_ID> <COMMAND>..."
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "COMMAND",
+        "display": "<COMMAND>...",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "report-agent"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane report-agent <PANE_ID> --source <ID> --agent <LABEL> --state <STATUS> [OPTIONS] [-- [RESUME_ARG]...]"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "-- RESUME_ARG",
+        "display": "[-- [RESUME_ARG]...]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--source",
+        "display": "--source <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--agent",
+        "display": "--agent <LABEL>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--state",
+        "display": "--state <STATUS>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--message",
+        "display": "--message <TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--seq",
+        "display": "--seq <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--agent-session-id",
+        "display": "--agent-session-id <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--agent-session-path",
+        "display": "--agent-session-path <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "report-agent-session"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane report-agent-session <PANE_ID> --source <ID> --agent <LABEL> [OPTIONS] [-- [RESUME_ARG]...]"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "-- RESUME_ARG",
+        "display": "[-- [RESUME_ARG]...]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--source",
+        "display": "--source <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--agent",
+        "display": "--agent <LABEL>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--seq",
+        "display": "--seq <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--agent-session-id",
+        "display": "--agent-session-id <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--agent-session-path",
+        "display": "--agent-session-path <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--session-start-source",
+        "display": "--session-start-source <SOURCE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "release-agent"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane release-agent <PANE_ID> --source <ID> --agent <LABEL> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--source",
+        "display": "--source <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--agent",
+        "display": "--agent <LABEL>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--seq",
+        "display": "--seq <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pane",
+      "report-metadata"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr pane report-metadata <PANE_ID> --source <ID> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--source",
+        "display": "--source <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--agent",
+        "display": "--agent <LABEL>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--applies-to-source",
+        "display": "--applies-to-source <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--title",
+        "display": "--title <TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--clear-title",
+        "display": "--clear-title",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--display-agent",
+        "display": "--display-agent <TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--clear-display-agent",
+        "display": "--clear-display-agent",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--state-label",
+        "display": "--state-label <STATUS=TEXT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--clear-state-labels",
+        "display": "--clear-state-labels",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--token",
+        "display": "--token <NAME=VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--clear-token",
+        "display": "--clear-token <NAME>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--seq",
+        "display": "--seq <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--ttl-ms",
+        "display": "--ttl-ms <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/pane.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/pane.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "terminal"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr terminal <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "terminal",
+        "attach"
+      ],
+      [
+        "terminal",
+        "session"
+      ],
+      [
+        "terminal",
+        "title"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "terminal",
+      "attach"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr terminal attach <TERMINAL_ID> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "TERMINAL_ID",
+        "display": "<TERMINAL_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--takeover",
+        "display": "--takeover",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "terminal",
+      "session"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr terminal session <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "terminal",
+        "session",
+        "control"
+      ],
+      [
+        "terminal",
+        "session",
+        "observe"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "terminal",
+      "session",
+      "control"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr terminal session control <TARGET> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "TARGET",
+        "display": "<TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--takeover",
+        "display": "--takeover",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--cols",
+        "display": "--cols <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--rows",
+        "display": "--rows <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "terminal",
+      "session",
+      "observe"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr terminal session observe <TARGET> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "TARGET",
+        "display": "<TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--cols",
+        "display": "--cols <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--rows",
+        "display": "--rows <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "terminal",
+      "title"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr terminal title <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "terminal",
+        "title",
+        "set"
+      ],
+      [
+        "terminal",
+        "title",
+        "clear"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "terminal",
+      "title",
+      "set"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr terminal title set <TITLE>"
+    ],
+    "arguments": [
+      {
+        "name": "TITLE",
+        "display": "<TITLE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "terminal",
+      "title",
+      "clear"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr terminal title clear"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "session"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr session <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "session",
+        "list"
+      ],
+      [
+        "session",
+        "attach"
+      ],
+      [
+        "session",
+        "stop"
+      ],
+      [
+        "session",
+        "delete"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "session",
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr session list [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "session",
+      "attach"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr session attach <NAME>"
+    ],
+    "arguments": [
+      {
+        "name": "NAME",
+        "display": "<NAME>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "session",
+      "stop"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr session stop <NAME> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "NAME",
+        "display": "<NAME>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "session",
+      "delete"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr session delete <NAME> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "NAME",
+        "display": "<NAME>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "integration"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr integration <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/integration.rs",
+          "source:src/integration/registry.rs",
+          "source:src/integration/mod.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "integration",
+        "install"
+      ],
+      [
+        "integration",
+        "uninstall"
+      ],
+      [
+        "integration",
+        "status"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/integration.rs",
+      "source:src/integration/registry.rs",
+      "source:src/integration/mod.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "integration",
+      "install"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr integration install <TARGET>"
+    ],
+    "arguments": [
+      {
+        "name": "TARGET",
+        "display": "<TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/integration.rs",
+          "source:src/integration/registry.rs",
+          "source:src/integration/mod.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/integration.rs",
+          "source:src/integration/registry.rs",
+          "source:src/integration/mod.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/integration.rs",
+      "source:src/integration/registry.rs",
+      "source:src/integration/mod.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "integration",
+      "uninstall"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr integration uninstall <TARGET>"
+    ],
+    "arguments": [
+      {
+        "name": "TARGET",
+        "display": "<TARGET>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/integration.rs",
+          "source:src/integration/registry.rs",
+          "source:src/integration/mod.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/integration.rs",
+          "source:src/integration/registry.rs",
+          "source:src/integration/mod.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/integration.rs",
+      "source:src/integration/registry.rs",
+      "source:src/integration/mod.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "integration",
+      "status"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr integration status [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--outdated-only",
+        "display": "--outdated-only",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/integration.rs",
+          "source:src/integration/registry.rs",
+          "source:src/integration/mod.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/integration.rs",
+          "source:src/integration/registry.rs",
+          "source:src/integration/mod.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/integration.rs",
+      "source:src/integration/registry.rs",
+      "source:src/integration/mod.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "plugin",
+        "install"
+      ],
+      [
+        "plugin",
+        "uninstall"
+      ],
+      [
+        "plugin",
+        "link"
+      ],
+      [
+        "plugin",
+        "unlink"
+      ],
+      [
+        "plugin",
+        "enable"
+      ],
+      [
+        "plugin",
+        "disable"
+      ],
+      [
+        "plugin",
+        "list"
+      ],
+      [
+        "plugin",
+        "config-dir"
+      ],
+      [
+        "plugin",
+        "action"
+      ],
+      [
+        "plugin",
+        "log"
+      ],
+      [
+        "plugin",
+        "pane"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "install"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin install <OWNER/REPO[/SUBDIR]> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "OWNER/REPO/SUBDIR",
+        "display": "<OWNER/REPO[/SUBDIR]>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--ref",
+        "display": "--ref <REF>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--yes",
+        "display": "-y, --yes",
+        "aliases": [
+          "-y"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "uninstall"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin uninstall <PLUGIN>"
+    ],
+    "arguments": [
+      {
+        "name": "PLUGIN",
+        "display": "<PLUGIN>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "link"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin link <PATH> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "PATH",
+        "display": "<PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--disabled",
+        "display": "--disabled",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--enabled",
+        "display": "--enabled",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "unlink"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin unlink <PLUGIN_ID>"
+    ],
+    "arguments": [
+      {
+        "name": "PLUGIN_ID",
+        "display": "<PLUGIN_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "enable"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin enable <PLUGIN_ID>"
+    ],
+    "arguments": [
+      {
+        "name": "PLUGIN_ID",
+        "display": "<PLUGIN_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "disable"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin disable <PLUGIN_ID>"
+    ],
+    "arguments": [
+      {
+        "name": "PLUGIN_ID",
+        "display": "<PLUGIN_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin list [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--plugin",
+        "display": "--plugin <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "config-dir"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin config-dir <PLUGIN_ID>"
+    ],
+    "arguments": [
+      {
+        "name": "PLUGIN_ID",
+        "display": "<PLUGIN_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "action"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin action <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "plugin",
+        "action",
+        "list"
+      ],
+      [
+        "plugin",
+        "action",
+        "invoke"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "action",
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin action list [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--plugin",
+        "display": "--plugin <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "action",
+      "invoke"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin action invoke <ACTION_ID> [OPTIONS]"
+    ],
+    "arguments": [
+      {
+        "name": "ACTION_ID",
+        "display": "<ACTION_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--plugin",
+        "display": "--plugin <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "log"
+    ],
+    "aliases": [
+      [
+        "plugin",
+        "logs"
+      ]
+    ],
+    "synopsis": [
+      "herdr plugin log <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "plugin",
+        "log",
+        "list"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "log",
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin log list [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--plugin",
+        "display": "--plugin <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--limit",
+        "display": "--limit <N>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "pane"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin pane <COMMAND>"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "plugin",
+        "pane",
+        "open"
+      ],
+      [
+        "plugin",
+        "pane",
+        "focus"
+      ],
+      [
+        "plugin",
+        "pane",
+        "close"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "pane",
+      "open"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin pane open [OPTIONS]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--plugin",
+        "display": "--plugin <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--entrypoint",
+        "display": "--entrypoint <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--placement",
+        "display": "--placement <PLACEMENT>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--workspace",
+        "display": "--workspace <ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--target-pane",
+        "display": "--target-pane <PANE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--direction",
+        "display": "--direction <DIRECTION>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--cwd",
+        "display": "--cwd <PATH>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--env",
+        "display": "--env <KEY=VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--focus",
+        "display": "--focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--no-focus",
+        "display": "--no-focus",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      },
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "pane",
+      "focus"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin pane focus <PANE_ID>"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "pane",
+      "close"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "herdr plugin pane close <PANE_ID>"
+    ],
+    "arguments": [
+      {
+        "name": "PANE_ID",
+        "display": "<PANE_ID>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:src/cli/spec.rs",
+          "source:src/cli/plugin.rs"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:src/cli/spec.rs",
+      "source:src/cli/plugin.rs"
+    ],
+    "profileId": "source-default"
+  }
+]

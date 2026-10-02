@@ -1,0 +1,4452 @@
+{
+  "project": "herdrdev/herdr",
+  "version": "0.9.3",
+  "date": "2026-10-01",
+  "scope": "public help tree; source-audited reconstruction, not executed capture",
+  "counts": {
+    "public_nodes_including_root": 125,
+    "top_level_groups": 18,
+    "leaf_commands": 103,
+    "branch_nodes": 22,
+    "documented_option_entries_including_help": 331
+  },
+  "commands": [
+    {
+      "path": "",
+      "description": "面向 AI 编程 Agent 的终端工作区管理器。",
+      "usage": "herdr [OPTIONS]\nherdr [--session <NAME>] <COMMAND>\nherdr --machine <LABEL-OR-ID> <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "--session <NAME>",
+          "使用或创建命名持久会话；可用于本地启动和会话范围的命令。"
+        ],
+        [
+          "--machine <LABEL-OR-ID>",
+          "将受支持的 API 命令路由到已保存且启用的 SSH machine。不能与其他启动选项混用。"
+        ],
+        [
+          "--remote <TARGET>",
+          "通过 SSH 连接远程 Herdr TUI；不是任意 CLI 子命令的远程执行开关。"
+        ],
+        [
+          "--remote-keybindings <MODE>",
+          "远程 TUI 使用 local 或 server 快捷键；默认 local。"
+        ],
+        [
+          "--handoff",
+          "为更新或远程连接显式启用实验性 live handoff。"
+        ],
+        [
+          "--default-config",
+          "输出此二进制内置的默认 TOML 配置并退出。"
+        ],
+        [
+          "--skill",
+          "输出内置的 Agent 操作说明文件并退出。"
+        ],
+        [
+          "-V, --version",
+          "打印版本并退出。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "不带子命令时进入交互式 TUI。后台 server 管理终端，detach 不等于停止 server。",
+        "这是按统一 spec 补齐的完整命令索引。实际根帮助由 main.rs 手写，未列全 terminal、plugin 等命令；不是根帮助的逐字终端转储。",
+        "优先使用 herdr pane read --help 这种“完整命令路径紧接 --help”的形式。没有通用的 herdr help <COMMAND>。",
+        "全局选项放在子命令之前；不要假定每个手写解析器都支持 --option=value。示例统一使用 --option VALUE。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S02",
+        "S03"
+      ],
+      "children": [
+        "completion",
+        "update",
+        "status",
+        "config",
+        "channel",
+        "machine",
+        "server",
+        "api",
+        "workspace",
+        "worktree",
+        "tab",
+        "notification",
+        "agent",
+        "pane",
+        "terminal",
+        "session",
+        "integration",
+        "plugin"
+      ],
+      "anchor": "cmd-herdr",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "completion",
+      "description": "生成 shell 补全脚本。",
+      "usage": "herdr completion <SHELL>",
+      "arguments": [
+        [
+          "<SHELL>",
+          "bash、zsh、fish、powershell、elvish。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "脚本写到标准输出；生成脚本本身不修改 shell 配置。"
+      ],
+      "runtime_additions": [],
+      "aliases": [
+        "completions"
+      ],
+      "sources": [
+        "S12"
+      ],
+      "children": [],
+      "anchor": "cmd-completion",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "update",
+      "description": "下载并安装更新。",
+      "usage": "herdr update [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--handoff",
+          "安装后尝试实验性的运行中 server 交接。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "更新通道由 channel 管理。包管理器安装的构建可能要求通过原包管理器更新。",
+        "升级客户端文件不等于所有已运行 server 都已换成新版本；用 status 比较。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "children": [],
+      "anchor": "cmd-update",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "status",
+      "description": "查看客户端与运行中 server 的状态。",
+      "usage": "herdr status [OPTIONS] [COMMAND]",
+      "arguments": [],
+      "options": [
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "本命令自身可执行；server/client 子命令可只查看一侧。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S16"
+      ],
+      "children": [
+        "status server",
+        "status client"
+      ],
+      "anchor": "cmd-status",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "status server",
+      "description": "查看运行中 server 状态。",
+      "usage": "herdr status server [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S16"
+      ],
+      "children": [],
+      "anchor": "cmd-status-server",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "status client",
+      "description": "查看本地客户端状态。",
+      "usage": "herdr status client [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S16"
+      ],
+      "children": [],
+      "anchor": "cmd-status-client",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "config",
+      "description": "管理本地配置。",
+      "usage": "herdr config <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [
+        "config check",
+        "config reset-keys"
+      ],
+      "anchor": "cmd-config",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "config check",
+      "description": "校验 config.toml 并输出诊断。",
+      "usage": "herdr config check",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "没有问题退出 0；发现问题退出 1。它不是对全部 Agent、插件、SSH 环境的健康检查。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-config-check",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "config reset-keys",
+      "description": "移除自定义快捷键配置以回到内置默认。",
+      "usage": "herdr config reset-keys",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "会修改配置文件并生成 config.toml.bak-keybind-v2-<timestamp> 备份。",
+        "删除 [keys]、[keys.indexed]、[[keys.command]] 的自定义设置，保留其他配置。运行中 server 可用 server reload-config 重载。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-config-reset-keys",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "channel",
+      "description": "管理 stable / preview 更新通道。",
+      "usage": "herdr channel <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [
+        "channel show",
+        "channel set"
+      ],
+      "anchor": "cmd-channel",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "channel show",
+      "description": "打印当前配置的更新通道。",
+      "usage": "herdr channel show",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-channel-show",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "channel set",
+      "description": "选择更新通道。",
+      "usage": "herdr channel set <CHANNEL>",
+      "arguments": [
+        [
+          "<CHANNEL>",
+          "stable 或 preview。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "并非只改变一个显示值：保存通道后，直接安装版本会进入自更新流程；包管理器构建会给出相应指引。",
+        "配置 TOML 无法安全解析时不会静默覆盖。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-channel-set",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "machine",
+      "description": "管理保存的 SSH machine 配置。",
+      "usage": "herdr machine <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "配置 ID、显示 label 与 SSH_TARGET 不是同一个字段。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S11",
+        "S10"
+      ],
+      "children": [
+        "machine list",
+        "machine status",
+        "machine reconnect",
+        "machine add",
+        "machine rename",
+        "machine remove",
+        "machine enable",
+        "machine disable"
+      ],
+      "anchor": "cmd-machine",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "machine list",
+      "description": "列出保存的机器配置。",
+      "usage": "herdr machine list [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S11",
+        "S10"
+      ],
+      "children": [],
+      "anchor": "cmd-machine-list",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "machine status",
+      "description": "检查已保存机器的连接状态。",
+      "usage": "herdr machine status [LABEL_OR_ID] [OPTIONS]",
+      "arguments": [
+        [
+          "[LABEL_OR_ID]",
+          "只检查一个配置；省略时检查已保存的机器。"
+        ]
+      ],
+      "options": [
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "这是新发起的状态探测，不等同于某个 TUI 客户端正在显示的连接状态；不会弹出交互认证提示。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S11",
+        "S10"
+      ],
+      "children": [],
+      "anchor": "cmd-machine-status",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "machine reconnect",
+      "description": "从当前终端重新进行连接/认证。",
+      "usage": "herdr machine reconnect <LABEL_OR_ID>",
+      "arguments": [
+        [
+          "<LABEL_OR_ID>",
+          "已保存的配置 ID 或唯一显示名称。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "不执行安装或升级；与 machine add 的准备流程不同。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S11",
+        "S10"
+      ],
+      "children": [],
+      "anchor": "cmd-machine-reconnect",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "machine add",
+      "description": "准备远程 Herdr 并保存机器配置。",
+      "usage": "herdr machine add <SSH_TARGET> [OPTIONS]",
+      "arguments": [
+        [
+          "<SSH_TARGET>",
+          "SSH 配置别名或 SSH 目标，例如 build-host；不是 Herdr profile ID。"
+        ]
+      ],
+      "options": [
+        [
+          "--label <LABEL>",
+          "本地保存的显示名；未指定时由主机与会话信息产生。"
+        ],
+        [
+          "--remote-session <NAME>",
+          "绑定的远程命名会话。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "交互流程可能发现并询问远程会话。安装、升级、重启或重置操作以提示为准；重置可能终止远程进程。",
+        "该配置保存后，使用 herdr --machine <label-or-id> ... 执行允许的 API 命令。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S11",
+        "S10"
+      ],
+      "children": [],
+      "anchor": "cmd-machine-add",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "machine rename",
+      "description": "重命名保存的机器配置。",
+      "usage": "herdr machine rename <PROFILE_ID> --label <LABEL>",
+      "arguments": [
+        [
+          "<PROFILE_ID>",
+          "配置 ID；此处不写 SSH_TARGET。"
+        ]
+      ],
+      "options": [
+        [
+          "--label <LABEL>",
+          "新的显示名称，必需。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S11",
+        "S10"
+      ],
+      "children": [],
+      "anchor": "cmd-machine-rename",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "machine remove",
+      "description": "移除保存的机器配置。",
+      "usage": "herdr machine remove <PROFILE_ID>",
+      "arguments": [
+        [
+          "<PROFILE_ID>",
+          "machine list 返回的配置 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "只移除本地连接配置，不负责停止远程 server。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S11",
+        "S10"
+      ],
+      "children": [],
+      "anchor": "cmd-machine-remove",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "machine enable",
+      "description": "启用保存的机器配置。",
+      "usage": "herdr machine enable <PROFILE_ID>",
+      "arguments": [
+        [
+          "<PROFILE_ID>",
+          "machine list 返回的配置 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S11",
+        "S10"
+      ],
+      "children": [],
+      "anchor": "cmd-machine-enable",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "machine disable",
+      "description": "禁用保存的机器配置。",
+      "usage": "herdr machine disable <PROFILE_ID>",
+      "arguments": [
+        [
+          "<PROFILE_ID>",
+          "machine list 返回的配置 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "禁用连接配置，不负责停止远程 server。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S11",
+        "S10"
+      ],
+      "children": [],
+      "anchor": "cmd-machine-disable",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "server",
+      "description": "运行或控制无界面后台 server。",
+      "usage": "herdr server [COMMAND]",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "直接运行启动 headless server。普通 TUI 客户端退出、detach 与 server stop 是不同操作。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S13"
+      ],
+      "children": [
+        "server stop",
+        "server reload-config",
+        "server agent-manifests",
+        "server update-agent-manifests",
+        "server reload-agent-manifests"
+      ],
+      "anchor": "cmd-server",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "server stop",
+      "description": "停止当前目标 server。",
+      "usage": "herdr server stop",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "破坏性操作：其托管的终端及进程会受影响；不要把它当成 detach。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S13"
+      ],
+      "children": [],
+      "anchor": "cmd-server-stop",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "server reload-config",
+      "description": "让运行中的 server 重载配置。",
+      "usage": "herdr server reload-config",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S13"
+      ],
+      "children": [],
+      "anchor": "cmd-server-reload-config",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "server agent-manifests",
+      "description": "查看当前启用的 Agent 检测 manifest。",
+      "usage": "herdr server agent-manifests [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S13"
+      ],
+      "children": [],
+      "anchor": "cmd-server-agent-manifests",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "server update-agent-manifests",
+      "description": "获取并重载 Agent 检测 manifest。",
+      "usage": "herdr server update-agent-manifests [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "这是获取检测规则，不是更新 Claude/Codex 等 Agent 可执行文件；--machine 路由不允许这个本地获取操作。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S13"
+      ],
+      "children": [],
+      "anchor": "cmd-server-update-agent-manifests",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "server reload-agent-manifests",
+      "description": "重载本地 Agent 检测 manifest 覆盖配置。",
+      "usage": "herdr server reload-agent-manifests",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S13"
+      ],
+      "children": [],
+      "anchor": "cmd-server-reload-agent-manifests",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "api",
+      "description": "检查 socket API 元数据和会话状态。",
+      "usage": "herdr api <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S14",
+        "S15"
+      ],
+      "children": [
+        "api snapshot",
+        "api schema"
+      ],
+      "anchor": "cmd-api",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "api snapshot",
+      "description": "打印当前会话的实时运行快照。",
+      "usage": "herdr api snapshot",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "这是实时 API 查询，依赖目标 server；与内置 api schema 不同。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S14",
+        "S15"
+      ],
+      "children": [],
+      "anchor": "cmd-api-snapshot",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "api schema",
+      "description": "查看或导出当前二进制内置 API schema。",
+      "usage": "herdr api schema [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "--output <PATH>",
+          "将完整 schema 写入文件。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "不加参数输出概要。--json 与 --output 在实际解析器中互斥。",
+        "schema 随客户端二进制打包，不需要在线 server；应与目标 server 的协议版本核对。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S14",
+        "S15"
+      ],
+      "children": [],
+      "anchor": "cmd-api-schema",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "workspace",
+      "description": "通过 API 管理工作区。",
+      "usage": "herdr workspace <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S06"
+      ],
+      "children": [
+        "workspace list",
+        "workspace create",
+        "workspace get",
+        "workspace focus",
+        "workspace rename",
+        "workspace report-metadata",
+        "workspace close"
+      ],
+      "anchor": "cmd-workspace",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "workspace list",
+      "description": "列出工作区。",
+      "usage": "herdr workspace list",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S06"
+      ],
+      "children": [],
+      "anchor": "cmd-workspace-list",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "workspace create",
+      "description": "创建工作区及其初始 tab / pane。",
+      "usage": "herdr workspace create [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--cwd <PATH>",
+          "新进程的工作目录；传入目标机器可访问的路径。"
+        ],
+        [
+          "--label <TEXT>",
+          "设置显示名称；含空格时整体加引号。"
+        ],
+        [
+          "--env <KEY=VALUE>",
+          "设置启动进程的环境变量；可重复。相同键后值覆盖前值，键不得为空。"
+        ],
+        [
+          "--focus",
+          "创建后切换焦点到新对象。"
+        ],
+        [
+          "--no-focus",
+          "创建后不改变当前焦点；不要与 --focus 同时传入。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "默认不抢焦点。",
+        "成功 JSON 中可读取 .result.workspace.workspace_id、.result.tab.tab_id、.result.root_pane.pane_id；不要通过名称猜 ID。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S06"
+      ],
+      "children": [],
+      "anchor": "cmd-workspace-create",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "workspace get",
+      "description": "查看工作区。",
+      "usage": "herdr workspace get <workspace_id>",
+      "arguments": [
+        [
+          "<workspace_id>",
+          "workspace list/create 返回的工作区 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S06"
+      ],
+      "children": [],
+      "anchor": "cmd-workspace-get",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "workspace focus",
+      "description": "切换到工作区。",
+      "usage": "herdr workspace focus <workspace_id>",
+      "arguments": [
+        [
+          "<workspace_id>",
+          "workspace list/create 返回的工作区 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S06"
+      ],
+      "children": [],
+      "anchor": "cmd-workspace-focus",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "workspace rename",
+      "description": "重命名工作区。",
+      "usage": "herdr workspace rename <WORKSPACE_ID> <LABEL>...",
+      "arguments": [
+        [
+          "<WORKSPACE_ID>",
+          "目标工作区 ID。"
+        ],
+        [
+          "<LABEL>...",
+          "名称文本；建议整体加引号，解析器会连接多个词。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S06"
+      ],
+      "children": [],
+      "anchor": "cmd-workspace-rename",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "workspace report-metadata",
+      "description": "上报仅用于展示的工作区元数据。",
+      "usage": "herdr workspace report-metadata <WORKSPACE_ID> --source <ID> [OPTIONS]",
+      "arguments": [
+        [
+          "<WORKSPACE_ID>",
+          "目标工作区 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "--source <ID>",
+          "非空来源标识，必需；用于区分不同报告方。"
+        ],
+        [
+          "--token <NAME=VALUE>",
+          "设置自定义展示 token；可重复。"
+        ],
+        [
+          "--clear-token <NAME>",
+          "清除指定 token；可重复。"
+        ],
+        [
+          "--seq <N>",
+          "来源提供的顺序编号，用于报告更新顺序；这是计数值，不是时间戳。"
+        ],
+        [
+          "--ttl-ms <N>",
+          "展示元数据的有效期，单位毫秒；省略时采用服务端默认策略。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "必须至少设置或清除一个 token。不改变 Agent 的生命周期状态。成功时通常不打印正文。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S06"
+      ],
+      "children": [],
+      "anchor": "cmd-workspace-report-metadata",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "workspace close",
+      "description": "关闭工作区。",
+      "usage": "herdr workspace close <workspace_id>",
+      "arguments": [
+        [
+          "<workspace_id>",
+          "目标工作区 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "关闭 Herdr 工作区不等于删除 Git checkout。要删除 worktree 使用 worktree remove，并先检查未提交数据。",
+        "带关联工作区的主工作区可能要求 --group，避免误关闭整组。"
+      ],
+      "runtime_additions": [
+        [
+          "--group",
+          "实际解析器接受。关闭关联的 workspace 组；放在 workspace_id 之后。"
+        ]
+      ],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S06"
+      ],
+      "children": [],
+      "anchor": "cmd-workspace-close",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "worktree",
+      "description": "管理基于 Git worktree 的工作区。",
+      "usage": "herdr worktree <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "这里是真正的 Git worktree，不是 jj workspace。所有子命令默认输出 JSON。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S07"
+      ],
+      "children": [
+        "worktree list",
+        "worktree create",
+        "worktree open",
+        "worktree remove"
+      ],
+      "anchor": "cmd-worktree",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "worktree list",
+      "description": "列出仓库关联的 worktree 工作区。",
+      "usage": "herdr worktree list [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--workspace <ID>",
+          "从指定 Herdr workspace 解析 Git 仓库。"
+        ],
+        [
+          "--cwd <PATH>",
+          "从指定目录解析 Git 仓库；与 --workspace 二选一。"
+        ],
+        [
+          "--trust-repository",
+          "仅对本次命令解析到的仓库显式授予信任；不是全局修改 Git 的 safe.directory。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [
+        [
+          "--json",
+          "兼容参数：解析器接受，但默认已经是 JSON，不改变输出。"
+        ]
+      ],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S07"
+      ],
+      "children": [],
+      "anchor": "cmd-worktree-list",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "worktree create",
+      "description": "创建 Git worktree 并打开对应工作区。",
+      "usage": "herdr worktree create [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--workspace <ID>",
+          "从指定 Herdr workspace 解析 Git 仓库。"
+        ],
+        [
+          "--cwd <PATH>",
+          "从指定目录解析 Git 仓库；与 --workspace 二选一。"
+        ],
+        [
+          "--branch <NAME>",
+          "分支名；已有分支用于检出，否则创建新分支。"
+        ],
+        [
+          "--base <REF>",
+          "创建新分支的基准，未指定时以仓库默认/HEAD 规则处理。"
+        ],
+        [
+          "--path <PATH>",
+          "检出目录；省略时由 worktrees.directory、仓库和分支名生成。"
+        ],
+        [
+          "--label <TEXT>",
+          "设置显示名称；含空格时整体加引号。"
+        ],
+        [
+          "--focus",
+          "创建后切换焦点到新对象。"
+        ],
+        [
+          "--no-focus",
+          "创建后不改变当前焦点；不要与 --focus 同时传入。"
+        ],
+        [
+          "--trust-repository",
+          "仅对本次命令解析到的仓库显式授予信任；不是全局修改 Git 的 safe.directory。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "是磁盘与仓库写操作，会创建 checkout / 分支，不能当作纯 UI 标签页创建。"
+      ],
+      "runtime_additions": [
+        [
+          "--json",
+          "兼容参数；默认已输出 JSON。"
+        ]
+      ],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S07"
+      ],
+      "children": [],
+      "anchor": "cmd-worktree-create",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "worktree open",
+      "description": "打开已经存在的 Git worktree。",
+      "usage": "herdr worktree open [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--workspace <ID>",
+          "从指定 Herdr workspace 解析 Git 仓库。"
+        ],
+        [
+          "--cwd <PATH>",
+          "从指定目录解析 Git 仓库；与 --workspace 二选一。"
+        ],
+        [
+          "--path <PATH>",
+          "选择现有 worktree 路径；与 --branch 二选一。"
+        ],
+        [
+          "--branch <NAME>",
+          "选择现有 worktree 的分支；与 --path 二选一。"
+        ],
+        [
+          "--label <TEXT>",
+          "设置显示名称；含空格时整体加引号。"
+        ],
+        [
+          "--focus",
+          "创建后切换焦点到新对象。"
+        ],
+        [
+          "--no-focus",
+          "创建后不改变当前焦点；不要与 --focus 同时传入。"
+        ],
+        [
+          "--trust-repository",
+          "仅对本次命令解析到的仓库显式授予信任；不是全局修改 Git 的 safe.directory。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "实际解析器要求 --path 或 --branch；不是 create 的另一种拼写。"
+      ],
+      "runtime_additions": [
+        [
+          "--json",
+          "兼容参数；默认已输出 JSON。"
+        ]
+      ],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S07"
+      ],
+      "children": [],
+      "anchor": "cmd-worktree-open",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "worktree remove",
+      "description": "删除工作区对应的 Git worktree checkout。",
+      "usage": "herdr worktree remove --workspace <ID> [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--workspace <ID>",
+          "要删除其 checkout 的 Herdr 工作区 ID，必需。"
+        ],
+        [
+          "--force",
+          "请求强制删除；可能丢失未提交文件，务必先检查与备份。"
+        ],
+        [
+          "--trust-repository",
+          "仅对本次命令解析到的仓库显式授予信任；不是全局修改 Git 的 safe.directory。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "调用 Git 的 worktree 删除语义，不自动等同于删除该分支；与 workspace close 的风险不同。"
+      ],
+      "runtime_additions": [
+        [
+          "--json",
+          "兼容参数；默认已输出 JSON。"
+        ]
+      ],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S07"
+      ],
+      "children": [],
+      "anchor": "cmd-worktree-remove",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "tab",
+      "description": "通过 API 管理工作区内的标签页。",
+      "usage": "herdr tab <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S08"
+      ],
+      "children": [
+        "tab list",
+        "tab create",
+        "tab get",
+        "tab focus",
+        "tab close",
+        "tab rename"
+      ],
+      "anchor": "cmd-tab",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "tab list",
+      "description": "列出标签页。",
+      "usage": "herdr tab list [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--workspace <WORKSPACE_ID>",
+          "限定工作区。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S08"
+      ],
+      "children": [],
+      "anchor": "cmd-tab-list",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "tab create",
+      "description": "创建标签页。",
+      "usage": "herdr tab create [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--workspace <WORKSPACE_ID>",
+          "目标工作区；自动化建议明确指定。"
+        ],
+        [
+          "--cwd <PATH>",
+          "新进程的工作目录；传入目标机器可访问的路径。"
+        ],
+        [
+          "--label <TEXT>",
+          "设置显示名称；含空格时整体加引号。"
+        ],
+        [
+          "--env <KEY=VALUE>",
+          "设置启动进程的环境变量；可重复。相同键后值覆盖前值，键不得为空。"
+        ],
+        [
+          "--focus",
+          "创建后切换焦点到新对象。"
+        ],
+        [
+          "--no-focus",
+          "创建后不改变当前焦点；不要与 --focus 同时传入。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "默认不抢焦点。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S08"
+      ],
+      "children": [],
+      "anchor": "cmd-tab-create",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "tab get",
+      "description": "查看标签页。",
+      "usage": "herdr tab get <tab_id>",
+      "arguments": [
+        [
+          "<tab_id>",
+          "标签页 ID，不是可见序号 1、2、3。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S08"
+      ],
+      "children": [],
+      "anchor": "cmd-tab-get",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "tab focus",
+      "description": "切换标签页。",
+      "usage": "herdr tab focus <tab_id>",
+      "arguments": [
+        [
+          "<tab_id>",
+          "标签页 ID，不是可见序号 1、2、3。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S08"
+      ],
+      "children": [],
+      "anchor": "cmd-tab-focus",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "tab close",
+      "description": "关闭标签页及其窗格。",
+      "usage": "herdr tab close <tab_id>",
+      "arguments": [
+        [
+          "<tab_id>",
+          "标签页 ID，不是可见序号 1、2、3。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "关闭操作会影响其中正在运行的终端任务。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S08"
+      ],
+      "children": [],
+      "anchor": "cmd-tab-close",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "tab rename",
+      "description": "重命名标签页。",
+      "usage": "herdr tab rename <TAB_ID> <LABEL>...",
+      "arguments": [
+        [
+          "<TAB_ID>",
+          "标签页 ID。"
+        ],
+        [
+          "<LABEL>...",
+          "名称，建议加引号。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S08"
+      ],
+      "children": [],
+      "anchor": "cmd-tab-rename",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "notification",
+      "description": "显示 Herdr 通知。",
+      "usage": "herdr notification <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01"
+      ],
+      "children": [
+        "notification show"
+      ],
+      "anchor": "cmd-notification",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "notification show",
+      "description": "显示一条通知。",
+      "usage": "herdr notification show <TITLE> [OPTIONS]",
+      "arguments": [
+        [
+          "<TITLE>",
+          "通知标题。"
+        ]
+      ],
+      "options": [
+        [
+          "--body <TEXT>",
+          "正文。"
+        ],
+        [
+          "--position <POSITION>",
+          "Herdr 内部 toast 位置：top-left、top-right、bottom-left、bottom-right。"
+        ],
+        [
+          "--sound <SOUND>",
+          "声音类别：none、done、request；默认 none。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "遵守 ui.toast 的投递配置；默认配置 delivery=\"off\"，命令不会强制绕过关闭设置。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01"
+      ],
+      "children": [],
+      "anchor": "cmd-notification-show",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent",
+      "description": "控制和检查已识别的 Agent 窗格。",
+      "usage": "herdr agent <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "TARGET 可使用命令接受的 Agent/窗格标识或 Agent 名称；不要把 workspace 的显示名当作 Agent ID。",
+        "Agent 检测、内置集成、Agent 可执行程序的安装是三件不同的事。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [
+        "agent list",
+        "agent get",
+        "agent read",
+        "agent send-keys",
+        "agent prompt",
+        "agent rename",
+        "agent focus",
+        "agent wait",
+        "agent attach",
+        "agent start",
+        "agent explain"
+      ],
+      "anchor": "cmd-agent",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent list",
+      "description": "列出当前识别到的 Agent。",
+      "usage": "herdr agent list",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [],
+      "anchor": "cmd-agent-list",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent get",
+      "description": "查看 Agent 的结构化状态。",
+      "usage": "herdr agent get <target>",
+      "arguments": [
+        [
+          "<target>",
+          "目标 Agent 或所在窗格的可解析标识。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [],
+      "anchor": "cmd-agent-get",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent read",
+      "description": "读取 Agent 的终端输出。",
+      "usage": "herdr agent read <TARGET> [OPTIONS]",
+      "arguments": [
+        [
+          "<TARGET>",
+          "目标 Agent。"
+        ]
+      ],
+      "options": [
+        [
+          "--source <SOURCE>",
+          "快照来源：visible、recent、recent-unwrapped、detection；默认 recent。"
+        ],
+        [
+          "--lines <N>",
+          "限制快照的末尾渲染行数；软换行合并后的逻辑行数可能更少。"
+        ],
+        [
+          "--format <FORMAT>",
+          "输出格式：text 或 ansi；默认按普通文本读取。"
+        ],
+        [
+          "--ansi",
+          "请求 ANSI 格式；相当于选择 ansi 格式的便捷开关。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "标准输出直接是文本或 ANSI 内容，不是通用 API JSON 外层。",
+        "本命令没有 pane read 的 --raw 开关。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [],
+      "anchor": "cmd-agent-read",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent send-keys",
+      "description": "向 Agent 发送按键。",
+      "usage": "herdr agent send-keys <TARGET> <KEY>...",
+      "arguments": [
+        [
+          "<TARGET>",
+          "目标 Agent。"
+        ],
+        [
+          "<KEY>...",
+          "一个或多个键名，如 enter、esc、ctrl+c；esc 为规范写法，escape 也接受。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "按键是操作真实交互界面，不是发送新的自然语言 prompt。确认当前屏幕后再操作；不要自动批准未知确认框。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [],
+      "anchor": "cmd-agent-send-keys",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent prompt",
+      "description": "向 Agent 提交提示词。",
+      "usage": "herdr agent prompt <TARGET> <TEXT> [OPTIONS]",
+      "arguments": [
+        [
+          "<TARGET>",
+          "目标 Agent。"
+        ],
+        [
+          "<TEXT>",
+          "完整提示词，含空格或换行时整体引用。"
+        ]
+      ],
+      "options": [
+        [
+          "--wait",
+          "提交后等待首次观察到满足条件的状态。"
+        ],
+        [
+          "--until <STATUS>",
+          "匹配状态：idle、working、blocked、done、unknown；可重复，多个状态按“或”匹配。"
+        ],
+        [
+          "--timeout <MS>",
+          "超时毫秒数；等待命令省略时可无限等待。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "--until 与 --timeout 都要求 --wait。默认匹配 idle、done、blocked。",
+        "目标已经 blocked 时，提交在发送任何输入之前被 agent_blocked 拒绝。",
+        "接受提交时若不处于 working，--wait 要求在 5000ms 内观察到 working 或 blocked，否则返回 agent_prompt_stalled；调用方超时更早到达则返回 timeout。",
+        "不追踪请求与 Agent turn 的因果关系。目标原本已 working 时，正在进行的旧 turn 结束也可能满足等待。",
+        "超时或 stalled 不是“提示词肯定没发出”的证明；先 get/read 再决定是否重试，避免重复提交。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [],
+      "anchor": "cmd-agent-prompt",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent rename",
+      "description": "给已识别的 Agent 命名或清除名称。",
+      "usage": "herdr agent rename <TARGET> <NAME>|--clear",
+      "arguments": [
+        [
+          "<TARGET>",
+          "已识别 Agent 的目标。"
+        ],
+        [
+          "<NAME>",
+          "新名称；与 --clear 二选一。"
+        ]
+      ],
+      "options": [
+        [
+          "--clear",
+          "清除自定义 Agent 名称。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "不能通过 rename 把一个普通 shell 声明成 Agent；重命名也不改变 Agent 种类。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [],
+      "anchor": "cmd-agent-rename",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent focus",
+      "description": "切换到 Agent 所在位置。",
+      "usage": "herdr agent focus <target>",
+      "arguments": [
+        [
+          "<target>",
+          "目标 Agent。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [],
+      "anchor": "cmd-agent-focus",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent wait",
+      "description": "等待 Agent 状态匹配。",
+      "usage": "herdr agent wait <TARGET> [OPTIONS]",
+      "arguments": [
+        [
+          "<TARGET>",
+          "目标 Agent。"
+        ]
+      ],
+      "options": [
+        [
+          "--until <STATUS>",
+          "匹配状态：idle、working、blocked、done、unknown；可重复，多个状态按“或”匹配。"
+        ],
+        [
+          "--timeout <MS>",
+          "超时毫秒数；等待命令省略时可无限等待。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "默认匹配 idle、done、blocked；多个 --until 是“或”。没有 --timeout 时无限等待。",
+        "当前状态已经匹配时可立即返回；不是“等待下一轮完成”。unknown 必须显式指定才会匹配。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [],
+      "anchor": "cmd-agent-wait",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent attach",
+      "description": "直接附着到 Agent 的终端。",
+      "usage": "herdr agent attach <TARGET> [OPTIONS]",
+      "arguments": [
+        [
+          "<TARGET>",
+          "目标 Agent。"
+        ]
+      ],
+      "options": [
+        [
+          "--takeover",
+          "显式接管已有终端写入控制权。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "交互式 attach，不是一次性 JSON 查询。Ctrl+B 然后 q 退出附着；Ctrl+B 连按两次发送字面 Ctrl+B。",
+        "--machine 路由不支持此交互 attach 命令。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [],
+      "anchor": "cmd-agent-attach",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent start",
+      "description": "在现有交互 shell 窗格内启动支持的 Agent。",
+      "usage": "herdr agent start <NAME> --kind <KIND> --pane <ID> [OPTIONS] [-- [AGENT_ARG]...]",
+      "arguments": [
+        [
+          "<NAME>",
+          "启动后给该 Agent 使用的名称。"
+        ],
+        [
+          "[AGENT_ARG]...",
+          "-- 后的参数直接传给 Agent，不由 Herdr 解释。"
+        ]
+      ],
+      "options": [
+        [
+          "--kind <KIND>",
+          "必需。规范 Agent 种类见“Agent 种类与别名”表，共 24 种。"
+        ],
+        [
+          "--pane <ID>",
+          "必需。现有且停在交互式 shell 提示符的 pane ID。"
+        ],
+        [
+          "--timeout <MS>",
+          "等待可交互就绪；默认 30000ms，上限 300000ms。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "不会替你安装 Agent 二进制；相关程序需已可在目标环境启动。",
+        "成功表示在同一终端检测到预期 Agent 并已准备接受输入，不只是成功写入了一行 shell 命令。",
+        "不能把仍在运行前台任务的 pane 当作空闲 shell 直接覆盖启动。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [],
+      "anchor": "cmd-agent-start",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "agent explain",
+      "description": "解释 Agent 检测状态及证据。",
+      "usage": "herdr agent explain [TARGET] [OPTIONS]",
+      "arguments": [
+        [
+          "[TARGET]",
+          "在线模式的 Agent/窗格目标；本地 --file 模式不使用该参数。"
+        ]
+      ],
+      "options": [
+        [
+          "--file <PATH>",
+          "读取本地 UTF-8 终端文本样本，离线解释检测结果。"
+        ],
+        [
+          "--agent <LABEL>",
+          "本地文件样本对应的 Agent 标签；与 --file 配套。"
+        ],
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "--format <FORMAT>",
+          "text 或 json。"
+        ],
+        [
+          "-v, --verbose",
+          "展开详细证据、匹配区域/规则及覆盖来源。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "两种形式：在线 TARGET；或离线 --file PATH --agent LABEL。文件模式与 TARGET 互斥。",
+        "--agent 不是在线模式的目标选择器。--json 输出解释对象自身，不保证含 result 外层。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S05"
+      ],
+      "children": [],
+      "anchor": "cmd-agent-explain",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane",
+      "description": "管理终端窗格、输出、输入及 Agent 报告。",
+      "usage": "herdr pane <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [
+        "pane list",
+        "pane current",
+        "pane get",
+        "pane layout",
+        "pane process-info",
+        "pane neighbor",
+        "pane edges",
+        "pane focus",
+        "pane resize",
+        "pane zoom",
+        "pane read",
+        "pane rename",
+        "pane input",
+        "pane split",
+        "pane swap",
+        "pane move",
+        "pane close",
+        "pane send-text",
+        "pane send-keys",
+        "pane wait-output",
+        "pane run",
+        "pane report-agent",
+        "pane report-agent-session",
+        "pane release-agent",
+        "pane report-metadata"
+      ],
+      "anchor": "cmd-pane",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane list",
+      "description": "列出终端窗格。",
+      "usage": "herdr pane list [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--workspace <WORKSPACE_ID>",
+          "限定工作区。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-list",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane current",
+      "description": "解析当前窗格。",
+      "usage": "herdr pane current [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--pane <ID>",
+          "显式指定作为操作起点的 pane ID。"
+        ],
+        [
+          "--current",
+          "使用调用进程环境中的 HERDR_PANE_ID；不是“鼠标正指着的窗格”。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "省略显式选择时会使用可用的调用上下文/焦点回退；自动化优先 --pane，避免随用户焦点变化。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-current",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane get",
+      "description": "查看一个窗格。",
+      "usage": "herdr pane get <pane_id>",
+      "arguments": [
+        [
+          "<pane_id>",
+          "pane list/create 返回的窗格 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-get",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane layout",
+      "description": "查看窗格布局信息。",
+      "usage": "herdr pane layout [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--pane <ID>",
+          "显式指定作为操作起点的 pane ID。"
+        ],
+        [
+          "--current",
+          "使用调用进程环境中的 HERDR_PANE_ID；不是“鼠标正指着的窗格”。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-layout",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane process-info",
+      "description": "查看窗格进程信息。",
+      "usage": "herdr pane process-info [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--pane <ID>",
+          "显式指定作为操作起点的 pane ID。"
+        ],
+        [
+          "--current",
+          "使用调用进程环境中的 HERDR_PANE_ID；不是“鼠标正指着的窗格”。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "用于区分交互 shell、前台命令和 Agent 进程；不应只根据窗口标题判断进程是否存在。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-process-info",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane neighbor",
+      "description": "查找某方向上的相邻窗格。",
+      "usage": "herdr pane neighbor --direction <DIRECTION> [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--direction <DIRECTION>",
+          "方向：left、right、up、down。"
+        ],
+        [
+          "--pane <ID>",
+          "显式指定作为操作起点的 pane ID。"
+        ],
+        [
+          "--current",
+          "使用调用进程环境中的 HERDR_PANE_ID；不是“鼠标正指着的窗格”。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-neighbor",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane edges",
+      "description": "查看窗格在布局中的边缘信息。",
+      "usage": "herdr pane edges [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--pane <ID>",
+          "显式指定作为操作起点的 pane ID。"
+        ],
+        [
+          "--current",
+          "使用调用进程环境中的 HERDR_PANE_ID；不是“鼠标正指着的窗格”。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-edges",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane focus",
+      "description": "将焦点切到起点窗格某方向的相邻窗格。",
+      "usage": "herdr pane focus --direction <DIRECTION> [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--direction <DIRECTION>",
+          "方向：left、right、up、down。"
+        ],
+        [
+          "--pane <ID>",
+          "显式指定作为操作起点的 pane ID。"
+        ],
+        [
+          "--current",
+          "使用调用进程环境中的 HERDR_PANE_ID；不是“鼠标正指着的窗格”。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "--pane 是方向导航的起点，不是“直接 focus 到这个 ID”的另一种写法。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-focus",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane resize",
+      "description": "调整窗格分割尺寸。",
+      "usage": "herdr pane resize --direction <DIRECTION> [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--direction <DIRECTION>",
+          "方向：left、right、up、down。"
+        ],
+        [
+          "--amount <FLOAT>",
+          "调整幅度，必须为有限浮点数；不要当作固定的终端列数/行数。"
+        ],
+        [
+          "--pane <ID>",
+          "显式指定作为操作起点的 pane ID。"
+        ],
+        [
+          "--current",
+          "使用调用进程环境中的 HERDR_PANE_ID；不是“鼠标正指着的窗格”。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "布局与有效调整范围由运行时判定；手册不臆造此选项未标注的默认值。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-resize",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane zoom",
+      "description": "切换或设置窗格放大状态。",
+      "usage": "herdr pane zoom [PANE_ID] [OPTIONS]",
+      "arguments": [
+        [
+          "[PANE_ID]",
+          "可选窗格 ID；也可用 --pane 或 --current 选择。"
+        ]
+      ],
+      "options": [
+        [
+          "--pane <ID>",
+          "显式指定作为操作起点的 pane ID。"
+        ],
+        [
+          "--current",
+          "使用调用进程环境中的 HERDR_PANE_ID；不是“鼠标正指着的窗格”。"
+        ],
+        [
+          "--toggle",
+          "反转放大状态；未传模式时的默认行为。"
+        ],
+        [
+          "--on",
+          "设为放大。"
+        ],
+        [
+          "--off",
+          "取消放大。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "--toggle、--on、--off 互斥；不要混合目标选择方式。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-zoom",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane read",
+      "description": "读取窗格终端快照。",
+      "usage": "herdr pane read <PANE_ID> [OPTIONS]",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "目标窗格 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "--source <SOURCE>",
+          "快照来源：visible、recent、recent-unwrapped、detection；默认 recent。"
+        ],
+        [
+          "--lines <N>",
+          "限制快照的末尾渲染行数；软换行合并后的逻辑行数可能更少。"
+        ],
+        [
+          "--format <FORMAT>",
+          "输出格式：text 或 ansi；默认按普通文本读取。"
+        ],
+        [
+          "--ansi",
+          "请求 ANSI 格式；相当于选择 ansi 格式的便捷开关。"
+        ],
+        [
+          "--raw",
+          "保留 ANSI 转义，选择原始 ANSI 读取路径；不是二进制日志导出。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "输出直接是文本/ANSI，不应无条件接 jq。",
+        "默认 recent 从末尾近期输出取样；visible 与 detection 的视图不同。见概念章节的快照表。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-read",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane rename",
+      "description": "设置或清除窗格显示名。",
+      "usage": "herdr pane rename <PANE_ID> [LABEL]... [OPTIONS]",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "目标窗格 ID。"
+        ],
+        [
+          "[LABEL]...",
+          "名称；实际调用需提供名称或 --clear。"
+        ]
+      ],
+      "options": [
+        [
+          "--clear",
+          "清除自定义 pane 标签；不要与名称同时传入。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "与 agent rename、terminal title set 管理的是不同层级。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-rename",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane input",
+      "description": "设置窗格输入路由。",
+      "usage": "herdr pane input [PANE_ID] [OPTIONS] --right-click <TARGET>",
+      "arguments": [
+        [
+          "[PANE_ID]",
+          "目标窗格；或用 --pane / --current 明确选择。"
+        ]
+      ],
+      "options": [
+        [
+          "--pane <ID>",
+          "显式指定作为操作起点的 pane ID。"
+        ],
+        [
+          "--current",
+          "使用调用进程环境中的 HERDR_PANE_ID；不是“鼠标正指着的窗格”。"
+        ],
+        [
+          "--right-click <TARGET>",
+          "必需。herdr 交给 Herdr 菜单；pane 交给窗格内程序的鼠标输入路径。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "实际解析器要求存在目标选择方式；--current 依赖 HERDR_PANE_ID。",
+        "pane 右键路由还受窗格内程序是否启用鼠标协议影响。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-input",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane split",
+      "description": "分割窗格并创建新终端。",
+      "usage": "herdr pane split [PANE_ID] [OPTIONS]",
+      "arguments": [
+        [
+          "[PANE_ID]",
+          "起点窗格；可用 --pane 或 --current 替代。"
+        ]
+      ],
+      "options": [
+        [
+          "--pane <ID>",
+          "显式指定作为操作起点的 pane ID。"
+        ],
+        [
+          "--current",
+          "使用调用进程环境中的 HERDR_PANE_ID；不是“鼠标正指着的窗格”。"
+        ],
+        [
+          "--direction <DIRECTION>",
+          "分割方向：right 在右侧创建，down 在下侧创建。"
+        ],
+        [
+          "--ratio <FLOAT>",
+          "分割比例，由运行时布局校验；不是列数。"
+        ],
+        [
+          "--cwd <PATH>",
+          "新进程的工作目录；传入目标机器可访问的路径。"
+        ],
+        [
+          "--env <KEY=VALUE>",
+          "设置启动进程的环境变量；可重复。相同键后值覆盖前值，键不得为空。"
+        ],
+        [
+          "--right-click <TARGET>",
+          "新窗格右键路由：herdr 或 pane；默认 herdr。"
+        ],
+        [
+          "--focus",
+          "创建后切换焦点到新对象。"
+        ],
+        [
+          "--no-focus",
+          "创建后不改变当前焦点；不要与 --focus 同时传入。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "实际调用必须传 --direction right 或 --direction down；统一帮助定义没有标记成 required。",
+        "默认不改变焦点。自动化建议显式 --pane ID --direction right --no-focus。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-split",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane swap",
+      "description": "交换两个窗格的位置。",
+      "usage": "herdr pane swap [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--direction <DIRECTION>",
+          "方向：left、right、up、down。"
+        ],
+        [
+          "--pane <ID>",
+          "显式指定作为操作起点的 pane ID。"
+        ],
+        [
+          "--current",
+          "使用调用进程环境中的 HERDR_PANE_ID；不是“鼠标正指着的窗格”。"
+        ],
+        [
+          "--source-pane <ID>",
+          "显式交换的源窗格 ID。"
+        ],
+        [
+          "--target-pane <ID>",
+          "显式交换的目标窗格 ID。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "形式一：--direction left/right/up/down，加起点 --pane/--current。",
+        "形式二：--source-pane ID --target-pane ID。两种形式不要混用。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-swap",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane move",
+      "description": "把窗格移到其他标签页或工作区。",
+      "usage": "herdr pane move <PANE_ID> [OPTIONS]",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "被移动的窗格。"
+        ]
+      ],
+      "options": [
+        [
+          "--tab <TAB_ID>",
+          "移入现有标签页。"
+        ],
+        [
+          "--split <DIRECTION>",
+          "现有标签页中的分割方向：right 或 down。"
+        ],
+        [
+          "--target-pane <ID>",
+          "现有标签页里作为分割锚点的窗格。"
+        ],
+        [
+          "--ratio <FLOAT>",
+          "移入现有布局时的分割比例。"
+        ],
+        [
+          "--new-tab",
+          "创建新标签页承载被移动窗格。"
+        ],
+        [
+          "--workspace <ID>",
+          "新标签页的目标工作区。"
+        ],
+        [
+          "--new-workspace",
+          "创建新工作区承载被移动窗格。"
+        ],
+        [
+          "--label <TEXT>",
+          "新标签页或新工作区的名称。"
+        ],
+        [
+          "--tab-label <TEXT>",
+          "新工作区内初始标签页名称。"
+        ],
+        [
+          "--focus",
+          "创建后切换焦点到新对象。"
+        ],
+        [
+          "--no-focus",
+          "创建后不改变当前焦点；不要与 --focus 同时传入。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "现有 tab：--tab TAB_ID --split right|down [--target-pane ID] [--ratio FLOAT]。",
+        "新 tab：--new-tab [--workspace ID] [--label TEXT]。",
+        "新 workspace：--new-workspace [--label TEXT] [--tab-label TEXT]。三种目的地形式互斥。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-move",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane close",
+      "description": "关闭窗格及其终端。",
+      "usage": "herdr pane close <pane_id>",
+      "arguments": [
+        [
+          "<pane_id>",
+          "目标窗格 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "会影响正在运行的前台任务；不要误关闭承载当前自动化控制程序的窗格。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-close",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane send-text",
+      "description": "向窗格发送字面文本，不附加 Enter。",
+      "usage": "herdr pane send-text <PANE_ID> <TEXT>",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "目标窗格。"
+        ],
+        [
+          "<TEXT>",
+          "要输入的原始文本；推荐整体引用。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "仅发送输入，不意味着命令已执行。要一次提交文本与 Enter 可用 pane run。",
+        "成功时通常没有标准输出。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-send-text",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane send-keys",
+      "description": "向窗格发送按键序列。",
+      "usage": "herdr pane send-keys <PANE_ID> <KEY>...",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "目标窗格。"
+        ],
+        [
+          "<KEY>...",
+          "一个或多个键名，如 enter、esc、ctrl+c。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "解析器先校验键名，再发送输入；esc 为规范名称，escape 是兼容写法。成功时通常无正文。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-send-keys",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane wait-output",
+      "description": "等待窗格快照中出现匹配输出。",
+      "usage": "herdr pane wait-output <PANE_ID> [OPTIONS]",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "目标窗格。"
+        ]
+      ],
+      "options": [
+        [
+          "--match <TEXT>",
+          "按字面子串匹配，与 --regex 二选一，必须提供一种。"
+        ],
+        [
+          "--regex <PATTERN>",
+          "按 Rust 正则表达式匹配，与 --match 互斥；按行匹配而不是跨行全文匹配。"
+        ],
+        [
+          "--source <SOURCE>",
+          "visible、recent、recent-unwrapped；默认 recent。"
+        ],
+        [
+          "--lines <N>",
+          "限制搜索快照的渲染行数；recent 默认近期 80 行。"
+        ],
+        [
+          "--timeout <MS>",
+          "超时毫秒数；等待命令省略时可无限等待。"
+        ],
+        [
+          "--raw",
+          "匹配时保留 ANSI 转义序列；可能影响锚点及子串判断。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "先立即搜索已存在的输出，再轮询。旧日志满足条件也会立即返回，不是“只看本次命令之后的新日志”。",
+        "recent / recent-unwrapped 在匹配时会合并软换行；行数截取在合并前执行。",
+        "没有 --timeout 则无限等待。帮助允许值不包括 detection，不建议依赖共享解析器的额外放行行为。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-wait-output",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane run",
+      "description": "一次提交命令文本与 Enter。",
+      "usage": "herdr pane run <PANE_ID> <COMMAND>...",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "目标窗格。"
+        ],
+        [
+          "<COMMAND>...",
+          "交给窗格内 shell 的命令文本；多个词会按空格连接，建议完整引用。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "API 成功只表示输入已提交，不是子进程成功退出，也不返回进程退出码。成功通常无标准输出。",
+        "只在明确处于 shell 提示符时使用；若窗格正运行 Agent/TUI，这些字节会发给那个程序。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-run",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane report-agent",
+      "description": "由 hook/集成上报 Agent 生命周期状态。",
+      "usage": "herdr pane report-agent <PANE_ID> --source <ID> --agent <LABEL> --state <STATUS> [OPTIONS] [-- [RESUME_ARG]...]",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "状态归属的窗格。"
+        ],
+        [
+          "[-- [RESUME_ARG]...]",
+          "恢复此 agent 会话的 argv；必须以普通命令名开头，不是任意 shell 脚本字符串。"
+        ]
+      ],
+      "options": [
+        [
+          "--source <ID>",
+          "必需，生命周期报告来源。"
+        ],
+        [
+          "--agent <LABEL>",
+          "必需，Agent 规范标签。"
+        ],
+        [
+          "--state <STATUS>",
+          "必需，仅 idle、working、blocked、unknown。这里不接受 done。"
+        ],
+        [
+          "--message <TEXT>",
+          "补充状态说明。"
+        ],
+        [
+          "--seq <N>",
+          "来源提供的顺序编号，用于报告更新顺序；这是计数值，不是时间戳。"
+        ],
+        [
+          "--agent-session-id <ID>",
+          "Agent 自己的会话标识，区别于 Herdr session。"
+        ],
+        [
+          "--agent-session-path <PATH>",
+          "Agent 会话存储路径。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "高级集成接口，会影响生命周期权威来源；普通使用者不应把它当成给任意任务手工造完成状态的命令。",
+        "与 wait 可匹配的状态集合不同。成功通常不打印正文。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-report-agent",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane report-agent-session",
+      "description": "上报 Agent 会话标识及可选恢复参数。",
+      "usage": "herdr pane report-agent-session <PANE_ID> --source <ID> --agent <LABEL> [OPTIONS] [-- [RESUME_ARG]...]",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "会话身份归属的窗格。"
+        ],
+        [
+          "[-- [RESUME_ARG]...]",
+          "恢复此 agent 会话的 argv；必须以普通命令名开头，不是任意 shell 脚本字符串。"
+        ]
+      ],
+      "options": [
+        [
+          "--source <ID>",
+          "必需，报告来源。"
+        ],
+        [
+          "--agent <LABEL>",
+          "必需，Agent 规范标签。"
+        ],
+        [
+          "--seq <N>",
+          "来源提供的顺序编号，用于报告更新顺序；这是计数值，不是时间戳。"
+        ],
+        [
+          "--agent-session-id <ID>",
+          "Agent 自己的会话标识，区别于 Herdr session。"
+        ],
+        [
+          "--agent-session-path <PATH>",
+          "Agent 会话存储路径。"
+        ],
+        [
+          "--session-start-source <SOURCE>",
+          "描述 Agent 会话启动来源的标记；不是 pane read 的快照来源枚举。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "只报告会话身份/恢复信息，不宣称拥有 Agent 生命周期状态权威。成功通常无正文。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-report-agent-session",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane release-agent",
+      "description": "释放某个来源的 Agent 生命周期权威。",
+      "usage": "herdr pane release-agent <PANE_ID> --source <ID> --agent <LABEL> [OPTIONS]",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "目标窗格。"
+        ]
+      ],
+      "options": [
+        [
+          "--source <ID>",
+          "必需，要释放的报告来源。"
+        ],
+        [
+          "--agent <LABEL>",
+          "必需，Agent 规范标签。"
+        ],
+        [
+          "--seq <N>",
+          "来源提供的顺序编号，用于报告更新顺序；这是计数值，不是时间戳。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "release 是释放状态报告权威，不是 kill、停止 Agent、关闭 pane 或删除会话。成功通常无正文。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-release-agent",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "pane report-metadata",
+      "description": "上报仅用于展示的窗格元数据。",
+      "usage": "herdr pane report-metadata <PANE_ID> --source <ID> [OPTIONS]",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "目标窗格。"
+        ]
+      ],
+      "options": [
+        [
+          "--source <ID>",
+          "必需，非空报告来源。"
+        ],
+        [
+          "--agent <LABEL>",
+          "将展示元数据关联到某 Agent 标签。"
+        ],
+        [
+          "--applies-to-source <ID>",
+          "限定这份展示覆盖适用于哪个状态来源。"
+        ],
+        [
+          "--title <TEXT>",
+          "展示标题。"
+        ],
+        [
+          "--clear-title",
+          "清除展示标题；与 --title 互斥。"
+        ],
+        [
+          "--display-agent <TEXT>",
+          "Agent 的展示文本，不改变真实种类。"
+        ],
+        [
+          "--clear-display-agent",
+          "清除展示 Agent 文本；与 --display-agent 互斥。"
+        ],
+        [
+          "--state-label <STATUS=TEXT>",
+          "覆盖某个状态的展示文字；运行时可重复设置多个状态。"
+        ],
+        [
+          "--clear-state-labels",
+          "清除状态展示文字覆盖。"
+        ],
+        [
+          "--token <NAME=VALUE>",
+          "设置自定义展示 token；可重复。"
+        ],
+        [
+          "--clear-token <NAME>",
+          "清除指定 token；可重复。"
+        ],
+        [
+          "--seq <N>",
+          "来源提供的顺序编号，用于报告更新顺序；这是计数值，不是时间戳。"
+        ],
+        [
+          "--ttl-ms <N>",
+          "展示元数据的有效期，单位毫秒；省略时采用服务端默认策略。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "实际解析器要求至少设置或清除一个展示字段；这类更新不改变 idle/working/blocked 的语义状态。",
+        "--state-label 在运行时支持重复，但 spec 没有为它配置 Append。成功通常无正文。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S04"
+      ],
+      "children": [],
+      "anchor": "cmd-pane-report-metadata",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "terminal",
+      "description": "附着或观察底层终端流。",
+      "usage": "herdr terminal <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "terminal 是 pane 承载的终端实例；不是外层终端模拟器窗口。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [
+        "terminal attach",
+        "terminal session",
+        "terminal title"
+      ],
+      "anchor": "cmd-terminal",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "terminal attach",
+      "description": "直接附着到底层终端。",
+      "usage": "herdr terminal attach <TERMINAL_ID> [OPTIONS]",
+      "arguments": [
+        [
+          "<TERMINAL_ID>",
+          "底层终端 ID；不要把 workspace/tab ID 填到这里。"
+        ]
+      ],
+      "options": [
+        [
+          "--takeover",
+          "显式接管现有写入控制权。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "交互式命令；退出附着为 Ctrl+B 然后 q。退出附着不等于终止终端进程。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-terminal-attach",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "terminal session",
+      "description": "通过 NDJSON 控制或观察终端会话。",
+      "usage": "herdr terminal session <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "面向程序的持续流协议，不是一次返回一个 JSON 的查询；请按行解码事件。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [
+        "terminal session control",
+        "terminal session observe"
+      ],
+      "anchor": "cmd-terminal-session",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "terminal session control",
+      "description": "通过 NDJSON 持有终端写入控制流。",
+      "usage": "herdr terminal session control <TARGET> [OPTIONS]",
+      "arguments": [
+        [
+          "<TARGET>",
+          "受支持的 pane / terminal / agent 目标。"
+        ]
+      ],
+      "options": [
+        [
+          "--takeover",
+          "接管已有控制流。"
+        ],
+        [
+          "--cols <N>",
+          "终端列数，1..65535；默认 120。"
+        ],
+        [
+          "--rows <N>",
+          "终端行数，1..65535；默认 40。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "标准输出持续发送终端帧/关闭事件；标准输入读取协议规定的 input/resize/mouse 等消息。",
+        "一个终端仅一个写入控制者。不要把任意文本直接写入 stdin 当成键盘字节；先查 api schema。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-terminal-session-control",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "terminal session observe",
+      "description": "只读观察终端 NDJSON 流。",
+      "usage": "herdr terminal session observe <TARGET> [OPTIONS]",
+      "arguments": [
+        [
+          "<TARGET>",
+          "受支持的 pane / terminal / agent 目标。"
+        ]
+      ],
+      "options": [
+        [
+          "--cols <N>",
+          "终端列数，1..65535；默认 120。"
+        ],
+        [
+          "--rows <N>",
+          "终端行数，1..65535；默认 40。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "输出 terminal.frame 等事件，帧内 ANSI 数据按协议编码；不要当作可直接 cat 的终端画面。",
+        "只读观察，不发送按键，也不抢占输入控制权。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-terminal-session-observe",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "terminal title",
+      "description": "设置外层终端窗口标题。",
+      "usage": "herdr terminal title <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [
+        "terminal title set",
+        "terminal title clear"
+      ],
+      "anchor": "cmd-terminal-title",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "terminal title set",
+      "description": "设置外层终端窗口标题。",
+      "usage": "herdr terminal title set <TITLE>",
+      "arguments": [
+        [
+          "<TITLE>",
+          "标题文本。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "与 pane rename、tab rename 和 Agent 名称不是同一个字段。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-terminal-title-set",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "terminal title clear",
+      "description": "清除手工设置的外层标题。",
+      "usage": "herdr terminal title clear",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "恢复由 ui.window_title 配置生成的标题。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-terminal-title-clear",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "session",
+      "description": "管理命名持久会话。",
+      "usage": "herdr session <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "会话控制 server 与保存的工作区结构。默认会话名称为 default。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [
+        "session list",
+        "session attach",
+        "session stop",
+        "session delete"
+      ],
+      "anchor": "cmd-session",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "session list",
+      "description": "列出会话。",
+      "usage": "herdr session list [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-session-list",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "session attach",
+      "description": "启动客户端附着到会话。",
+      "usage": "herdr session attach <NAME>",
+      "arguments": [
+        [
+          "<NAME>",
+          "会话名称。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "这是启动/进入 TUI 的操作，不是 JSON 状态查询。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-session-attach",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "session stop",
+      "description": "停止命名会话。",
+      "usage": "herdr session stop <NAME> [OPTIONS]",
+      "arguments": [
+        [
+          "<NAME>",
+          "会话名称。"
+        ]
+      ],
+      "options": [
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "会影响该会话托管的进程。只想离开 TUI 时应 detach，不要 stop。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-session-stop",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "session delete",
+      "description": "删除已经停止的会话。",
+      "usage": "herdr session delete <NAME> [OPTIONS]",
+      "arguments": [
+        [
+          "<NAME>",
+          "已停止会话的名称；默认会话显式填写 default。"
+        ]
+      ],
+      "options": [
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "会删除保存的会话状态；正在运行的会话不能直接作为 stopped 会话删除。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "children": [],
+      "anchor": "cmd-session-delete",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "integration",
+      "description": "安装和检查内置 Agent 集成。",
+      "usage": "herdr integration <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "安装的是 Herdr 的 hook/集成配置，不是安装 Agent 主程序。目标名不总与 agent start --kind 相同。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S17",
+        "S19",
+        "S20"
+      ],
+      "children": [
+        "integration install",
+        "integration uninstall",
+        "integration status"
+      ],
+      "anchor": "cmd-integration",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "integration install",
+      "description": "安装或更新一个 Agent 的 Herdr 集成。",
+      "usage": "herdr integration install <TARGET>",
+      "arguments": [
+        [
+          "<TARGET>",
+          "17 个常规目标及实验性 letta，见集成目标表。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "会修改对应 Agent 的配置或 hook 文件。该版本没有 integration install all，也没有此命令的 --json。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S17",
+        "S19",
+        "S20"
+      ],
+      "children": [],
+      "anchor": "cmd-integration-install",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "integration uninstall",
+      "description": "卸载一个 Agent 的 Herdr 集成。",
+      "usage": "herdr integration uninstall <TARGET>",
+      "arguments": [
+        [
+          "<TARGET>",
+          "17 个常规目标及实验性 letta，见集成目标表。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "会修改对应 Agent 的配置或 hook 文件。该版本没有 integration install all，也没有此命令的 --json。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S17",
+        "S19",
+        "S20"
+      ],
+      "children": [],
+      "anchor": "cmd-integration-uninstall",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "integration status",
+      "description": "检查集成安装状态。",
+      "usage": "herdr integration status [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--outdated-only",
+          "只列出被判为过期、需要更新的集成。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "检查后可对具体目标重新运行 integration install；检测支持的 Agent 数量不等于可安装集成目标数量。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S17",
+        "S19",
+        "S20"
+      ],
+      "children": [],
+      "anchor": "cmd-integration-status",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin",
+      "description": "安装、关联及运行工作流插件。",
+      "usage": "herdr plugin <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "插件可执行本机代码、访问本地资源。安装/启用前应确认来源、版本、配置与权限。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [
+        "plugin install",
+        "plugin uninstall",
+        "plugin link",
+        "plugin unlink",
+        "plugin enable",
+        "plugin disable",
+        "plugin list",
+        "plugin config-dir",
+        "plugin action",
+        "plugin log",
+        "plugin pane"
+      ],
+      "anchor": "cmd-plugin",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin install",
+      "description": "从 GitHub 安装插件。",
+      "usage": "herdr plugin install <OWNER/REPO[/SUBDIR]> [OPTIONS]",
+      "arguments": [
+        [
+          "<OWNER/REPO[/SUBDIR]>",
+          "GitHub 仓库简写，可带插件子目录；不是任意 HTTPS/Git URL。"
+        ]
+      ],
+      "options": [
+        [
+          "--ref <REF>",
+          "指定 Git 引用，如固定 tag 或提交。"
+        ],
+        [
+          "-y, --yes",
+          "跳过交互确认；只对已审核的来源使用。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "属于磁盘/代码安装操作；--machine 不允许把本地安装器当作远程命令运行。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-install",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin uninstall",
+      "description": "卸载插件。",
+      "usage": "herdr plugin uninstall <PLUGIN>",
+      "arguments": [
+        [
+          "<PLUGIN>",
+          "已安装插件 ID 或安装来源简写。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "与 unlink 本地开发目录不同；先检查 plugin list 确认对象。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-uninstall",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin link",
+      "description": "关联本地插件目录。",
+      "usage": "herdr plugin link <PATH> [OPTIONS]",
+      "arguments": [
+        [
+          "<PATH>",
+          "插件目录；远程 --machine 场景必须为远程绝对路径。"
+        ]
+      ],
+      "options": [
+        [
+          "--disabled",
+          "关联但保持禁用，适合先检查新插件。"
+        ],
+        [
+          "--enabled",
+          "关联并启用；默认启用。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "不要同时传 --enabled 与 --disabled。不是上传本地目录到远程机器。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-link",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin unlink",
+      "description": "取消本地插件目录关联。",
+      "usage": "herdr plugin unlink <PLUGIN_ID>",
+      "arguments": [
+        [
+          "<PLUGIN_ID>",
+          "关联的插件 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "管理关联关系，不等于删除原始开发仓库。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-unlink",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin enable",
+      "description": "启用插件。",
+      "usage": "herdr plugin enable <PLUGIN_ID>",
+      "arguments": [
+        [
+          "<PLUGIN_ID>",
+          "插件 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-enable",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin disable",
+      "description": "禁用插件。",
+      "usage": "herdr plugin disable <PLUGIN_ID>",
+      "arguments": [
+        [
+          "<PLUGIN_ID>",
+          "插件 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-disable",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin list",
+      "description": "列出插件及状态。",
+      "usage": "herdr plugin list [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--plugin <ID>",
+          "仅查看指定插件。"
+        ],
+        [
+          "--json",
+          "输出 JSON，而不是默认的人类可读格式。具体结构以本命令为准，不假定都有 result 外层。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-list",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin config-dir",
+      "description": "输出插件用户配置目录。",
+      "usage": "herdr plugin config-dir <PLUGIN_ID>",
+      "arguments": [
+        [
+          "<PLUGIN_ID>",
+          "插件 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "并非严格只读：实现会确保相关用户目录已创建。输出目录路径文本。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-config-dir",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin action",
+      "description": "列出或调用插件动作。",
+      "usage": "herdr plugin action <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [
+        "plugin action list",
+        "plugin action invoke"
+      ],
+      "anchor": "cmd-plugin-action",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin action list",
+      "description": "列出可用插件动作。",
+      "usage": "herdr plugin action list [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--plugin <ID>",
+          "仅列出指定插件动作。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-action-list",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin action invoke",
+      "description": "调用一个插件动作。",
+      "usage": "herdr plugin action invoke <ACTION_ID> [OPTIONS]",
+      "arguments": [
+        [
+          "<ACTION_ID>",
+          "动作标识；可用 <plugin-id>.<local-action> 形式。"
+        ]
+      ],
+      "options": [
+        [
+          "--plugin <ID>",
+          "显式指定插件，避免本地动作名歧义。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "本地动作名不能自行随意添加点号层级。调用动作可能运行外部命令，以插件定义为准。"
+      ],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-action-invoke",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin log",
+      "description": "查看插件命令日志。",
+      "usage": "herdr plugin log <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [
+        "logs"
+      ],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [
+        "plugin log list"
+      ],
+      "anchor": "cmd-plugin-log",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin log list",
+      "description": "列出插件命令日志。",
+      "usage": "herdr plugin log list [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--plugin <ID>",
+          "限定插件。"
+        ],
+        [
+          "--limit <N>",
+          "最多返回的日志条数；未传时由实现采用默认上限。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-log-list",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin pane",
+      "description": "管理插件拥有的窗格。",
+      "usage": "herdr plugin pane <COMMAND>",
+      "arguments": [],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [
+        "plugin pane open",
+        "plugin pane focus",
+        "plugin pane close"
+      ],
+      "anchor": "cmd-plugin-pane",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin pane open",
+      "description": "打开插件入口对应的窗格。",
+      "usage": "herdr plugin pane open [OPTIONS]",
+      "arguments": [],
+      "options": [
+        [
+          "--plugin <ID>",
+          "插件 ID；实际解析器要求提供。"
+        ],
+        [
+          "--entrypoint <ID>",
+          "插件入口 ID；实际解析器要求提供。"
+        ],
+        [
+          "--placement <PLACEMENT>",
+          "spec 列出 overlay、split、tab、zoomed；运行时额外支持 popup，见补注。"
+        ],
+        [
+          "--workspace <ID>",
+          "目标工作区。"
+        ],
+        [
+          "--target-pane <PANE>",
+          "目标/锚点窗格。"
+        ],
+        [
+          "--direction <DIRECTION>",
+          "分割方向：right 在右侧创建，down 在下侧创建。"
+        ],
+        [
+          "--cwd <PATH>",
+          "新进程的工作目录；传入目标机器可访问的路径。"
+        ],
+        [
+          "--env <KEY=VALUE>",
+          "设置启动进程的环境变量；可重复。相同键后值覆盖前值，键不得为空。"
+        ],
+        [
+          "--focus",
+          "创建后切换焦点到新对象。"
+        ],
+        [
+          "--no-focus",
+          "创建后不改变当前焦点；不要与 --focus 同时传入。"
+        ],
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [
+        "默认 focus=true，与 workspace create / tab create / pane split 默认不抢焦点不同。",
+        "尺寸选项未列入统一 spec。布局相关组合限制仍由运行时验证；popup 示例见工作流。"
+      ],
+      "runtime_additions": [
+        [
+          "--placement popup",
+          "实际解析器支持弹出式窗格；此外 fullscreen 是 zoomed 的兼容别名。"
+        ],
+        [
+          "--width <SIZE>",
+          "弹出式窗格宽度，可用终端单元格数或百分比，例如 100、80%。"
+        ],
+        [
+          "--height <SIZE>",
+          "弹出式窗格高度，可用终端单元格数或百分比，例如 30、70%。"
+        ]
+      ],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-pane-open",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin pane focus",
+      "description": "聚焦插件窗格。",
+      "usage": "herdr plugin pane focus <PANE_ID>",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "plugin pane open/list 信息中的窗格 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-pane-focus",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    },
+    {
+      "path": "plugin pane close",
+      "description": "关闭插件窗格。",
+      "usage": "herdr plugin pane close <PANE_ID>",
+      "arguments": [
+        [
+          "<PANE_ID>",
+          "plugin pane open/list 信息中的窗格 ID。"
+        ]
+      ],
+      "options": [
+        [
+          "-h, --help",
+          "打印该命令的帮助。"
+        ]
+      ],
+      "notes": [],
+      "runtime_additions": [],
+      "aliases": [],
+      "sources": [
+        "S01",
+        "S09"
+      ],
+      "children": [],
+      "anchor": "cmd-plugin-pane-close",
+      "help_capture_status": "source-reconstructed-not-binary-executed"
+    }
+  ],
+  "sources": {
+    "S01": {
+      "title": "统一命令树、参数与帮助生成",
+      "path": "src/cli/spec.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/spec.rs#L6-L966"
+    },
+    "S02": {
+      "title": "根命令、启动选项、默认配置及快捷键",
+      "path": "src/main.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/main.rs"
+    },
+    "S03": {
+      "title": "主分发、读取参数、ID 与键名处理",
+      "path": "src/cli.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli.rs"
+    },
+    "S04": {
+      "title": "Pane 命令及实际参数解析",
+      "path": "src/cli/pane.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/pane.rs"
+    },
+    "S05": {
+      "title": "Agent 命令、等待与启动语义",
+      "path": "src/cli/agent.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/agent.rs"
+    },
+    "S06": {
+      "title": "Workspace 命令及 --group",
+      "path": "src/cli/workspace.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/workspace.rs"
+    },
+    "S07": {
+      "title": "Git worktree 命令",
+      "path": "src/cli/worktree.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/worktree.rs"
+    },
+    "S08": {
+      "title": "Tab 命令",
+      "path": "src/cli/tab.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/tab.rs"
+    },
+    "S09": {
+      "title": "插件命令、popup 与尺寸参数",
+      "path": "src/cli/plugin.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/plugin.rs"
+    },
+    "S10": {
+      "title": "--machine 路由与白名单",
+      "path": "src/cli/target.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/target.rs#L174-L301"
+    },
+    "S11": {
+      "title": "Machine 命令帮助定义",
+      "path": "src/cli/spec/machine.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/spec/machine.rs"
+    },
+    "S12": {
+      "title": "补全命令帮助定义",
+      "path": "src/cli/spec/completion.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/spec/completion.rs"
+    },
+    "S13": {
+      "title": "Server 命令及 live-handoff",
+      "path": "src/cli/server.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/server.rs"
+    },
+    "S14": {
+      "title": "API 输出与 schema",
+      "path": "src/cli/api.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/api.rs"
+    },
+    "S15": {
+      "title": "API 请求输出适配",
+      "path": "src/cli/runtime.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/runtime.rs"
+    },
+    "S16": {
+      "title": "状态命令",
+      "path": "src/cli/status.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/status.rs"
+    },
+    "S17": {
+      "title": "集成安装命令",
+      "path": "src/cli/integration.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/cli/integration.rs"
+    },
+    "S18": {
+      "title": "Agent 类型、名称与别名",
+      "path": "src/detect/mod.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/detect/mod.rs"
+    },
+    "S19": {
+      "title": "集成注册与规范名称",
+      "path": "src/integration/registry.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/integration/registry.rs"
+    },
+    "S20": {
+      "title": "实验性集成目标",
+      "path": "src/integration/mod.rs",
+      "url": "https://github.com/herdrdev/herdr/blob/v0.9.3/src/integration/mod.rs"
+    }
+  }
+}

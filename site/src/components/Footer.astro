@@ -1,0 +1,18 @@
+---
+import DefaultFooter from '@astrojs/starlight/components/Footer.astro';
+const meta=Astro.locals.starlightRoute.entry.data.fieldbook??{};
+---
+<DefaultFooter {...Astro.props}/>
+<div class="provenance" data-pagefind-ignore>
+  {meta.sourceCommit&&<p>上游固定提交：<a href={`${meta.repository}/tree/${meta.sourceCommit}`}>{meta.sourceCommit.slice(0,12)}</a> · 文档修订：<code>{meta.revision?.slice(0,12)}</code></p>}
+  <p>非官方中文整理 · Apache-2.0 · 审阅基线仅记录复核输入。</p>
+  <p id="publication-proof">发布批准以 GitHub 环境记录为准；本地预览没有发布批准。</p>
+</div>
+<script>
+  fetch(`${import.meta.env.BASE_URL.replace(/\/$/,'')}/generated/publication.json`).then(r=>r.ok?r.json():null).then(proof=>{
+    if(!proof||!/^https:\/\/github\.com\/zhangzhenxiang666\/cli-fieldbook\/actions\/runs\/\d+$/.test(proof.approvalRecord))return;
+    const p=document.querySelector('#publication-proof');if(!p)return;
+    const link=document.createElement('a');link.href=proof.approvalRecord;link.textContent='查看维护者发布审核与部署记录';p.replaceChildren(link);
+  }).catch(()=>{});
+</script>
+<style>.provenance {border-top:1px solid var(--sl-color-hairline-light);margin-top:1.5rem;padding-top:1rem;font-size:.75rem;color:var(--sl-color-gray-3);overflow-wrap:anywhere;}.provenance p {margin:.4rem 0;}</style>
