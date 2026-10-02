@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "status": "prepared",
+  "preparedBy": "Codex · source and migration audit",
+  "method": "Fixed-source structural checks and documented semantic review; no runtime certification. Publication requires the maintainer GitHub environment approval.",
+  "pages": {
+    "commands:add": {
+      "body": "da2284f46a1faa53f32484863618f01e562fb5c586a4f0f375e8d2330ccd60ed",
+      "facts": "bf39aa0dd75c9056076449e5f38df79ea5f3c0886aaa371d213aac7e470728f7",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "commands:experimental_install": {
+      "body": "38da794ffd15121c5ec3854b20d81e3c4231801c4058c3ee9d02b6f4f15c8a6a",
+      "facts": "ce33ddf4cde0b6d6bdbbecddf7bb0e21ce727a0d7b525c8cbe7bdb3353755467",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "commands:experimental_sync": {
+      "body": "ee6fac3d500c7109d5508054bd0ea1b5ec46c31baeb74798436edbef287631e2",
+      "facts": "c781ad69761693a8a9c2e5efdfd70676b3e91c693a190198f5bc3000c973d16e",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "commands:find": {
+      "body": "81286040ac945ca6f96ba1ef2818aad05ca65ef0f5d4c348626bfe456dd3743f",
+      "facts": "53db3e1ae925ae1b1c68a8ef3d939c4ed6a99f85a7be597c31d1839232e732ff",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "commands:": {
+      "body": "2dab47543482a949b901f9d2aac4ad6270901590433ab86a24fa0d411335529b",
+      "facts": "6b17c0da5c4bb47966a8958a8da82ae62360bac545fcfbaabbca5f6a376e7e4f",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "commands:init": {
+      "body": "5101946674f559bf25ac10ed1ee87352c964f936b98435976f798420e9fff033",
+      "facts": "384dac0da7526d37429acd43ea6601ff388026f017ae23571a3ef2ee749dd947",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "commands:list": {
+      "body": "bebea0a4397d2098d253483a69199149753e8f257bb3a2ed3b1b810651c9f502",
+      "facts": "1a7acd9a0369f67355b6665e295e7edb402069d0b32f7cb45d5a8c8e890afef5",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "commands:remove": {
+      "body": "6dc7c6b777ea1d291afff63745905ef3404c98adb9add0e802ef5c87929b4d6e",
+      "facts": "6a2ff9afc33745e9070316a0e254f76badf5ec41ec6f91c79411c120f907983f",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "commands:update": {
+      "body": "d711b02af2e03bef3856ea06ff0e2e404ca63efb084116d8baea3a2705abb3aa",
+      "facts": "ae8a7c4911bc06f3d205668e8878284bf31aa03ad2425d38d7cd6a700e1435af",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "commands:use": {
+      "body": "7e3cd4d70a299f79606c1172742d10e2f876a9abda164435b71bef6ce1ecd4b9",
+      "facts": "b700aed582c37efa95f677fef6803c48c251904e6a45b54cb0d9c482671bf4c5",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "concepts:agent-skills": {
+      "body": "5a8c56ce540ab8459dfa4be74c8818e555df7c5bfcaa9fc79cafed960f06260d",
+      "facts": "063ccc856403043b06cd1a71a62b6e511e2d5a291001347c568938340719db19",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "concepts:agents": {
+      "body": "0ecc5e0a8bf9282c272c7e12a676bacc0a63a202cf86b6ba1c322a717e8f7e38",
+      "facts": "e26de630b08be060a4d6d902be5b8fe5f1d1b17cdc9f3caaeace92655908a15a",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "concepts:scopes": {
+      "body": "7c7324e8ef2b336604b7fb81966294e70db2e7f68f1d1e539276c1e9f10030c1",
+      "facts": "ddf58c3164a487168decb61e558405c936172aca68b1726405478268eca0a1a5",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "concepts:skills-lock": {
+      "body": "d741fd320615c45062e39261332eb02caab6bee4d698c8e1fbe956e03c1a39d7",
+      "facts": "812abb21aca717fb2a3d5f95ef88ae2fea09342a45a240bb972c6c37d0b8084c",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "concepts:source-formats": {
+      "body": "5d6d970fc3a263e5a5dc09ca1e49c3e03caf2a74fa61481cbf0b6deb9287d236",
+      "facts": "5cd107d65c3640f373355c9d6222d48acd04bfb2bd6ebc674b3c8282ea17b567",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "concepts:telemetry": {
+      "body": "21f15e00796b2eab3fc342b708796da336fb68fa8acca6357aa75618bda7de4f",
+      "facts": "42261dd736edc9ca0c4fe84988e0633e8b7b57e85e4a520f1bf9ffb99d8634e8",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference:sources": {
+      "body": "bff551c444193c35b70bcd66e456254282e6fef6e2dd922e916fae76527d7567",
+      "facts": "b5beec345ef50403d40a6f0beb2594cb2df8d3264f5783c461a986aace07e97a",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "workflows:author-and-init": {
+      "body": "8fd3ff965e87a493842f1cdc84de80e2c3a76503b08696fb1b85795bc059532a",
+      "facts": "c1bddaee70b8d01b34f3ef15ec2ce401229a0dbedf492fb0853c0ff496c2d5f5",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "0f857fbecd50bb317d52da8eabd250cf3e4e8cbade816736b2259b3fd0f943a7"
+    },
+    "workflows:discover-skills": {
+      "body": "6bc81a4e340e0f5f6f98c82dcda7d7ee63f278487139a1b94417ba489c354657",
+      "facts": "d8dcaa71ade03b0a005b1fb0dc173fbf2fc206203a51d129ba2344d730cab615",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "b91895f39ee3541c735f91be927956cf337f31d6310d2643383451133b7e5a2e"
+    },
+    "workflows:install-for-claude": {
+      "body": "e7cf49588851cdd0de90c07ef0b935efb085556adb45663e6dd9f56e258cfc1a",
+      "facts": "bae23c6b57a887031f1df99eb29e997984de1780cfbfb9e7a98a06a55f0ddbc7",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "dacf2396637f8591d597362fc9572d7eaf065d4752692ba564b46bde5e821503"
+    },
+    "workflows:team-lockfile": {
+      "body": "3bc0f93be6903a32906d001b62456d19e76958fd36ae8456bb4e79c2eb82e536",
+      "facts": "aee0b6bb5856843c3730cf89ba08b6cb4799a17e3071689f1a2d8187276bc2ea",
+      "sources": "36203e8a1d345fffff9b448fbb1f5ea1913b14c5e49a7de922364735738744de",
+      "dependencies": "478bfc722df66607348a90d1a12ef9b2b1009da764198ed59f6c19b5e953d630"
+    }
+  }
+}
