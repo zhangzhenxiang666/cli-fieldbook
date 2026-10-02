@@ -1,0 +1,238 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/astral-sh/uv",
+  "upstreamVersion": "0.12.22",
+  "ref": "0.12.22",
+  "commit": "70fe1196a546e49148a73b1c592b2f74c33af80e",
+  "adapter": "uv-source-v1",
+  "normalization": 1,
+  "profile": {
+    "id": "source-default",
+    "scope": "62 public nodes, 16 hidden nodes (command tree enumerated from crates/uv-cli/src/lib.rs)"
+  },
+  "evidence": [
+    {
+      "id": "source:crates/uv-cache/src/cli.rs",
+      "path": "upstream/source-extracts/crates/uv-cache/src/cli.rs.txt",
+      "sha256": "8a69851e1e51a86b424cf85129f61973d0b076c246f04364004b8b82c728251d",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/crates/uv-cache/src/cli.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T14:05:00Z"
+    },
+    {
+      "id": "source:crates/uv-cli/src/compat.rs",
+      "path": "upstream/source-extracts/crates/uv-cli/src/compat.rs.txt",
+      "sha256": "2a4d1d33fabc00bf7b3f8c0f8c2b022f03fec7d2c6de248324c41bae6b53db20",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/crates/uv-cli/src/compat.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:crates/uv-cli/src/lib.rs",
+      "path": "upstream/source-extracts/crates/uv-cli/src/lib.rs.txt",
+      "sha256": "d5493712483dc9c36023cf806937ef0bb956efe4fc30661064d6decd73a26b67",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/crates/uv-cli/src/lib.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:crates/uv-cli/src/options.rs",
+      "path": "upstream/source-extracts/crates/uv-cli/src/options.rs.txt",
+      "sha256": "d5c47db7a2567d6e7842d2a9cb03f6e4fcb1dbfbd234eb3dc4f3aab2cbb0c6c8",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/crates/uv-cli/src/options.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:crates/uv-cli/src/version.rs",
+      "path": "upstream/source-extracts/crates/uv-cli/src/version.rs.txt",
+      "sha256": "81220c281d39747a3f5ee06b6959fe84848f8224850694653a43a160b68c75da",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/crates/uv-cli/src/version.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/cache.md",
+      "path": "upstream/source-extracts/docs/concepts/cache.md.txt",
+      "sha256": "9800abbe382196c27d15c2ac4d5df950480ec2ec064f5fccb4429a0579c498e0",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/cache.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/configuration-files.md",
+      "path": "upstream/source-extracts/docs/concepts/configuration-files.md.txt",
+      "sha256": "e026002bb6cdb2c2c575fca5ceb29b82981874016d67162baf27693c0e335e91",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/configuration-files.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/indexes.md",
+      "path": "upstream/source-extracts/docs/concepts/indexes.md.txt",
+      "sha256": "395d010ab8de68a613f513e2d1d33e51dfc59014bb0a7214c375ad4f94a82658",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/indexes.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/projects/dependencies.md",
+      "path": "upstream/source-extracts/docs/concepts/projects/dependencies.md.txt",
+      "sha256": "abd68b302b56e9e23e421099851d3531e3e40bd7ae8eb10b4e9e0281c9d68364",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/projects/dependencies.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/projects/index.md",
+      "path": "upstream/source-extracts/docs/concepts/projects/index.md.txt",
+      "sha256": "1f479134613d6051b7ef7cf9b6f56e6a49d201e3d676d9a7b505a71e44a2686c",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/projects/index.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/projects/init.md",
+      "path": "upstream/source-extracts/docs/concepts/projects/init.md.txt",
+      "sha256": "bed2f55f83b375bcb76bb3a86440150ca439d6aa8a25f22c105402e5ac6daa14",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/projects/init.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/projects/layout.md",
+      "path": "upstream/source-extracts/docs/concepts/projects/layout.md.txt",
+      "sha256": "39a4e523e58410f02fd0a6e0cb31d59bf17dd08097f5457aded8b6b7c7ec5b08",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/projects/layout.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/projects/run.md",
+      "path": "upstream/source-extracts/docs/concepts/projects/run.md.txt",
+      "sha256": "b9c64e077a69916da739204486e6d47505b3919ac5581072a3f41d7e9da24a8e",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/projects/run.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/projects/sync.md",
+      "path": "upstream/source-extracts/docs/concepts/projects/sync.md.txt",
+      "sha256": "5c6a534a81111800ff37455f8c547bbb67f304b9d0cb02543c7185266dbef218",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/projects/sync.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/projects/workspaces.md",
+      "path": "upstream/source-extracts/docs/concepts/projects/workspaces.md.txt",
+      "sha256": "0c3fb5bc8f45b59619c80b4d331a9ab20d39319ed1d2bde71797ba482700764a",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/projects/workspaces.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/python-versions.md",
+      "path": "upstream/source-extracts/docs/concepts/python-versions.md.txt",
+      "sha256": "4f6eaa03755b44dfb42e90a13c3cac37b6286cce4c4ac8bdb23649e2e65706c4",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/python-versions.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/resolution.md",
+      "path": "upstream/source-extracts/docs/concepts/resolution.md.txt",
+      "sha256": "6f272bae6e2634520f93dd34bbffd8388832ddb3b78be0b762cac5bc4bdf3407",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/resolution.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/concepts/tools.md",
+      "path": "upstream/source-extracts/docs/concepts/tools.md.txt",
+      "sha256": "144bacf899273ef35251a4488a1f083c16d4d9ae12efd62c6616ab44ad7eff5f",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/concepts/tools.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/pip/compatibility.md",
+      "path": "upstream/source-extracts/docs/pip/compatibility.md.txt",
+      "sha256": "ec7be5faec521286e3c721c21e2657ad1d2708c379a41a538a232e6d9965eb21",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/pip/compatibility.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/pip/compile.md",
+      "path": "upstream/source-extracts/docs/pip/compile.md.txt",
+      "sha256": "bea0c8dcc00d12f1895b2ee3e217c321c494d84aa71df97adb1d25880fec3d60",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/pip/compile.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/pip/dependencies.md",
+      "path": "upstream/source-extracts/docs/pip/dependencies.md.txt",
+      "sha256": "20031acac05c0bf54127bc9ff3cc1c4e13c7653e990799d573258fecf542336c",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/pip/dependencies.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/pip/environments.md",
+      "path": "upstream/source-extracts/docs/pip/environments.md.txt",
+      "sha256": "1ae64cb659cc39e5e96beafc2dc749e2f64acf2a064173f11bedfa55cf0d66c5",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/pip/environments.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/pip/index.md",
+      "path": "upstream/source-extracts/docs/pip/index.md.txt",
+      "sha256": "d8402b8ea57ee63c0c66c2f2a83df79f834c440ce1124f4694db735c435bde14",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/pip/index.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/pip/inspection.md",
+      "path": "upstream/source-extracts/docs/pip/inspection.md.txt",
+      "sha256": "bb0c0b59b9847a31eb3f967c574ae8470e671b4373aaa378f87e97707ba3f53b",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/pip/inspection.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:docs/pip/packages.md",
+      "path": "upstream/source-extracts/docs/pip/packages.md.txt",
+      "sha256": "49a163db73e14708eff30ab9bcc55d6e4efc458e673e5535564c27d8b3e9c4d9",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/docs/pip/packages.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:LICENSE-APACHE",
+      "path": "upstream/source-extracts/LICENSE-APACHE.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/LICENSE-APACHE",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    },
+    {
+      "id": "source:LICENSE-MIT",
+      "path": "upstream/source-extracts/LICENSE-MIT.txt",
+      "sha256": "860e3d7a86b84e6a7012c7a635fc64df475cebc6cce34dfeb73a5982ec58176c",
+      "url": "https://raw.githubusercontent.com/astral-sh/uv/70fe1196a546e49148a73b1c592b2f74c33af80e/LICENSE-MIT",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-02T13:41:39Z"
+    }
+  ],
+  "limitations": [
+    "未采集目标二进制原始帮助；帮助内容自固定提交源码重建，未建 raw-help。",
+    "示例和工作流未实测。",
+    "默认值仅结构化记录 clap 声明值；来自 uv-settings 合并链的默认未逐项抽取。",
+    "命令清单自 crates/uv-cli/src/lib.rs 的 clap 定义枚举；未运行二进制验证。",
+    "协议要求别名在版本内唯一：python list 与 tool list 的 ls 别名仅登记于 pip list，python update-shell 的 ensurepath 别名仅登记于 tool update-shell；其余命令页正文说明各自别名。"
+  ]
+}
