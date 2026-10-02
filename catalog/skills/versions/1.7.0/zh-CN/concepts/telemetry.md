@@ -4,7 +4,7 @@ title: 遥测与环境变量
 
 ## 遥测
 
-CLI 向 `https://add-skill.vercel.sh/t` 发送匿名使用数据（install/remove/update/find/experimental_sync 事件），并携带 CLI 版本、检测到的 Agent 名与 CI 标志。GitHub 仓库与技能标识仅在 GitHub 确认仓库公开时发送；其他远程来源可能包含来源与技能标识。安装时还会向 `https://add-skill.vercel.sh/audit` 查询技能安全审计评分（3 秒超时，失败不阻塞安装）。
+CLI 向 `https://add-skill.vercel.sh/t` 发送遥测数据（install/remove/update/find/experimental_sync 事件），并携带 CLI 版本、检测到的 Agent 名与 CI 标志。这些数据并非完全匿名：GitHub 仓库与技能标识仅在 GitHub 确认仓库公开时发送，其他远程来源可能包含来源与技能标识，非交互 `skills find` 的查询词也会原样上报。安装时还会向 `https://add-skill.vercel.sh/audit` 查询技能安全审计评分（3 秒超时，失败不阻塞安装）。
 
 设置 `DISABLE_TELEMETRY=1` 或 `DO_NOT_TRACK=1` 可完全关闭遥测与审计查询。注意：CI 环境变量（`CI`、`GITHUB_ACTIONS` 等）**不禁用**遥测，只在事件上附加 `ci=1` 标志。
 
@@ -13,8 +13,8 @@ CLI 向 `https://add-skill.vercel.sh/t` 发送匿名使用数据（install/remov
 | 变量 | 作用 |
 | --- | --- |
 | `INSTALL_INTERNAL_SKILLS` | 设为 `1` 或 `true` 时显示并允许安装 `internal: true` 的内部技能 |
-| `DISABLE_TELEMETRY` | 关闭匿名遥测 |
-| `DO_NOT_TRACK` | 关闭匿名遥测的另一种写法 |
+| `DISABLE_TELEMETRY` | 关闭遥测 |
+| `DO_NOT_TRACK` | 关闭遥测的另一种写法 |
 | `GITHUB_TOKEN` | GitHub API 访问令牌（私有仓库下载、更新检查） |
 | `GH_TOKEN` | `GITHUB_TOKEN` 未设置时的回退令牌 |
 | `SKILLS_API_URL` | 覆盖 `skills find` 的搜索 API 地址（默认 `https://skills.sh`） |

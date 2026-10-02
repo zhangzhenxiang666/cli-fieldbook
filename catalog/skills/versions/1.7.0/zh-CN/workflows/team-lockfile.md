@@ -22,7 +22,7 @@ uses:
 npx skills experimental_install
 ```
 
-按来源分组重装锁文件中的全部远程技能，始终跳过确认。`node_modules` 来源的技能自动转入下一步的同步流程。
+按来源分组重装锁文件中的全部远程技能，始终跳过确认。锁文件中的 `node_modules` 来源技能也在此命令内自动完成同步（内部以跳过确认的方式调用同步逻辑，见 `src/install.ts`），无需再手动执行第 2 步。
 
 ### 2. 同步 npm 包自带的技能
 
@@ -30,7 +30,7 @@ npx skills experimental_install
 npx skills experimental_sync
 ```
 
-把已安装 npm 包内声明的技能链接到 Agent 目录；`-y` 跳过确认。
+扫描 `node_modules` 中的 SKILL.md，与锁文件哈希比对后安装新出现或内容已变化的技能并写回锁文件；`-y` 跳过确认。第 1 步已覆盖锁文件内的 `node_modules` 技能，此步主要用于其后新增或内容发生变化的 npm 依赖。
 
 ### 3. 验证
 
@@ -48,4 +48,4 @@ npx skills ls
 
 ## 完成条件
 
-第 3 步列表覆盖锁文件中的全部技能名即恢复完成。该流程未实测，依据 v1.7.0 源码（`src/install.ts`、`src/local-lock.ts`）。
+第 3 步列表覆盖锁文件中的全部技能名即恢复完成。该流程未实测，依据 v1.7.0 源码（`src/install.ts`、`src/sync.ts`、`src/local-lock.ts`）。
