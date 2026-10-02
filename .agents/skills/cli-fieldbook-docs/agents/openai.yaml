@@ -1,0 +1,4 @@
+interface:
+  display_name: "令册文档维护"
+  short_description: "依据固定源码与官方文档维护令册的命令参考、工作流及审阅证据"
+  default_prompt: "使用 $cli-fieldbook-docs，结合目标版本源码与官方文档维护令册内容，记录依据、验证边界并完成检查。"

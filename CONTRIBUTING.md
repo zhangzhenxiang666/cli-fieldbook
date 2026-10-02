@@ -1,5 +1,11 @@
 # 贡献指南
 
+## AI 协作
+
+仓库提供 [cli-fieldbook-docs skill](.agents/skills/cli-fieldbook-docs/SKILL.md)，整理来源调研、内容协议、工作流编写及审阅边界。可直接调用 `$cli-fieldbook-docs`；不支持 skill 发现的 Agent 可从 `AGENTS.md` 读取该入口。它引用现有 schema、设计决策和写作规范，协议更新时同步维护入口及相关引用。
+
+有目标版本源码时，优先结合命令定义、参数解析、配置默认值及实际执行分支生成帮助文档和工作流，同时阅读官方 CLI、概念、专题和教程文档。资料发生差异时注明固定版本、依据和验证限制。
+
 ## 修正译文
 
 编辑 `catalog/<tool>/versions/<version>/zh-CN/` 中对应 Markdown，保持命令、选项、函数和操作符的原始拼写。说明依据和未验证事项，然后运行：
