@@ -1,0 +1,19 @@
+Start an application (initiates a deployment).
+
+Usage:
+  coolify app start <uuid> [flags]
+
+Aliases:
+  start, deploy
+
+Flags:
+      --force            Force rebuild
+  -h, --help             help for start
+      --instant-deploy   Instant deploy (skip queuing)
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

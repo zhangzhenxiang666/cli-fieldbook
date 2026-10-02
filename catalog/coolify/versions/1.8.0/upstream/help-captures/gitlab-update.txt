@@ -1,0 +1,25 @@
+Update an existing GitLab App integration. Provide the app ID or UUID and the fields you want to update.
+
+Usage:
+  coolify gitlab update <app_id_or_uuid> [flags]
+
+Flags:
+      --api-url string         GitLab API URL
+      --client-id string       GitLab OAuth Application ID
+      --client-secret string   GitLab OAuth Application Secret
+      --custom-port int        Custom SSH port
+      --custom-user string     Custom SSH user
+      --group-name string      Optional comma-separated group filter
+  -h, --help                   help for update
+      --html-url string        GitLab instance URL
+      --name string            GitLab App name
+      --redirect-uri string    OAuth redirect URI
+      --system-wide            Is this app system-wide
+      --webhook-token string   Webhook secret token
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

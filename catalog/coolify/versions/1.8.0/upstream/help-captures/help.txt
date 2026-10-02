@@ -1,0 +1,15 @@
+Help provides help for any command in the application.
+Simply type coolify help [path to command] for full details.
+
+Usage:
+  coolify help [command] [flags]
+
+Flags:
+  -h, --help   help for help
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

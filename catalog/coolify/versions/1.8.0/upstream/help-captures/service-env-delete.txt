@@ -1,0 +1,15 @@
+Delete an environment variable from a service. First UUID is the service, second is the specific environment variable to delete.
+
+Usage:
+  coolify service env delete <service_uuid> <env_uuid> [flags]
+
+Flags:
+      --force   Skip confirmation prompt
+  -h, --help    help for delete
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

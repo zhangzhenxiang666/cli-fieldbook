@@ -1,0 +1,20 @@
+Update docker cleanup settings
+
+Usage:
+  coolify server docker-cleanup update <server_uuid> [flags]
+
+Flags:
+      --delete-unused-networks    Delete unused networks
+      --delete-unused-volumes     Delete unused volumes
+      --disable-image-retention   Disable application image retention
+      --force                     Force cleanup
+      --frequency string          Cron frequency
+  -h, --help                      help for update
+      --threshold int             Disk usage threshold percent
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

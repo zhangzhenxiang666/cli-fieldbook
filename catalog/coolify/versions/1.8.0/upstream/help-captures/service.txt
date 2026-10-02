@@ -1,0 +1,39 @@
+Manage Coolify one-click services (databases, Redis, PostgreSQL, etc.).
+
+Usage:
+  coolify service [command]
+
+Aliases:
+  service, services, svc
+
+Available Commands:
+  application        Manage applications within a service
+  clone              Clone a service to a destination
+  create             Create a new one-click service
+  database           Manage databases within a service
+  delete             Delete a service
+  env                Manage service environment variables
+  execute-task       Execute a service scheduled task now
+  get                Get service details
+  list               List all services
+  logs               Get logs for a service sub-resource
+  move               Move a service to another environment
+  restart            Restart a service
+  run-storage-backup Run a service volume backup schedule now
+  start              Start a service
+  stop               Stop a service
+  storage            Manage service storages
+  tag                Manage service tags
+  task               Manage service scheduled tasks
+
+Flags:
+  -h, --help   help for service
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)
+
+Use "coolify service [command] --help" for more information about a command.

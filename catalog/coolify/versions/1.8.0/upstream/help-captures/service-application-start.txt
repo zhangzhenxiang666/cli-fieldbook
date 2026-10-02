@@ -1,0 +1,16 @@
+Start or redeploy an application in a service
+
+Usage:
+  coolify service application start <service-uuid> <application-uuid> [flags]
+
+Flags:
+      --force    Rebuild the application
+  -h, --help     help for start
+      --latest   Pull the latest image
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

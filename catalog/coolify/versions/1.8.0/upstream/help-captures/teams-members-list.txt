@@ -1,0 +1,14 @@
+List members of a specific team by ID, or list members of the current team if no ID is provided.
+
+Usage:
+  coolify teams members list [team_id] [flags]
+
+Flags:
+  -h, --help   help for list
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

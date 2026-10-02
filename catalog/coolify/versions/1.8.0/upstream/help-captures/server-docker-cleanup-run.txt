@@ -1,0 +1,14 @@
+Run docker cleanup now
+
+Usage:
+  coolify server docker-cleanup run <server_uuid> [flags]
+
+Flags:
+  -h, --help   help for run
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

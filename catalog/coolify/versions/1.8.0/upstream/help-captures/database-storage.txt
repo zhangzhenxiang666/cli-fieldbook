@@ -1,0 +1,28 @@
+List and manage persistent volumes and file storages for databases.
+
+Usage:
+  coolify database storage [command]
+
+Aliases:
+  storage, storages
+
+Available Commands:
+  create        Create a storage for a database
+  delete        Delete a storage from a database
+  delete-backup Delete database storage volume backup schedule
+  list          List all storages for a database
+  run-backup    Run database storage volume backup now
+  set-backup    Create or replace database storage volume backup schedule
+  update        Update a storage for a database
+
+Flags:
+  -h, --help   help for storage
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)
+
+Use "coolify database storage [command] --help" for more information about a command.

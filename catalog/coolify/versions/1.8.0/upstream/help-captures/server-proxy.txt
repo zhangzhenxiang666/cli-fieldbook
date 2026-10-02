@@ -1,0 +1,22 @@
+Manage server reverse proxy
+
+Usage:
+  coolify server proxy [command]
+
+Available Commands:
+  get         Get proxy settings
+  restart     Restart proxy
+  set-config  Save raw proxy configuration
+  update      Update proxy settings
+
+Flags:
+  -h, --help   help for proxy
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)
+
+Use "coolify server proxy [command] --help" for more information about a command.

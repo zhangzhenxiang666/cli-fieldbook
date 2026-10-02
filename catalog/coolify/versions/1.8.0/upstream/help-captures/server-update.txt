@@ -1,0 +1,33 @@
+Update server configuration by UUID. Only specified fields are updated.
+
+Example:
+  coolify server update <uuid> --name "prod-1" --ip 10.0.0.5 --port 22
+
+Usage:
+  coolify server update <uuid> [flags]
+
+Flags:
+      --concurrent-builds int                   Max concurrent builds
+      --connection-timeout int                  SSH connection timeout in seconds
+      --deployment-queue-limit int              Deployment queue limit
+      --description string                      Server description
+      --disk-usage-check-frequency string       Disk usage check frequency (cron)
+      --disk-usage-notification-threshold int   Disk usage notification threshold percent
+      --dynamic-timeout int                     Dynamic timeout
+  -h, --help                                    help for update
+      --instant-validate                        Validate server after update
+      --ip string                               Server IP address
+      --is-build-server                         Mark as build server
+      --is-terminal-enabled                     Enable terminal access
+      --name string                             Server name
+      --port int                                SSH port (default 22)
+      --private-key-uuid string                 Private key UUID
+      --proxy-type string                       Proxy type (e.g. TRAEFIK, CADDY, NGINX)
+      --user string                             SSH user
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

@@ -1,0 +1,5 @@
+schema: 1
+upstream:
+  version: '1.8.0'
+  ref: v1.8.0
+publication: draft

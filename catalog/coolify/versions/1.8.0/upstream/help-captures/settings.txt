@@ -1,0 +1,19 @@
+Manage instance settings
+
+Usage:
+  coolify settings [command]
+
+Available Commands:
+  email       Manage instance-wide SMTP and Resend settings
+
+Flags:
+  -h, --help   help for settings
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)
+
+Use "coolify settings [command] --help" for more information about a command.

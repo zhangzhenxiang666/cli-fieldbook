@@ -1,0 +1,30 @@
+Create a new GitLab App (OAuth) source. This allows deploying private repositories from GitLab.com or self-hosted GitLab.
+
+Required flags: --name, --html-url
+
+Example:
+  coolify gitlab create --name "My GitLab" --html-url "https://gitlab.com" --client-id "..." --client-secret "..."
+
+Usage:
+  coolify gitlab create [flags]
+
+Flags:
+      --api-url string         GitLab API URL (defaults to {html-url}/api/v4)
+      --client-id string       GitLab OAuth Application ID
+      --client-secret string   GitLab OAuth Application Secret
+      --custom-port int        Custom SSH port (default: 22)
+      --custom-user string     Custom SSH user (default: git)
+      --group-name string      Optional comma-separated group filter
+  -h, --help                   help for create
+      --html-url string        GitLab instance URL (required, e.g. https://gitlab.com)
+      --name string            GitLab App name (required)
+      --redirect-uri string    OAuth redirect URI registered in GitLab
+      --system-wide            Make this app system-wide (non-cloud instances only)
+      --webhook-token string   Webhook secret token (auto-generated when omitted)
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

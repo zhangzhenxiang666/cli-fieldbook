@@ -1,0 +1,18 @@
+Add a private key
+
+Usage:
+  coolify private-key add <key_name> <private_key_or_file> [flags]
+
+Examples:
+add mykey ~/.ssh/id_rsa
+
+Flags:
+      --description string   Private key description
+  -h, --help                 help for add
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

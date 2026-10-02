@@ -1,0 +1,18 @@
+Update proxy settings
+
+Usage:
+  coolify server proxy update <server_uuid> [flags]
+
+Flags:
+      --generate-exact-labels   Generate exact labels
+  -h, --help                    help for update
+      --proxy-type string       Proxy type (e.g. TRAEFIK)
+      --redirect-enabled        Enable proxy redirect (default true)
+      --redirect-url string     Redirect URL
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

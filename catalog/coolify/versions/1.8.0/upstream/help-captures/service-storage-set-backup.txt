@@ -1,0 +1,27 @@
+Create or replace service storage volume backup schedule
+
+Usage:
+  coolify service storage set-backup <service_uuid> <storage_uuid> [flags]
+
+Flags:
+      --disable-local-backup                  Disable local backup retention
+      --enabled                               Enable the schedule (default true)
+      --frequency string                      Cron frequency (required)
+  -h, --help                                  help for set-backup
+      --retention-amount-locally int          Local retention count (default 7)
+      --retention-amount-s3 int               S3 retention count (default 7)
+      --retention-days-locally int            Local retention days
+      --retention-days-s3 int                 S3 retention days
+      --retention-max-storage-locally float   Local max storage
+      --retention-max-storage-s3 float        S3 max storage
+      --s3-storage-uuid string                S3 storage UUID when --save-s3 is set
+      --save-s3                               Also save backups to S3
+      --stop-during-backup                    Stop resource during backup
+      --timeout int                           Backup timeout seconds (default 3600)
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

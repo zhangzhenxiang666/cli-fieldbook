@@ -1,0 +1,84 @@
+Create a new application from a private git repository using GitHub App authentication.
+
+Use 'coolify github list' to find your GitHub App UUID.
+Use 'coolify github repos <app-uuid>' to list accessible repositories.
+
+Examples:
+  coolify app create github --server-uuid <uuid> --project-uuid <uuid> --environment-name production \
+    --github-app-uuid <uuid> --git-repository "owner/repo" --git-branch main \
+    --build-pack nixpacks --ports-exposes 3000
+
+	  coolify app create github --server-uuid <uuid> --project-uuid <uuid> --environment-name production \
+	    --github-app-uuid <uuid> --git-repository "owner/repo" --git-branch main \
+	    --build-pack dockerfile --ports-exposes 8080 --instant-deploy
+
+	  coolify app create github --server-uuid <uuid> --project-uuid <uuid> --environment-name production \
+	    --github-app-uuid <uuid> --git-repository "owner/repo" --git-branch main \
+	    --build-pack dockercompose --ports-exposes 4000 --compose-domain "api=https://api.example.com"
+
+Usage:
+  coolify app create github [flags]
+
+Flags:
+      --base-directory string                  Base directory for the application
+      --build-command string                   Custom build command
+      --build-pack string                      Build pack: nixpacks, static, dockerfile, dockercompose (required)
+      --compose-domain stringArray             Docker Compose service domain in <service>=<url>[,<url>] format (repeatable)
+      --custom-internal-name string            Custom internal hostname
+      --description string                     Application description
+      --destination-uuid string                Destination UUID if server has multiple destinations
+      --disable-build-cache                    Disable the build cache
+      --docker-images-to-keep int              Number of Docker images to retain
+      --dockerfile-target-build string         Dockerfile target build stage
+      --domains string                         Domain(s) for the application
+      --environment-name string                Environment name
+      --environment-uuid string                Environment UUID
+      --git-branch string                      Git branch (required)
+      --git-commit-sha string                  Specific commit SHA to deploy
+      --git-repository string                  Git repository in format 'owner/repo' (required)
+      --github-app-uuid string                 GitHub App UUID (required)
+      --gpu-count string                       GPU count
+      --gpu-device-ids string                  GPU device IDs
+      --gpu-driver string                      GPU driver
+      --gpu-options string                     GPU options
+      --health-check-enabled                   Enable health checks
+      --health-check-path string               Health check path
+  -h, --help                                   help for github
+      --include-source-commit-in-build         Include the source commit in the build
+      --inject-build-args-to-dockerfile        Inject build arguments into the Dockerfile
+      --install-command string                 Custom install command
+      --instant-deploy                         Deploy immediately after creation
+      --is-consistent-container-name-enabled   Use consistent container names
+      --is-env-sorting-enabled                 Sort environment variables
+      --is-git-lfs-enabled                     Enable Git LFS
+      --is-git-shallow-clone-enabled           Use a shallow Git clone
+      --is-git-submodules-enabled              Clone Git submodules
+      --is-gpu-enabled                         Enable GPU
+      --is-gzip-enabled                        Enable gzip compression
+      --is-log-drain-enabled                   Enable application log drain
+      --is-pr-deployments-public-enabled       Make pull request deployments public
+      --is-preview-deployments-enabled         Enable preview deployments
+      --is-raw-compose-deployment-enabled      Deploy the raw Docker Compose definition
+      --is-stripprefix-enabled                 Enable path prefix stripping
+      --limits-cpus string                     CPU limit
+      --limits-memory string                   Memory limit
+      --max-restart-count int                  Maximum container restart count
+      --name string                            Application name
+      --ports-exposes string                   Exposed ports, e.g., '3000' or '3000,8080' (required)
+      --ports-mappings string                  Port mappings (host:container)
+      --preview-url-template string            Preview URL template
+      --project-uuid string                    Project UUID (required)
+      --publish-directory string               Publish directory for static builds
+      --server-uuid string                     Server UUID (required)
+      --start-command string                   Custom start command
+      --stop-grace-period int                  Container stop grace period in seconds
+      --tag stringArray                        Tag to assign to the application (repeatable)
+      --tags strings                           Tags to assign to the application
+      --use-build-secrets                      Use Docker Build Secrets for build-time variables
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

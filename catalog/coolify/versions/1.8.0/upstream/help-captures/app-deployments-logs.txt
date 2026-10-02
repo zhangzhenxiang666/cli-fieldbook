@@ -1,0 +1,22 @@
+Retrieve deployment logs for a specific application or deployment.
+
+If only app-uuid is provided, retrieves logs from the latest deployment.
+If deployment-uuid is also provided, retrieves logs for that specific deployment.
+
+Use --follow to continuously stream new logs.
+
+Usage:
+  coolify app deployments logs <app-uuid> [deployment-uuid] [flags]
+
+Flags:
+      --debuglogs   Show debug logs (includes hidden commands and internal operations)
+  -f, --follow      Follow log output (like tail -f)
+  -h, --help        help for logs
+  -n, --lines int   Number of log lines to display (0 = all)
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

@@ -1,0 +1,27 @@
+List and manage environment variables for applications. All commands require the application UUID first to establish context.
+
+Usage:
+  coolify app env [command]
+
+Aliases:
+  env, envs, environment
+
+Available Commands:
+  create      Create an environment variable for an application
+  delete      Delete an environment variable
+  get         Get environment variable details
+  list        List all environment variables for an application
+  sync        Sync environment variables from a .env file
+  update      Update an environment variable
+
+Flags:
+  -h, --help   help for env
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)
+
+Use "coolify app env [command] --help" for more information about a command.

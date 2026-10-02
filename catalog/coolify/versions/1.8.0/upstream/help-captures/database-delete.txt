@@ -1,0 +1,18 @@
+Delete a database and optionally clean up its configurations, volumes, and networks.
+
+Usage:
+  coolify database delete <uuid> [flags]
+
+Flags:
+      --delete-configurations       Delete configurations (default true)
+      --delete-connected-networks   Delete connected networks (default true)
+      --delete-volumes              Delete volumes (default true)
+      --docker-cleanup              Run docker cleanup (default true)
+  -h, --help                        help for delete
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)

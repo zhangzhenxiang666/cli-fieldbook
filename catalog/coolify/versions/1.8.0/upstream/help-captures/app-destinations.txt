@@ -1,0 +1,24 @@
+Manage application additional destinations
+
+Usage:
+  coolify app destinations [command]
+
+Aliases:
+  destinations, destination
+
+Available Commands:
+  add         Attach a destination
+  list        List application destinations
+  remove      Detach a destination
+
+Flags:
+  -h, --help   help for destinations
+
+Global Flags:
+      --context string   Use specific context by name
+      --debug            Debug mode
+      --format string    Format output (table|json|pretty) (default "table")
+  -s, --show-sensitive   Show sensitive information
+      --token string     Token for authentication (override context token)
+
+Use "coolify app destinations [command] --help" for more information about a command.

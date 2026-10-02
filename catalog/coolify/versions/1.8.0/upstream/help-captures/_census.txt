@@ -1,0 +1,330 @@
+<root>	Version: 1.8.0
+app	
+app clone	
+app create	
+app create deploy-key	
+app create dockerfile	
+app create dockerimage	
+app create github	
+app create public	
+app delete	
+app deployments	
+app deployments list	
+app deployments logs	
+app destinations	
+app destinations add	
+app destinations list	
+app destinations remove	
+app env	
+app env create	
+app env delete	
+app env get	
+app env list	
+app env sync	- Updates existing environment variables with new values
+app env update	
+app execute-task	
+app get	
+app list	
+app logs	
+app move	
+app previews	
+app previews delete	
+app restart	
+app rollback	
+app rollback images	
+app rollback run	
+app run-storage-backup	
+app start	
+app stop	
+app storage	
+app storage create	
+app storage delete	
+app storage delete-backup	
+app storage list	
+app storage run-backup	
+app storage set-backup	
+app storage update	
+app tag	
+app tag add	
+app tag list	
+app tag remove	
+app task	
+app task create	
+app task delete	
+app task execute	
+app task executions	
+app task list	
+app task update	
+app update	
+cloud-init	
+cloud-init create	
+cloud-init delete	
+cloud-init get	
+cloud-init list	
+cloud-init update	
+cloud-token	
+cloud-token create	
+cloud-token delete	
+cloud-token get	
+cloud-token list	
+cloud-token update	
+cloud-token validate	
+completion	
+config	
+context	
+context add	
+context delete	
+context get	
+context list	
+context set-default	
+context set-token	
+context update	
+context use	
+context verify	to the Coolify instance and validating the API token.
+context version	
+database	
+database backup	
+database backup create	
+database backup delete	
+database backup delete-execution	
+database backup executions	
+database backup list	
+database backup trigger	
+database backup update	
+database clone	
+database create	
+database delete	
+database env	
+database env create	
+database env delete	
+database env get	
+database env list	
+database env sync	- Updates existing environment variables with new values
+database env update	
+database get	
+database list	
+database logs	
+database move	
+database restart	
+database run-storage-backup	
+database start	
+database stop	
+database storage	
+database storage create	
+database storage delete	
+database storage delete-backup	
+database storage list	
+database storage run-backup	
+database storage set-backup	
+database storage update	
+database tag	
+database tag add	
+database tag list	
+database tag remove	
+database update	
+deploy	
+deploy batch	Provide resource names as comma-separated values.
+deploy cancel	
+deploy get	
+deploy list	
+deploy name	
+deploy uuid	
+destination	
+destination create	
+destination delete	
+destination get	
+destination list	
+destination update	
+github	
+github branches	
+github create	
+github delete	
+github get	
+github list	
+github repos	
+github update	
+gitlab	
+gitlab create	
+gitlab delete	
+gitlab get	
+gitlab list	
+gitlab update	
+help	Simply type coolify help [path to command] for full details.
+mcp	
+mcp disable	
+mcp enable	
+notification	
+notification get	
+notification update	
+private-key	
+private-key add	
+private-key get	
+private-key list	
+private-key remove	
+private-key update	
+project	
+project create	
+project delete	
+project environments	
+project environments create	
+project environments delete	
+project environments list	
+project environments update	
+project get	
+project list	
+project update	
+project update-environment	
+resource	
+resource list	
+s3	
+s3 create	
+s3 delete	
+s3 get	
+s3 list	
+s3 update	
+s3 validate	
+server	
+server add	
+server cloudflare-tunnel	
+server cloudflare-tunnel disable	
+server cloudflare-tunnel enable	
+server cloudflare-tunnel get	
+server cloudflare-tunnel update	
+server destinations	
+server destinations create	
+server destinations list	
+server digitalocean	
+server digitalocean create	
+server digitalocean images	
+server digitalocean regions	
+server digitalocean sizes	
+server digitalocean ssh-keys	
+server docker-cleanup	
+server docker-cleanup executions	
+server docker-cleanup get	
+server docker-cleanup run	
+server docker-cleanup update	
+server domains	
+server get	
+server hetzner	
+server hetzner create	
+server hetzner firewalls	
+server hetzner images	
+server hetzner locations	
+server hetzner networks	
+server hetzner server-types	
+server hetzner ssh-keys	
+server list	
+server log-drains	
+server log-drains get	
+server log-drains update	
+server proxy	
+server proxy get	
+server proxy restart	
+server proxy set-config	
+server proxy update	
+server remove	
+server sentinel	
+server sentinel get	
+server sentinel update	
+server update	
+server validate	
+server vultr	
+server vultr create	
+server vultr os	
+server vultr plans	
+server vultr regions	
+server vultr ssh-keys	
+service	
+service application	
+service application get	
+service application list	
+service application logs	
+service application restart	
+service application start	
+service application stop	
+service application update	
+service clone	
+service create	
+service database	
+service database get	
+service database list	
+service database logs	
+service database restart	
+service database start	
+service database stop	
+service database update	
+service delete	
+service env	
+service env create	
+service env delete	
+service env get	
+service env list	
+service env sync	- Updates existing environment variables with new values
+service env update	
+service execute-task	
+service get	
+service list	
+service logs	
+service move	
+service restart	
+service run-storage-backup	
+service start	
+service stop	
+service storage	
+service storage create	
+service storage delete	
+service storage delete-backup	
+service storage list	
+service storage run-backup	
+service storage set-backup	
+service storage update	
+service tag	
+service tag add	
+service tag list	
+service tag remove	
+service task	
+service task create	
+service task delete	
+service task execute	
+service task executions	
+service task list	
+service task update	
+settings	
+settings email	
+settings email get	
+settings email update	
+shared-env	
+shared-env environment	
+shared-env environment create	
+shared-env environment delete	
+shared-env environment list	
+shared-env environment update	
+shared-env project	
+shared-env project create	
+shared-env project delete	
+shared-env project list	
+shared-env project update	
+shared-env server	
+shared-env server create	
+shared-env server delete	
+shared-env server list	
+shared-env server update	
+shared-env team	
+shared-env team create	
+shared-env team delete	
+shared-env team list	
+shared-env team update	
+tag	
+tag create	
+tag delete	
+tag list	
+tag update	
+teams	
+teams current	
+teams get	
+teams list	
+teams members	
+teams members list	
+update	
+version	
