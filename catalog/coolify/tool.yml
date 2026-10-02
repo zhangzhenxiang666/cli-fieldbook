@@ -3,3 +3,5 @@ name: Coolify CLI
 binary: coolify
 repository: https://github.com/coollabsio/coolify-cli
 summary: Coolify 自托管 PaaS 官方命令行客户端。
+defaults:
+  zh-CN: 1.8.0
