@@ -51,3 +51,12 @@ test('public asset metadata and generated links include project base',async({pag
   expect(hrefs.some(h=>h.startsWith('cli:'))).toBeFalsy();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBeTruthy();
 });
+test('mobile menu opens the tool navigation',async({page},testInfo)=>{
+  test.skip(testInfo.project.name!=='mobile','Mobile navigation only');
+  await page.goto('zh-cn/jj/0.45.1/commands/log/');
+  await page.getByRole('button',{name:'菜单',exact:true}).click();
+  const nav=page.getByRole('navigation',{name:'工具与文档'});
+  await expect(nav).toBeVisible();
+  await nav.getByRole('link',{name:'← 全部工具'}).click();
+  await expect(page.locator('h1')).toHaveText('CLI Fieldbook · 令册');
+});

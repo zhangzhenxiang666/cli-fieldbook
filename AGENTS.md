@@ -7,5 +7,5 @@
 - Do not run archived capture scripts, upstream CLIs, or examples in normal checks/builds.
 - Keep command, option, function and operator spellings unchanged. Do not infer unknown defaults.
 - A prepared review baseline is not approval. Publication requires the GitHub environment decision for the exact artifact.
-- Explain non-obvious invariants in comments; omit mechanical comments. Keep commit messages concise.
+- Explain non-obvious invariants in comments; omit mechanical comments. Use an English commit label and a short Chinese description, for example `fix: 修复搜索范围`.
 - Run pnpm check, pnpm test and pnpm build. UI changes also need pnpm test:browser.
