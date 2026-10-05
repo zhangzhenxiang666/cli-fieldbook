@@ -1,0 +1,36 @@
+# gh 工具级术语表：覆盖 style/terms.yml 的通用译法。
+# 保留原文的术语在此显式登记，避免不同页面各自选词。
+pull request: 拉取请求
+issue: 议题
+repository: 仓库
+fork: 复刻
+gist: gist
+release: release
+GitHub Actions: GitHub Actions
+workflow: 工作流
+extension: 扩展
+alias: 别名
+codespace: codespace
+commit: 提交
+branch: 分支
+head branch: 头部分支
+base branch: 基分支
+milestone: 里程碑
+label: 标签
+assignee: 指派人
+reviewer: 评审人
+draft: 草稿
+token: 令牌
+hostname: 主机名
+host: 主机
+attestation: 证明
+ruleset: 规则集
+deploy key: 部署密钥
+autolink: 自动链接
+runner: runner
+artifact: 产物
+cache: 缓存
+secret: 机密
+variable: 变量
+template: 模板
+snapshot: 快照
