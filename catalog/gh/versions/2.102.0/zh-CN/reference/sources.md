@@ -27,7 +27,7 @@ title: 来源、覆盖与校对记录
 | 其中公开命令 | 172 |
 | 其中隐藏命令 | 4（`version`、`auth git-credential`、`attestation inspect`、`repo credits`） |
 | 位置参数条目 | 129 |
-| 选项条目（含继承的 `-R/--repo`、`--help` 与 `--json/--jq/--template`） | 1023 |
+| 选项条目（含继承的 `-R/--repo`、`--help` 与 `--json/--jq/--template`/`--format`） | 1036 |
 | 固定源码快照文件 | 174 |
 
 各族收录数：根命令 1、alias 5、api 1、attestation 5、auth 9、browse 1、cache 3、completion 1、config 5、extension 9、gist 8、gpg-key 4、issue 16、label 6、org 2、pr 19、release 11、repo 31、ruleset 4、run 8、search 6、secret 4、ssh-key 4、status 1、variable 5、version 1、workflow 6。
@@ -39,7 +39,7 @@ title: 来源、覆盖与校对记录
 - 命令事实（路径、别名、用法行、参数、选项、枚举、默认值）自固定 commit 的 Go 源码重建：cobra 命令定义给出 `Use`/`Short`/`Aliases`/`Args`/隐藏标记，pflag 注册语句（`cmd.Flags().XxxVarP` 等）与 `cmdutil` 辅助函数（[json_flags.go](https://github.com/cli/cli/blob/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmdutil/json_flags.go)、[repo_override.go](https://github.com/cli/cli/blob/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmdutil/repo_override.go)）给出旗标；**未采集目标二进制的原始帮助输出**。
 - 选项显示形式为归一化约定：短旗标前置（`-R, --repo`），占位符优先取用法文本中的反引号命名（如 `--body-file <file>`），否则按值类型（`<int>`、`<strings>` 等）；仅在源码字面量给出非零默认值时记录默认值。
 - `--json` 的字段清单按源码字段表静态求值（含 `append(...)` 组合链，如 `api.IssueFields = append(sharedIssuePRFields, issueOnlyFields...)`）；个别字段是否可用取决于 GitHub API 能力。
-- 个别旗标用法文本在源码中为运行时拼接（如 `issue lock` 与 `pr lock` 的 `--reason`，其有效值来自仓库的锁定原因列表），页面如实标注，不枚举具体值。
+- 个别旗标用法文本在源码中为运行时拼接（如 `issue lock` 与 `pr lock` 的 `--reason`，固定取值 `off_topic`、`resolved`、`spam`、`too_heated` 在注册时拼接进用法串并在本地校验），页面按固定取值枚举。
 - 同一构造器可被多个父命令复用（如 `issue` 与 `pr` 共用 [lock.go](https://github.com/cli/cli/blob/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/lock/lock.go) 的 lock/unlock），两侧分别建页，行为差异（如错误提示中的父命令名）在页面注明。
 - 别名按 cobra 语义记录为完整别名调用路径（如 `gh issue ls` 记在 `issue list` 名下）；`gh co` 这类默认配置别名在 `pr checkout` 页面说明，不作为独立节点。
 - **全部示例为说明性内容，未实际运行**；示例中的输出形态依源码逻辑推断，可能因仓库状态、终端能力或 API 版本而不同。

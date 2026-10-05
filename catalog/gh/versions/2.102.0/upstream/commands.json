@@ -625,6 +625,37 @@
     ]
    },
    {
+    "name": "--format",
+    "display": "--format <string>",
+    "aliases": [],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ],
+    "values": [
+     "json"
+    ]
+   },
+   {
+    "name": "--jq",
+    "display": "-q, --jq <expression>",
+    "aliases": [
+     "-q"
+    ],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ]
+   },
+   {
+    "name": "--template",
+    "display": "-t, --template <string>",
+    "aliases": [
+     "-t"
+    ],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ]
+   },
+   {
     "name": "--help",
     "display": "--help",
     "aliases": [],
@@ -637,7 +668,8 @@
   "children": [],
   "category": "hidden",
   "evidenceIds": [
-   "source:pkg/cmd/attestation/inspect/inspect.go"
+   "source:pkg/cmd/attestation/inspect/inspect.go",
+   "source:pkg/cmdutil/json_flags.go"
   ],
   "profileId": "source-default"
  },
@@ -835,6 +867,37 @@
     ]
    },
    {
+    "name": "--format",
+    "display": "--format <string>",
+    "aliases": [],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ],
+    "values": [
+     "json"
+    ]
+   },
+   {
+    "name": "--jq",
+    "display": "-q, --jq <expression>",
+    "aliases": [
+     "-q"
+    ],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ]
+   },
+   {
+    "name": "--template",
+    "display": "-t, --template <string>",
+    "aliases": [
+     "-t"
+    ],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ]
+   },
+   {
     "name": "--help",
     "display": "--help",
     "aliases": [],
@@ -847,7 +910,8 @@
   "children": [],
   "category": "public",
   "evidenceIds": [
-   "source:pkg/cmd/attestation/verify/verify.go"
+   "source:pkg/cmd/attestation/verify/verify.go",
+   "source:pkg/cmdutil/json_flags.go"
   ],
   "profileId": "source-default"
  },
@@ -8865,6 +8929,37 @@
     ]
    },
    {
+    "name": "--format",
+    "display": "--format <string>",
+    "aliases": [],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ],
+    "values": [
+     "json"
+    ]
+   },
+   {
+    "name": "--jq",
+    "display": "-q, --jq <expression>",
+    "aliases": [
+     "-q"
+    ],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ]
+   },
+   {
+    "name": "--template",
+    "display": "-t, --template <string>",
+    "aliases": [
+     "-t"
+    ],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ]
+   },
+   {
     "name": "--repo",
     "display": "-R, --repo <[HOST/]OWNER/REPO>",
     "aliases": [
@@ -8888,7 +8983,8 @@
   "children": [],
   "category": "public",
   "evidenceIds": [
-   "source:pkg/cmd/release/verify/verify.go"
+   "source:pkg/cmd/release/verify/verify.go",
+   "source:pkg/cmdutil/json_flags.go"
   ],
   "profileId": "source-default"
  },
@@ -8931,6 +9027,37 @@
     ]
    },
    {
+    "name": "--format",
+    "display": "--format <string>",
+    "aliases": [],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ],
+    "values": [
+     "json"
+    ]
+   },
+   {
+    "name": "--jq",
+    "display": "-q, --jq <expression>",
+    "aliases": [
+     "-q"
+    ],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ]
+   },
+   {
+    "name": "--template",
+    "display": "-t, --template <string>",
+    "aliases": [
+     "-t"
+    ],
+    "evidenceIds": [
+     "source:pkg/cmdutil/json_flags.go"
+    ]
+   },
+   {
     "name": "--repo",
     "display": "-R, --repo <[HOST/]OWNER/REPO>",
     "aliases": [
@@ -8954,7 +9081,8 @@
   "children": [],
   "category": "public",
   "evidenceIds": [
-   "source:pkg/cmd/release/verify-asset/verify_asset.go"
+   "source:pkg/cmd/release/verify-asset/verify_asset.go",
+   "source:pkg/cmdutil/json_flags.go"
   ],
   "profileId": "source-default"
  },
@@ -12164,6 +12292,16 @@
     "display": "-w, --web",
     "aliases": [
      "-w"
+    ],
+    "evidenceIds": [
+     "source:pkg/cmd/run/view/view.go"
+    ]
+   },
+   {
+    "name": "--attempt",
+    "display": "-a, --attempt <int>",
+    "aliases": [
+     "-a"
     ],
     "evidenceIds": [
      "source:pkg/cmd/run/view/view.go"
