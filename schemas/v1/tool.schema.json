@@ -34,7 +34,8 @@
     "schema",
     "name",
     "binary",
-    "repository"
+    "repository",
+    "summary"
   ],
   "additionalProperties": false
 }

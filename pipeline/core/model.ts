@@ -1,6 +1,6 @@
 export type Kind = 'commands' | 'concepts' | 'workflows' | 'reference';
 export type Diagnostic = { file: string; line: number; code: string; message: string; fix: string; severity: 'error' | 'warning' };
-export type Tool = { schema: 1; name: string; binary: string; repository: string; summary?: string; defaults?: Record<string, string> };
+export type Tool = { schema: 1; name: string; binary: string; repository: string; summary: string; defaults?: Record<string, string> };
 export type Version = { schema: 1; upstream: { version: string; ref: string }; publication: 'draft' | 'published' };
 export type Field = { name: string; display: string; aliases: string[]; evidenceIds: string[]; inherited?: boolean; group?: 'diff-format'; default?: string; required?: boolean; values?: string[] };
 export type Command = { path: string[]; aliases: string[][]; synopsis: string[]; arguments: Field[]; options: Field[]; children: string[][]; category: 'public' | 'hidden' | 'feature-gated'; evidenceIds: string[]; profileId: string; slug?: string[] };

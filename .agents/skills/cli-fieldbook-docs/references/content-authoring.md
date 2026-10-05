@@ -31,7 +31,7 @@
 下面的 `democtl` 是虚构示例。使用真实任务参数替换工具、版本和来源路径，在仓库根目录运行：
 
 ```sh
-pnpm run docs new-tool democtl --name Demo --repository https://example.com/democtl
+pnpm run docs new-tool democtl --name Demo --repository https://example.com/democtl --summary '演示 CLI 的协议示例。'
 pnpm run docs new-version democtl 1.0.0 --ref v1.0.0
 pnpm run docs import democtl 1.0.0 --input ./capture-data
 ```
