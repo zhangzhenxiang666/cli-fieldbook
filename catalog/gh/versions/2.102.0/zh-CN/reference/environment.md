@@ -22,7 +22,7 @@ gh 通过一组环境变量控制认证、上下文与输出行为。本页整�
 
 - `GH_DEBUG`：设为真值时在标准错误启用详细输出；设为 `api` 时额外记录 HTTP 流量。
 - `DEBUG`（已弃用）：设为 `1`、`true` 或 `yes` 时启用详细输出。
-- `GH_PAGER`、`PAGER`（按优先级）：标准输出的分页程序，如 `less`。
+- `GH_PAGER`、`PAGER`：标准输出的分页程序，如 `less`。解析顺序为 `GH_PAGER`、配置的 `pager` 键（见 `gh config set`）、`PAGER`。
 - `GLAMOUR_STYLE`：渲染 Markdown 使用的样式，见 [glamour 样式列表](https://github.com/charmbracelet/glamour#styles)。
 - `NO_COLOR`：设为任意值时不输出 ANSI 颜色转义序列。
 - `CLICOLOR`：设为 `0` 关闭彩色输出。
