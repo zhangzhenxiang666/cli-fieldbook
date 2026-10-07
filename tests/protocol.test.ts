@@ -20,7 +20,7 @@ async function fixture() {
   const sources:SourceLock={schema:1,repository:'https://example.invalid/demo',upstreamVersion:'fictional-1',ref:'fixture',commit,adapter:'synthetic-fixture',normalization:1,profile:{id:'fixture',scope:'fictional test data'},evidence:[{id:'source',path:'upstream/source-extracts/fixture.txt',sha256:hash('fixture'),url:`https://example.invalid/${commit}/fixture`,method:'source-snapshot',obtainedAt:'2026-01-01T00:00:00Z'}],limitations:['This tool and version are fictional test fixtures.']};
   const common={aliases:[],synopsis:['demo'],arguments:[],options:[],category:'public',evidenceIds:['source'],profileId:'fixture'} as const;
   const commands:Command[]=[{...common,path:[],aliases:[],arguments:[],options:[],evidenceIds:['source'],synopsis:['demo'],children:[['index']]},{...common,path:['index'],aliases:[['ix']],arguments:[],options:[{name:'-q',display:'-q',aliases:[],evidenceIds:['source']}],evidenceIds:['source'],synopsis:['demo index [-q]'],children:[]}];
-  await writeYaml(path.join(root,'catalog/demo/tool.yml'),{schema:1,name:'Fictional demo',binary:'demo',repository:'https://example.invalid/demo'});
+  await writeYaml(path.join(root,'catalog/demo/tool.yml'),{schema:1,name:'Fictional demo',binary:'demo',repository:'https://example.invalid/demo',summary:'虚构的演示工具，用于协议测试。'});
   await writeYaml(path.join(dir,'version.yml'),{schema:1,upstream:{version:'fictional-1',ref:'fixture'},publication:'draft'});
   await writeJson(path.join(dir,'upstream/commands.json'),commands);await writeJson(path.join(dir,'upstream/source.lock.json'),sources);await write(path.join(dir,'upstream/source-extracts/fixture.txt'),'fixture');
   await write(path.join(dir,'zh-CN/commands/index.md'),'---\ncommand: []\n---\n\n## 简介\n\nFictional root.\n');
@@ -41,6 +41,21 @@ test('root/index nodes, aliases and arbitrary tools work without a registry',asy
     await generateSite(catalog,false,f.root);assert.equal((await fs.readFile(path.join(f.root,'site/public/generated/manifest.json'),'utf8')).includes('fictional-1'),false);
     await generateSite(catalog,true,f.root);assert.equal((await fs.readFile(path.join(f.root,'.generated/site.json'),'utf8')).includes('Fictional demo'),true);
     f.commands[1]!.aliases=[[]];await writeJson(path.join(f.dir,'upstream/commands.json'),f.commands);assert((await loadCatalog(f.root)).diagnostics.some(d=>d.code==='alias_conflict'));
+  }finally{await f.close();}
+});
+test('home cards render tool summary and missing summary fails the tool schema',async()=>{
+  const f=await fixture();try{
+    const catalog=await loadCatalog(f.root);
+    await generateSite(catalog,true,f.root);
+    const site=JSON.parse(await fs.readFile(path.join(f.root,'.generated/site.json'),'utf8'));
+    assert.equal(site.versions[0]!.summary,'虚构的演示工具，用于协议测试。');
+    const index=await fs.readFile(path.join(f.root,'site/src/content/docs/index.md'),'utf8');
+    const heading=index.indexOf('### [Fictional demo]');const summary=index.indexOf('虚构的演示工具');const meta=index.indexOf('版本 fictional-1 · [3 篇内容]');
+    assert.ok(heading>=0&&summary>heading&&meta>summary);
+    await writeYaml(path.join(f.root,'catalog/demo/tool.yml'),{schema:1,name:'Fictional demo',binary:'demo',repository:'https://example.invalid/demo'});
+    const broken=await loadCatalog(f.root);
+    assert(broken.diagnostics.some(d=>d.code==='schema'&&d.severity==='error'&&d.message.includes('summary')));
+    assert.equal(broken.versions.length,0);
   }finally{await f.close();}
 });
 test('body, facts, dependency and source changes invalidate prepared baselines',async()=>{

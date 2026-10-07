@@ -7,6 +7,13 @@ test('versioned root and literal index command routes stay distinct',async({page
   await expect(page.locator('h1')).toHaveText('jj debug index');
   await expect(page.getByText('条件编译节点')).toHaveCount(0);
 });
+test('home directory lists tools with their summaries',async({page})=>{
+  await page.goto('.');
+  await expect(page.locator('h1')).toHaveText('CLI Fieldbook · 令册');
+  await expect(page.getByRole('heading',{name:'Jujutsu'})).toBeVisible();
+  await expect(page.getByText('与 Git 兼容的版本控制工具，含完整 Revset 专题。')).toBeVisible();
+  await expect(page.getByText('面向 AI 编程 Agent 的终端工作区管理器。')).toBeVisible();
+});
 test('knowledge, downloads and narrow layouts work',async({page})=>{
   await page.goto('zh-cn/jj/0.45.1/reference/revset/');
   await page.locator('main').getByRole('link',{name:'parents(x, [depth])',exact:true}).click();

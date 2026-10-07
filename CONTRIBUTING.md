@@ -21,7 +21,7 @@ pnpm run docs build --preview
 ## 新增工具与版本
 
 ```sh
-pnpm run docs new-tool democtl --name Demo --repository https://example.com/democtl
+pnpm run docs new-tool democtl --name Demo --repository https://example.com/democtl --summary '演示 CLI 的协议示例。'
 pnpm run docs new-version democtl 1.0.0 --ref v1.0.0
 # 有历史版本时可添加 --from <version>，只复用译文，不继承来源与审阅批准。
 pnpm run docs import democtl 1.0.0 --input ./capture-data

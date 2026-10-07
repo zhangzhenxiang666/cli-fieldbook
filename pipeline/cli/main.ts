@@ -28,7 +28,8 @@ async function main():Promise<void> {
     if(!tool||!safeToken(tool))throw new Error('使用安全工具 ID。');
     const file=path.resolve('catalog',tool,'tool.yml');if(await fs.stat(file).catch(()=>null))throw new Error('工具已存在。');
     const repository=option('--repository');if(!repository?.startsWith('https://'))throw new Error('必须指定 --repository https://...，不推测上游。');
-    await writeYaml(file,{schema:1,name:option('--name')??tool,binary:option('--binary')??tool,repository});return;
+    const summary=option('--summary');if(!summary?.trim())throw new Error('必须指定 --summary <一句话中文简介>，不推测工具用途。');
+    await writeYaml(file,{schema:1,name:option('--name')??tool,binary:option('--binary')??tool,repository,summary:summary.trim()});return;
   }
   if(action==='new-version') {
     if(!tool||!safeToken(tool)||!version||!/^[a-zA-Z0-9][a-zA-Z0-9._-]*$/.test(version))throw new Error('无效工具或版本。');

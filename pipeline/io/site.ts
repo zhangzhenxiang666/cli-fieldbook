@@ -24,14 +24,14 @@ export async function generateSite(catalog:Catalog,preview=false,root=process.cw
   await fs.mkdir(generated,{recursive:true});
   const commit=revision();
   const base='/cli-fieldbook/';
-  const nav=selected.map(v=>({toolId:v.toolId,name:v.tool.name,version:v.versionId,publication:v.version.publication,default:v.tool.defaults?.['zh-CN']===v.versionId,url:`${base}zh-cn/${v.toolId}/${v.versionId}/`,pages:v.pages.map(p=>({id:idOf(p.kind,p.id),kind:p.kind,title:p.title,url:route(v.toolId,v.versionId,p.relative)}))}));
+  const nav=selected.map(v=>({toolId:v.toolId,name:v.tool.name,summary:v.tool.summary,version:v.versionId,publication:v.version.publication,default:v.tool.defaults?.['zh-CN']===v.versionId,url:`${base}zh-cn/${v.toolId}/${v.versionId}/`,pages:v.pages.map(p=>({id:idOf(p.kind,p.id),kind:p.kind,title:p.title,url:route(v.toolId,v.versionId,p.relative)}))}));
   const search=selected.flatMap(v=>v.pages.flatMap(p=>{
     const terms=[p.title,...(p.frontmatter.identifiers??[]),...(p.command?[...p.command.aliases.map(a=>`${v.tool.binary} ${a.join(' ')}`),...p.command.options.flatMap(f=>[f.name,...f.aliases])]:[])];
     return [...new Set(terms)].map(term=>({term,title:p.title,tool:v.toolId,version:v.versionId,kind:p.kind,url:route(v.toolId,v.versionId,p.relative)}));
   }));
   await writeJson(path.join(generated,'site.json'),{versions:nav,revision:commit,preview});
   await writeJson(path.join(publicGenerated,'identifiers.json'),search);
-  const toolCards=nav.filter(v=>v.default || !nav.some(other=>other.toolId===v.toolId && other.default)).map(v=>`### [${v.name}](${v.url})\n\n版本 ${v.version} · [${v.pages.length} 篇内容](${v.url})\n`);
+  const toolCards=nav.filter(v=>v.default || !nav.some(other=>other.toolId===v.toolId && other.default)).map(v=>`### [${v.name}](${v.url})\n\n${v.summary}\n\n版本 ${v.version} · [${v.pages.length} 篇内容](${v.url})\n`);
   const page=(meta:unknown,body:string):string=>`---\n${stringify(meta)}---\n\n${body}`;
   await write(path.join(content,'index.md'),page({title:'CLI Fieldbook · 令册',description:'有版本、有出处的 CLI 中文参考与实战手册。',editUrl:false,fieldbook:{kind:'home'}},`有版本、有出处的 CLI 中文参考与实战手册。\n\n按工具与版本查命令、读概念、学习工作流和专题知识。资料均为非官方中文整理，来源与验证边界随版本保存。\n\n${preview?'> 当前为预览，包括未发布草稿；不代表已批准发布。\n\n':''}## 工具\n\n${toolCards.join('\n')}\n## 参与维护\n\n[仓库与贡献指南](https://github.com/zhangzhenxiang666/cli-fieldbook) · [设计依据](https://github.com/zhangzhenxiang666/cli-fieldbook/blob/main/docs/DESIGN.md)\n`));
   for(const version of selected) {
@@ -40,7 +40,7 @@ export async function generateSite(catalog:Catalog,preview=false,root=process.cw
     const groups=['commands','concepts','workflows','reference'];
     const labels={commands:'命令参考',concepts:'概念',workflows:'工作流',reference:'专题参考与来源'};
     const stats=Object.fromEntries(['public','hidden','feature-gated'].map(category=>[category,version.commands.filter(c=>c.category===category).length]));
-    const overview=`${version.tool.summary??''}\n\n> 非官方中文整理。原始帮助未采集；示例与工作流未实测。固定源码的结构核对与人工行为复核范围详见[来源页](${route(version.toolId,version.versionId,'reference/sources.md')})。\n\n## 覆盖范围\n\n公开节点 ${stats.public}，隐藏节点 ${stats.hidden}，条件编译节点 ${stats['feature-gated']}。这些计数包含根与分组，别名不重复计数。\n\n[下载合订 Markdown](${base}generated/${version.toolId}-${version.versionId}-zh-CN.md)\n\n${groups.map(kind=>`## ${labels[kind as keyof typeof labels]}\n\n${version.pages.filter(p=>p.kind===kind).map(p=>`- [${p.title}](${route(version.toolId,version.versionId,p.relative)})`).join('\n')}`).join('\n\n')}\n`;
+    const overview=`${version.tool.summary}\n\n> 非官方中文整理。原始帮助未采集；示例与工作流未实测。固定源码的结构核对与人工行为复核范围详见[来源页](${route(version.toolId,version.versionId,'reference/sources.md')})。\n\n## 覆盖范围\n\n公开节点 ${stats.public}，隐藏节点 ${stats.hidden}，条件编译节点 ${stats['feature-gated']}。这些计数包含根与分组，别名不重复计数。\n\n[下载合订 Markdown](${base}generated/${version.toolId}-${version.versionId}-zh-CN.md)\n\n${groups.map(kind=>`## ${labels[kind as keyof typeof labels]}\n\n${version.pages.filter(p=>p.kind===kind).map(p=>`- [${p.title}](${route(version.toolId,version.versionId,p.relative)})`).join('\n')}`).join('\n\n')}\n`;
     await write(path.join(content,dir,'index.md'),page({title:`${version.tool.name} ${version.versionId}`,editUrl:false,fieldbook:{...context,kind:'overview'}},overview));
     for(const p of version.pages) {
       const output=p.relative.replace(/\.md$/,'.md');

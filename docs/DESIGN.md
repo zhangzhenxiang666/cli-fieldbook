@@ -232,9 +232,10 @@ schema: 1
 name: Herdr
 binary: herdr
 repository: https://github.com/herdrdev/herdr
+summary: 面向 AI 编程 Agent 的终端工作区管理器。
 ```
 
-最低必填只有以上四项。工具 ID 是目录名 `herdr`。可选字段包括 `summary`、`homepage`、`defaults` 和 `release_source`，未提供时不推测。
+最低必填为以上五项。`summary` 是一句话中文工具简介，站点首页目录会展示。工具 ID 是目录名 `herdr`。可选字段包括 `homepage`、`defaults` 和 `release_source`，未提供时不推测。
 
 首次接入可以只做手动版本导入，不要求立即开发自动采集器。自动发现新版本的配置必须指向仓库已经允许的 provider，不得包含任意 shell 命令。
 
@@ -712,7 +713,7 @@ Lint 能检查结构，不证明语义正确。参数解释、行为推论、示
 
 ### 13.1 页面与导航
 
-主页展示工具与可用中文版；工具主页展示默认版本、版本历史和来源；版本首页展示覆盖与证据范围；命令页统一展示 Usage、参数、选项、示例和补充解释。
+主页展示工具简介与可用中文版；工具主页展示默认版本、版本历史和来源；版本首页展示覆盖与证据范围；命令页统一展示 Usage、参数、选项、示例和补充解释。
 
 逻辑 URL 采用：
 

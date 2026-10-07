@@ -1,0 +1,1415 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/cli/cli",
+  "upstreamVersion": "2.102.0",
+  "ref": "v2.102.0",
+  "commit": "fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd",
+  "adapter": "gh-source-v1",
+  "normalization": 1,
+  "profile": {
+    "id": "source-default",
+    "scope": "176 of 242 command-tree nodes enumerated from pkg/cmd/root/root.go and pkg/cmd/** constructors at the pinned commit (172 public, 4 hidden: version, auth git-credential, attestation inspect, repo credits). Excluded 66 nodes: codespace 15, project 20, discussion 6, skills 7, agent-task 4, copilot 1, preview 2, licenses 1, send-telemetry 1 (hidden), accessibility 1, actions 1 (help-topic commands), root standalone credits 1 (hidden), and 6 hidden help topics (mintty, environment, telemetry, reference, formatting, exit-codes). Runtime config aliases (gh co) and installed extensions are not static tree nodes."
+  },
+  "evidence": [
+    {
+      "id": "source:LICENSE",
+      "path": "upstream/source-extracts/LICENSE.txt",
+      "sha256": "6da4adc42392c8485e40b4251c7e332fc3352df1947c9ffade71dd60b14a7a4f",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/LICENSE",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:docs/command-line-syntax.md",
+      "path": "upstream/source-extracts/docs/command-line-syntax.md.txt",
+      "sha256": "7e82ec0d35b5f06ecbabaed0e83b05317570d24018e96abd827252cd703351d3",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/docs/command-line-syntax.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:docs/gh-vs-hub.md",
+      "path": "upstream/source-extracts/docs/gh-vs-hub.md.txt",
+      "sha256": "d95917e620e2da4064cdfa665026624bb2b4c4ded73d4bae513181b95086f365",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/docs/gh-vs-hub.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:internal/attachments/flags.go",
+      "path": "upstream/source-extracts/internal/attachments/flags.go.txt",
+      "sha256": "ada81b7bd3af688d2251951431ec14fde23bf2115338fbc1659f5d6763785792",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/internal/attachments/flags.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/alias/alias.go",
+      "path": "upstream/source-extracts/pkg/cmd/alias/alias.go.txt",
+      "sha256": "3bef77a6ed97fa5afe4d4ad917797bc1060bf44bb5cbdfbe1997567c381ce781",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/alias/alias.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/alias/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/alias/delete/delete.go.txt",
+      "sha256": "bf85baba3067d8acb86daaadc5d55dc60aa88fbb31014ac3219043365f1104ef",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/alias/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/alias/imports/import.go",
+      "path": "upstream/source-extracts/pkg/cmd/alias/imports/import.go.txt",
+      "sha256": "c5ec6f27d94f61d777700a5065f65a0460ef98064f1ffc32cc4ef168121188cd",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/alias/imports/import.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/alias/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/alias/list/list.go.txt",
+      "sha256": "08f8935283394f81546426c02a9f7c0b2dbb5321c0ed0f26eb9223eb28a4433e",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/alias/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/alias/set/set.go",
+      "path": "upstream/source-extracts/pkg/cmd/alias/set/set.go.txt",
+      "sha256": "506c9d1b037efaff46c76830ab6277c7538acc7a2f69edc007eac9f99abdc1c4",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/alias/set/set.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/api/api.go",
+      "path": "upstream/source-extracts/pkg/cmd/api/api.go.txt",
+      "sha256": "030eda84dcfdb52e3bba2cadfc0243a7b47d3098b64f8c12c665550733d72ca1",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/api/api.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/attestation/attestation.go",
+      "path": "upstream/source-extracts/pkg/cmd/attestation/attestation.go.txt",
+      "sha256": "0ba19a18c2d54a43494196e1e4257f1723b6013dd41b8bea7381e08070176a7c",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/attestation/attestation.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/attestation/download/download.go",
+      "path": "upstream/source-extracts/pkg/cmd/attestation/download/download.go.txt",
+      "sha256": "91c8e99e46f88999a22a40700e649917ffa40cd92717b6df70971dc89457232a",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/attestation/download/download.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/attestation/inspect/inspect.go",
+      "path": "upstream/source-extracts/pkg/cmd/attestation/inspect/inspect.go.txt",
+      "sha256": "ed3ee4e2e4d03a7c3bb1cf4decae237631f2f258c65c018d7822f0340f41e9b3",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/attestation/inspect/inspect.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/attestation/trustedroot/trustedroot.go",
+      "path": "upstream/source-extracts/pkg/cmd/attestation/trustedroot/trustedroot.go.txt",
+      "sha256": "e01bb8f223d391c72988bc32912e6c774be75a6208db6477dc359d398350a8c7",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/attestation/trustedroot/trustedroot.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/attestation/verify/verify.go",
+      "path": "upstream/source-extracts/pkg/cmd/attestation/verify/verify.go.txt",
+      "sha256": "8394f4b550a3b776dd846656a1f67130a6622f7023fc9cc30477d943b4dd1661",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/attestation/verify/verify.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/auth/auth.go",
+      "path": "upstream/source-extracts/pkg/cmd/auth/auth.go.txt",
+      "sha256": "6bc70a50758eb6fb910c4508b70a5e6ce271a17db57f61fd30bcfc626d006b35",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/auth/auth.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/auth/gitcredential/helper.go",
+      "path": "upstream/source-extracts/pkg/cmd/auth/gitcredential/helper.go.txt",
+      "sha256": "263f2c1f71442c6bde2fe60d2fcaeca58035981c68983db2800f7af601765d0f",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/auth/gitcredential/helper.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/auth/login/login.go",
+      "path": "upstream/source-extracts/pkg/cmd/auth/login/login.go.txt",
+      "sha256": "29e2bac8ef1ba47dd599d52b9026ffe92fbafbd436bd294491c8fe3931299601",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/auth/login/login.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/auth/logout/logout.go",
+      "path": "upstream/source-extracts/pkg/cmd/auth/logout/logout.go.txt",
+      "sha256": "32c6aa6dd31d4526fa88d507d8222e2614a7a237cc79f78a832d2b11ca29694a",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/auth/logout/logout.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/auth/refresh/refresh.go",
+      "path": "upstream/source-extracts/pkg/cmd/auth/refresh/refresh.go.txt",
+      "sha256": "6b6a7de6b2bb65e7f164ef37deb318d391a988f7d92e21b067fe8016692e21bf",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/auth/refresh/refresh.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/auth/setupgit/setupgit.go",
+      "path": "upstream/source-extracts/pkg/cmd/auth/setupgit/setupgit.go.txt",
+      "sha256": "f2705a9cf29879a8ebf975570de70434897f731230e787c806958c884de330a5",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/auth/setupgit/setupgit.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/auth/status/status.go",
+      "path": "upstream/source-extracts/pkg/cmd/auth/status/status.go.txt",
+      "sha256": "8b605e080179e36cb8eee604130f196fac71f4d976aefc012fe378e5f376a0b3",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/auth/status/status.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/auth/switch/switch.go",
+      "path": "upstream/source-extracts/pkg/cmd/auth/switch/switch.go.txt",
+      "sha256": "5df14e5022e7e6f451fb45cf7f30b3f817529ae2b86339b399afdddd2041a885",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/auth/switch/switch.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/auth/token/token.go",
+      "path": "upstream/source-extracts/pkg/cmd/auth/token/token.go.txt",
+      "sha256": "f58aed5c56c6a44bf1baa945113abc0c3f976e46279e0267f242105cf817c5a8",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/auth/token/token.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/browse/browse.go",
+      "path": "upstream/source-extracts/pkg/cmd/browse/browse.go.txt",
+      "sha256": "d112c506f89e52d5ea3266f86e0a6dda36956c5b5daf0505ed8cb7fe85899208",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/browse/browse.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/cache/cache.go",
+      "path": "upstream/source-extracts/pkg/cmd/cache/cache.go.txt",
+      "sha256": "62fbfb3d1701061883d3f37dcdfe34df71ec7a308cdbcac1d2d16330d1d005b2",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/cache/cache.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/cache/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/cache/delete/delete.go.txt",
+      "sha256": "ed140a18577de4f32f2b72c123c4c2948bfd39c5d0b197d0a732a387ba08ad6f",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/cache/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/cache/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/cache/list/list.go.txt",
+      "sha256": "e343475be62c16da64d04a648232b2d3ef083d326a6b8aab7e05dc4e557779cb",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/cache/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/completion/completion.go",
+      "path": "upstream/source-extracts/pkg/cmd/completion/completion.go.txt",
+      "sha256": "75b78fbb28c6eec21d28a463d0192dc5f7c613e4cd14bb313ecf7b7e264d1dbf",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/completion/completion.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/config/clear-cache/clear_cache.go",
+      "path": "upstream/source-extracts/pkg/cmd/config/clear-cache/clear_cache.go.txt",
+      "sha256": "7902905305b6824e85cff958066f69acfbf5264b443de9cbee15737244d284ba",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/config/clear-cache/clear_cache.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/config/config.go",
+      "path": "upstream/source-extracts/pkg/cmd/config/config.go.txt",
+      "sha256": "9131a35d0e6ffa27e4636740770db5cb38ab684bc8ddf6ffd6bdac9031affc02",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/config/config.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/config/get/get.go",
+      "path": "upstream/source-extracts/pkg/cmd/config/get/get.go.txt",
+      "sha256": "d3acc0b9d138dd9adf2bc42fe70a916a5ebe4deaf6b66ee118bc303c027745b8",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/config/get/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/config/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/config/list/list.go.txt",
+      "sha256": "f98e01ec14c9c8f381547f7c6d6a26897955d3f6c59d52b60e67794a658c095b",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/config/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/config/set/set.go",
+      "path": "upstream/source-extracts/pkg/cmd/config/set/set.go.txt",
+      "sha256": "42defca690a4593e83c72da6ef04bedde7055ada0714f94429a5ce9ea9f61562",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/config/set/set.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/extension/command.go",
+      "path": "upstream/source-extracts/pkg/cmd/extension/command.go.txt",
+      "sha256": "9b23e9f14d7009ae3ce5b543a15e7dfefea047181862471745f4908227a5abb2",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/extension/command.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gist/clone/clone.go",
+      "path": "upstream/source-extracts/pkg/cmd/gist/clone/clone.go.txt",
+      "sha256": "f5e64267820168c272fdde19b9cae20f4a5ad95083ad4d250906ca8b1b299fb5",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gist/clone/clone.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gist/create/create.go",
+      "path": "upstream/source-extracts/pkg/cmd/gist/create/create.go.txt",
+      "sha256": "cf54b0f74cb7b449d038846d082a0709d360c1dea32b48ebfaccf82512c26c11",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gist/create/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gist/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/gist/delete/delete.go.txt",
+      "sha256": "39a7c2455e4e23dbe73f5443be3f03bdb3adcc28a297283fd80321a352907d50",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gist/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gist/edit/edit.go",
+      "path": "upstream/source-extracts/pkg/cmd/gist/edit/edit.go.txt",
+      "sha256": "1f5507c23e1406a807ecc6f7976c63becf698c8ec3189b7903e1ec8426fd6ed7",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gist/edit/edit.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gist/gist.go",
+      "path": "upstream/source-extracts/pkg/cmd/gist/gist.go.txt",
+      "sha256": "089a03cf5244f983465c3b4f2f2be63e55347a8d686b5d2f3d80660cfaef9b16",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gist/gist.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gist/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/gist/list/list.go.txt",
+      "sha256": "28edb4cb28b52b28a85da071a95887a2ffb9dc69021173442b77716f70f9b2f9",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gist/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gist/rename/rename.go",
+      "path": "upstream/source-extracts/pkg/cmd/gist/rename/rename.go.txt",
+      "sha256": "1633c622f98fc248f85dee6b96c42215095ce5c32d29c9f7672a14ed8b860b52",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gist/rename/rename.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gist/view/view.go",
+      "path": "upstream/source-extracts/pkg/cmd/gist/view/view.go.txt",
+      "sha256": "99999e662e97404e611d917bd3108f6e8fc3e9176b5d27f7a723f017d474db48",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gist/view/view.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gpg-key/add/add.go",
+      "path": "upstream/source-extracts/pkg/cmd/gpg-key/add/add.go.txt",
+      "sha256": "d15c86b6d279f132c2301cef8cac3c3a4fa9fb19e35d03e2859435edbe8d24f1",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gpg-key/add/add.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gpg-key/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/gpg-key/delete/delete.go.txt",
+      "sha256": "14ab77e65f59bf4a8bf95cbfa3e29d48d5e5e36f99b98478cd07fbcdce26cc9f",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gpg-key/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gpg-key/gpg_key.go",
+      "path": "upstream/source-extracts/pkg/cmd/gpg-key/gpg_key.go.txt",
+      "sha256": "293260139c945839be49e7a8cadf442af3b13fd1b0f7f0edd9c9e0be25ba15dd",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gpg-key/gpg_key.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/gpg-key/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/gpg-key/list/list.go.txt",
+      "sha256": "486146d8704dcd7877a3430d3a5e544a777d4e39339678296b0e51ba224e8e70",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/gpg-key/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/close/close.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/close/close.go.txt",
+      "sha256": "2338205ae555ea24507692b07b8f0a65a9e8b801490b738102b3fad8bf2a70e8",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/close/close.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/comment/comment.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/comment/comment.go.txt",
+      "sha256": "814d63d839561ad9fb02fdd4a4718ec87272466c1b54614084f2f9dc7b0ec91f",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/comment/comment.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/create/create.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/create/create.go.txt",
+      "sha256": "44016ce1c58e613c9bffe87b0c900d9a0666edfb7418465f87cb77cd463bda60",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/create/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/delete/delete.go.txt",
+      "sha256": "5b210075d2b49a45091d55829c547e1c65827e17636177aae2ed2c7285b9152a",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/develop/develop.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/develop/develop.go.txt",
+      "sha256": "9b532b3b4341afaa7657374761d1b63875697bfbf59a9063231a8ef3867f4d73",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/develop/develop.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/edit/edit.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/edit/edit.go.txt",
+      "sha256": "4f2ff095b02e54c54e11ed9c0f0e0a1baa98a2a927a1c90500bce1454ac7e4fe",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/edit/edit.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/issue.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/issue.go.txt",
+      "sha256": "963a228614f3088424bd02282b610317cd6c550385d455917ebcf344d9f93225",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/issue.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/list/list.go.txt",
+      "sha256": "04bef2dbac6d662bb1a6b253cf4f63402199ad5fa00078bdac9b1ae518cab438",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/lock/lock.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/lock/lock.go.txt",
+      "sha256": "409de4d4b0e38e91061f811af286c0d3b4313c4d27ae67176ef1d7e3eb691ea2",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/lock/lock.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/pin/pin.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/pin/pin.go.txt",
+      "sha256": "47bba91b928cb6f1c91e9387aa8831114c7425819fb691f3684bd3284d8822c0",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/pin/pin.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/reopen/reopen.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/reopen/reopen.go.txt",
+      "sha256": "6445ad8799db99fe7d5fe7ecfbe8c4b7ea3b753ddc3d9a144b70a17f4f7ebabf",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/reopen/reopen.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/status/status.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/status/status.go.txt",
+      "sha256": "821c97b0eae020637200bd9b05c044be2a6b41f8fe9ee7ef2caeb150fd9a07ca",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/status/status.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/transfer/transfer.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/transfer/transfer.go.txt",
+      "sha256": "b47aabfdda5d0972c6f1f87e8759f8c84f1f7174af5b44e46f8f1489384f89fe",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/transfer/transfer.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/unpin/unpin.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/unpin/unpin.go.txt",
+      "sha256": "02af2fe9afebf2ef2c4281e3ad1b1bf6b474512337295179e5be9d88c7f8005a",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/unpin/unpin.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/issue/view/view.go",
+      "path": "upstream/source-extracts/pkg/cmd/issue/view/view.go.txt",
+      "sha256": "b82f0c61236eecb011ac1c28a7f759d7261d1fdcaf7ef7bde8244912757a6247",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/issue/view/view.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/label/clone.go",
+      "path": "upstream/source-extracts/pkg/cmd/label/clone.go.txt",
+      "sha256": "1a06b075e14b4a61610e7c7c4a2bc697f031209ff08f7a07ada47b3b0f27deea",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/label/clone.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/label/create.go",
+      "path": "upstream/source-extracts/pkg/cmd/label/create.go.txt",
+      "sha256": "7aa49640826a34a7995b5dcb867157bcd78c77c03f7b9e32f42b6865879c595f",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/label/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/label/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/label/delete.go.txt",
+      "sha256": "414e28873bc24d98cf95ae8c4a43ccdfc81128d6195230c84abbd43f5f585d23",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/label/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/label/edit.go",
+      "path": "upstream/source-extracts/pkg/cmd/label/edit.go.txt",
+      "sha256": "8a4bb0117d45f7792eedd9fa8c9bda64dd0e35823806403cf87c1d567bfff307",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/label/edit.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/label/label.go",
+      "path": "upstream/source-extracts/pkg/cmd/label/label.go.txt",
+      "sha256": "534b829971c9564d84e32ca3010408bb9dbfc2c65881eae3f9d1708debddddfd",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/label/label.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/label/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/label/list.go.txt",
+      "sha256": "f8a233fac0f3f1428059907c2e8510172c6c7fddd52b20fdedc3f8b966c240cd",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/label/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/org/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/org/list/list.go.txt",
+      "sha256": "d65e30aa1c92c1a1034d12ff807e2412ed75668335d91a5e93e6366b22d2adc0",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/org/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/org/org.go",
+      "path": "upstream/source-extracts/pkg/cmd/org/org.go.txt",
+      "sha256": "6735c1a10089510de02ae2758256e72b132465895a132e98903aa8654495f9f9",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/org/org.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/checkout/checkout.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/checkout/checkout.go.txt",
+      "sha256": "9e007801828b13724a1d38c003749549437c2a33e2a79792a7745fd73a405a51",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/checkout/checkout.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/checks/checks.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/checks/checks.go.txt",
+      "sha256": "1ea61d22b2e6c95e4380c50dbd55cb65c6497cbdf9cc8da074b2fc637d5c2526",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/checks/checks.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/close/close.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/close/close.go.txt",
+      "sha256": "bcfd3c90438616944f21697d6422fda9673266ddccba3330655d60ebbcbf8957",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/close/close.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/comment/comment.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/comment/comment.go.txt",
+      "sha256": "82d7bdc56fbda3e90420b87d57627c44a242825688e91894ec50cf6b0a8b9afa",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/comment/comment.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/create/create.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/create/create.go.txt",
+      "sha256": "9fe12a8c6459a4200d5b55395045e4d2a7309c9278ecfa6c883866d315f7a23c",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/create/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/diff/diff.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/diff/diff.go.txt",
+      "sha256": "d11e843e913ba700d389a5fcb2559d43b6d3dbba94fb01a834e8cc9180bb8729",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/diff/diff.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/edit/edit.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/edit/edit.go.txt",
+      "sha256": "da53e3a0ec33b8b5eaaa828f79ff3c7108c2709e9f19d156feb482834f852c49",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/edit/edit.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/list/list.go.txt",
+      "sha256": "4c87b28445444eb3d2b095bc1d8549dd3aa3aff786fa8c69a3ee2fdb5fa4d3f7",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/merge/merge.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/merge/merge.go.txt",
+      "sha256": "ca3849b4d224ac0384bcc90102f77bd0612e2c0ba67fc1ee44bb48abe87c5942",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/merge/merge.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/pr.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/pr.go.txt",
+      "sha256": "89f8b00dfd80add59927dc84065216d05f8154bebbd40420e2024ca957aac41a",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/pr.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/ready/ready.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/ready/ready.go.txt",
+      "sha256": "eda1386e8336aef0e8a2ccc651be77121f9faf977801956dc5705b332d311423",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/ready/ready.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/reopen/reopen.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/reopen/reopen.go.txt",
+      "sha256": "408fdb85c27d27aa628cc2937c926ffeaa0fdb0d2c2278eb51308cadc9e65ecc",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/reopen/reopen.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/revert/revert.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/revert/revert.go.txt",
+      "sha256": "e2df354f9c6b604e3b1ef9a1a256f5e5646bbb3f2c764ae1f72a67fc032f1a3f",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/revert/revert.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/review/review.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/review/review.go.txt",
+      "sha256": "eb34cc831947a61659e182fab62c70c51b80f49b2ac721b63a5f0c2befcf3240",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/review/review.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/status/status.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/status/status.go.txt",
+      "sha256": "910fa50e7cd04120f782462af7b73be9214b4cedf60dac401abad1c7b5b79ec6",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/status/status.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/update-branch/update_branch.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/update-branch/update_branch.go.txt",
+      "sha256": "9062266c5be5e57180e53fcecfd60077bcaa33a2e7e83439d9c2bedde62c948e",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/update-branch/update_branch.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/pr/view/view.go",
+      "path": "upstream/source-extracts/pkg/cmd/pr/view/view.go.txt",
+      "sha256": "2a4422232ca522ee5c5284fa83387fe22e6251d8597489f5af28b19727a6e4c7",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/pr/view/view.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/release/create/create.go",
+      "path": "upstream/source-extracts/pkg/cmd/release/create/create.go.txt",
+      "sha256": "db03558cfad62c394007b0a7aff4969117a2c3bbe1c096f7c06faeb6476c4ee6",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/release/create/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/release/delete-asset/delete_asset.go",
+      "path": "upstream/source-extracts/pkg/cmd/release/delete-asset/delete_asset.go.txt",
+      "sha256": "737533d0e13c9bffacb6b8b59ee57affaba2045aaa383c8d598ddfb464c5ca69",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/release/delete-asset/delete_asset.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/release/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/release/delete/delete.go.txt",
+      "sha256": "40af60bd3e785eff19023fd4367df09f7a173e3e479710107a8f14a21d01ce2b",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/release/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/release/download/download.go",
+      "path": "upstream/source-extracts/pkg/cmd/release/download/download.go.txt",
+      "sha256": "2e9540e802d9398e74d9585941d2a6d5cdd7e9dcd91bca655ec51a0efe158260",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/release/download/download.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/release/edit/edit.go",
+      "path": "upstream/source-extracts/pkg/cmd/release/edit/edit.go.txt",
+      "sha256": "1cb3876774350406f2878edf84ce8ad30ae08c4314d23f44122c2ed38621914b",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/release/edit/edit.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/release/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/release/list/list.go.txt",
+      "sha256": "923e848189fc984b78af4eedb8810f2df7baf6b6d65b16d1041eefbe732a51f0",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/release/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/release/release.go",
+      "path": "upstream/source-extracts/pkg/cmd/release/release.go.txt",
+      "sha256": "7950594586825d476d29759033f98b7f0abe808e4b8d541c83974f3b958930cc",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/release/release.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/release/upload/upload.go",
+      "path": "upstream/source-extracts/pkg/cmd/release/upload/upload.go.txt",
+      "sha256": "8a276af9cba13142c6481b68f82f245b489137fe11a2281108d0849b0d41e15e",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/release/upload/upload.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/release/verify-asset/verify_asset.go",
+      "path": "upstream/source-extracts/pkg/cmd/release/verify-asset/verify_asset.go.txt",
+      "sha256": "0bdfbeae63b76ad22cac36f82f4177c562d09a67eacb4d9f816f45787d1e8525",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/release/verify-asset/verify_asset.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/release/verify/verify.go",
+      "path": "upstream/source-extracts/pkg/cmd/release/verify/verify.go.txt",
+      "sha256": "db5f261eae8b6cb5471eac1f77a3357b06fa16ab6c9689caf868bd21f3854394",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/release/verify/verify.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/release/view/view.go",
+      "path": "upstream/source-extracts/pkg/cmd/release/view/view.go.txt",
+      "sha256": "01e7f9d16879f5842d923bc210024b4e3fe9d603c77a6616a2ef205f224231be",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/release/view/view.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/archive/archive.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/archive/archive.go.txt",
+      "sha256": "a10986acc9874ac36d1a75854159640a516dd6784a9af5f6c852f20de8e41b5b",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/archive/archive.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/autolink/autolink.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/autolink/autolink.go.txt",
+      "sha256": "fa3853a22c7e801f9cb9f9dc4738c0f306de001c61c416452e323b8736d76ec9",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/autolink/autolink.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/autolink/create/create.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/autolink/create/create.go.txt",
+      "sha256": "66e62328f92ac7e4c24ca9f323b5de366e65e79d69a55620fbc68f61387a82bb",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/autolink/create/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/autolink/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/autolink/delete/delete.go.txt",
+      "sha256": "c4513a7cdef7a6baa04e3ea93a68021dfa2952d3402910c5c2abf362cd90464c",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/autolink/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/autolink/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/autolink/list/list.go.txt",
+      "sha256": "61b871ee9e7db20571d7ce5cb2682997f4e15eb7b831b575ece0a7c257ab7ffa",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/autolink/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/autolink/view/view.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/autolink/view/view.go.txt",
+      "sha256": "2ee3a2f2bd2db0736e74bda9be8ff64e47cf93aa65d3d274fb2cf0d2722f713a",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/autolink/view/view.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/clone/clone.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/clone/clone.go.txt",
+      "sha256": "c51e828cccbcf927da6bdea522b8d9bb00ca278ee0cbcb2a956563137bf83456",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/clone/clone.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/create/create.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/create/create.go.txt",
+      "sha256": "e98a3491445861dad7266b5dad2124855fac60e88df610eecf4d75b819613568",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/create/create.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/credits/credits.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/credits/credits.go.txt",
+      "sha256": "9754489e67fbad94d3628d76a514ec3266c1f82b2736b0caca8846be0e2381a1",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/credits/credits.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/delete/delete.go.txt",
+      "sha256": "0e7514b9e2a957d531204d1febba26ce7642558b6e078ea5d1381128232cfe56",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/deploy-key/add/add.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/deploy-key/add/add.go.txt",
+      "sha256": "d44ab715ecbc90d786c4715078e0c3a87a9918404f8899757eb783597e664d1d",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/deploy-key/add/add.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/deploy-key/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/deploy-key/delete/delete.go.txt",
+      "sha256": "035175085405e4c6411511d99a7ef3f517e31dba30c7a1e4ba69b2c8e02baacb",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/deploy-key/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/deploy-key/deploy-key.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/deploy-key/deploy-key.go.txt",
+      "sha256": "0fe9893c68e823b6364ed97423a0764b4b6da740fcb3add6f36cce9d795493c1",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/deploy-key/deploy-key.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/deploy-key/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/deploy-key/list/list.go.txt",
+      "sha256": "4b86dc098e994d91647b5ea48d68c8d16a8d0b2ac2401ee50622ba47f58e3b9d",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/deploy-key/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/edit/edit.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/edit/edit.go.txt",
+      "sha256": "93b9ddb1699127f565ee106ad5585953afc16b8bab8abd8916228b9d14dbdd5c",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/edit/edit.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/fork/fork.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/fork/fork.go.txt",
+      "sha256": "224dd3940518f8ae4547e062a93b007116d6b8c1d49e71d8adb8be36de2728ca",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/fork/fork.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/gitignore/gitignore.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/gitignore/gitignore.go.txt",
+      "sha256": "3ed70015b5a128257511c088c9a4a2b4d78e7dc0e370b166dd68c0813968218a",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/gitignore/gitignore.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/gitignore/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/gitignore/list/list.go.txt",
+      "sha256": "b78ff6f02033331d0fb43ed41df8ccc5296ae17db906df77a284b87323b1b0b6",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/gitignore/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/gitignore/view/view.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/gitignore/view/view.go.txt",
+      "sha256": "70dbe9f795ba098cd914ee908d183377294c01909441e64b116f4d4951a1a085",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/gitignore/view/view.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/license/license.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/license/license.go.txt",
+      "sha256": "cbd5312b1ac4cf5e819784104d8696fabb307e2527c56173a063a10c509fb98d",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/license/license.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/license/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/license/list/list.go.txt",
+      "sha256": "1554751986e839994b48dbecfe2909fc69024ece8e1cc7300c6d4de249d83126",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/license/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/license/view/view.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/license/view/view.go.txt",
+      "sha256": "183f2d24695020aef82f02541b14d0d571097b03eb766559a49064ea9db38aff",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/license/view/view.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/list/list.go.txt",
+      "sha256": "7611153b66046dc76e97d55f87d8074c0543d3c234d0d44a91d7cb6661f6efca",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/read-dir/read_dir.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/read-dir/read_dir.go.txt",
+      "sha256": "c3bfce4d961b43bad86ea1b68714f8af051383e2c59141fa4ad37a96529c399e",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/read-dir/read_dir.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/read-file/read_file.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/read-file/read_file.go.txt",
+      "sha256": "8499a99899f5f7202bfc144e5b2c05c74ddbdc0e438cd3e80d726824da1c62e3",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/read-file/read_file.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/rename/rename.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/rename/rename.go.txt",
+      "sha256": "78c2b5ad412463aa8e483c5a704cdfda7b8b8112f57e8161d2e18ae29ff5c434",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/rename/rename.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/repo.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/repo.go.txt",
+      "sha256": "9c0d2984113a805ea254fad72a62bb5e00d2ed8601e9bd58ce8a3ffd727b5494",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/repo.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/setdefault/setdefault.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/setdefault/setdefault.go.txt",
+      "sha256": "92e0f67532001d71fd5a69d5954913c2e088c378e3bda5a860c5ce835ed53b01",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/setdefault/setdefault.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/sync/sync.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/sync/sync.go.txt",
+      "sha256": "dc2af151ea189e2b0ea44dca8b4c9ad9702587beae887d2b8bf7dc0fde8950d5",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/sync/sync.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/unarchive/unarchive.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/unarchive/unarchive.go.txt",
+      "sha256": "8d59d9f5aedc39cc66952862c97b502e9ad48b7e8a3d72e51f8a70f0f26385ee",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/unarchive/unarchive.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/repo/view/view.go",
+      "path": "upstream/source-extracts/pkg/cmd/repo/view/view.go.txt",
+      "sha256": "8e719e28748bd5531e11756ae6c948a0080622aa85cece988f0489719b3cd029",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/repo/view/view.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/root/help.go",
+      "path": "upstream/source-extracts/pkg/cmd/root/help.go.txt",
+      "sha256": "fb65e557c0bfd2d2c4544e8591064619c92b44ef97cb16325143f7d91a95b0de",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/root/help.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/root/help_topic.go",
+      "path": "upstream/source-extracts/pkg/cmd/root/help_topic.go.txt",
+      "sha256": "eac9dcf099b956e82a0a461ed02c722135a34e4dc712f448b95456214bb89fc0",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/root/help_topic.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/root/root.go",
+      "path": "upstream/source-extracts/pkg/cmd/root/root.go.txt",
+      "sha256": "198446ea5a09dc7b225c89762e26e47beff5385ad0eb208c21fbbc15a74c929c",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/root/root.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/ruleset/check/check.go",
+      "path": "upstream/source-extracts/pkg/cmd/ruleset/check/check.go.txt",
+      "sha256": "43e3c5741677a812bcfdd53e3e38f2d932aca594b7eb1d3bbae6617f1bb7957e",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/ruleset/check/check.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/ruleset/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/ruleset/list/list.go.txt",
+      "sha256": "aa5774b8c98f38c28bd67290bf5694257fe5a805ad94b01b598b2d0e0cccaa1a",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/ruleset/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/ruleset/ruleset.go",
+      "path": "upstream/source-extracts/pkg/cmd/ruleset/ruleset.go.txt",
+      "sha256": "de261ab3625eecab6f8b088bb49e33e0b3db0d8ca1ea3a65a5c33acde7126357",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/ruleset/ruleset.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/ruleset/view/view.go",
+      "path": "upstream/source-extracts/pkg/cmd/ruleset/view/view.go.txt",
+      "sha256": "3dd577b8b45f852065fe1e7cd9382faa043fbfa95dbd664039b7c82bf3b24d4c",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/ruleset/view/view.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/run/cancel/cancel.go",
+      "path": "upstream/source-extracts/pkg/cmd/run/cancel/cancel.go.txt",
+      "sha256": "4ef3412d55b27244ede0dcf8e15916a709102b6d2923ab53e1080be2a84358e3",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/run/cancel/cancel.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/run/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/run/delete/delete.go.txt",
+      "sha256": "4266baa24e13f9ad3dfa46e9c43838012ccb53b8b6c959b63856d0e4bd826e05",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/run/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/run/download/download.go",
+      "path": "upstream/source-extracts/pkg/cmd/run/download/download.go.txt",
+      "sha256": "b0952b62bb638f4e36a230f7e05108ac92df94875106539ef9dddf49c1b6350c",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/run/download/download.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/run/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/run/list/list.go.txt",
+      "sha256": "0d6039a741319755d4e5db01fd75002ab7d4bf5edb2b70dce1642a2a313af342",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/run/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/run/rerun/rerun.go",
+      "path": "upstream/source-extracts/pkg/cmd/run/rerun/rerun.go.txt",
+      "sha256": "bd2aff59d52d1e56171b17b7fbbc6a800bc227ee36082d36d38bacaf196dfa71",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/run/rerun/rerun.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/run/run.go",
+      "path": "upstream/source-extracts/pkg/cmd/run/run.go.txt",
+      "sha256": "bb92188fc162cf54a302abad4b1212a738c6eb978e15c87f158a577c6aabdb98",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/run/run.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/run/view/view.go",
+      "path": "upstream/source-extracts/pkg/cmd/run/view/view.go.txt",
+      "sha256": "7a14ebb063c6afc4f9f0099684a4031f5d63f72d97bc1c5229252015a18ddbf6",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/run/view/view.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/run/watch/watch.go",
+      "path": "upstream/source-extracts/pkg/cmd/run/watch/watch.go.txt",
+      "sha256": "d06215329c8ef040f7904dcfe53675521577d23178fe83d51eca637abe01eb58",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/run/watch/watch.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/search/code/code.go",
+      "path": "upstream/source-extracts/pkg/cmd/search/code/code.go.txt",
+      "sha256": "52b816a24bc3363a5549765970d1cb015eea95edc196e17e3c3d4cc9c216c7ca",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/search/code/code.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/search/commits/commits.go",
+      "path": "upstream/source-extracts/pkg/cmd/search/commits/commits.go.txt",
+      "sha256": "ae4fca938a3704058b10b08675c80db50566f5076f8673a74bbf468db83f7a68",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/search/commits/commits.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/search/issues/issues.go",
+      "path": "upstream/source-extracts/pkg/cmd/search/issues/issues.go.txt",
+      "sha256": "5e788555a698903201e5b76e9db72edc6a830e7eb078dd38bc64bbb8755b97bc",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/search/issues/issues.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/search/prs/prs.go",
+      "path": "upstream/source-extracts/pkg/cmd/search/prs/prs.go.txt",
+      "sha256": "a70fbb7657561c72abd71112068d16efb98b51260bbf06219de6a4b427c87e99",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/search/prs/prs.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/search/repos/repos.go",
+      "path": "upstream/source-extracts/pkg/cmd/search/repos/repos.go.txt",
+      "sha256": "1eb779248c3eaf4c2e51d99709d4494f81144ef4a085315befe8e6b43168a996",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/search/repos/repos.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/search/search.go",
+      "path": "upstream/source-extracts/pkg/cmd/search/search.go.txt",
+      "sha256": "453172227d221bc4ab3b23c8c4e6d1efb055e1f9136fa919937f18ed126455c0",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/search/search.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/secret/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/secret/delete/delete.go.txt",
+      "sha256": "7cffc19369c4e9fe743c46679a4982189bdf943344f27f05f6b1a4dcf264ed3a",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/secret/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/secret/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/secret/list/list.go.txt",
+      "sha256": "a4c78f0c3f4b03c41b903701b16c9b47b1a9d62db6ef27fc8268e3b0718f847b",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/secret/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/secret/secret.go",
+      "path": "upstream/source-extracts/pkg/cmd/secret/secret.go.txt",
+      "sha256": "25bc89101426223442cb63df99d62eb382be1462ea878936247cd9d485c5dc4a",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/secret/secret.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/secret/set/set.go",
+      "path": "upstream/source-extracts/pkg/cmd/secret/set/set.go.txt",
+      "sha256": "956ec69b02ac2612735ea8b5804a2e2eafdfaeb97a9536c132a5f004327b0b3b",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/secret/set/set.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/ssh-key/add/add.go",
+      "path": "upstream/source-extracts/pkg/cmd/ssh-key/add/add.go.txt",
+      "sha256": "bf841f8ab72a0f033ebeae887a51b3873eaf9263c00b14193b422c02f2a63eba",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/ssh-key/add/add.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/ssh-key/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/ssh-key/delete/delete.go.txt",
+      "sha256": "83949d7179605bacb83383b290fc87d266e886a3ebe9a10b33ec53ed4005e64e",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/ssh-key/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/ssh-key/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/ssh-key/list/list.go.txt",
+      "sha256": "8b804cc5b3476cd6c22acb6164275d7e9bba65e0a3b0fb90b813f5368ac53b8f",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/ssh-key/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/ssh-key/ssh_key.go",
+      "path": "upstream/source-extracts/pkg/cmd/ssh-key/ssh_key.go.txt",
+      "sha256": "31fa34e33ab698317ca9d7708c3b28114d626f6d24ad5914ab1d741acce9c40b",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/ssh-key/ssh_key.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/status/status.go",
+      "path": "upstream/source-extracts/pkg/cmd/status/status.go.txt",
+      "sha256": "fecd9bf68a26b20b17c502d046de97c571d254f4c1cdd874a0bf1657123d5a48",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/status/status.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/variable/delete/delete.go",
+      "path": "upstream/source-extracts/pkg/cmd/variable/delete/delete.go.txt",
+      "sha256": "5d376f570bf007d65520260f45c79aa0e9814193f4a489466187272599a40b42",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/variable/delete/delete.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/variable/get/get.go",
+      "path": "upstream/source-extracts/pkg/cmd/variable/get/get.go.txt",
+      "sha256": "9cdd8a8dfc163c8f273677fe3e9907d0602ac6390e88cbc97172afeca0747e84",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/variable/get/get.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/variable/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/variable/list/list.go.txt",
+      "sha256": "e93598986e91d96eefd29e95699297852af2ab90f136b7f963327a5ba51fc921",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/variable/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/variable/set/set.go",
+      "path": "upstream/source-extracts/pkg/cmd/variable/set/set.go.txt",
+      "sha256": "542f6ac38e2c3e451eb543a2f82f1e3ed1b640f3600c7947c933d8121e8d8996",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/variable/set/set.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/variable/variable.go",
+      "path": "upstream/source-extracts/pkg/cmd/variable/variable.go.txt",
+      "sha256": "c0c21d2ff8b7db4d2688ced07a0a6a32f5d631a878ebc69231184bb0deac31ac",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/variable/variable.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/version/version.go",
+      "path": "upstream/source-extracts/pkg/cmd/version/version.go.txt",
+      "sha256": "e239107ca56c0ba121976c44a0963c9de05cea96f4265bca1ebc289093a1a893",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/version/version.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/workflow/disable/disable.go",
+      "path": "upstream/source-extracts/pkg/cmd/workflow/disable/disable.go.txt",
+      "sha256": "34ba097135a0f20856e477170544cf4251b113d6a02600c44f8c1418e3cd142b",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/workflow/disable/disable.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/workflow/enable/enable.go",
+      "path": "upstream/source-extracts/pkg/cmd/workflow/enable/enable.go.txt",
+      "sha256": "faac09bd8983bdd4281f847d1ba9eaf200d3aa287e4a776830c966b02a9ea5e4",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/workflow/enable/enable.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/workflow/list/list.go",
+      "path": "upstream/source-extracts/pkg/cmd/workflow/list/list.go.txt",
+      "sha256": "4aec964c6aa88db6b6b5af877310484c083f4830620fcef5de7a80682b86bf20",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/workflow/list/list.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/workflow/run/run.go",
+      "path": "upstream/source-extracts/pkg/cmd/workflow/run/run.go.txt",
+      "sha256": "f211c6f33fad9771cef8dd4ad9d4e348c9ac6802d9240d7692edfea158af7446",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/workflow/run/run.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/workflow/view/view.go",
+      "path": "upstream/source-extracts/pkg/cmd/workflow/view/view.go.txt",
+      "sha256": "6a734b30396784999a814be713941e69ae4f877900be218a0cad2179b9d46039",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/workflow/view/view.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmd/workflow/workflow.go",
+      "path": "upstream/source-extracts/pkg/cmd/workflow/workflow.go.txt",
+      "sha256": "74719c072f2bbda29234aa3ca94dee86f9fe5634ad7fc72da522bc225f104ffc",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmd/workflow/workflow.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmdutil/flags.go",
+      "path": "upstream/source-extracts/pkg/cmdutil/flags.go.txt",
+      "sha256": "103a5c069a262740edd3a317eb6a38fc2eb73e5dbf1af10ce3bf320eb59d0a41",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmdutil/flags.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmdutil/json_flags.go",
+      "path": "upstream/source-extracts/pkg/cmdutil/json_flags.go.txt",
+      "sha256": "f20742e73bc5d98c98f5f34e1fb6a9dc4fe3efe7fb84da8e4ae9e71ccd755700",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmdutil/json_flags.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    },
+    {
+      "id": "source:pkg/cmdutil/repo_override.go",
+      "path": "upstream/source-extracts/pkg/cmdutil/repo_override.go.txt",
+      "sha256": "0d58ce07ca3fe69cc499d135ac0def4ef6e453ae66ba8873d7f99ee43d0b53b2",
+      "url": "https://raw.githubusercontent.com/cli/cli/fc4b137cdef0a6bd28fd461b7cf9c84a5812a8cd/pkg/cmdutil/repo_override.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-05T02:12:02Z"
+    }
+  ],
+  "limitations": [
+    "未采集目标二进制原始帮助输出；命令事实自固定提交的 Go 源码（cobra 定义与 pflag 注册语句）重建。",
+    "示例与工作流未实际运行；全部示例为说明性内容。",
+    "官方在线文档（docs.github.com GitHub CLI 章节、cli.github.com/manual）为滚动版本，仅作交叉旁证，不作为固定来源。",
+    "个别旗标用法文本在源码中为运行时拼接（如 issue/pr lock 的 --reason），有效值以运行时仓库数据为准，未在事实中枚举。",
+    "--json 字段清单按源码字段表（含 append 组合链）静态求值；个别字段是否可用取决于 GitHub API 版本。",
+    "排除族（codespace/project/discussion/skills/agent-task/copilot/preview/licenses）与帮助主题、credits、send-telemetry 未收录译文；后续版本可增量补齐。"
+  ]
+}
