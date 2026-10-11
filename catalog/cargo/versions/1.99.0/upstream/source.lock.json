@@ -8,7 +8,7 @@
   "normalization": 1,
   "profile": {
     "id": "source-default",
-    "scope": "命令树节点自固定提交的 src/bin/cargo/commands/mod.rs builtin() 表与各命令文件（src/bin/cargo/commands/*.rs 的 clap 定义）静态枚举：全部静态节点 46 个（根 + 39 顶级 + 6 子命令：config get、report future-incompatibilities/timings/sessions/rebuilds、clean gc），本版全部收录（公开 39、隐藏 4：git-checkout、read-manifest、verify-project、clean gc；不稳定门控 3：report timings/sessions/rebuilds 需 nightly -Z）。内置别名 b/c/d/r/t/rm 记录在目标命令节点名下，不另立节点；rustup 分发的 +toolchain 前缀、[alias] 用户别名与外部 cargo-* 子命令不是静态树节点。来源证据为仓库固定提交下的 CLI 定义（src/bin/cargo/）、共享参数声明点（src/cargo/util/command_prelude.rs）、配置与环境映射（src/cargo/util/context/）、错误与退出分支（src/cargo/util/errors.rs 等）、命令行为实现（src/cargo/ops/ 按命令族）、man 手册页与官方书（src/doc/），合计 189 个文件。"
+    "scope": "命令树节点自固定提交的 src/bin/cargo/commands/mod.rs builtin() 表与各命令文件（src/bin/cargo/commands/*.rs 的 clap 定义）静态枚举：全部静态节点 46 个（根 + 39 顶级 + 6 子命令：config get、report future-incompatibilities/timings/sessions/rebuilds、clean gc），本版全部收录（公开 37、隐藏 4：git-checkout、read-manifest、verify-project、clean gc；不稳定门控 5：config 与 config get 需 nightly `-Z unstable-options`，report timings/sessions/rebuilds 需 `-Z build-analysis`）。内置别名 b/c/d/r/t/rm 记录在目标命令节点名下，不另立节点；rustup 分发的 +toolchain 前缀、[alias] 用户别名与外部 cargo-* 子命令不是静态树节点。来源证据为仓库固定提交下的 CLI 定义（src/bin/cargo/）、共享参数声明点（src/cargo/util/command_prelude.rs）、配置与环境映射（src/cargo/util/context/）、错误与退出分支（src/cargo/util/errors.rs 等）、命令行为实现（src/cargo/ops/ 按命令族）、man 手册页与官方书（src/doc/），合计 189 个文件。"
   },
   "evidence": [
     {
