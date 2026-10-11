@@ -33,7 +33,7 @@ title: 来源、覆盖与校对记录
 
 顶级命令 39 个：add、bench、build、check、clean、config、doc、fetch、fix、generate-lockfile、git-checkout、help、info、init、install、locate-project、login、logout、metadata、new、owner、package、pkgid、publish、read-manifest、remove、report、run、rustc、rustdoc、search、test、tree、uninstall、update、vendor、verify-project、version、yank；子命令 6 个：`config get`、`report future-incompatibilities`（别名 `future-incompat`）、`report timings`、`report sessions`、`report rebuilds`、`clean gc`。
 
-内置别名 `b`/`c`/`d`/`r`/`t`/`rm` 分别记在 build、check、doc、run、test、remove 名下（[src/bin/cargo/main.rs](https://github.com/rust-lang/cargo/blob/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/main.rs) 的 `BUILTIN_ALIASES` 表），不另立节点。rustup 分发的 `+toolchain` 前缀、`[alias]` 配置的用户别名与 `$PATH` 上的外部 `cargo-*` 子命令不属于静态命令树，不计入分母，在概念文章《总览》中说明。
+内置别名 `b`/`c`/`d`/`r`/`t`/`rm` 分别记在 build、check、doc、run、test、remove 名下（[src/bin/cargo/main.rs](https://github.com/rust-lang/cargo/blob/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/main.rs) 的 `BUILTIN_ALIASES` 表），不另立节点。rustup 分发的 `+toolchain` 前缀、`[alias]` 配置的用户别名与 `$PATH` 上的外部 `cargo-*` 子命令不属于静态命令树，不计入分母，见[总览](../concepts/overview.md)。
 
 ## 方法与验证限制
 
