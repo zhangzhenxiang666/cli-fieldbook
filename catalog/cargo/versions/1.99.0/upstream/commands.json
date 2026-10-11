@@ -973,8 +973,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--message-format",
@@ -983,7 +982,6 @@
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
         ],
-        "inherited": true,
         "values": [
           "human",
           "short",
@@ -1001,8 +999,7 @@
         ],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--workspace",
@@ -1010,8 +1007,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--exclude",
@@ -1019,8 +1015,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--all",
@@ -1028,8 +1023,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--lib",
@@ -1037,8 +1031,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--bins",
@@ -1046,8 +1039,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--bin",
@@ -1055,8 +1047,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--examples",
@@ -1064,8 +1055,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--example",
@@ -1073,8 +1063,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--tests",
@@ -1082,8 +1071,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--test",
@@ -1091,8 +1079,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--benches",
@@ -1100,8 +1087,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--bench",
@@ -1109,8 +1095,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--all-targets",
@@ -1118,8 +1103,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--features",
@@ -1129,8 +1113,7 @@
         ],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--all-features",
@@ -1138,8 +1121,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--no-default-features",
@@ -1147,8 +1129,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--release",
@@ -1158,8 +1139,7 @@
         ],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--profile",
@@ -1167,8 +1147,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--jobs",
@@ -1178,8 +1157,7 @@
         ],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--keep-going",
@@ -1187,8 +1165,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--target",
@@ -1196,8 +1173,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--target-dir",
@@ -1205,8 +1181,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--artifact-dir",
@@ -1214,8 +1189,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--unit-graph",
@@ -1223,8 +1197,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--timings",
@@ -1232,8 +1205,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--compile-time-deps",
@@ -1241,8 +1213,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--manifest-path",
@@ -1252,8 +1223,7 @@
         ],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--ignore-rust-version",
@@ -1261,8 +1231,7 @@
         "aliases": [],
         "evidenceIds": [
           "source:src/cargo/util/command_prelude.rs"
-        ],
-        "inherited": true
+        ]
       },
       {
         "name": "--verbose",
