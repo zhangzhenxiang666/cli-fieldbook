@@ -1,0 +1,7 @@
+schema: 1
+name: Cargo
+binary: cargo
+repository: https://github.com/rust-lang/cargo
+summary: Rust 官方包管理器，管理 crate 依赖、构建、测试、文档与发布。
+defaults:
+  zh-CN: 1.99.0

@@ -1,0 +1,1535 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/rust-lang/cargo",
+  "upstreamVersion": "1.99.0",
+  "ref": "0.99.0",
+  "commit": "797e8a9bca276c1c9f9f738d2a20f484fa4eea9d",
+  "adapter": "cargo-source-v1",
+  "normalization": 1,
+  "profile": {
+    "id": "source-default",
+    "scope": "命令树节点自固定提交的 src/bin/cargo/commands/mod.rs builtin() 表与各命令文件（src/bin/cargo/commands/*.rs 的 clap 定义）静态枚举：全部静态节点 46 个（根 + 39 顶级 + 6 子命令：config get、report future-incompatibilities/timings/sessions/rebuilds、clean gc），本版全部收录（公开 37、隐藏 4：git-checkout、read-manifest、verify-project、clean gc；不稳定门控 5：config 与 config get 需 nightly `-Z unstable-options`，report timings/sessions/rebuilds 需 `-Z build-analysis`）。内置别名 b/c/d/r/t/rm 记录在目标命令节点名下，不另立节点；rustup 分发的 +toolchain 前缀、[alias] 用户别名与外部 cargo-* 子命令不是静态树节点。来源证据为仓库固定提交下的 CLI 定义（src/bin/cargo/）、共享参数声明点（src/cargo/util/command_prelude.rs）、配置与环境映射（src/cargo/util/context/）、错误与退出分支（src/cargo/util/errors.rs 等）、命令行为实现（src/cargo/ops/ 按命令族）、man 手册页与官方书（src/doc/），合计 189 个文件。"
+  },
+  "evidence": [
+    {
+      "id": "source:Cargo.toml",
+      "path": "upstream/source-extracts/Cargo.toml.txt",
+      "sha256": "0e46f2c8cbe0c03f7b723b0de2e2663042f181b8f5dda71b1f2170870ac5ec2a",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/Cargo.toml",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:LICENSE-APACHE",
+      "path": "upstream/source-extracts/LICENSE-APACHE.txt",
+      "sha256": "8ada45cd9f843acf64e4722ae262c622a2b3b3007c7310ef36ac1061a30f6adb",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/LICENSE-APACHE",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:LICENSE-MIT",
+      "path": "upstream/source-extracts/LICENSE-MIT.txt",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/LICENSE-MIT",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:LICENSE-THIRD-PARTY",
+      "path": "upstream/source-extracts/LICENSE-THIRD-PARTY.txt",
+      "sha256": "cbc759b1f17a2ac38fe3eb9e9563b1a08ba0f900611c49faaf68b46907b6d898",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/LICENSE-THIRD-PARTY",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:README.md",
+      "path": "upstream/source-extracts/README.md.txt",
+      "sha256": "d9b7b448fdd1bcdff86dc4034733602b8bcb60bdc1a14c37148525b67a157054",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/README.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/cli.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/cli.rs.txt",
+      "sha256": "c26e6176bfc53c95de5beb05b5e8ef4e9f57df28df7ec830e6691ec8624b9df7",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/cli.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/add.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/add.rs.txt",
+      "sha256": "9bb628fe70b9f867bb7fc91aedc40f750e9223ac450963a884f91532a34e29fc",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/add.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/bench.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/bench.rs.txt",
+      "sha256": "8d9ff954276fa492897feb5c8c43da16602194ac04cf2ab3b12133f2d1ab90ae",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/bench.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/build.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/build.rs.txt",
+      "sha256": "10435788c80cc418639d2a649acc58efd1d3fb25818fefb9fc78b9d0a9c0bce2",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/build.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/check.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/check.rs.txt",
+      "sha256": "b4f0789e3a072c0fc294381f84ecd1733cf8ea380210139f941919b1628af423",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/check.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/clean.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/clean.rs.txt",
+      "sha256": "93b52cc76207df874224aee52609ac9ea77808aba3899112ade81bf913f06c99",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/clean.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/config.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/config.rs.txt",
+      "sha256": "1f4aaab6966ce50fdf5fe0381e505306877c1d20d2c773cacf80a5a3995b16cc",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/config.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/doc.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/doc.rs.txt",
+      "sha256": "780d306e6a9826968ce92a73089030225ad5eea4671826eef50e68ec0694c08f",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/doc.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/fetch.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/fetch.rs.txt",
+      "sha256": "cdc9442c7d6a6cb6e25b39fbda5fe6057fb3b0397441bf2543b4c23bb1157d36",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/fetch.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/fix.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/fix.rs.txt",
+      "sha256": "5a71158b5cf476af906a3e84e8324c66aec683170c9114e3dfdd9169f6f2d5f0",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/fix.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/generate_lockfile.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/generate_lockfile.rs.txt",
+      "sha256": "d904e7216e97ba6dbd75e1e7283fef08b281b38a32de1271fc34784e3382ecd9",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/generate_lockfile.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/git_checkout.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/git_checkout.rs.txt",
+      "sha256": "99e83e79f1abd3644b49c9de9820aa6388eaa69cdc7ed12655cc917a65281aa6",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/git_checkout.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/help.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/help.rs.txt",
+      "sha256": "30ea33cae059b71eb6e036e0e995a9498c8b5a1aecf06f215f56447088247a99",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/help.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/info.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/info.rs.txt",
+      "sha256": "0cefca3c305d2ec883c90597236deb8558fbdd41eb1f337b23a100ee79aca7a2",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/info.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/init.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/init.rs.txt",
+      "sha256": "fe726507d361444fbe74065469dc56bebff1f833e894fc8b8fffc8ee84b98a05",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/init.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/install.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/install.rs.txt",
+      "sha256": "c9590281714d46b66a3df2c5469b82336e9b9bc9c5e2011d461597872a8667cb",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/install.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/locate_project.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/locate_project.rs.txt",
+      "sha256": "057a8d6bca1cda68da1fca6b4dbe7aa1336d51fcd9850055d2433a5c5cfa1a58",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/locate_project.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/login.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/login.rs.txt",
+      "sha256": "f2296cfa21aeed9c97ec243a692af06a897f14c8ecdb3c2578717cd9ca2a962e",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/login.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/logout.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/logout.rs.txt",
+      "sha256": "158567b5764a33bec1108b87f8164d321a78d7497cf6da10f75bb757536f2d83",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/logout.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/metadata.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/metadata.rs.txt",
+      "sha256": "a5c58cc9420087f982a0f179f35dc0e1892839aa8dc7f4312c4b077bbb99f925",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/metadata.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/mod.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/mod.rs.txt",
+      "sha256": "8478ae1963efff4987b3c7b8c6d64c527f238df9493e517b32a20aae592dbf81",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/new.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/new.rs.txt",
+      "sha256": "886973f4154de4d3c4d4899fc9f98b3d0c11bc27918d65242e18a1fb974a175a",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/new.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/owner.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/owner.rs.txt",
+      "sha256": "72fa9139cc6623300a16aeed5a690295056e4d3fc026d176b2a323b7c10e5b3e",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/owner.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/package.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/package.rs.txt",
+      "sha256": "0fb645dbf70ab1cb6d6b6e1b8c47db71de5094790dea7c19b93885cc3dfde995",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/package.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/pkgid.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/pkgid.rs.txt",
+      "sha256": "e91e1e4b459c1124d76895fa9083683e70137ef7369c55e2a60a3a8c55ad6419",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/pkgid.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/publish.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/publish.rs.txt",
+      "sha256": "f90d8e66445973af4437ba8543d4b3f8009d36550c8199f5dfa8d0986f036c42",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/publish.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/read_manifest.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/read_manifest.rs.txt",
+      "sha256": "ef97bf1b552762e8f1f0a9dd6a5ea200844c04dd7c450258a761fd3a0b60759a",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/read_manifest.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/remove.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/remove.rs.txt",
+      "sha256": "d3ca0ac3ef4f9068c98439331472e6aa59f83287a8ccd0f05e1d6ca130cfa81d",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/remove.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/report.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/report.rs.txt",
+      "sha256": "096fbbc2407a29f95925ffc03c8b468ccc03ef5c0f6f2b852b17c2962c788928",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/report.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/run.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/run.rs.txt",
+      "sha256": "446de84ae274356a876f5864a51c83021261d1c176864b80b3abb8eb1aefee2f",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/run.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/rustc.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/rustc.rs.txt",
+      "sha256": "a193b734abce09c1fab50e9fa87add7d33e199e3e5b764e8da47bacdf16cc137",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/rustc.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/rustdoc.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/rustdoc.rs.txt",
+      "sha256": "3b8266538929b3f3803e808c6519cc3ca7200f3a00e819d4afcb3ee82443540a",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/rustdoc.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/search.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/search.rs.txt",
+      "sha256": "13b3314a11d774767f20920e75967c347a51cac6156cbdc9dcfaee66b9a03314",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/search.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/test.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/test.rs.txt",
+      "sha256": "fe1944aa2e06daadc06fbeb078484b1303e13bb2f31cf2be367a394761e1491d",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/test.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/tree.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/tree.rs.txt",
+      "sha256": "1d915e700f811c5c875210a743e914250e811058c15f27300ebb06829c029665",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/tree.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/uninstall.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/uninstall.rs.txt",
+      "sha256": "22c5ea2e2456b642e7f31dc276fdb16edf88c6de481ccd55ab740e4791390bfd",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/uninstall.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/update.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/update.rs.txt",
+      "sha256": "17ecad6ac1a441aaa106ebe13fab047e1fed1d022ecb3f19ba065e4ddc77c12d",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/update.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/vendor.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/vendor.rs.txt",
+      "sha256": "9883b8c5a9382351ad70162a03dfdb435f6b8ab44eb8831c0b5f368a1c9212d5",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/vendor.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/verify_project.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/verify_project.rs.txt",
+      "sha256": "ea6bb25079e326b5bfec190774527178094a2f39499944234394e13ad21ecb56",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/verify_project.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/version.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/version.rs.txt",
+      "sha256": "14dd85ad24e0fac2157afa379dd97f1861ce04fce69ae8ea6e75fa0c440d25b8",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/version.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/commands/yank.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/commands/yank.rs.txt",
+      "sha256": "bf096a95f89b48b155fdf43e66633c2092b0646a267ac9153ede7e0a4e927f79",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/commands/yank.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/bin/cargo/main.rs",
+      "path": "upstream/source-extracts/src/bin/cargo/main.rs.txt",
+      "sha256": "65eae0bf7a42f6a9dd4923fb2fa08d35e3627eb9570b11b6f423fa8b77ffd724",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/bin/cargo/main.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/lib.rs",
+      "path": "upstream/source-extracts/src/cargo/lib.rs.txt",
+      "sha256": "38eed987441970af77506ca63558f3c95418fcdf5f47a4a9ee35d517369ffd0f",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/lib.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_add/crate_spec.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_add/crate_spec.rs.txt",
+      "sha256": "41f4289f6368776dae5af7cafa0739cf47851cf893e5d0918efab3f4d1b53488",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_add/crate_spec.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_add/mod.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_add/mod.rs.txt",
+      "sha256": "b68ace6eca8d7ad075f9a3488a30729ec632cb98202cb48c11cc94f1588a2228",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_add/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_clean.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_clean.rs.txt",
+      "sha256": "7b32b91cfb91af2dd180343491861b92ad8052b209e146fa22ef2e4de8bf68ee",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_clean.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_compile/compile_filter.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_compile/compile_filter.rs.txt",
+      "sha256": "ef35a8e16e8a16f569f1a3b7f418988641f9b00d0ba296fad8231659ff8d0ba7",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_compile/compile_filter.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_compile/mod.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_compile/mod.rs.txt",
+      "sha256": "f6f7df95cf95a43470930dac793649efa1fa1037f420bffd266751cb65ba3318",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_compile/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_compile/packages.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_compile/packages.rs.txt",
+      "sha256": "ea8818697151e4123b5c847cb52762be18807af043053712ed4a04089722342e",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_compile/packages.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_compile/unit_generator.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_compile/unit_generator.rs.txt",
+      "sha256": "c126d6fc3b73579cf33e5aa0228d47eb52672034a6e2ac694e85999e0cbf3681",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_compile/unit_generator.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_config.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_config.rs.txt",
+      "sha256": "c66d4d6a899505b833270a0603e38bcedd12bd51403df3d711661e2822cd6fc6",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_config.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_doc.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_doc.rs.txt",
+      "sha256": "38f229ddb87d8c8b8fc98e8c177240d2e3e7b76c961edb94c92748d096353821",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_doc.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_fetch.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_fetch.rs.txt",
+      "sha256": "9a56ebbf46bcce4552f9f96c6919ba1a0a19c29f3de1ed13161343cb7c5b5a53",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_fetch.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_install.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_install.rs.txt",
+      "sha256": "306229d4143b4f8f49d2a904ff9ac699525737c32b5b651aad1691916485114b",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_install.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_new.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_new.rs.txt",
+      "sha256": "be678b78906c3b5afa98132377d4943c4c379dfd886291c8da115b7c24ddf48e",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_new.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_output_metadata.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_output_metadata.rs.txt",
+      "sha256": "f197dbfde70f65a6fdb92125276b4c5578960a8162cbd943e4bb6aa65ff6fb7c",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_output_metadata.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_package/mod.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_package/mod.rs.txt",
+      "sha256": "f5d50597973fdba1815ada7b3502ced329dc90eaf0e74c8242bae5ec4493b6ca",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_package/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_package/vcs.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_package/vcs.rs.txt",
+      "sha256": "81447a23a9ea34b5fb479cb86cb208c98b0a07258697f2de653e3351a0533889",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_package/vcs.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_package/verify.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_package/verify.rs.txt",
+      "sha256": "e96fd91c922f509e589947100a3544f3543ce4d5d46f3f9ae105272eb9a80083",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_package/verify.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_pkgid.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_pkgid.rs.txt",
+      "sha256": "1396910e966d21c44f45dd222386936c5a00b767548f9c9c054a0e564345dd6e",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_pkgid.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_read_manifest.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_read_manifest.rs.txt",
+      "sha256": "196d3b4368e04e79aa5ebafe565d361d4fbcdb1c17d3bb1317465f03762f1a08",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_read_manifest.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_remove.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_remove.rs.txt",
+      "sha256": "2111611c0612ac49f54cb1ccb40e63b2b863bd2ecc779887b894dcd37b0c2171",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_remove.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_report/mod.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_report/mod.rs.txt",
+      "sha256": "12dc1257175eec8b982c58945187231843c33352cef92e788509f810c1a2943a",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_report/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_report/rebuilds.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_report/rebuilds.rs.txt",
+      "sha256": "ca2ecd7d17b09da2279ccf45ddc23b85a73ab4a974e80f08a763abca865851d3",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_report/rebuilds.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_report/sessions.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_report/sessions.rs.txt",
+      "sha256": "22c13b8c763448219ea6aed95df008230bf98b71f4f2da87c31c268ed2b62bc0",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_report/sessions.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_report/timings.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_report/timings.rs.txt",
+      "sha256": "e0ba4a751c362a780b067d30edbe97e1d5cbd73a80bf21c59a959475e5b3ca07",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_report/timings.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_report/util.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_report/util.rs.txt",
+      "sha256": "584e5bfaacf08efba9bbfa1f8aec8c950770531e59cb982a59f2f07a071d6742",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_report/util.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_run.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_run.rs.txt",
+      "sha256": "50b5800f9fa660be672e7fe3092ff53a649afc232c8e99ed5999c1858e591c51",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_run.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_test.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_test.rs.txt",
+      "sha256": "1f2da1eef2bad52277b5f9e73a199f79aab0695969911d4bd381cf3de32244c9",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_test.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_uninstall.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_uninstall.rs.txt",
+      "sha256": "eb87ddd51d85bb0d0f062f7098390435ac308e1373fdfcdde22b337a1afe7288",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_uninstall.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/cargo_update.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/cargo_update.rs.txt",
+      "sha256": "a495f63b1934193881ab8ad3107330fda3825b7faf590772ff686eed31c2dba9",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/cargo_update.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/common_for_install_and_uninstall.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/common_for_install_and_uninstall.rs.txt",
+      "sha256": "39b83d91df25afc12824d92427df9bd92013e2987e851e43e7311856b2e2a48e",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/common_for_install_and_uninstall.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/fix/fix_edition.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/fix/fix_edition.rs.txt",
+      "sha256": "8f0c347155420c6b7aab2d34090236243563393a23e42f92894b25007057a6f3",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/fix/fix_edition.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/fix/mod.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/fix/mod.rs.txt",
+      "sha256": "18aae11f526652b11b19640c21f2acbeefba7d891966db3f5f217c77aa17884d",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/fix/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/lockfile.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/lockfile.rs.txt",
+      "sha256": "abb5bba6e027e56abab733c1d8d529143dde313bbd0f8f6e1f8910c5010138d8",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/lockfile.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/mod.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/mod.rs.txt",
+      "sha256": "9056bf84d1d0ecfee2ba2197c5cc9d0d20700c6af74cdd0874268d32bba54f4b",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/registry/login.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/registry/login.rs.txt",
+      "sha256": "a71bee143a180be0371e4e614f51860a7aaebc155bb0667b372d96d44ac2fdca",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/registry/login.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/registry/logout.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/registry/logout.rs.txt",
+      "sha256": "ffb623ef2758302fa39d3d5c5d3273637e96c6413e797eaa0a9020ee63ebc4cc",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/registry/logout.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/registry/mod.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/registry/mod.rs.txt",
+      "sha256": "9601376b403b79cc162a8cfe061c393ba5436808120bbde39542f1b562e06b0e",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/registry/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/registry/owner.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/registry/owner.rs.txt",
+      "sha256": "25dcf59b2e34e1b5e3bc2ccf718134ea2d6177d4ed7d292f6c57a3157bcfcaa2",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/registry/owner.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/registry/publish.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/registry/publish.rs.txt",
+      "sha256": "e0e8cc5d89ab35ffa5acff4c3a8a4a5c53aa9091c68827000f40a7682b6dbd12",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/registry/publish.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/registry/search.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/registry/search.rs.txt",
+      "sha256": "a480ca766dcd5e7d1a1c2fa805476e50eb1a107f674116e874e9b7d0fab0ca6b",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/registry/search.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/registry/yank.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/registry/yank.rs.txt",
+      "sha256": "edc0dfca7b3be52ecd0f33dc52a050a725cf44c1480cdd39c80254c8bce5f0f8",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/registry/yank.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/resolve.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/resolve.rs.txt",
+      "sha256": "ed49ba7a8f73b19445f0f70c28cb68038c4083d925eab96f83df4dc531e413b0",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/resolve.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/tree/graph.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/tree/graph.rs.txt",
+      "sha256": "bc1429505ea26fe31f5b01a9610b62fa16cc53d6539b4ccf7241dbd9a8f8877b",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/tree/graph.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/tree/mod.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/tree/mod.rs.txt",
+      "sha256": "6ffa62ccca725fdbd5512d32d9a82749789798e293fd708b2ca223670d100748",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/tree/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/ops/vendor.rs",
+      "path": "upstream/source-extracts/src/cargo/ops/vendor.rs.txt",
+      "sha256": "56d67d055f6f77606dddb05cbcfbe11260fed3dbe9d63d2d8a6cc0de66790ac6",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/ops/vendor.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/util/command_prelude.rs",
+      "path": "upstream/source-extracts/src/cargo/util/command_prelude.rs.txt",
+      "sha256": "2fa5d0dc95d39feaf9f35454c6e5f3db84baf7705250cc20503204d20c9abaf8",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/util/command_prelude.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/util/context/config_value.rs",
+      "path": "upstream/source-extracts/src/cargo/util/context/config_value.rs.txt",
+      "sha256": "7e5b78c61141896f54ddafebcbfc5db4b71c66eaab33e3da2976a5d6a65bb059",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/util/context/config_value.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/util/context/environment.rs",
+      "path": "upstream/source-extracts/src/cargo/util/context/environment.rs.txt",
+      "sha256": "dfdb3eb831bede48d25c19452105094b8053bf86ea009f7efcb6a595be301c7b",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/util/context/environment.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/util/context/key.rs",
+      "path": "upstream/source-extracts/src/cargo/util/context/key.rs.txt",
+      "sha256": "9e7d6af98f4c98a6855263ba3d974fb11fcf2245db97e9688f0942813ad8784e",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/util/context/key.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/util/context/mod.rs",
+      "path": "upstream/source-extracts/src/cargo/util/context/mod.rs.txt",
+      "sha256": "a77f730b934ff69eda65ac5aa269bff0025045cc11bef981901b115e577641de",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/util/context/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/util/context/schema.rs",
+      "path": "upstream/source-extracts/src/cargo/util/context/schema.rs.txt",
+      "sha256": "9e76316fd5b25721dee94f19a91bdf137b5912f23df951e60ef6f2d83cee6955",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/util/context/schema.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/util/context/target.rs",
+      "path": "upstream/source-extracts/src/cargo/util/context/target.rs.txt",
+      "sha256": "0f093cfb79dc8bc9a602a21c03ce71073ea6319734e5d5a2d48054f4a5a00308",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/util/context/target.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/util/context/value.rs",
+      "path": "upstream/source-extracts/src/cargo/util/context/value.rs.txt",
+      "sha256": "b3f98b232940c49b061aae7717bd035aa3ce99e1204f3dde2d9d834726786def",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/util/context/value.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/util/errors.rs",
+      "path": "upstream/source-extracts/src/cargo/util/errors.rs.txt",
+      "sha256": "46f49efe878b0d39bfd239620b4bded90f247e4e76dd8e29c2e89caff32eedee",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/util/errors.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/cargo/util/mod.rs",
+      "path": "upstream/source-extracts/src/cargo/util/mod.rs.txt",
+      "sha256": "9b423232ff81880d38bca011641f2b4c512bc0298c71eec57f2405559f8b1257",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/cargo/util/mod.rs",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-add.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-add.md.txt",
+      "sha256": "2c2d3a31ba5be2b92b9caa1b484b479a74afd2df83167d33dbd55b872b0b74ce",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-add.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-bench.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-bench.md.txt",
+      "sha256": "22b76cf54b80016a5c867dfca2fa25e10dec0e6ccc0fa4bfc5b12bde0af76396",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-bench.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-build.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-build.md.txt",
+      "sha256": "feb2bc75bdc0b2b53d3589d39ed97243bbd11a478de18ce37100195ff363bea2",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-build.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-check.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-check.md.txt",
+      "sha256": "eaa7799f585599e64e7cf4cac3c2f42f5db183b391bf904a0f2fb1f533d7a0eb",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-check.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-clean.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-clean.md.txt",
+      "sha256": "070315e725a2c7eb6676ae45f86d3c16f60aa0f8e80bbffc740ffc3bdd45e66d",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-clean.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-doc.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-doc.md.txt",
+      "sha256": "d6c71d7b504e33228c6ccf6d7eca7d4b01ebc8b10627d450580401c0d958384c",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-doc.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-fetch.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-fetch.md.txt",
+      "sha256": "78c7132b7e69efbe4a080b1003d4f31c5086c3ea2bc0791f14826cdc3b94eac0",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-fetch.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-fix.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-fix.md.txt",
+      "sha256": "7cbf4eb3082509b04570eabfdf54e6be7b1c7e65c99341dd83016db9e548f2cd",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-fix.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-generate-lockfile.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-generate-lockfile.md.txt",
+      "sha256": "366ba643bb14858f46fd7a83619f9e55b557f74d455635dc5ea4af0901999f73",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-generate-lockfile.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-help.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-help.md.txt",
+      "sha256": "7747a8a5b141c613f668918f42bc4827f46b84e9c20af1ade9c9823d24c1a451",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-help.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-info.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-info.md.txt",
+      "sha256": "2a99e46bafb366aad5cba8f26541fb1ced8528b04f14017cbead8a9efb20607c",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-info.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-init.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-init.md.txt",
+      "sha256": "ca36005597b782cbc96c01dea3fb2f93f6de7b7516bbe31f8bcd9f95413e4c27",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-init.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-install.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-install.md.txt",
+      "sha256": "2668cc43cd4ba570bc976e4cf9fbd5212c2b4cf89ca0e2e38c65598ceb3c440c",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-install.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-locate-project.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-locate-project.md.txt",
+      "sha256": "cc4a607f760b4a5975c9cd9507e2de081ed8f0217b18d8007ad04f7a04666662",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-locate-project.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-login.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-login.md.txt",
+      "sha256": "cf0f9e89bb45b153a1b73609a7d5c6375cb855c662910e0cbde38affc0584df6",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-login.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-logout.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-logout.md.txt",
+      "sha256": "5feb5b17d940ee0c38da889290102e040bd5c4ba6dcd18602f9d367420778abc",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-logout.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-metadata.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-metadata.md.txt",
+      "sha256": "8ebf98e812e0d3863592e08e226998784dee9ab8e3843066df1b8d1a720b47b5",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-metadata.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-new.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-new.md.txt",
+      "sha256": "a802af835141b6c306b3234a173daf095877483d0bc50b4b7147cac7e748dd7f",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-new.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-owner.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-owner.md.txt",
+      "sha256": "0c2218b2a20e5c8a2f1fae9d9e08a5c1533045b87d0cf5f65500e43a086c86f2",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-owner.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-package.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-package.md.txt",
+      "sha256": "9d712115601d8bd82123fa45dfeedd67b1949eeba9fe05bb75da23d00baeefc8",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-package.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-pkgid.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-pkgid.md.txt",
+      "sha256": "60b99c9d2bfdb541c4828b62fae81fd6c5f7202e348323e4cbd5fbc3e8e03ba9",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-pkgid.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-publish.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-publish.md.txt",
+      "sha256": "76c945bc4ce3fc8fe0208bca720039851eca6e9af35c157d782c14f176c1e7ef",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-publish.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-remove.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-remove.md.txt",
+      "sha256": "05a04f31acfdab6322aeeedfa280cd93f766425f9deb34ecbfb13d21f40f9dc9",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-remove.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-report-future-incompatibilities.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-report-future-incompatibilities.md.txt",
+      "sha256": "446e95332615cbc3488ea715d31ec76a94f245348a3d122436d96a1cdd0a764b",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-report-future-incompatibilities.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-report.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-report.md.txt",
+      "sha256": "669551884243bec28adaa0e6024cf05679a5731e6b89eea1a573d3f7a8bad99e",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-report.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-run.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-run.md.txt",
+      "sha256": "d79093dc82467da00fcc7a7bd5918cc1e243f7b5bb9333fdca0cbd20829e70c3",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-run.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-rustc.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-rustc.md.txt",
+      "sha256": "37890135753459e544bf6bfd29533924997a8e8fbab0b901afe0e5f09896d331",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-rustc.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-rustdoc.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-rustdoc.md.txt",
+      "sha256": "1212ebbd216f475d73db555856c676b017581be7b8c4cac529bda91f8eaba6af",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-rustdoc.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-search.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-search.md.txt",
+      "sha256": "b6ec59e427e8c0e9009f361ef49cf916c2eb46767c1ce17a2dcfce8c37b12a4f",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-search.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-test.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-test.md.txt",
+      "sha256": "16ebc556e1fa8ff854e001100c15b988443e927bc6eabc10110786a38ebc5b9b",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-test.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-tree.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-tree.md.txt",
+      "sha256": "714d96cc39d6d931c2d1b135031f78f8f0bcd92a5242325aa0840acb92661a06",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-tree.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-uninstall.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-uninstall.md.txt",
+      "sha256": "bdfb79e6175b27c8b86ab7eabe87354740131c54c0c863d5ced783b515278ec4",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-uninstall.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-update.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-update.md.txt",
+      "sha256": "094075881a68a2be04fcc617d943e269fb0c8aec74b4feda03ac22477d32e541",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-update.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-vendor.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-vendor.md.txt",
+      "sha256": "9d1aca7f157fc1fe73060dd8c602987a0106a53b89fe315428f8e4256ef36d17",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-vendor.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-version.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-version.md.txt",
+      "sha256": "839394dc2d37fb8b5925fca34648f1ff017ce6c5df291983fc45c84bfd107d5b",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-version.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo-yank.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo-yank.md.txt",
+      "sha256": "d2d428c166e590022cd4bc348e74e4eb87d2a20501673ad654a324fd051bb544",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo-yank.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/man/cargo.md",
+      "path": "upstream/source-extracts/src/doc/man/cargo.md.txt",
+      "sha256": "61f796614b78fb461c8022be64576605743214b7376311624941386856b11729",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/man/cargo.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/SUMMARY.md",
+      "path": "upstream/source-extracts/src/doc/src/SUMMARY.md.txt",
+      "sha256": "dcd0cdcf92c606813f5f16710ffbcdc02c17ea6469947fc934bd2eaa4a15dde3",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/SUMMARY.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/appendix/git-authentication.md",
+      "path": "upstream/source-extracts/src/doc/src/appendix/git-authentication.md.txt",
+      "sha256": "45b7340270329fa437cdf6354abb35e30e8e68c919b8cba40a7530d79b99b875",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/appendix/git-authentication.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/appendix/glossary.md",
+      "path": "upstream/source-extracts/src/doc/src/appendix/glossary.md.txt",
+      "sha256": "73b96f190cd804a7b6ff99aa816b3786453ab629e87aad562e93baeabedcdb09",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/appendix/glossary.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/faq.md",
+      "path": "upstream/source-extracts/src/doc/src/faq.md.txt",
+      "sha256": "bdd68eab49fbb82e386ed9886208a435967fd36147a3391e159b964606e30985",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/faq.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/getting-started/first-steps.md",
+      "path": "upstream/source-extracts/src/doc/src/getting-started/first-steps.md.txt",
+      "sha256": "639d3997a4ccae98060e3e894cd8ab464c9dbf2b2439ed31ff4f27b457c05ad7",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/getting-started/first-steps.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/getting-started/index.md",
+      "path": "upstream/source-extracts/src/doc/src/getting-started/index.md.txt",
+      "sha256": "9c9d3b3c397ee656cc5d5e2a90cb9372fe838d45c94929c100f233dd5fb7b8eb",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/getting-started/index.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/getting-started/installation.md",
+      "path": "upstream/source-extracts/src/doc/src/getting-started/installation.md.txt",
+      "sha256": "bce6b13247c9fb0c2087f6e504fd6e85f443f88f16e1a1220756ab0839a98c0a",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/getting-started/installation.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/guide/build-performance.md",
+      "path": "upstream/source-extracts/src/doc/src/guide/build-performance.md.txt",
+      "sha256": "c6e4c491fe09760224599d33b605e056cff74df4ad7796f2345f2e75844f5147",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/guide/build-performance.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/guide/cargo-home.md",
+      "path": "upstream/source-extracts/src/doc/src/guide/cargo-home.md.txt",
+      "sha256": "53399d7f2251f8f06a7dfab47d3df74cbe3d54854fac4d64272edde1c4f83ec6",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/guide/cargo-home.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/guide/cargo-toml-vs-cargo-lock.md",
+      "path": "upstream/source-extracts/src/doc/src/guide/cargo-toml-vs-cargo-lock.md.txt",
+      "sha256": "6f9e877d28092f6b2ab64e5ed05162a25b075c1303413d3620c7c1cafd466055",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/guide/cargo-toml-vs-cargo-lock.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/guide/continuous-integration.md",
+      "path": "upstream/source-extracts/src/doc/src/guide/continuous-integration.md.txt",
+      "sha256": "12eab6bc6382b29c618f71a047087ef561d93fc6fefec2dfb757baa89996ce96",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/guide/continuous-integration.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/guide/creating-a-new-project.md",
+      "path": "upstream/source-extracts/src/doc/src/guide/creating-a-new-project.md.txt",
+      "sha256": "efbc26fd4b0c88a1a668456742d70d6f4e9ce92925d73073309fcf5c5c5bfba1",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/guide/creating-a-new-project.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/guide/dependencies.md",
+      "path": "upstream/source-extracts/src/doc/src/guide/dependencies.md.txt",
+      "sha256": "b21bc4b574eb62d8bac78900dbb03718e36bf00647f149c6ca2aad05dbcf2a90",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/guide/dependencies.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/guide/index.md",
+      "path": "upstream/source-extracts/src/doc/src/guide/index.md.txt",
+      "sha256": "3a8af80e53a1d16bd9d38c392f02d5e2d049b52373b1b4e84085a7957677d653",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/guide/index.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/guide/project-layout.md",
+      "path": "upstream/source-extracts/src/doc/src/guide/project-layout.md.txt",
+      "sha256": "a84bc69a050e024e8e69d2c6775e6608cdbd3008cb47dfdd55043b47c1ad179b",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/guide/project-layout.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/guide/tests.md",
+      "path": "upstream/source-extracts/src/doc/src/guide/tests.md.txt",
+      "sha256": "0d2e0c9d64cf118206a8cf51f7ddc5655194a4ffe87beea2d64b5c2165cff947",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/guide/tests.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/guide/why-cargo-exists.md",
+      "path": "upstream/source-extracts/src/doc/src/guide/why-cargo-exists.md.txt",
+      "sha256": "d0b0d8d5bd5bd78a492908ad6a8eaddb765f02f6e310df2f2bc335c4d78ed69e",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/guide/why-cargo-exists.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/guide/working-on-an-existing-project.md",
+      "path": "upstream/source-extracts/src/doc/src/guide/working-on-an-existing-project.md.txt",
+      "sha256": "931ac25c63d695cd04ea9754cbb7917f619f8ddd442cf341e7aa8a4d50e1c0f1",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/guide/working-on-an-existing-project.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/index.md",
+      "path": "upstream/source-extracts/src/doc/src/index.md.txt",
+      "sha256": "1d792accca3b933de71779c8efe044552c94f4d45047f10776cae3ec750613be",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/index.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/build-cache.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/build-cache.md.txt",
+      "sha256": "8866bcb97bdd2abf2f8177a010a2cea29a73743f4ab39306ca036a30bd5e00ad",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/build-cache.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/build-script-examples.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/build-script-examples.md.txt",
+      "sha256": "8a91fbcbb6b44d02e2483475292f120483d5da57973261dd9323f617b30215b0",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/build-script-examples.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/build-scripts.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/build-scripts.md.txt",
+      "sha256": "703f7547c5d4c28fff8d7769d5bd80dd6cd20475b7725baa902dd1cbc4449396",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/build-scripts.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/cargo-targets.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/cargo-targets.md.txt",
+      "sha256": "4115df65c915ae7143c219b13a928d6707fc317596d9013f7c3f9215668d48dd",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/cargo-targets.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/config.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/config.md.txt",
+      "sha256": "82c05784a526af53496f0349912248b93a5e48d1a7112383ab468cc534c57e04",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/config.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/credential-provider-protocol.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/credential-provider-protocol.md.txt",
+      "sha256": "639db5d0e97362b1585130ab9aef37ddb97404f8b8d3182bb1b453ad613ce17d",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/credential-provider-protocol.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/environment-variables.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/environment-variables.md.txt",
+      "sha256": "6f665b89e5a164da0526f22602105ba9dfb16928d76e028bf2fc4a30e0d37323",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/environment-variables.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/external-tools.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/external-tools.md.txt",
+      "sha256": "155fcf2f4ce71ba30aa46897356c15201e14e9e6bb335b496a358bc263f0cb89",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/external-tools.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/features-examples.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/features-examples.md.txt",
+      "sha256": "a674fc15ea20b91bf336cb140a7a83c94b7180535293886d53cc5afd29818163",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/features-examples.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/features.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/features.md.txt",
+      "sha256": "aa89b699dad0f4af13c5dee007482d471ed8fffd37bad642cb98a19d334353c5",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/features.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/future-incompat-report.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/future-incompat-report.md.txt",
+      "sha256": "901ed3dcf26a59ba031443a03577983eebb8b16c50cbc5558d8ffbaa2d31280b",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/future-incompat-report.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/index.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/index.md.txt",
+      "sha256": "393e31d525c07283168fc416b132142a79a95bddd8fbe0225434e8b5a843f8aa",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/index.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/lints.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/lints.md.txt",
+      "sha256": "faca59d932049e49da3fc6f5d09634650357e0d436034b2cbafa42caf7a85fb9",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/lints.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/manifest.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/manifest.md.txt",
+      "sha256": "28e0aaa4907a85fd7c8bc45e68a6fb4bac997913edaff83500cd63ca608a215b",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/manifest.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/overriding-dependencies.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/overriding-dependencies.md.txt",
+      "sha256": "ffd1cb9e87b23db77b65af03966b36f43e43736930923693919ef3aa04c67387",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/overriding-dependencies.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/pkgid-spec.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/pkgid-spec.md.txt",
+      "sha256": "8649e56a386275e09c296cf21dcd45acf2948bf886a9b5105861a586f1de8cc5",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/pkgid-spec.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/profiles.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/profiles.md.txt",
+      "sha256": "a09a6e4a079f4c7e5bdf6ee1352636ff67e9808fa66ccc10374f75b75ae65271",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/profiles.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/publishing.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/publishing.md.txt",
+      "sha256": "c0f4b305faaced861f03abf863973eaed7fb419e9bae98777120e23e29feb0b7",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/publishing.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/registries.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/registries.md.txt",
+      "sha256": "097fe77538e44156e2ea17fb69a86682955da1f2f97fd2fe0aab252eabfe3eed",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/registries.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/registry-authentication.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/registry-authentication.md.txt",
+      "sha256": "84e29c768cc368d039f2b30f8c1def3cb747803386be42938e8980cf51905f29",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/registry-authentication.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/registry-index.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/registry-index.md.txt",
+      "sha256": "aeeab820ce7305201c2c67a52f1eed61c9afa61cc89313f2ccb243af21501d00",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/registry-index.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/registry-web-api.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/registry-web-api.md.txt",
+      "sha256": "7534f4445d2c7c26e0ab9f0ecc5248764bb6c39cd55f5251eaab71ab1ae0f976",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/registry-web-api.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/resolver.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/resolver.md.txt",
+      "sha256": "5b38deff497269e82fda363534124e2536198d6c77a0a46ddbdf80a6eebef6d1",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/resolver.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/running-a-registry.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/running-a-registry.md.txt",
+      "sha256": "89bf58ef30692ab595ddd237d459761b93b0b865518108bf117f9a5d3845a080",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/running-a-registry.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/rust-version.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/rust-version.md.txt",
+      "sha256": "b428c662be624c351941eceac8a246bac247d2688b2b15fe5b4406ac6db16638",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/rust-version.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/semver.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/semver.md.txt",
+      "sha256": "a1fc9716b107f2289bf06baff43147644f8506c2ea8cee7314d02e0461d9c9e1",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/semver.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/source-replacement.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/source-replacement.md.txt",
+      "sha256": "bc6cb9bb746c3a0819312f87a4e07bbd1067c00a6e7fddc778f379bf3eb94983",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/source-replacement.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/specifying-dependencies.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/specifying-dependencies.md.txt",
+      "sha256": "9944fce402153c609a5dd9df5317419ea7552da7bff4ed226d0fbf90fbc237a9",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/specifying-dependencies.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/timings.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/timings.md.txt",
+      "sha256": "ec084d23659e6c7e1c40c3020c9f4bb4f46f9798b74ebd03953ebaf9b833c85e",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/timings.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/unstable.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/unstable.md.txt",
+      "sha256": "d7df9b0cf403ded81b85e53668c1e8975afafe86ffee8dc6b2f6a7e7d91dede1",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/unstable.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    },
+    {
+      "id": "source:src/doc/src/reference/workspaces.md",
+      "path": "upstream/source-extracts/src/doc/src/reference/workspaces.md.txt",
+      "sha256": "c4650e2bf9f9824bb1055cff869337a9ea0b9b5497a460ba57b95b75fe3ac2b9",
+      "url": "https://raw.githubusercontent.com/rust-lang/cargo/797e8a9bca276c1c9f9f738d2a20f484fa4eea9d/src/doc/src/reference/workspaces.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-11T03:02:20Z"
+    }
+  ],
+  "limitations": [
+    "未采集目标二进制原始帮助输出；命令事实自固定提交的 Rust 源码（clap 子命令定义与共享参数助手）重建，帮助文本为源码重构而非运行时抓取。",
+    "示例与工作流未实际运行；全部示例为说明性内容。",
+    "官方在线文档（doc.rust-lang.org/cargo、crates.io）为滚动版本，仅作交叉旁证；本版固定来源为仓库内 src/doc 手册页与官方书。",
+    "-Z/--unstable-features 的不稳定旗标值清单为运行时注册（CliUnstable 表），未在命令事实中逐一枚举；仅在根命令收录该旗标本身。",
+    "cargo 仓库 tag 为 0.99.0（crate 版本），随 Rust 1.99.0 发布的二进制自称 cargo 1.99.0；两者为同一提交，本库按用户可见版本 1.99.0 登记。",
+    "环境变量清单以 src/doc/src/reference/environment-variables.md 与 src/cargo/util/context/environment.rs 为据；个别变量依赖运行时配置值组合，未逐一验证。"
+  ]
+}

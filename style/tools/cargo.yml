@@ -1,0 +1,30 @@
+# cargo 工具级术语表：覆盖 style/terms.yml 的通用译法。
+# 保留原文的术语在此显式登记，避免不同页面各自选词。
+crate: crate
+package: 包
+workspace: 工作区
+manifest: 清单
+registry: 注册表
+index: 注册表索引
+feature: 特性
+profile: profile
+target: 目标
+target directory: target 目录
+target triple: 目标三元组
+dependency: 依赖
+dev-dependency: 开发依赖
+lockfile: Cargo.lock
+edition: edition
+bin target: 二进制目标
+lib target: 库目标
+example: 示例目标
+benchmark: 基准目标
+artifact: 产物
+fingerprint: 指纹
+vendored source: vendored 源
+token: 令牌
+dry run: 干跑
+owner: 所有者
+yank: yank
+sparse registry: sparse 注册表
+source replacement: 来源替换
