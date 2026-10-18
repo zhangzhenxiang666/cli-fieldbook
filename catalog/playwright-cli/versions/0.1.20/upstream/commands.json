@@ -1,0 +1,3258 @@
+[
+  {
+    "path": [],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli <command> [args] [options]",
+      "playwright-cli -s=<session> <command> [args] [options]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "--help [command]",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-client/program.ts",
+          "source:packages/playwright-core/src/tools/cli-daemon/helpGenerator.ts"
+        ]
+      },
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-client/program.ts"
+        ]
+      },
+      {
+        "name": "--raw",
+        "display": "--raw",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-client/program.ts"
+        ]
+      },
+      {
+        "name": "--session",
+        "display": "-s, --session <NAME>",
+        "aliases": [
+          "-s"
+        ],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-client/program.ts",
+          "source:packages/playwright-core/src/tools/cli-daemon/helpGenerator.ts"
+        ]
+      },
+      {
+        "name": "--version",
+        "display": "-v, --version",
+        "aliases": [
+          "-v"
+        ],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-client/program.ts"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "open"
+      ],
+      [
+        "attach"
+      ],
+      [
+        "close"
+      ],
+      [
+        "detach"
+      ],
+      [
+        "goto"
+      ],
+      [
+        "type"
+      ],
+      [
+        "click"
+      ],
+      [
+        "dblclick"
+      ],
+      [
+        "fill"
+      ],
+      [
+        "drag"
+      ],
+      [
+        "drop"
+      ],
+      [
+        "hover"
+      ],
+      [
+        "select"
+      ],
+      [
+        "upload"
+      ],
+      [
+        "check"
+      ],
+      [
+        "uncheck"
+      ],
+      [
+        "snapshot"
+      ],
+      [
+        "find"
+      ],
+      [
+        "eval"
+      ],
+      [
+        "console"
+      ],
+      [
+        "dialog-accept"
+      ],
+      [
+        "dialog-dismiss"
+      ],
+      [
+        "resize"
+      ],
+      [
+        "run-code"
+      ],
+      [
+        "delete-data"
+      ],
+      [
+        "go-back"
+      ],
+      [
+        "go-forward"
+      ],
+      [
+        "reload"
+      ],
+      [
+        "press"
+      ],
+      [
+        "keydown"
+      ],
+      [
+        "keyup"
+      ],
+      [
+        "mousemove"
+      ],
+      [
+        "mousedown"
+      ],
+      [
+        "mouseup"
+      ],
+      [
+        "mousewheel"
+      ],
+      [
+        "screenshot"
+      ],
+      [
+        "pdf"
+      ],
+      [
+        "tab-list"
+      ],
+      [
+        "tab-new"
+      ],
+      [
+        "tab-close"
+      ],
+      [
+        "tab-select"
+      ],
+      [
+        "state-load"
+      ],
+      [
+        "state-save"
+      ],
+      [
+        "cookie-list"
+      ],
+      [
+        "cookie-get"
+      ],
+      [
+        "cookie-set"
+      ],
+      [
+        "cookie-delete"
+      ],
+      [
+        "cookie-clear"
+      ],
+      [
+        "localstorage-list"
+      ],
+      [
+        "localstorage-get"
+      ],
+      [
+        "localstorage-set"
+      ],
+      [
+        "localstorage-delete"
+      ],
+      [
+        "localstorage-clear"
+      ],
+      [
+        "sessionstorage-list"
+      ],
+      [
+        "sessionstorage-get"
+      ],
+      [
+        "sessionstorage-set"
+      ],
+      [
+        "sessionstorage-delete"
+      ],
+      [
+        "sessionstorage-clear"
+      ],
+      [
+        "requests"
+      ],
+      [
+        "request"
+      ],
+      [
+        "request-headers"
+      ],
+      [
+        "request-body"
+      ],
+      [
+        "response-headers"
+      ],
+      [
+        "response-body"
+      ],
+      [
+        "route"
+      ],
+      [
+        "route-list"
+      ],
+      [
+        "unroute"
+      ],
+      [
+        "network-state-set"
+      ],
+      [
+        "config-print"
+      ],
+      [
+        "install"
+      ],
+      [
+        "install-browser"
+      ],
+      [
+        "recording-start"
+      ],
+      [
+        "recording-stop"
+      ],
+      [
+        "tracing-start"
+      ],
+      [
+        "tracing-stop"
+      ],
+      [
+        "video-start"
+      ],
+      [
+        "video-stop"
+      ],
+      [
+        "video-chapter"
+      ],
+      [
+        "video-show-actions"
+      ],
+      [
+        "video-hide-actions"
+      ],
+      [
+        "show"
+      ],
+      [
+        "pause-at"
+      ],
+      [
+        "resume"
+      ],
+      [
+        "step-over"
+      ],
+      [
+        "generate-locator"
+      ],
+      [
+        "highlight"
+      ],
+      [
+        "list"
+      ],
+      [
+        "close-all"
+      ],
+      [
+        "kill-all"
+      ],
+      [
+        "webmcp-list"
+      ],
+      [
+        "webmcp-call"
+      ],
+      [
+        "tray"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-client/program.ts",
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-daemon/helpGenerator.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "open"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli open [url]"
+    ],
+    "arguments": [
+      {
+        "name": "url",
+        "display": "[url]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--browser",
+        "display": "--browser <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--config",
+        "display": "--config <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--device",
+        "display": "--device <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--headed",
+        "display": "--headed",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--idle-timeout",
+        "display": "--idle-timeout <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--mobile",
+        "display": "--mobile",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--persistent",
+        "display": "--persistent",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--profile",
+        "display": "--profile <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-client/program.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "attach"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli attach [name]"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "[name]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--cdp",
+        "display": "--cdp <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--endpoint",
+        "display": "--endpoint <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--extension",
+        "display": "--extension <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--config",
+        "display": "--config <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--session",
+        "display": "--session <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--idle-timeout",
+        "display": "--idle-timeout <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-client/program.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "close"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli close"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-client/program.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "detach"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli detach"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-client/program.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "goto"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli goto <url>"
+    ],
+    "arguments": [
+      {
+        "name": "url",
+        "display": "<url>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "type"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli type <text>"
+    ],
+    "arguments": [
+      {
+        "name": "text",
+        "display": "<text>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--submit",
+        "display": "--submit",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "click"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli click <target> [button]"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<target>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "button",
+        "display": "[button]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--modifiers",
+        "display": "--modifiers <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "dblclick"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli dblclick <target> [button]"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<target>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "button",
+        "display": "[button]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--modifiers",
+        "display": "--modifiers <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "fill"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli fill <target> <text>"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<target>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "text",
+        "display": "<text>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--submit",
+        "display": "--submit",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "drag"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli drag <startTarget> <endTarget>"
+    ],
+    "arguments": [
+      {
+        "name": "startTarget",
+        "display": "<startTarget>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "endTarget",
+        "display": "<endTarget>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "drop"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli drop <target>"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<target>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--path",
+        "display": "--path <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--data",
+        "display": "--data <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "hover"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli hover <target>"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<target>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "select"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli select <target> <val>"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<target>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "val",
+        "display": "<val>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "upload"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli upload <files...>"
+    ],
+    "arguments": [
+      {
+        "name": "files",
+        "display": "<files...>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "check"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli check <target>"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<target>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "uncheck"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli uncheck <target>"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<target>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "snapshot"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli snapshot [target]"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[target]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--filename",
+        "display": "--filename <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--depth",
+        "display": "--depth <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--boxes",
+        "display": "--boxes",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "find"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli find [text]"
+    ],
+    "arguments": [
+      {
+        "name": "text",
+        "display": "[text]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--regex",
+        "display": "--regex <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "eval"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli eval <func> [target]"
+    ],
+    "arguments": [
+      {
+        "name": "func",
+        "display": "<func>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "target",
+        "display": "[target]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--filename",
+        "display": "--filename <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "console"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli console [min-level]"
+    ],
+    "arguments": [
+      {
+        "name": "min-level",
+        "display": "[min-level]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--clear",
+        "display": "--clear",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "dialog-accept"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli dialog-accept [prompt]"
+    ],
+    "arguments": [
+      {
+        "name": "prompt",
+        "display": "[prompt]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "dialog-dismiss"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli dialog-dismiss"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "resize"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli resize <w> <h>"
+    ],
+    "arguments": [
+      {
+        "name": "w",
+        "display": "<w>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "h",
+        "display": "<h>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "run-code"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli run-code [code]"
+    ],
+    "arguments": [
+      {
+        "name": "code",
+        "display": "[code]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--filename",
+        "display": "--filename <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "delete-data"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli delete-data"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-client/program.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "go-back"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli go-back"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "go-forward"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli go-forward"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "reload"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli reload"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "press"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli press <key>"
+    ],
+    "arguments": [
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "keydown"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli keydown <key>"
+    ],
+    "arguments": [
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "keyup"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli keyup <key>"
+    ],
+    "arguments": [
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "mousemove"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli mousemove <x> <y>"
+    ],
+    "arguments": [
+      {
+        "name": "x",
+        "display": "<x>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "y",
+        "display": "<y>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "mousedown"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli mousedown [button]"
+    ],
+    "arguments": [
+      {
+        "name": "button",
+        "display": "[button]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "mouseup"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli mouseup [button]"
+    ],
+    "arguments": [
+      {
+        "name": "button",
+        "display": "[button]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "mousewheel"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli mousewheel <dx> <dy>"
+    ],
+    "arguments": [
+      {
+        "name": "dx",
+        "display": "<dx>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "dy",
+        "display": "<dy>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "screenshot"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli screenshot [target]"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[target]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--filename",
+        "display": "--filename <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--type",
+        "display": "--type <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "values": [
+          "png",
+          "jpeg",
+          "webp"
+        ]
+      },
+      {
+        "name": "--full-page",
+        "display": "--full-page",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--hires",
+        "display": "--hires",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pdf"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli pdf"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--filename",
+        "display": "--filename <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tab-list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli tab-list"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tab-new"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli tab-new [url]"
+    ],
+    "arguments": [
+      {
+        "name": "url",
+        "display": "[url]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tab-close"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli tab-close [index]"
+    ],
+    "arguments": [
+      {
+        "name": "index",
+        "display": "[index]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tab-select"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli tab-select <index>"
+    ],
+    "arguments": [
+      {
+        "name": "index",
+        "display": "<index>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "state-load"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli state-load <filename>"
+    ],
+    "arguments": [
+      {
+        "name": "filename",
+        "display": "<filename>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "state-save"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli state-save [filename]"
+    ],
+    "arguments": [
+      {
+        "name": "filename",
+        "display": "[filename]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "cookie-list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli cookie-list"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--domain",
+        "display": "--domain <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--path",
+        "display": "--path <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "cookie-get"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli cookie-get <name>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "cookie-set"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli cookie-set <name> <value>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "value",
+        "display": "<value>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--domain",
+        "display": "--domain <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--path",
+        "display": "--path <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--expires",
+        "display": "--expires <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--httpOnly",
+        "display": "--httpOnly",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--secure",
+        "display": "--secure",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--sameSite",
+        "display": "--sameSite <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "values": [
+          "Strict",
+          "Lax",
+          "None"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "cookie-delete"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli cookie-delete <name>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "cookie-clear"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli cookie-clear"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "localstorage-list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli localstorage-list"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "localstorage-get"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli localstorage-get <key>"
+    ],
+    "arguments": [
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "localstorage-set"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli localstorage-set <key> <value>"
+    ],
+    "arguments": [
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "value",
+        "display": "<value>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "localstorage-delete"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli localstorage-delete <key>"
+    ],
+    "arguments": [
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "localstorage-clear"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli localstorage-clear"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "sessionstorage-list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli sessionstorage-list"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "sessionstorage-get"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli sessionstorage-get <key>"
+    ],
+    "arguments": [
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "sessionstorage-set"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli sessionstorage-set <key> <value>"
+    ],
+    "arguments": [
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      },
+      {
+        "name": "value",
+        "display": "<value>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "sessionstorage-delete"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli sessionstorage-delete <key>"
+    ],
+    "arguments": [
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "sessionstorage-clear"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli sessionstorage-clear"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "requests"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli requests"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--static",
+        "display": "--static",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--filter",
+        "display": "--filter <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--clear",
+        "display": "--clear",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "request"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli request <index>"
+    ],
+    "arguments": [
+      {
+        "name": "index",
+        "display": "<index>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--filename",
+        "display": "--filename <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "request-headers"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli request-headers <index>"
+    ],
+    "arguments": [
+      {
+        "name": "index",
+        "display": "<index>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--filename",
+        "display": "--filename <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "request-body"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli request-body <index>"
+    ],
+    "arguments": [
+      {
+        "name": "index",
+        "display": "<index>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--filename",
+        "display": "--filename <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "response-headers"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli response-headers <index>"
+    ],
+    "arguments": [
+      {
+        "name": "index",
+        "display": "<index>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--filename",
+        "display": "--filename <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "response-body"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli response-body <index>"
+    ],
+    "arguments": [
+      {
+        "name": "index",
+        "display": "<index>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--filename",
+        "display": "--filename <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "route"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli route <pattern>"
+    ],
+    "arguments": [
+      {
+        "name": "pattern",
+        "display": "<pattern>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--status",
+        "display": "--status <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--body",
+        "display": "--body <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--content-type",
+        "display": "--content-type <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--header",
+        "display": "--header <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--remove-header",
+        "display": "--remove-header <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "route-list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli route-list"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "unroute"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli unroute [pattern]"
+    ],
+    "arguments": [
+      {
+        "name": "pattern",
+        "display": "[pattern]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "network-state-set"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli network-state-set <state>"
+    ],
+    "arguments": [
+      {
+        "name": "state",
+        "display": "<state>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true,
+        "values": [
+          "online",
+          "offline"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "config-print"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli config-print"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "hidden",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "install"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli install"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--skills",
+        "display": "--skills <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--global",
+        "display": "-g, --global",
+        "aliases": [
+          "-g"
+        ],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+          "source:packages/playwright-core/src/tools/cli-client/program.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-client/program.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "install-browser"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli install-browser [browser]"
+    ],
+    "arguments": [
+      {
+        "name": "browser",
+        "display": "[browser]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--with-deps",
+        "display": "--with-deps",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--dry-run",
+        "display": "--dry-run",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--list",
+        "display": "--list",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--force",
+        "display": "--force",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--only-shell",
+        "display": "--only-shell",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--no-shell",
+        "display": "--no-shell",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-client/program.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "recording-start"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli recording-start"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "recording-stop"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli recording-stop"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tracing-start"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli tracing-start"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tracing-stop"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli tracing-stop"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "video-start"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli video-start [filename]"
+    ],
+    "arguments": [
+      {
+        "name": "filename",
+        "display": "[filename]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--size",
+        "display": "--size <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "video-stop"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli video-stop"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "video-chapter"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli video-chapter <title>"
+    ],
+    "arguments": [
+      {
+        "name": "title",
+        "display": "<title>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--description",
+        "display": "--description <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--duration",
+        "display": "--duration <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "video-show-actions"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli video-show-actions"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--duration",
+        "display": "--duration <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--position",
+        "display": "--position <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "values": [
+          "top-left",
+          "top",
+          "top-right",
+          "bottom-left",
+          "bottom",
+          "bottom-right"
+        ]
+      },
+      {
+        "name": "--cursor",
+        "display": "--cursor <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "values": [
+          "none",
+          "pointer"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "video-hide-actions"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli video-hide-actions"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "show"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli show"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--port",
+        "display": "--port <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--host",
+        "display": "--host <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--annotate",
+        "display": "--annotate",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--kill",
+        "display": "--kill",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-client/program.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pause-at"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli pause-at <location>"
+    ],
+    "arguments": [
+      {
+        "name": "location",
+        "display": "<location>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "resume"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli resume"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "step-over"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli step-over"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "generate-locator"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli generate-locator <target>"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<target>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "highlight"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli highlight [target]"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[target]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--hide",
+        "display": "--hide",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--style",
+        "display": "--style <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli list"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--all",
+        "display": "--all",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-client/program.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "close-all"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli close-all"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-client/program.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "kill-all"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli kill-all"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "source:packages/playwright-core/src/tools/cli-client/program.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webmcp-list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli webmcp-list"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webmcp-call"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli webmcp-call <name>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ],
+        "required": true
+      }
+    ],
+    "options": [
+      {
+        "name": "--params",
+        "display": "--params <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      },
+      {
+        "name": "--frame",
+        "display": "--frame <VALUE>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tray"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "playwright-cli tray"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "hidden",
+    "evidenceIds": [
+      "source:packages/playwright-core/src/tools/cli-daemon/commands.ts"
+    ],
+    "profileId": "source-default"
+  }
+]
