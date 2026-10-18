@@ -3,3 +3,5 @@ name: Playwright CLI
 binary: playwright-cli
 repository: https://github.com/microsoft/playwright
 summary: Playwright 官方终端 CLI，通过持久浏览器会话执行页面交互、截图、网络观察、录制与状态管理等操作。
+defaults:
+  zh-CN: 0.1.20
