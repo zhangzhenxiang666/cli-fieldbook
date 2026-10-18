@@ -1,0 +1,26 @@
+# playwright-cli 工具级术语表：覆盖 style/terms.yml 的通用译法。
+# 保留原文的术语在此显式登记，避免不同页面各自选词。
+session: 会话
+browser session: 浏览器会话
+workspace: 工作区
+target: 目标
+snapshot: 快照
+locator: 定位器
+accessibility snapshot: 可访问性快照
+headless: 无头
+headed: 有头
+storage state: 存储状态
+cookie: cookie
+trace: 追踪
+tracing: 追踪
+video: 视频
+recording: 录制
+route: 路由
+request: 请求
+response: 响应
+network: 网络
+console: 控制台
+dashboard: Dashboard
+profile: profile
+daemon: 守护进程
+attachment: 附件
