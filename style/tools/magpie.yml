@@ -1,0 +1,15 @@
+# magpie 工具级术语表：覆盖 style/terms.yml 的通用译法。
+# 保留原文的术语在此显式登记，避免不同页面各自选词。
+gateway: 网关
+provider: provider
+preset: preset
+routing group: 路由组
+subscription: 订阅
+account: 账户
+quota: 配额
+menu bar: 菜单栏
+quick panel: 快速面板
+daemon: 守护进程
+fallback: fallback
+effort: effort
+check-in: 签到
