@@ -15,7 +15,7 @@ title: 来源、覆盖与校对记录
 | 固定 ref | v0.1.1291 |
 | 固定 commit | `33dbdcc529622cf0dd053c99eb34f51c06fbba77` |
 | 适配器 | magpie-source-v1 |
-| 证据文件 | 50 个(源码 41、官方文档 8、许可 1),SHA-256 见 `upstream/source.lock.json` |
+| 证据文件 | 55 个(源码 46、官方文档 8、许可 1),SHA-256 见 `upstream/source.lock.json` |
 
 ## 收录口径
 
@@ -30,3 +30,4 @@ title: 来源、覆盖与校对记录
 - 行为描述依据固定提交源码逐条核对(已核对源码);官方文档(README、docs/reference.md、docs/subsystems/*)作为交叉依据。
 - 页内示例均为说明性内容,未实际运行(未实测示例);涉及密钥、订阅与网络请求的操作尤其不应照抄尝试。
 - `gateway-key limit` 的 `list|off|reset|remove|add` 子形式与 `provider set` 的 k=v 键作为同一节点内的参数形式说明,未拆分为独立节点。
+- 主帮助未列出、仅存在于源码的若干子形式未建节点,已在相应页面"使用提醒"如实注明:`gateway-key accounts <id>`、`quota` 的 `reset`/`auto-reset`/`credits`/`alert`/`refresh`、`sessions relocate-claude` 与 `sessions --limit N`、`group rule` 的 `classifier` 动词与裸查询形式、`provider test --as`、`models --agent=<id>` 写法。
