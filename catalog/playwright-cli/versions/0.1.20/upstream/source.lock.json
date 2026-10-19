@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/microsoft/playwright",
+  "upstreamVersion": "0.1.20",
+  "ref": "d1ead3ecca23182f2d06d761c28e3d4edafb6595",
+  "commit": "d1ead3ecca23182f2d06d761c28e3d4edafb6595",
+  "adapter": "playwright-cli-source-v1",
+  "normalization": 1,
+  "profile": {
+    "id": "source-default",
+    "scope": "命令树节点自固定提交的 packages/playwright-core/src/tools/cli-daemon/commands.ts declareCommand 表静态枚举：全部 92 个命令节点（均为根级单 token，公开 90、隐藏 2：config-print、tray），另有根命令 1 个，合计 93 个节点，本版全部收录。@playwright/cli 0.1.20（npm 分发壳，microsoft/playwright-cli tag v0.1.20）精确依赖 playwright/playwright-core 1.64.0-alpha-2026-09-14，命令行为源码即本仓库该构建提交。证据覆盖：命令与参数定义（cli-daemon/commands.ts 的 zod 声明）、参数解析与帮助生成（cli-daemon/command.ts、helpGenerator.ts）、客户端入口与全局选项（cli-client/program.ts）、输出与会话管理（cli-client/output.ts、session.ts、registry.ts、channelSessions.ts、minimist.ts、cli.ts）、守护进程（cli-daemon/daemon.ts、program.ts）、工作区初始化（utils/installSkills.ts）、官方 skills 使用文档（tools/skills/playwright-cli/），合计 28 个文件。"
+  },
+  "evidence": [
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-daemon/DEPS.list",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-daemon/DEPS.list.txt",
+      "sha256": "748187a61ae80fbc5c6969cb732cd691ed9c2839536dfe49b481622b043ed8c5",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-daemon/DEPS.list",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-daemon/command.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-daemon/command.ts.txt",
+      "sha256": "f6a439e69536be5bb26a083798ccfd122c79dc7d5a29f6755acc607932d57dc4",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-daemon/command.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-daemon/commands.ts.txt",
+      "sha256": "aa50db0a9e9784b49db405732897df2e66511c9a932c99de045c8dbf6e48bb17",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-daemon/commands.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-daemon/daemon.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-daemon/daemon.ts.txt",
+      "sha256": "c199bf642da99293b8ddd076942f85e2c43845f8b1ee9db78f922130ab38638c",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-daemon/daemon.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-daemon/helpGenerator.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-daemon/helpGenerator.ts.txt",
+      "sha256": "a9a1001631b0d94590c20ab9724ad5191d59665ea3d2a3f2184a96967d6271f8",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-daemon/helpGenerator.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-daemon/program.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-daemon/program.ts.txt",
+      "sha256": "6b6557a4327d97589fc2f9e4163c242a3b48ef592e7dc1550e74a1886517afd1",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-daemon/program.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-client/DEPS.list",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-client/DEPS.list.txt",
+      "sha256": "9c67ae3a0a3c85e61c77073920229e9ade9f128f508673c4100a1139f93341d9",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-client/DEPS.list",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-client/channelSessions.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-client/channelSessions.ts.txt",
+      "sha256": "8182f2a356e2f8a5092f762585004a6157658fab820e8d2d9a8558a4a99f351c",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-client/channelSessions.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-client/cli.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-client/cli.ts.txt",
+      "sha256": "6166a1a007c1895ee4ee227b458b0bcfd895c06ceae85766c54caedb0a077717",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-client/cli.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-client/minimist.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-client/minimist.ts.txt",
+      "sha256": "67d01e52e43a4a107ea3a4ef8166f9bc57b9d17a760821d44f8ea55cf342c66b",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-client/minimist.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-client/output.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-client/output.ts.txt",
+      "sha256": "70d033fc8a225c862489266b40cb4d6408ae2ce8d010c6e4173a57bd8ecb994e",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-client/output.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-client/program.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-client/program.ts.txt",
+      "sha256": "45910efdc2c9a47444532e56b5c508894099ddf1fd86a550cb76a801aeab0108",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-client/program.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-client/registry.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-client/registry.ts.txt",
+      "sha256": "4f48db283c05432704bba2b464a2e5c98eaf9cc4f1b223e295b3b36cb0febc70",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-client/registry.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/cli-client/session.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/cli-client/session.ts.txt",
+      "sha256": "ad1809cdf64d90a0e8d0cb653cef605d186c67425b53743ac3199d0eb8b53f8e",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-client/session.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/skills/playwright-cli/SKILL.md",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/skills/playwright-cli/SKILL.md.txt",
+      "sha256": "862ddb356d81e6cc652fb3427232e4282d7fffcc554c852658fef6f15615c8d1",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/skills/playwright-cli/SKILL.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/skills/playwright-cli/references/element-attributes.md",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/skills/playwright-cli/references/element-attributes.md.txt",
+      "sha256": "bf19aa4671e0a50a0fefa9c790f39124e803060eefe395042b723c29fcb7faa2",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/skills/playwright-cli/references/element-attributes.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/skills/playwright-cli/references/playwright-tests.md",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/skills/playwright-cli/references/playwright-tests.md.txt",
+      "sha256": "c5b0719fef2cfdff50bd744051b2f9afc119775db4b48e9b2882c1cf3886797c",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/skills/playwright-cli/references/playwright-tests.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/skills/playwright-cli/references/pr-attachments.md",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/skills/playwright-cli/references/pr-attachments.md.txt",
+      "sha256": "24b118e74598be72e73e24fe223d295b9099c85b1860a7c8f6e5690c9038fa2a",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/skills/playwright-cli/references/pr-attachments.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/skills/playwright-cli/references/request-mocking.md",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/skills/playwright-cli/references/request-mocking.md.txt",
+      "sha256": "54e801c9663fc2b6d68ceb058cb1c360724c2499f42acc7852a68e83e5b5f37c",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/skills/playwright-cli/references/request-mocking.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/skills/playwright-cli/references/running-code.md",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/skills/playwright-cli/references/running-code.md.txt",
+      "sha256": "d95c539a5990b71d02d8bdf1d9414df16191eb6cff95b0063820518b7a13dcb2",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/skills/playwright-cli/references/running-code.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/skills/playwright-cli/references/session-management.md",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/skills/playwright-cli/references/session-management.md.txt",
+      "sha256": "a4f16271f95d3eec7bc56e659d8adbb8f6ad7d603a6fa15efdcdd071a50c6ce3",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/skills/playwright-cli/references/session-management.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/skills/playwright-cli/references/storage-state.md",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/skills/playwright-cli/references/storage-state.md.txt",
+      "sha256": "9ac47f9ae4a1aedcd2077f8ac9ab1ba6bee1962cb83ff51adcd36fb6d83b5ec6",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/skills/playwright-cli/references/storage-state.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/skills/playwright-cli/references/test-generation.md",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/skills/playwright-cli/references/test-generation.md.txt",
+      "sha256": "12f54cfa718d9e559bad918120a4ca4f11c933167713d1b9c5f99872eddaf749",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/skills/playwright-cli/references/test-generation.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/skills/playwright-cli/references/tracing.md",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/skills/playwright-cli/references/tracing.md.txt",
+      "sha256": "ef73e71bee792e341df9cd4f60529c929ade48b538ac76e033f4f20843e8dbda",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/skills/playwright-cli/references/tracing.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/skills/playwright-cli/references/video-recording.md",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/skills/playwright-cli/references/video-recording.md.txt",
+      "sha256": "66a1f83444f285282e590d3e0b2d9896a3394518ee7304c6d708bba6c0d9abc7",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/skills/playwright-cli/references/video-recording.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/src/tools/utils/installSkills.ts",
+      "path": "upstream/source-extracts/packages/playwright-core/src/tools/utils/installSkills.ts.txt",
+      "sha256": "7be7628683b065df7d9d2777f92a1cabf52f84302996bc49f4b61a4658b06307",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/utils/installSkills.ts",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:packages/playwright-core/package.json",
+      "path": "upstream/source-extracts/packages/playwright-core/package.json.txt",
+      "sha256": "f8cb679caf6de9f7bee6e113f4f19801822d43038b5bd8fcf9d3fbd459b2d122",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/package.json",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    },
+    {
+      "id": "source:LICENSE",
+      "path": "upstream/source-extracts/LICENSE.txt",
+      "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/d1ead3ecca23182f2d06d761c28e3d4edafb6595/LICENSE",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-18T13:53:46Z"
+    }
+  ],
+  "limitations": [
+    "未采集目标二进制原始帮助输出；命令事实自固定提交的 TypeScript 源码重建（cli-daemon/commands.ts 的 zod 声明与 cli-client/program.ts 的客户端处理），并与本机安装的 @playwright/cli 0.1.20 实际 --help 输出交叉核对，以后者输出格式核对 synopsis 与分组。",
+    "@playwright/cli 0.1.20 为 npm 分发壳，其精确依赖的 playwright-core 1.64.0-alpha-2026-09-14 为每日 alpha 构建，上游不打 tag；ref 与 commit 使用 npm registry 为该包记录的构建提交完整哈希（gitHead）固定。",
+    "help.json 为构建期由 helpGenerator.ts 生成的产物，未签入源码树，不在快照中；命令帮助文本以 commands.ts 各字段的 describe 文本与 helpGenerator.ts 的格式逻辑重建。",
+    "install-browser 由客户端转发至随包分发的经典 playwright install 程序执行，选项事实按 commands.ts 声明记录，实际安装行为以该转发实现为准。",
+    "示例与工作流未实际运行，均为依据固定提交源码与官方 skills 文档编写的说明性内容；官方文档为滚动版本，仅作交叉旁证。"
+  ]
+}
