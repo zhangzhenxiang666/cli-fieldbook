@@ -55,6 +55,7 @@ command:
 ## 使用提醒
 
 - 同名会话存在时会被先停止再替换，未保存的页面状态会丢失。
+- 启动序列（检查既有会话、停止、拉起守护进程）没有按会话串行化：避免对同一会话并发执行两个 `open`，或与 [delete-data](cli:command:delete-data) 同时执行，否则可能相互停掉对方刚建立的会话或误删其 profile。
 - 持久会话的用户数据可用 [delete-data](cli:command:delete-data) 清除。
 - 会话名用全局 `-s` 指定：`playwright-cli -s=mysession open <url>`。
 

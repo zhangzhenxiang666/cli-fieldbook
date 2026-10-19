@@ -10,6 +10,8 @@ command:
 
 `install` 初始化当前工作区的 playwright-cli 配置（`.playwright/` 目录）；`--skills` 同时安装官方 agent skills 文档（取值 `claude`（缺省）或 `agents`），`--global`/`-g` 把 skills 装到用户主目录而不是工作区。
 
+非 `--global` 运行时，工作区初始化还会确保配置的浏览器已安装：本机没有可用浏览器时会触发浏览器下载（设 `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1` 跳过；显式安装用 [install-browser](cli:command:install-browser)）。
+
 ## 选项
 
 ### `--skills`
@@ -38,3 +40,4 @@ playwright-cli install --skills=agents --global
 
 - 命令声明与底层工具映射见 [commands.ts](https://github.com/microsoft/playwright/blob/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-daemon/commands.ts)。
 - 工作区初始化与 skills 安装的转发实现见 [program.ts](https://github.com/microsoft/playwright/blob/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-client/program.ts) 与 [installSkills.ts](https://github.com/microsoft/playwright/blob/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/utils/installSkills.ts)。
+- 浏览器确保安装逻辑（`ensureConfiguredBrowserInstalled`）见 [cli-daemon/program.ts](https://github.com/microsoft/playwright/blob/d1ead3ecca23182f2d06d761c28e3d4edafb6595/packages/playwright-core/src/tools/cli-daemon/program.ts)。

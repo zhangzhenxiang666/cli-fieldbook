@@ -11,7 +11,7 @@ Playwright 官方终端 CLI：围绕持久浏览器会话执行打开页面、�
 
 命令分两类处理：会话管理类命令（`open`、`attach`、`close`、`detach`、`list`、`close-all`、`delete-data`、`kill-all`、`install`、`install-browser`、`show`）由客户端在本地直接处理；其余命令转发给会话守护进程，映射为对应的 Playwright 浏览器工具执行。
 
-安装方式为全局安装 npm 包 `@playwright/cli`（`npm install -g @playwright/cli`）；本地项目装有 Playwright 时也可经 `npx playwright cli` 使用同套命令。
+安装方式为全局安装 npm 包 `@playwright/cli`（`npm install -g @playwright/cli`，要求 Node.js 20 及以上——`playwright-core` 的 engines 声明比壳包更严）；本地项目装有提供 `cli` 子命令的 Playwright 版本时，也可经 `npx playwright cli` 使用同套命令（先用 `npx --no-install playwright --version` 确认本地版本可用）。
 
 ## 选项
 
@@ -39,7 +39,7 @@ Playwright 官方终端 CLI：围绕持久浏览器会话执行打开页面、�
 
 - 不带任何命令调用时打印总帮助；`--help <command>` 打印单命令帮助。
 - 未知命令、未知选项与超量位置参数都会被客户端拒绝并列出可用项。
-- 会话由守护进程维持：机器重启或 `kill-all` 后需要重新 `open`。
+- 会话由守护进程维持：机器重启或 `kill-all` 后需要重新 `open`；无头会话默认空闲 1 小时后自动关闭（[open](cli:command:open) 的 `--idle-timeout` 控制），长时间空闲后返回发现会话不在属正常行为。
 - 全局选项在每个命令前给出，例如 `playwright-cli -s=work goto <url>`；也可写 `--session=work`。
 
 ## 示例

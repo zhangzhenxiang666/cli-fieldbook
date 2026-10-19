@@ -15,7 +15,7 @@ uses:
 
 ## 追踪（trace）
 
-[tracing-start](cli:command:tracing-start)/[tracing-stop](cli:command:tracing-stop) 记录会话的 trace 文件（操作序列、网络与控制台快照），在 Playwright Trace Viewer 中逐步回放，适合定位"哪一步开始不对"的问题。
+[tracing-start](cli:command:tracing-start)/[tracing-stop](cli:command:tracing-stop) 记录会话的 trace 文件（操作序列、网络与控制台快照），在 Playwright Trace Viewer 中逐步回放，适合定位"哪一步开始不对"的问题。trace 含完整页面内容与请求/响应明细，可能包括凭据与个人数据；外发或上传前先检查并脱敏。
 
 ## 视频
 
