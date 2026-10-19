@@ -1,0 +1,7216 @@
+[
+  {
+    "path": [],
+    "aliases": [],
+    "synopsis": [
+      "magpie",
+      "magpie <command> [args] [options]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--help",
+        "display": "-h, --help",
+        "aliases": [
+          "-h"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/main.go"
+        ]
+      },
+      {
+        "name": "--version",
+        "display": "-v, --version",
+        "aliases": [
+          "-v"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/main.go"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "tui"
+      ],
+      [
+        "web"
+      ],
+      [
+        "app"
+      ],
+      [
+        "tray"
+      ],
+      [
+        "panel"
+      ],
+      [
+        "autostart"
+      ],
+      [
+        "daemon"
+      ],
+      [
+        "ls"
+      ],
+      [
+        "agents"
+      ],
+      [
+        "sync"
+      ],
+      [
+        "save"
+      ],
+      [
+        "use"
+      ],
+      [
+        "profiles"
+      ],
+      [
+        "rm"
+      ],
+      [
+        "import"
+      ],
+      [
+        "providers"
+      ],
+      [
+        "presets"
+      ],
+      [
+        "provider"
+      ],
+      [
+        "models"
+      ],
+      [
+        "model"
+      ],
+      [
+        "visible"
+      ],
+      [
+        "search"
+      ],
+      [
+        "groups"
+      ],
+      [
+        "group"
+      ],
+      [
+        "serve"
+      ],
+      [
+        "gateway-key"
+      ],
+      [
+        "accounts"
+      ],
+      [
+        "usage"
+      ],
+      [
+        "sessions"
+      ],
+      [
+        "quota"
+      ],
+      [
+        "statusline"
+      ],
+      [
+        "update"
+      ],
+      [
+        "library"
+      ],
+      [
+        "backup"
+      ],
+      [
+        "restore"
+      ],
+      [
+        "webdav"
+      ],
+      [
+        "plugin"
+      ],
+      [
+        "s3"
+      ],
+      [
+        "github"
+      ],
+      [
+        "mcp"
+      ],
+      [
+        "claude-code"
+      ],
+      [
+        "healthcheck"
+      ],
+      [
+        "heap"
+      ],
+      [
+        "cpu"
+      ],
+      [
+        "help"
+      ],
+      [
+        "version"
+      ],
+      [
+        "claude-mcp-helper"
+      ],
+      [
+        "claude"
+      ],
+      [
+        "codex"
+      ],
+      [
+        "gemini"
+      ],
+      [
+        "opencode"
+      ],
+      [
+        "mimocode"
+      ],
+      [
+        "deveco"
+      ],
+      [
+        "pi"
+      ],
+      [
+        "goose"
+      ],
+      [
+        "cursor"
+      ],
+      [
+        "zed"
+      ],
+      [
+        "copilot"
+      ],
+      [
+        "crush"
+      ],
+      [
+        "aside"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/help_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tui"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie tui"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:README.md"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "web"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie web [--addr host:port] [--lan] [--no-open] [--gateway] [--tls-cert <file> --tls-key <file>]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--addr",
+        "display": "--addr host:port",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/web_cli.go"
+        ]
+      },
+      {
+        "name": "--lan",
+        "display": "--lan",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/web_cli.go"
+        ]
+      },
+      {
+        "name": "--no-open",
+        "display": "--no-open",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/web_cli.go"
+        ]
+      },
+      {
+        "name": "--gateway",
+        "display": "--gateway",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/web_cli.go"
+        ]
+      },
+      {
+        "name": "--tls-cert",
+        "display": "--tls-cert <file>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/web_cli.go",
+          "source:internal/cli/tls_cli.go"
+        ]
+      },
+      {
+        "name": "--tls-key",
+        "display": "--tls-key <file>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/web_cli.go",
+          "source:internal/cli/tls_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/web_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "app"
+    ],
+    "aliases": [
+      [
+        "gui"
+      ]
+    ],
+    "synopsis": [
+      "magpie app [tab]"
+    ],
+    "arguments": [
+      {
+        "name": "tab",
+        "display": "[tab]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "hidden",
+    "evidenceIds": [
+      "source:internal/cli/main.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "tray"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie tray"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "panel"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie panel"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "autostart"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie autostart [on|off]"
+    ],
+    "arguments": [
+      {
+        "name": "state",
+        "display": "[on|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/autostart_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/autostart_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "daemon"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie daemon [install|uninstall|start|stop|restart|status]"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "daemon",
+        "install"
+      ],
+      [
+        "daemon",
+        "uninstall"
+      ],
+      [
+        "daemon",
+        "start"
+      ],
+      [
+        "daemon",
+        "stop"
+      ],
+      [
+        "daemon",
+        "restart"
+      ],
+      [
+        "daemon",
+        "status"
+      ],
+      [
+        "daemon",
+        "web"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/daemon_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "daemon",
+      "install"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie daemon install [--web] [--lan] [--addr host:port] [--no-web] [--tls-cert <file> --tls-key <file>|--no-tls]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--web",
+        "display": "--web",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/daemon_cli.go"
+        ]
+      },
+      {
+        "name": "--lan",
+        "display": "--lan",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/daemon_cli.go"
+        ]
+      },
+      {
+        "name": "--addr",
+        "display": "--addr host:port",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/daemon_cli.go"
+        ]
+      },
+      {
+        "name": "--no-web",
+        "display": "--no-web",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/daemon_cli.go"
+        ]
+      },
+      {
+        "name": "--tls-cert",
+        "display": "--tls-cert <file>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/daemon_cli.go",
+          "source:internal/cli/tls_cli.go"
+        ]
+      },
+      {
+        "name": "--tls-key",
+        "display": "--tls-key <file>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/daemon_cli.go",
+          "source:internal/cli/tls_cli.go"
+        ]
+      },
+      {
+        "name": "--no-tls",
+        "display": "--no-tls",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/daemon_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/daemon_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "daemon",
+      "uninstall"
+    ],
+    "aliases": [
+      [
+        "daemon",
+        "remove"
+      ]
+    ],
+    "synopsis": [
+      "magpie daemon uninstall"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/daemon_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "daemon",
+      "start"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie daemon start"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/daemon_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "daemon",
+      "stop"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie daemon stop"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/daemon_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "daemon",
+      "restart"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie daemon restart"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/daemon_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "daemon",
+      "status"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie daemon status"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/daemon_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "daemon",
+      "web"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie daemon web [on|off] [--lan] [--addr host:port]"
+    ],
+    "arguments": [
+      {
+        "name": "state",
+        "display": "[on|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/daemon_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--lan",
+        "display": "--lan",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/daemon_cli.go"
+        ]
+      },
+      {
+        "name": "--addr",
+        "display": "--addr host:port",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/daemon_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/daemon_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "serve"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie serve [--web[=host:port]] [--tls-cert <file> --tls-key <file>]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--web",
+        "display": "--web[=host:port]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:README.md"
+        ]
+      },
+      {
+        "name": "--tls-cert",
+        "display": "--tls-cert <file>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/cli/tls_cli.go"
+        ]
+      },
+      {
+        "name": "--tls-key",
+        "display": "--tls-key <file>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/cli/tls_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:README.md"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "healthcheck"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie healthcheck"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/healthcheck_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "heap"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie heap [<file>]"
+    ],
+    "arguments": [
+      {
+        "name": "file",
+        "display": "[<file>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/heap_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/heap_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "cpu"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie cpu [<file>] [--seconds N]"
+    ],
+    "arguments": [
+      {
+        "name": "file",
+        "display": "[<file>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/cpu_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--seconds",
+        "display": "--seconds N",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/cpu_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/cpu_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "mcp"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie mcp image"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "mcp",
+        "image"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "mcp",
+      "image"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie mcp image"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/imagemcp/imagemcp.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "claude-code"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie claude-code [install [--yes]|remove]"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "claude-code",
+        "install"
+      ],
+      [
+        "claude-code",
+        "remove"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/claude_code_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "claude-code",
+      "install"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie claude-code install [--yes]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--yes",
+        "display": "--yes",
+        "aliases": [
+          "-y"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/claude_code_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/claude_code_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "claude-code",
+      "remove"
+    ],
+    "aliases": [
+      [
+        "claude-code",
+        "rm"
+      ]
+    ],
+    "synopsis": [
+      "magpie claude-code remove"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/claude_code_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "claude-mcp-helper"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie claude-mcp-helper"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "hidden",
+    "evidenceIds": [
+      "source:internal/cli/main.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "help"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie help"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "hidden",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/help_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "version"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie version"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "hidden",
+    "evidenceIds": [
+      "source:internal/cli/main.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "ls"
+    ],
+    "aliases": [
+      [
+        "list"
+      ]
+    ],
+    "synopsis": [
+      "magpie ls"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/builtin_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "agents"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie agents"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/builtin_cli.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "sync"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie sync"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "save"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie save <name>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/cli/builtin_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/builtin_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "use"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie use <name>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/cli/builtin_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/builtin_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "profiles"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie profiles"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/builtin_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "rm"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie rm <name>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/cli/builtin_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/builtin_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "import"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie import [-y] <link>"
+    ],
+    "arguments": [
+      {
+        "name": "link",
+        "display": "<link>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--yes",
+        "display": "-y, --yes",
+        "aliases": [
+          "-y"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/main.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "backup"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie backup [--no-keys] [--no-library] [file]"
+    ],
+    "arguments": [
+      {
+        "name": "file",
+        "display": "[file]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/backup_cmd.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--no-keys",
+        "display": "--no-keys",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/backup_cmd.go"
+        ]
+      },
+      {
+        "name": "--no-library",
+        "display": "--no-library",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/backup_cmd.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/backup_cmd.go",
+      "source:internal/cli/main.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "restore"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie restore [--no-agents] [--no-library] <file>"
+    ],
+    "arguments": [
+      {
+        "name": "file",
+        "display": "<file>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/backup_cmd.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--no-agents",
+        "display": "--no-agents",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/backup_cmd.go"
+        ]
+      },
+      {
+        "name": "--no-library",
+        "display": "--no-library",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/backup_cmd.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/backup_cmd.go",
+      "source:internal/cli/main.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "statusline"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie statusline [<provider|account>]"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<provider|account>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/statusline_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/statusline_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "providers"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie providers"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "presets"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie presets"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider <id>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [
+      [
+        "provider",
+        "add"
+      ],
+      [
+        "provider",
+        "set"
+      ],
+      [
+        "provider",
+        "key"
+      ],
+      [
+        "provider",
+        "icon"
+      ],
+      [
+        "provider",
+        "fallback"
+      ],
+      [
+        "provider",
+        "models"
+      ],
+      [
+        "provider",
+        "refresh-every"
+      ],
+      [
+        "provider",
+        "auto-include"
+      ],
+      [
+        "provider",
+        "account-models"
+      ],
+      [
+        "provider",
+        "account-cap"
+      ],
+      [
+        "provider",
+        "account-concurrency"
+      ],
+      [
+        "provider",
+        "queue"
+      ],
+      [
+        "provider",
+        "rpm"
+      ],
+      [
+        "provider",
+        "quota-rest"
+      ],
+      [
+        "provider",
+        "rest-cap"
+      ],
+      [
+        "provider",
+        "listed"
+      ],
+      [
+        "provider",
+        "off"
+      ],
+      [
+        "provider",
+        "on"
+      ],
+      [
+        "provider",
+        "rm"
+      ],
+      [
+        "provider",
+        "test"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "add"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider add <preset> <key>",
+      "magpie provider add <name> k=v…"
+    ],
+    "arguments": [
+      {
+        "name": "preset",
+        "display": "<preset>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "set"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider set <id> k=v…"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "pairs",
+        "display": "k=v…",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "key"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider key <id> <key>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "icon"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider icon <id> <file|name>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "source",
+        "display": "<file|name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "fallback"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider fallback <id> <provider/model>…"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "models",
+        "display": "<provider/model>…",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "models"
+    ],
+    "aliases": [
+      [
+        "provider",
+        "refresh"
+      ],
+      [
+        "provider",
+        "fetch"
+      ]
+    ],
+    "synopsis": [
+      "magpie provider models <id> [ids…]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "ids",
+        "display": "[ids…]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "refresh-every"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider refresh-every <id> [6h|1d|off]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "interval",
+        "display": "[6h|1d|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "auto-include"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider auto-include <id> [rule…|none]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "rules",
+        "display": "[rule…|none]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "account-models"
+    ],
+    "aliases": [
+      [
+        "provider",
+        "account-model"
+      ]
+    ],
+    "synopsis": [
+      "magpie provider account-models <id> [account|key [ids…|all]]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "account",
+        "display": "[account|key",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "ids",
+        "display": "[ids…|all]]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "account-cap"
+    ],
+    "aliases": [
+      [
+        "provider",
+        "account-caps"
+      ]
+    ],
+    "synopsis": [
+      "magpie provider account-cap <id> [account [percent|off]]",
+      "magpie provider account-cap <id> <account> --window <name> [percent|none|default]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "account",
+        "display": "[account",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "percent",
+        "display": "[percent|off]]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--window",
+        "display": "--window <name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "account-concurrency"
+    ],
+    "aliases": [
+      [
+        "provider",
+        "account-limit"
+      ]
+    ],
+    "synopsis": [
+      "magpie provider account-concurrency <id> [account|key [n|off|default]]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "account",
+        "display": "[account|key",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "n",
+        "display": "[n|off|default]]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "queue"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider queue <id> [length [seconds]]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "length",
+        "display": "[length",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "seconds",
+        "display": "[seconds]]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "rpm"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider rpm <id> [n|off]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "n",
+        "display": "[n|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "quota-rest"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider quota-rest <id> [30m|6h|7d|until 08:00|until 00:00+08:00|default]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "duration",
+        "display": "[30m|6h|7d|until 08:00|until 00:00+08:00|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "rest-cap"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider rest-cap <id> [1m|30m|6h|1d|off|default]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "duration",
+        "display": "[1m|30m|6h|1d|off|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "listed"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider listed <id> yes|no"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      },
+      {
+        "name": "choice",
+        "display": "yes|no",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "off"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider off <id>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "on"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider on <id>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "rm"
+    ],
+    "aliases": [
+      [
+        "provider",
+        "remove"
+      ],
+      [
+        "provider",
+        "delete"
+      ]
+    ],
+    "synopsis": [
+      "magpie provider rm <id>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "provider",
+      "test"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie provider test <id>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/providers_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/providers_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "models"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie models [<agent>]"
+    ],
+    "arguments": [
+      {
+        "name": "agent",
+        "display": "[<agent>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie model <command>"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "model",
+        "names"
+      ],
+      [
+        "model",
+        "name"
+      ],
+      [
+        "model",
+        "efforts"
+      ],
+      [
+        "model",
+        "price"
+      ],
+      [
+        "model",
+        "prices"
+      ],
+      [
+        "model",
+        "wires"
+      ],
+      [
+        "model",
+        "suffix"
+      ],
+      [
+        "model",
+        "compact"
+      ],
+      [
+        "model",
+        "context"
+      ],
+      [
+        "model",
+        "output"
+      ],
+      [
+        "model",
+        "wire"
+      ],
+      [
+        "model",
+        "disable"
+      ],
+      [
+        "model",
+        "enable"
+      ],
+      [
+        "model",
+        "disabled"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "names"
+    ],
+    "aliases": [
+      [
+        "model",
+        "ls"
+      ],
+      [
+        "model",
+        "list"
+      ]
+    ],
+    "synopsis": [
+      "magpie model names"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "name"
+    ],
+    "aliases": [
+      [
+        "model",
+        "rename"
+      ]
+    ],
+    "synopsis": [
+      "magpie model name <provider/model> [<name>|--reset]"
+    ],
+    "arguments": [
+      {
+        "name": "model",
+        "display": "<provider/model>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      },
+      {
+        "name": "name",
+        "display": "[<name>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--reset",
+        "display": "--reset",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "efforts"
+    ],
+    "aliases": [
+      [
+        "model",
+        "effort"
+      ],
+      [
+        "model",
+        "levels"
+      ]
+    ],
+    "synopsis": [
+      "magpie model efforts <provider/model> [<l>,<l>|off|--reset]"
+    ],
+    "arguments": [
+      {
+        "name": "model",
+        "display": "<provider/model>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      },
+      {
+        "name": "levels",
+        "display": "[<l>,<l>|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--reset",
+        "display": "--reset",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "price"
+    ],
+    "aliases": [
+      [
+        "model",
+        "cost"
+      ]
+    ],
+    "synopsis": [
+      "magpie model price <provider/model> [<in>,<out>,<cache read>,<cache write>]",
+      "magpie model price <provider/model> --tier 272k <in>,<out>,<cr>,<cw>"
+    ],
+    "arguments": [
+      {
+        "name": "model",
+        "display": "<provider/model>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      },
+      {
+        "name": "prices",
+        "display": "[<in>,<out>,<cache read>,<cache write>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--tier",
+        "display": "--tier <n> <in>,<out>,<cr>,<cw>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      },
+      {
+        "name": "--reset",
+        "display": "--reset",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "prices"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie model prices"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "wires"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie model wires"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "suffix"
+    ],
+    "aliases": [
+      [
+        "model",
+        "suffixes"
+      ]
+    ],
+    "synopsis": [
+      "magpie model suffix [on|own|off]"
+    ],
+    "arguments": [
+      {
+        "name": "mode",
+        "display": "[on|own|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "compact"
+    ],
+    "aliases": [
+      [
+        "model",
+        "full-context"
+      ]
+    ],
+    "synopsis": [
+      "magpie model compact [on|off|<size>]"
+    ],
+    "arguments": [
+      {
+        "name": "setting",
+        "display": "[on|off|<size>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "context"
+    ],
+    "aliases": [
+      [
+        "model",
+        "ctx"
+      ]
+    ],
+    "synopsis": [
+      "magpie model context <provider/model> [<n>|--reset]"
+    ],
+    "arguments": [
+      {
+        "name": "model",
+        "display": "<provider/model>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      },
+      {
+        "name": "n",
+        "display": "[<n>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--reset",
+        "display": "--reset",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "output"
+    ],
+    "aliases": [
+      [
+        "model",
+        "max-output"
+      ]
+    ],
+    "synopsis": [
+      "magpie model output <provider/model> [<n>|--reset]"
+    ],
+    "arguments": [
+      {
+        "name": "model",
+        "display": "<provider/model>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      },
+      {
+        "name": "n",
+        "display": "[<n>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--reset",
+        "display": "--reset",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "wire"
+    ],
+    "aliases": [
+      [
+        "model",
+        "upstream"
+      ]
+    ],
+    "synopsis": [
+      "magpie model wire <provider/model> [<name>|--reset]",
+      "magpie model wire '<provider>/*' <name>"
+    ],
+    "arguments": [
+      {
+        "name": "model",
+        "display": "<provider/model>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      },
+      {
+        "name": "name",
+        "display": "[<name>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--reset",
+        "display": "--reset",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "disable"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie model disable <model> [<model>...]"
+    ],
+    "arguments": [
+      {
+        "name": "model",
+        "display": "<model>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "enable"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie model enable <model> [<model>...]"
+    ],
+    "arguments": [
+      {
+        "name": "model",
+        "display": "<model>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/model_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "model",
+      "disabled"
+    ],
+    "aliases": [
+      [
+        "model",
+        "list-disabled"
+      ]
+    ],
+    "synopsis": [
+      "magpie model disabled"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/model_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "visible"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie visible [<agent> <family|provider|group>,… | all | --only-picked | --show-new]"
+    ],
+    "arguments": [
+      {
+        "name": "agent",
+        "display": "[<agent>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/visible_cli.go"
+        ]
+      },
+      {
+        "name": "spec",
+        "display": "<family|provider|group>,… | all]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/visible_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--only-picked",
+        "display": "--only-picked",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/visible_cli.go"
+        ]
+      },
+      {
+        "name": "--show-new",
+        "display": "--show-new",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/visible_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/visible_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "search"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie search"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "search",
+        "add"
+      ],
+      [
+        "search",
+        "on"
+      ],
+      [
+        "search",
+        "off"
+      ],
+      [
+        "search",
+        "move"
+      ],
+      [
+        "search",
+        "rm"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/search_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "search",
+      "add"
+    ],
+    "aliases": [
+      [
+        "search",
+        "set"
+      ]
+    ],
+    "synopsis": [
+      "magpie search add <api> <key> [url=<address>] [pick=turns|order]",
+      "magpie search add searxng url=<address> [<key>]",
+      "magpie search add you [<key>]"
+    ],
+    "arguments": [
+      {
+        "name": "api",
+        "display": "<api>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/search_cli.go"
+        ]
+      },
+      {
+        "name": "key",
+        "display": "<key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/search_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/search_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "search",
+      "on"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie search on <api>"
+    ],
+    "arguments": [
+      {
+        "name": "api",
+        "display": "<api>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/search_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/search_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "search",
+      "off"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie search off <api>"
+    ],
+    "arguments": [
+      {
+        "name": "api",
+        "display": "<api>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/search_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/search_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "search",
+      "move"
+    ],
+    "aliases": [
+      [
+        "search",
+        "mv"
+      ]
+    ],
+    "synopsis": [
+      "magpie search move <api> <n>"
+    ],
+    "arguments": [
+      {
+        "name": "api",
+        "display": "<api>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/search_cli.go"
+        ]
+      },
+      {
+        "name": "n",
+        "display": "<n>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/search_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/search_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "search",
+      "rm"
+    ],
+    "aliases": [
+      [
+        "search",
+        "remove"
+      ]
+    ],
+    "synopsis": [
+      "magpie search rm <api>"
+    ],
+    "arguments": [
+      {
+        "name": "api",
+        "display": "<api>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/search_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/search_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "groups"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie groups"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/groups_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "group"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie group <id>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [
+      [
+        "group",
+        "add"
+      ],
+      [
+        "group",
+        "set"
+      ],
+      [
+        "group",
+        "show"
+      ],
+      [
+        "group",
+        "pick"
+      ],
+      [
+        "group",
+        "copy"
+      ],
+      [
+        "group",
+        "template"
+      ],
+      [
+        "group",
+        "rm"
+      ],
+      [
+        "group",
+        "restore"
+      ],
+      [
+        "group",
+        "auto"
+      ],
+      [
+        "group",
+        "rule"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/groups_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "group",
+      "add"
+    ],
+    "aliases": [
+      [
+        "group",
+        "new"
+      ]
+    ],
+    "synopsis": [
+      "magpie group add <name> models=<m1>[,m2…] [routing=…] [stays=…]"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      },
+      {
+        "name": "pairs",
+        "display": "models=<m1>[,m2…] [routing=…] [stays=…]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/groups_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "group",
+      "set"
+    ],
+    "aliases": [
+      [
+        "group",
+        "edit"
+      ]
+    ],
+    "synopsis": [
+      "magpie group set <id> k=v…"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      },
+      {
+        "name": "pairs",
+        "display": "k=v…",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/groups_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "group",
+      "show"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie group show <id>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/groups_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "group",
+      "pick"
+    ],
+    "aliases": [
+      [
+        "group",
+        "use"
+      ]
+    ],
+    "synopsis": [
+      "magpie group pick <id> <model>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      },
+      {
+        "name": "model",
+        "display": "<model>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/groups_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "group",
+      "copy"
+    ],
+    "aliases": [
+      [
+        "group",
+        "duplicate"
+      ],
+      [
+        "group",
+        "dup"
+      ],
+      [
+        "group",
+        "clone"
+      ]
+    ],
+    "synopsis": [
+      "magpie group copy <id> [name]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      },
+      {
+        "name": "name",
+        "display": "[name]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/groups_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "group",
+      "template"
+    ],
+    "aliases": [
+      [
+        "group",
+        "templates"
+      ],
+      [
+        "group",
+        "tpl"
+      ]
+    ],
+    "synopsis": [
+      "magpie group template [kind] [name]"
+    ],
+    "arguments": [
+      {
+        "name": "kind",
+        "display": "[kind]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      },
+      {
+        "name": "name",
+        "display": "[name]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/groups_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "group",
+      "rm"
+    ],
+    "aliases": [
+      [
+        "group",
+        "remove"
+      ],
+      [
+        "group",
+        "delete"
+      ]
+    ],
+    "synopsis": [
+      "magpie group rm <id>…"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>…",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/groups_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "group",
+      "restore"
+    ],
+    "aliases": [
+      [
+        "group",
+        "unhide"
+      ]
+    ],
+    "synopsis": [
+      "magpie group restore <id>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/groups_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "group",
+      "auto"
+    ],
+    "aliases": [
+      [
+        "group",
+        "found"
+      ]
+    ],
+    "synopsis": [
+      "magpie group auto [on|off]"
+    ],
+    "arguments": [
+      {
+        "name": "state",
+        "display": "[on|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/groups_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "group",
+      "rule"
+    ],
+    "aliases": [
+      [
+        "group",
+        "rules"
+      ]
+    ],
+    "synopsis": [
+      "magpie group rule add|rm|mv <id> …"
+    ],
+    "arguments": [
+      {
+        "name": "verb",
+        "display": "add|rm|mv",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_rules_cli.go"
+        ]
+      },
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_rules_cli.go"
+        ]
+      },
+      {
+        "name": "rest",
+        "display": "…",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/groups_rules_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/groups_rules_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "accounts"
+    ],
+    "aliases": [
+      [
+        "account"
+      ]
+    ],
+    "synopsis": [
+      "magpie accounts [agent] [--json]"
+    ],
+    "arguments": [
+      {
+        "name": "agent",
+        "display": "[claude|codex|grok|copilot|gemini|antigravity|zed|factory|mimo|<plugin>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "accounts",
+        "add"
+      ],
+      [
+        "accounts",
+        "switch"
+      ],
+      [
+        "accounts",
+        "forget"
+      ],
+      [
+        "accounts",
+        "refresh"
+      ],
+      [
+        "accounts",
+        "checkin"
+      ],
+      [
+        "accounts",
+        "import"
+      ],
+      [
+        "accounts",
+        "discovery"
+      ],
+      [
+        "accounts",
+        "project"
+      ],
+      [
+        "accounts",
+        "alias"
+      ],
+      [
+        "accounts",
+        "switch-only"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/accounts_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "accounts",
+      "add"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie accounts add <agent>",
+      "magpie accounts add copilot [--host <name>.ghe.com]"
+    ],
+    "arguments": [
+      {
+        "name": "agent",
+        "display": "<claude|codex|gemini|antigravity|zed|factory|mimo|<plugin>>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--host",
+        "display": "--host <name>.ghe.com",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/accounts_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "accounts",
+      "switch"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie accounts switch <agent> <email>",
+      "magpie accounts switch copilot <login>[@<name>.ghe.com] [--host <name>.ghe.com]"
+    ],
+    "arguments": [
+      {
+        "name": "agent",
+        "display": "<agent>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      },
+      {
+        "name": "email",
+        "display": "<email>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--host",
+        "display": "--host <name>.ghe.com",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/accounts_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "accounts",
+      "forget"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie accounts forget <agent> <email>"
+    ],
+    "arguments": [
+      {
+        "name": "agent",
+        "display": "<agent>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      },
+      {
+        "name": "email",
+        "display": "<email>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/accounts_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "accounts",
+      "refresh"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie accounts refresh [--json]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/accounts_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "accounts",
+      "checkin"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie accounts checkin [--json]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/accounts_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "accounts",
+      "import"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie accounts import <codex|claude|antigravity|factory> <file>... [--yes]"
+    ],
+    "arguments": [
+      {
+        "name": "kind",
+        "display": "<codex|claude|antigravity|factory>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      },
+      {
+        "name": "file",
+        "display": "<file>...",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--yes",
+        "display": "--yes",
+        "aliases": [
+          "-y"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/accounts_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "accounts",
+      "discovery"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie accounts discovery [on|off]"
+    ],
+    "arguments": [
+      {
+        "name": "state",
+        "display": "[on|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/account_discovery_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/account_discovery_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "accounts",
+      "project"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie accounts project <gemini|antigravity> <email> <project>"
+    ],
+    "arguments": [
+      {
+        "name": "agent",
+        "display": "<gemini|antigravity>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      },
+      {
+        "name": "email",
+        "display": "<email>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      },
+      {
+        "name": "project",
+        "display": "<project>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/accounts_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "accounts",
+      "alias"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie accounts alias <agent> <email> [<name>|--clear]"
+    ],
+    "arguments": [
+      {
+        "name": "agent",
+        "display": "<agent|<plugin>>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      },
+      {
+        "name": "email",
+        "display": "<email>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      },
+      {
+        "name": "name",
+        "display": "[<name>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--clear",
+        "display": "--clear",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/accounts_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "accounts",
+      "switch-only"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie accounts switch-only codex [on|off]"
+    ],
+    "arguments": [
+      {
+        "name": "state",
+        "display": "[on|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/accounts_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/accounts_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin"
+    ],
+    "aliases": [
+      [
+        "plugins"
+      ]
+    ],
+    "synopsis": [
+      "magpie plugin [list]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "plugin",
+        "add"
+      ],
+      [
+        "plugin",
+        "rm"
+      ],
+      [
+        "plugin",
+        "update"
+      ],
+      [
+        "plugin",
+        "on"
+      ],
+      [
+        "plugin",
+        "off"
+      ],
+      [
+        "plugin",
+        "options"
+      ],
+      [
+        "plugin",
+        "use"
+      ],
+      [
+        "plugin",
+        "login"
+      ],
+      [
+        "plugin",
+        "logout"
+      ],
+      [
+        "plugin",
+        "move"
+      ],
+      [
+        "plugin",
+        "move-back"
+      ],
+      [
+        "plugin",
+        "builtin"
+      ],
+      [
+        "plugin",
+        "preset"
+      ],
+      [
+        "plugin",
+        "dump"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "add"
+    ],
+    "aliases": [
+      [
+        "plugin",
+        "install"
+      ]
+    ],
+    "synopsis": [
+      "magpie plugin add <npm | git | path>"
+    ],
+    "arguments": [
+      {
+        "name": "package",
+        "display": "<npm | git | path>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "rm"
+    ],
+    "aliases": [
+      [
+        "plugin",
+        "remove"
+      ],
+      [
+        "plugin",
+        "uninstall"
+      ]
+    ],
+    "synopsis": [
+      "magpie plugin rm <name>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "update"
+    ],
+    "aliases": [
+      [
+        "plugin",
+        "upgrade"
+      ]
+    ],
+    "synopsis": [
+      "magpie plugin update"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "on"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie plugin on <name>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "off"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie plugin off <name>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "options"
+    ],
+    "aliases": [
+      [
+        "plugin",
+        "config"
+      ]
+    ],
+    "synopsis": [
+      "magpie plugin options <name> [<json> | off]"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      },
+      {
+        "name": "json",
+        "display": "[<json> | off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "use"
+    ],
+    "aliases": [
+      [
+        "plugin",
+        "prefer"
+      ]
+    ],
+    "synopsis": [
+      "magpie plugin use <name> <provider>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      },
+      {
+        "name": "provider",
+        "display": "<provider>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "login"
+    ],
+    "aliases": [
+      [
+        "plugin",
+        "signin"
+      ]
+    ],
+    "synopsis": [
+      "magpie plugin login <provider> [<method>]"
+    ],
+    "arguments": [
+      {
+        "name": "provider",
+        "display": "<provider>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      },
+      {
+        "name": "method",
+        "display": "[<method>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "logout"
+    ],
+    "aliases": [
+      [
+        "plugin",
+        "signout"
+      ]
+    ],
+    "synopsis": [
+      "magpie plugin logout <provider>"
+    ],
+    "arguments": [
+      {
+        "name": "provider",
+        "display": "<provider>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "move"
+    ],
+    "aliases": [
+      [
+        "plugin",
+        "migrate"
+      ]
+    ],
+    "synopsis": [
+      "magpie plugin move <subscription>"
+    ],
+    "arguments": [
+      {
+        "name": "subscription",
+        "display": "<subscription>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "move-back"
+    ],
+    "aliases": [
+      [
+        "plugin",
+        "moveback"
+      ],
+      [
+        "plugin",
+        "unmigrate"
+      ]
+    ],
+    "synopsis": [
+      "magpie plugin move-back <subscription>"
+    ],
+    "arguments": [
+      {
+        "name": "subscription",
+        "display": "<subscription>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "hidden",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "builtin"
+    ],
+    "aliases": [
+      [
+        "plugin",
+        "builtins"
+      ],
+      [
+        "plugin",
+        "built-in"
+      ]
+    ],
+    "synopsis": [
+      "magpie plugin builtin [on|off <id>]"
+    ],
+    "arguments": [
+      {
+        "name": "verb",
+        "display": "[on|off",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      },
+      {
+        "name": "id",
+        "display": "<id>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "preset"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie plugin preset essentials|all"
+    ],
+    "arguments": [
+      {
+        "name": "kind",
+        "display": "essentials|all",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "plugin",
+      "dump"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie plugin dump [--json]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/plugins_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/plugins_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library"
+    ],
+    "aliases": [
+      [
+        "lib"
+      ]
+    ],
+    "synopsis": [
+      "magpie library"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "library",
+        "sync"
+      ],
+      [
+        "library",
+        "instructions"
+      ],
+      [
+        "library",
+        "mcp"
+      ],
+      [
+        "library",
+        "skill"
+      ],
+      [
+        "library",
+        "rtk"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "sync"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library sync"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "instructions"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library instructions"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "library",
+        "instructions",
+        "set"
+      ],
+      [
+        "library",
+        "instructions",
+        "agents"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "instructions",
+      "set"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library instructions set <file|->"
+    ],
+    "arguments": [
+      {
+        "name": "file",
+        "display": "<file|->",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "instructions",
+      "agents"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library instructions agents <a,b…|none>"
+    ],
+    "arguments": [
+      {
+        "name": "agents",
+        "display": "<a,b…|none>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "mcp"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library mcp"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "library",
+        "mcp",
+        "add"
+      ],
+      [
+        "library",
+        "mcp",
+        "agents"
+      ],
+      [
+        "library",
+        "mcp",
+        "rm"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "mcp",
+      "add"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library mcp add <name> <url | command args…> [agents=a,b…]"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      },
+      {
+        "name": "target",
+        "display": "<url | command args…>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      },
+      {
+        "name": "agents",
+        "display": "[agents=a,b…]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "mcp",
+      "agents"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library mcp agents <name> <a,b…|none>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      },
+      {
+        "name": "agents",
+        "display": "<a,b…|none>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "mcp",
+      "rm"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library mcp rm <name>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "skill"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library skill"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "library",
+        "skill",
+        "agents"
+      ],
+      [
+        "library",
+        "skill",
+        "rm"
+      ],
+      [
+        "library",
+        "skill",
+        "update"
+      ],
+      [
+        "library",
+        "skill",
+        "how"
+      ],
+      [
+        "library",
+        "skill",
+        "use-library"
+      ],
+      [
+        "library",
+        "skill",
+        "keep-own"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "skill",
+      "agents"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library skill agents <name> <a,b…|none>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      },
+      {
+        "name": "agents",
+        "display": "<a,b…|none>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "skill",
+      "rm"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library skill rm <name>",
+      "magpie library skill rm --all [--yes]"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--all",
+        "display": "--all",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      },
+      {
+        "name": "--yes",
+        "display": "--yes",
+        "aliases": [
+          "-y"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "skill",
+      "update"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library skill update [name]"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "[name]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--replace-edits",
+        "display": "--replace-edits",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "skill",
+      "how"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library skill how link|copy [agent]",
+      "magpie library skill how default <agent>"
+    ],
+    "arguments": [
+      {
+        "name": "mode",
+        "display": "link|copy|default",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      },
+      {
+        "name": "agent",
+        "display": "[agent]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "skill",
+      "use-library"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library skill use-library <name> <agent>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      },
+      {
+        "name": "agent",
+        "display": "<agent>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "skill",
+      "keep-own"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library skill keep-own <name> <agent>"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      },
+      {
+        "name": "agent",
+        "display": "<agent>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "rtk"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library rtk"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "library",
+        "rtk",
+        "on"
+      ],
+      [
+        "library",
+        "rtk",
+        "off"
+      ],
+      [
+        "library",
+        "rtk",
+        "install"
+      ],
+      [
+        "library",
+        "rtk",
+        "upgrade"
+      ],
+      [
+        "library",
+        "rtk",
+        "path"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "rtk",
+      "on"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library rtk on <agent>"
+    ],
+    "arguments": [
+      {
+        "name": "agent",
+        "display": "<agent>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "rtk",
+      "off"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library rtk off <agent>"
+    ],
+    "arguments": [
+      {
+        "name": "agent",
+        "display": "<agent>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/library_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "rtk",
+      "install"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library rtk install"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "rtk",
+      "upgrade"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library rtk upgrade"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "library",
+      "rtk",
+      "path"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie library rtk path"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/library_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webdav"
+    ],
+    "aliases": [
+      [
+        "dav"
+      ]
+    ],
+    "synopsis": [
+      "magpie webdav"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "webdav",
+        "on"
+      ],
+      [
+        "webdav",
+        "set"
+      ],
+      [
+        "webdav",
+        "now"
+      ],
+      [
+        "webdav",
+        "auto"
+      ],
+      [
+        "webdav",
+        "restore"
+      ],
+      [
+        "webdav",
+        "undo"
+      ],
+      [
+        "webdav",
+        "upload"
+      ],
+      [
+        "webdav",
+        "dismiss"
+      ],
+      [
+        "webdav",
+        "off"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webdav",
+      "on"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie webdav on <address> [user=…] [keys=no] [agents=no] [library=no]"
+    ],
+    "arguments": [
+      {
+        "name": "address",
+        "display": "<address>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      },
+      {
+        "name": "pairs",
+        "display": "[user=…] [keys=no] [agents=no] [library=no]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webdav",
+      "set"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie webdav set k=v…"
+    ],
+    "arguments": [
+      {
+        "name": "pairs",
+        "display": "k=v…",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webdav",
+      "now"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie webdav now"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webdav",
+      "auto"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie webdav auto off|3|15|30|60"
+    ],
+    "arguments": [
+      {
+        "name": "minutes",
+        "display": "off|3|15|30|60",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webdav",
+      "restore"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie webdav restore"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webdav",
+      "undo"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie webdav undo"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webdav",
+      "upload"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie webdav upload"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webdav",
+      "dismiss"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie webdav dismiss"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "webdav",
+      "off"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie webdav off"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "s3"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie s3"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "s3",
+        "on"
+      ],
+      [
+        "s3",
+        "set"
+      ],
+      [
+        "s3",
+        "now"
+      ],
+      [
+        "s3",
+        "auto"
+      ],
+      [
+        "s3",
+        "restore"
+      ],
+      [
+        "s3",
+        "undo"
+      ],
+      [
+        "s3",
+        "upload"
+      ],
+      [
+        "s3",
+        "dismiss"
+      ],
+      [
+        "s3",
+        "off"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "s3",
+      "on"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie s3 on s3://<bucket>[/<prefix>] access-key-id=… [endpoint=…] [region=…] [path-style=yes]"
+    ],
+    "arguments": [
+      {
+        "name": "address",
+        "display": "s3://<bucket>[/<prefix>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      },
+      {
+        "name": "pairs",
+        "display": "access-key-id=… [endpoint=…] [region=…] [path-style=yes]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "s3",
+      "set"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie s3 set k=v…"
+    ],
+    "arguments": [
+      {
+        "name": "pairs",
+        "display": "k=v…",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "s3",
+      "now"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie s3 now"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "s3",
+      "auto"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie s3 auto off|3|15|30|60"
+    ],
+    "arguments": [
+      {
+        "name": "minutes",
+        "display": "off|3|15|30|60",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "s3",
+      "restore"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie s3 restore"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "s3",
+      "undo"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie s3 undo"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "s3",
+      "upload"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie s3 upload"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "s3",
+      "dismiss"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie s3 dismiss"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "s3",
+      "off"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie s3 off"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "github"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie github"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "github",
+        "on"
+      ],
+      [
+        "github",
+        "set"
+      ],
+      [
+        "github",
+        "now"
+      ],
+      [
+        "github",
+        "auto"
+      ],
+      [
+        "github",
+        "restore"
+      ],
+      [
+        "github",
+        "undo"
+      ],
+      [
+        "github",
+        "upload"
+      ],
+      [
+        "github",
+        "dismiss"
+      ],
+      [
+        "github",
+        "off"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "github",
+      "on"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie github on github://<owner>/<repo>[/<folder>] [branch=…] [keys=no] [agents=no] [library=no]"
+    ],
+    "arguments": [
+      {
+        "name": "address",
+        "display": "github://<owner>/<repo>[/<folder>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      },
+      {
+        "name": "pairs",
+        "display": "[branch=…] [keys=no] [agents=no] [library=no]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "github",
+      "set"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie github set k=v…"
+    ],
+    "arguments": [
+      {
+        "name": "pairs",
+        "display": "k=v…",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "github",
+      "now"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie github now"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "github",
+      "auto"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie github auto off|3|15|30|60"
+    ],
+    "arguments": [
+      {
+        "name": "minutes",
+        "display": "off|3|15|30|60",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/webdav_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "github",
+      "restore"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie github restore"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "github",
+      "undo"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie github undo"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "github",
+      "upload"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie github upload"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "github",
+      "dismiss"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie github dismiss"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "github",
+      "off"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie github off"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/webdav_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "gateway-key"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie gateway-key list|add|rotate|remove"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [
+      [
+        "gateway-key",
+        "list"
+      ],
+      [
+        "gateway-key",
+        "add"
+      ],
+      [
+        "gateway-key",
+        "rotate"
+      ],
+      [
+        "gateway-key",
+        "remove"
+      ],
+      [
+        "gateway-key",
+        "limit"
+      ],
+      [
+        "gateway-key",
+        "models"
+      ],
+      [
+        "gateway-key",
+        "quotas"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/gateway_keys_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "gateway-key",
+      "list"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie gateway-key list"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/gateway_keys_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "gateway-key",
+      "add"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie gateway-key add <name> [--key <key>]"
+    ],
+    "arguments": [
+      {
+        "name": "name",
+        "display": "<name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--key",
+        "display": "--key <key>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/gateway_keys_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "gateway-key",
+      "rotate"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie gateway-key rotate <id>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/gateway_keys_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "gateway-key",
+      "remove"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie gateway-key remove <id>"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/gateway_keys_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "gateway-key",
+      "limit"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie gateway-key limit <id> [list|off|reset [n]|remove <n>|[add] day|week|month|<N>d|<N>h --tokens N --cost USD --cache-reads]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      },
+      {
+        "name": "form",
+        "display": "[list|off|reset [n]|remove <n>|[add] day|week|month|<N>d|<N>h]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--tokens",
+        "display": "--tokens N",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      },
+      {
+        "name": "--cost",
+        "display": "--cost USD",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      },
+      {
+        "name": "--cache-reads",
+        "display": "--cache-reads",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/gateway_keys_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "gateway-key",
+      "models"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie gateway-key models <id> [all|<provider>/<model>|<provider>/* ...]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      },
+      {
+        "name": "models",
+        "display": "[all|<provider>/<model>|<provider>/* ...]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/gateway_keys_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "gateway-key",
+      "quotas"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie gateway-key quotas <id> [on|off]"
+    ],
+    "arguments": [
+      {
+        "name": "id",
+        "display": "<id>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      },
+      {
+        "name": "state",
+        "display": "[on|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/gateway_keys_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/gateway_keys_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "usage"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie usage [today|7d|30d|all]",
+      "magpie usage --csv [--account <name>] [today|7d|30d|all]",
+      "magpie usage [--csv [--account <name>]] --last <dur>|--days <n>"
+    ],
+    "arguments": [
+      {
+        "name": "window",
+        "display": "[today|7d|30d|all]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/usage_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--csv",
+        "display": "--csv",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/usage_cli.go"
+        ]
+      },
+      {
+        "name": "--account",
+        "display": "--account <name>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/usage_cli.go"
+        ]
+      },
+      {
+        "name": "--last",
+        "display": "--last <dur>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/usage_cli.go"
+        ]
+      },
+      {
+        "name": "--days",
+        "display": "--days <n>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/usage_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/usage_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "sessions"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie sessions [--model <m>] [--folder <f>] [--json]",
+      "magpie sessions --days N|today|all [--model <m>] [--folder <f>] [--json]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--days",
+        "display": "--days N|today|all",
+        "aliases": [
+          "-d"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/sessions_cli.go"
+        ]
+      },
+      {
+        "name": "--model",
+        "display": "--model <m>",
+        "aliases": [
+          "-m"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/sessions_cli.go"
+        ]
+      },
+      {
+        "name": "--folder",
+        "display": "--folder <f>",
+        "aliases": [
+          "-f"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/sessions_cli.go"
+        ]
+      },
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/sessions_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/sessions_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "quota"
+    ],
+    "aliases": [
+      [
+        "quotas"
+      ]
+    ],
+    "synopsis": [
+      "magpie quota [<provider>] [--json]"
+    ],
+    "arguments": [
+      {
+        "name": "provider",
+        "display": "[<provider>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/quota_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [
+          "-j"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/quota_cli.go"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "quota",
+        "wait"
+      ],
+      [
+        "quota",
+        "history"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/quota_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "quota",
+      "wait"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie quota wait <provider|account> [--timeout <d>] [--quiet]"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "<provider|account>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/quota_wait.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--timeout",
+        "display": "--timeout <d>",
+        "aliases": [
+          "-t"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/quota_wait.go"
+        ]
+      },
+      {
+        "name": "--quiet",
+        "display": "--quiet",
+        "aliases": [
+          "-q"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/quota_wait.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/quota_wait.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "quota",
+      "history"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie quota history [<provider|account>] [--days N] [--json]"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<provider|account>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/quota_cli.go"
+        ]
+      }
+    ],
+    "options": [
+      {
+        "name": "--days",
+        "display": "--days N",
+        "aliases": [
+          "-n"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/quota_cli.go"
+        ]
+      },
+      {
+        "name": "--json",
+        "display": "--json",
+        "aliases": [
+          "-j"
+        ],
+        "evidenceIds": [
+          "source:internal/cli/quota_cli.go"
+        ]
+      }
+    ],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/quota_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "update"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie update [--proxy <url>] [--mirror <prefix>]"
+    ],
+    "arguments": [],
+    "options": [
+      {
+        "name": "--proxy",
+        "display": "--proxy <url>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/update_cli.go"
+        ]
+      },
+      {
+        "name": "--mirror",
+        "display": "--mirror <prefix>",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/update_cli.go"
+        ]
+      }
+    ],
+    "children": [
+      [
+        "update",
+        "check"
+      ],
+      [
+        "update",
+        "mirror"
+      ],
+      [
+        "update",
+        "auto"
+      ]
+    ],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/cli/update_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "update",
+      "check"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie update check"
+    ],
+    "arguments": [],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/update_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "update",
+      "mirror"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie update mirror [<prefix>|off]"
+    ],
+    "arguments": [
+      {
+        "name": "prefix",
+        "display": "[<prefix>|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/update_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/update_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "update",
+      "auto"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie update auto [on|off] [download|notify] [30m|1h|6h|24h]"
+    ],
+    "arguments": [
+      {
+        "name": "state",
+        "display": "[on|off]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/update_cli.go"
+        ]
+      },
+      {
+        "name": "mode",
+        "display": "[download|notify]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/update_cli.go"
+        ]
+      },
+      {
+        "name": "interval",
+        "display": "[30m|1h|6h|24h]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/update_cli.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/update_cli.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "claude"
+    ],
+    "aliases": [
+      [
+        "cc"
+      ]
+    ],
+    "synopsis": [
+      "magpie claude",
+      "magpie claude <model>",
+      "magpie claude <field> [<value>]",
+      "magpie claude default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "codex"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie codex",
+      "magpie codex <model>",
+      "magpie codex <field> [<value>]",
+      "magpie codex default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "gemini"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie gemini",
+      "magpie gemini <model>",
+      "magpie gemini <field> [<value>]",
+      "magpie gemini default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "opencode"
+    ],
+    "aliases": [
+      [
+        "oc"
+      ]
+    ],
+    "synopsis": [
+      "magpie opencode",
+      "magpie opencode <model>",
+      "magpie opencode <field> [<value>]",
+      "magpie opencode default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "mimocode"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie mimocode",
+      "magpie mimocode <model>",
+      "magpie mimocode <field> [<value>]",
+      "magpie mimocode default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "deveco"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie deveco",
+      "magpie deveco <model>",
+      "magpie deveco <field> [<value>]",
+      "magpie deveco default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "pi"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie pi",
+      "magpie pi <model>",
+      "magpie pi <field> [<value>]",
+      "magpie pi default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "goose"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie goose",
+      "magpie goose <model>",
+      "magpie goose <field> [<value>]",
+      "magpie goose default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "cursor"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie cursor",
+      "magpie cursor <model>",
+      "magpie cursor <field> [<value>]",
+      "magpie cursor default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "zed"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie zed",
+      "magpie zed <model>",
+      "magpie zed <field> [<value>]",
+      "magpie zed default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "copilot"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie copilot",
+      "magpie copilot <model>",
+      "magpie copilot <field> [<value>]",
+      "magpie copilot default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "crush"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie crush",
+      "magpie crush <model>",
+      "magpie crush <field> [<value>]",
+      "magpie crush default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  },
+  {
+    "path": [
+      "aside"
+    ],
+    "aliases": [],
+    "synopsis": [
+      "magpie aside",
+      "magpie aside <model>",
+      "magpie aside <field> [<value>]",
+      "magpie aside default"
+    ],
+    "arguments": [
+      {
+        "name": "target",
+        "display": "[<model>|<field>|default]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      },
+      {
+        "name": "value",
+        "display": "[<value>]",
+        "aliases": [],
+        "evidenceIds": [
+          "source:internal/cli/main.go",
+          "source:internal/agent/agent.go"
+        ]
+      }
+    ],
+    "options": [],
+    "children": [],
+    "category": "public",
+    "evidenceIds": [
+      "source:internal/cli/main.go",
+      "source:internal/agent/agent.go",
+      "source:internal/agent/agents.go"
+    ],
+    "profileId": "source-default"
+  }
+]

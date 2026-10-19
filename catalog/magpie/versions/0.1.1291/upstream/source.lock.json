@@ -1,0 +1,422 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/yetone/magpie",
+  "upstreamVersion": "0.1.1291",
+  "ref": "v0.1.1291",
+  "commit": "33dbdcc529622cf0dd053c99eb34f51c06fbba77",
+  "adapter": "magpie-source-v1",
+  "normalization": 1,
+  "profile": {
+    "id": "source-default",
+    "scope": "命令树节点自固定提交的 internal/cli/main.go run() switch、各 internal/cli/*_cli.go 子命令处理器与 usage 常量静态枚举：合计 204 个节点——根命令 1、顶层 60（命令 47，另含 usage 尾部静态列出的 13 个 agent 节点：claude/cc、codex、gemini、opencode/oc、mimocode、deveco、pi、goose、cursor、zed、copilot、crush、aside）、子命令 143，最大深度 3；本版全部收录。隐藏节点 5 个（app/gui、claude-mcp-helper、help、version、plugin move-back）：存在于 run() switch 或子命令处理器但未列入 usage 主体。<agent> 占位形式按 usage 尾部静态清单固化为 13 个具体节点，四种通用形态（查看 / 设模型 / 查看字段 / 设字段 / default 复原）在各节点页统一说明；internal/agent/agents.go 的 builtins 注册表（约 70 个 agent）超出该静态清单的部分不单独建页，在 magpie agents 页与概念文章中说明。证据覆盖：命令定义与分发（internal/cli/main.go 及 36 个 *_cli.go）、agent 通用字段与注册表（internal/agent/agent.go、agents.go）、图像生成 MCP 服务器（internal/imagemcp/imagemcp.go、wsl.go）、官方文档（README.md、README.zh-CN.md、docs/reference.md、docs/subsystems/agent-wiring.md、gateway-routing.md、providers-accounts.md、sync-backup.md、library.md）与许可（LICENSE），合计 50 个文件。帮助文本为上游手写的散文式 usage 常量，未做机器采集；synopsis 行照抄固定提交的 usage 常量原文，与本地安装 0.1.1291 的实际 --help 输出核对一致。"
+  },
+  "evidence": [
+    {
+      "id": "source:LICENSE",
+      "path": "upstream/source-extracts/LICENSE.txt",
+      "sha256": "79d2c8444715d4bc453ec4f8a0aaf2051a4c1ee5ac08f5bd2e5848aef87c7572",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/LICENSE",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:README.md",
+      "path": "upstream/source-extracts/README.md.txt",
+      "sha256": "7679c170c88766c70b948679682541e92488673246297086100c480c1b9ff991",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/README.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:README.zh-CN.md",
+      "path": "upstream/source-extracts/README.zh-CN.md.txt",
+      "sha256": "7d04582846708c2bb1b28e96633c34481cf782b34fcdd6c60cc6df108e041264",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/README.zh-CN.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:docs/reference.md",
+      "path": "upstream/source-extracts/docs/reference.md.txt",
+      "sha256": "64fd60f4e9ea1f0c2bbf81bdab341d965ad4344295192f6ed73060b6188aeeeb",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/docs/reference.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:docs/subsystems/agent-wiring.md",
+      "path": "upstream/source-extracts/docs/subsystems/agent-wiring.md.txt",
+      "sha256": "940e3294095e2f1fe09e7bd0df35b188fe488dfd2c15d5f22c589d4adb344b2c",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/docs/subsystems/agent-wiring.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:docs/subsystems/gateway-routing.md",
+      "path": "upstream/source-extracts/docs/subsystems/gateway-routing.md.txt",
+      "sha256": "9ed9d8be203c165022c98816a6def7abc909e41332aed436ed0b70a8a25efcca",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/docs/subsystems/gateway-routing.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:docs/subsystems/library.md",
+      "path": "upstream/source-extracts/docs/subsystems/library.md.txt",
+      "sha256": "d8f1961bab46dc06123616fffc263aae4d534801635641309f750feb97f99940",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/docs/subsystems/library.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:docs/subsystems/providers-accounts.md",
+      "path": "upstream/source-extracts/docs/subsystems/providers-accounts.md.txt",
+      "sha256": "54d102b4fadfc27381dc894ee1ac0cd22eee17b39bdd5d560ec5a9453b91dd8a",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/docs/subsystems/providers-accounts.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:docs/subsystems/sync-backup.md",
+      "path": "upstream/source-extracts/docs/subsystems/sync-backup.md.txt",
+      "sha256": "40f7a7af1d6e6922740fe00711e8cd81fe43c330bb416d239f022af54b589ce7",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/docs/subsystems/sync-backup.md",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/agent/agent.go",
+      "path": "upstream/source-extracts/internal/agent/agent.go.txt",
+      "sha256": "b8c7d6b4417988061c3bdd1af65056230f0c79a6c9a1a18aafb0760431d13752",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/agent/agent.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/agent/agents.go",
+      "path": "upstream/source-extracts/internal/agent/agents.go.txt",
+      "sha256": "659738448ea6177006e68c9248a48df35563b1e9211787bd29a5941bb9a6523b",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/agent/agents.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/account_discovery_cli.go",
+      "path": "upstream/source-extracts/internal/cli/account_discovery_cli.go.txt",
+      "sha256": "052b83748c7d6df095409a988bd6ec4a25ccfa8b57eb86aff780446fcd10c4a9",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/account_discovery_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/accounts_cli.go",
+      "path": "upstream/source-extracts/internal/cli/accounts_cli.go.txt",
+      "sha256": "49e00b742f5af5e436a6712f354425a325fb0f8c2be189f2f1fd57a60d84fb1c",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/accounts_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/autostart_cli.go",
+      "path": "upstream/source-extracts/internal/cli/autostart_cli.go.txt",
+      "sha256": "2015c3078e095d3c9d6e241ff78062971bd8d77b0048a12375d59a91bf7699c8",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/autostart_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/backup_cmd.go",
+      "path": "upstream/source-extracts/internal/cli/backup_cmd.go.txt",
+      "sha256": "ef6a5ee25224703ae6c7673121be60499c903e639299772c29f759887f0076d3",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/backup_cmd.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/builtin_cli.go",
+      "path": "upstream/source-extracts/internal/cli/builtin_cli.go.txt",
+      "sha256": "6067a5abd03d44c67c9fd66387b800e5586baf4cfe7ec889b1dc1e6e7e3a7583",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/builtin_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/claude_code_cli.go",
+      "path": "upstream/source-extracts/internal/cli/claude_code_cli.go.txt",
+      "sha256": "3fe652fcf511b0b5e1ed28836db86a767ec3f79df64e72221eb9bb271d8d7ca0",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/claude_code_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/console_windows.go",
+      "path": "upstream/source-extracts/internal/cli/console_windows.go.txt",
+      "sha256": "84de79d846c936f7be92245d867253dd77675094e3159450d6de038c2dfe9de3",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/console_windows.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/cpu_cli.go",
+      "path": "upstream/source-extracts/internal/cli/cpu_cli.go.txt",
+      "sha256": "a91e705f183f310026a20713d67b2ed43b411fb17e1363891aca0cc1e630fe59",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/cpu_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/daemon_cli.go",
+      "path": "upstream/source-extracts/internal/cli/daemon_cli.go.txt",
+      "sha256": "bb282436ffc2d8bfabc86e05d1f20f389116961d0e5c0f007bf8325479b32b1f",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/daemon_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/gateway_keys_cli.go",
+      "path": "upstream/source-extracts/internal/cli/gateway_keys_cli.go.txt",
+      "sha256": "2c7762432286a1efcd01bf7dd8aaf72320ef0ab44f2cded9c918433541f5298a",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/gateway_keys_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/groups_cli.go",
+      "path": "upstream/source-extracts/internal/cli/groups_cli.go.txt",
+      "sha256": "5c42987aeebe6c47be8a21431be21c91863145487f0752ff0423d44860897121",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/groups_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/groups_rules_cli.go",
+      "path": "upstream/source-extracts/internal/cli/groups_rules_cli.go.txt",
+      "sha256": "76f8742edf153b939e1372e073fade4801a6e5c0ba91099aaea21ebac1c2701b",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/groups_rules_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/gui_off.go",
+      "path": "upstream/source-extracts/internal/cli/gui_off.go.txt",
+      "sha256": "ce5b047836f957e058be33b413aa7394e09a0f1f10a914db567ad27240eca383",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/gui_off.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/gui_on.go",
+      "path": "upstream/source-extracts/internal/cli/gui_on.go.txt",
+      "sha256": "32bfd3b12408c3b87cb415a12f86b71cf40c51a66f48d21891223d775c23d5c5",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/gui_on.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/healthcheck_cli.go",
+      "path": "upstream/source-extracts/internal/cli/healthcheck_cli.go.txt",
+      "sha256": "2da461c1a6cc20de6ac834e747966f7e242efdfd3abfa74a77591bbcfdae4d5c",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/healthcheck_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/heap_cli.go",
+      "path": "upstream/source-extracts/internal/cli/heap_cli.go.txt",
+      "sha256": "3ded416d2a186f9dd372686c88e8139b98f54444e8aa33a0271f1c766c0030f0",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/heap_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/help_cli.go",
+      "path": "upstream/source-extracts/internal/cli/help_cli.go.txt",
+      "sha256": "efc47c447db7bc640c5c9f895feafc016efea215542ba50d6e5e0557fb143a20",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/help_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/library_cli.go",
+      "path": "upstream/source-extracts/internal/cli/library_cli.go.txt",
+      "sha256": "e80f321e89a6c0c756d42479d86328f115612cfde09c0b48ff84effb56666cee",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/library_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/main.go",
+      "path": "upstream/source-extracts/internal/cli/main.go.txt",
+      "sha256": "582b6863bcb5e8f3e4a14d6a6b13244645cbf4a567d51c294a3796691df9d906",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/main.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/model_cli.go",
+      "path": "upstream/source-extracts/internal/cli/model_cli.go.txt",
+      "sha256": "f8ddba5e2b1f495e37bf43df1d1caf6f4ae474d136d18f479841d43a4bc4c8c0",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/model_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/plugins_cli.go",
+      "path": "upstream/source-extracts/internal/cli/plugins_cli.go.txt",
+      "sha256": "338d52f7ca4255159f2ba70c35ed86d42debd781fab52b028e59f0ba32a3e453",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/plugins_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/providers_cli.go",
+      "path": "upstream/source-extracts/internal/cli/providers_cli.go.txt",
+      "sha256": "6e32e331b0af779840d1bf130fe331053192ab04a792ad44d127f793cecd536d",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/providers_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/quota_cli.go",
+      "path": "upstream/source-extracts/internal/cli/quota_cli.go.txt",
+      "sha256": "7b3428efc7793ede33c1a8564bc4a6e25f38727d2caff37a792970408d119a91",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/quota_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/quota_refresh_cli.go",
+      "path": "upstream/source-extracts/internal/cli/quota_refresh_cli.go.txt",
+      "sha256": "dd8fdbec1b26fc0a192fea9e85379c1d86816501fd7fa2a83550281e350375e5",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/quota_refresh_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/quota_wait.go",
+      "path": "upstream/source-extracts/internal/cli/quota_wait.go.txt",
+      "sha256": "f8c5f877c0defedab1fa15c5fe741108d06e891e10a560d594346db9b9574e12",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/quota_wait.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/search_cli.go",
+      "path": "upstream/source-extracts/internal/cli/search_cli.go.txt",
+      "sha256": "e62468474a7545d9e842dffeb76b59d99ec4cb6dc9a341aa09c306b3fea7ab4b",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/search_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/sessions_cli.go",
+      "path": "upstream/source-extracts/internal/cli/sessions_cli.go.txt",
+      "sha256": "4c0dd966acdb02d4eb42eaa2a8f668ff72d85c011df7cc23b2463215d8ea264d",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/sessions_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/signals.go",
+      "path": "upstream/source-extracts/internal/cli/signals.go.txt",
+      "sha256": "8f5846929c5ec84612ef4edfc1c6672e6ab09024d86f20decde4a93dbc811ffd",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/signals.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/signals_unix.go",
+      "path": "upstream/source-extracts/internal/cli/signals_unix.go.txt",
+      "sha256": "4350c7d789a838fa915470d187b5b8c7710bb5346f8c40caa332dadafba29222",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/signals_unix.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/signals_windows.go",
+      "path": "upstream/source-extracts/internal/cli/signals_windows.go.txt",
+      "sha256": "1786926ec6e352fab1a931f7f1eb13848a0aef2aeee796672fbf7c96550c2a00",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/signals_windows.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/statusline_cli.go",
+      "path": "upstream/source-extracts/internal/cli/statusline_cli.go.txt",
+      "sha256": "432d51b329ead6c8be63d63bb67225619b3c939a6eaf23903b7b62fbca4299ab",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/statusline_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/tls_cli.go",
+      "path": "upstream/source-extracts/internal/cli/tls_cli.go.txt",
+      "sha256": "8390f7e825e41c874d9fe90627b031f54219fe83365f05b6c7dc2c9a2589908f",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/tls_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/update_cli.go",
+      "path": "upstream/source-extracts/internal/cli/update_cli.go.txt",
+      "sha256": "2c74d6764d3f81db37bf2fe165302efbedee295ca93dbfcfc5f4e31894e994cc",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/update_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/usage_cli.go",
+      "path": "upstream/source-extracts/internal/cli/usage_cli.go.txt",
+      "sha256": "80bdb630770db73f1d6130a197b66bea0c02843eadd0cea1d038d9be25c23002",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/usage_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/visible_cli.go",
+      "path": "upstream/source-extracts/internal/cli/visible_cli.go.txt",
+      "sha256": "b7e07d891be87c77a49dd744fa43744155cd1ea820643fc25d5636cf03528306",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/visible_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/web_cli.go",
+      "path": "upstream/source-extracts/internal/cli/web_cli.go.txt",
+      "sha256": "030fe9e769b1bb7f55274745565907e12e25626f1409b34fc0125dde08edfc35",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/web_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/cli/webdav_cli.go",
+      "path": "upstream/source-extracts/internal/cli/webdav_cli.go.txt",
+      "sha256": "7cae4d5a0936058ee255ef9b201025be53785724f6a2dfe2ac5490c9d08b3c24",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/cli/webdav_cli.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/imagemcp/imagemcp.go",
+      "path": "upstream/source-extracts/internal/imagemcp/imagemcp.go.txt",
+      "sha256": "88e9de8fe55c609cf4a5a3963d49b10175501cd3acf6fbace5bf70d58f0ac348",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/imagemcp/imagemcp.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    },
+    {
+      "id": "source:internal/imagemcp/wsl.go",
+      "path": "upstream/source-extracts/internal/imagemcp/wsl.go.txt",
+      "sha256": "fa7fae5df90b71fc82f94fca4bbd0de81f1e919a8116e191cc9d79a1fcc59f63",
+      "url": "https://raw.githubusercontent.com/yetone/magpie/33dbdcc529622cf0dd053c99eb34f51c06fbba77/internal/imagemcp/wsl.go",
+      "method": "source-snapshot",
+      "obtainedAt": "2026-10-19T13:56:06Z"
+    }
+  ],
+  "limitations": [
+    "上游帮助为手写散文式 usage 常量，非结构化解析输出；命令树与 synopsis 以固定提交源码为准逐条人工归一化，未运行采集脚本。",
+    "Windows 通知重启入口 -Embedding、agent.DryRunArg 与 magpie:// 链接参数等内部形式不构成命令节点，仅在根命令页源码补充说明。",
+    "13 个 agent 节点之外的注册 agent（internal/agent/agents.go builtins，约 70 个）不单独建页；agent 各自的可设字段以固定提交源码为准在页内举例，不保证穷举。",
+    "gateway-key limit 的 list|off|reset|remove|add 子形式与 provider set 的 k=v 键作为同一节点内的参数形式说明，未拆分为独立节点。",
+    "示例均为说明性内容，未实际运行；行为描述以固定提交源码与本地 0.1.1291 安装的帮助输出为依据。"
+  ]
+}
