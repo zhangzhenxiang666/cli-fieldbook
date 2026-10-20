@@ -1,0 +1,7 @@
+schema: 1
+name: magpie
+binary: magpie
+repository: https://github.com/yetone/magpie
+summary: 为 AI 编程代理统一挑选与管理模型的菜单栏应用与 CLI，通过本地网关在 OpenAI、Anthropic 与 Gemini 接口间转译。
+defaults:
+  zh-CN: 0.1.1291
